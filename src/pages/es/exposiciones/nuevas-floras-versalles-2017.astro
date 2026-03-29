@@ -1,0 +1,112 @@
+---
+import Layout from '../../../components/layout/Layout.astro';
+const lang = 'es' as const;
+---
+
+<Layout
+  lang={lang}
+  title="Nuevas Floras Versalles — Exposición"
+  description="Nuevas Floras Versalles. Intervención en el Jardín de Tullerías (FIAC) y Arboretum de Chevreloup, Museo Nacional de Historia Natural. París / Versalles, Francia, 2017."
+>
+
+  <article class="exhibition-page">
+    <div class="container">
+
+      <!-- Header -->
+      <header class="exh-header">
+        <span class="label">Exposición individual (internacional) — 2017</span>
+        <h1>Nuevas Floras Versalles</h1>
+        <p class="exh-meta">Jardín de Tullerías (FIAC) / Arboretum de Chevreloup, Museo Nacional de Historia Natural · París / Versalles, Francia · Junio — Septiembre 2017</p>
+      </header>
+
+      <!-- Galería -->
+      <div class="exh-gallery">
+        <div class="placeholder-img" style="aspect-ratio:16/9;">[ Pendiente: Nuevas Floras — Intervención en Jardín de Tullerías ]</div>
+        <div class="placeholder-img" style="aspect-ratio:16/9;">[ Pendiente: Nuevas Floras — Arboretum de Chevreloup, Versalles ]</div>
+        <div class="placeholder-img" style="aspect-ratio:4/3;">[ Pendiente: Detalle de talla sobre árbol en jardín formal francés ]</div>
+      </div>
+
+      <!-- Cuerpo -->
+      <div class="exh-body">
+        <div class="exh-text">
+
+          <h3>SOBRE LA EXPOSICIÓN</h3>
+          <p class="curatorial" style="margin-top: var(--s2);">
+            Versión francesa del proyecto nómada <em>Nuevas Floras</em>, adaptado al contexto
+            del jardín formal francés — uno de los máximos exponentes del control humano
+            sobre la naturaleza.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            La intervención sobre árboles en Versalles y el Arboretum de Chevreloup crea
+            una tensión entre el orden impuesto del jardín francés y la respuesta orgánica
+            de los árboles, amplificando el diálogo cultura-naturaleza que define la serie.
+            El proyecto fue presentado en el contexto de la FIAC (Foire Internationale
+            d'Art Contemporain) en el emblemático Jardín de Tullerías de París, y en el
+            Arboretum de Chevreloup, perteneciente al Museo Nacional de Historia Natural
+            de Francia.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            Esta versión representa la culminación del carácter nómada de <em>Nuevas Floras</em>,
+            que José Roca señaló en 2003 como uno de los aspectos fundamentales de la obra:
+            la idea puede desarrollarse en otros espacios, respondiendo a las especificidades
+            de cada lugar.
+          </p>
+
+          <div class="exh-works">
+            <h3>OBRAS EXHIBIDAS</h3>
+            <ul>
+              <li><a href="/es/obra/nuevas-floras/">Nuevas Floras</a> — Versión Versalles</li>
+            </ul>
+          </div>
+        </div>
+
+        <aside class="exh-aside">
+          <h4>DATOS</h4>
+          <div class="ficha">
+            <strong>Nuevas Floras Versalles</strong><br>
+            Exposición individual<br><br>
+            Jardín de Tullerías (FIAC)<br>
+            Arboretum de Chevreloup<br>
+            Museo Nacional de Historia Natural<br>
+            París / Versalles, Francia<br><br>
+            Junio — Septiembre 2017<br><br>
+            Intervención escultórica sobre árboles<br>
+            Talla en madera, prótesis
+          </div>
+
+          <h4 style="margin-top: var(--s3);">IDIOMAS</h4>
+          <div class="ficha">
+            <a href="/en/exhibitions/nuevas-floras-versalles-2017/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">
+              View in English
+            </a>
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </article>
+
+</Layout>
+
+<style>
+  .exhibition-page { padding-top: calc(var(--s5) + 40px); }
+  .exh-header { margin-bottom: var(--s4); }
+  .exh-header h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(2rem, 5vw, 3.5rem); margin: var(--s1) 0; }
+  .exh-meta { font-size: 0.8rem; color: var(--ash); letter-spacing: 0.03em; }
+  .exh-body { display: grid; grid-template-columns: 2fr 1fr; gap: var(--s5); margin-bottom: var(--s5); }
+  .exh-gallery { display: grid; gap: var(--s2); margin-bottom: var(--s4); }
+  .exh-gallery img { width: 100%; }
+  .exh-text h3 { font-size: 0.8rem; letter-spacing: 0.08em; color: var(--ash); padding-bottom: var(--s1); border-bottom: 1px solid var(--paper-dark); }
+  .exh-aside h4 { font-family: var(--mono); font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: var(--ash); margin-bottom: var(--s1); padding-bottom: var(--s1); border-bottom: 1px solid var(--paper-dark); }
+  .exh-works { margin-top: var(--s3); }
+  .exh-works li { padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark); }
+  .exh-works a { color: var(--moss); border-bottom: 1px solid var(--paper-dark); }
+  .exh-works a:hover { border-color: var(--moss); }
+  .exh-press { margin-top: var(--s3); }
+  .exh-press li { padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark); font-size: 0.8rem; }
+  .exh-press a { color: var(--moss); }
+  .placeholder-img { width: 100%; background: var(--paper-dark); display: flex; align-items: center; justify-content: center; color: var(--ash-light); font-family: var(--mono); font-size: 0.55rem; letter-spacing: 0.08em; text-transform: uppercase; }
+  @media (max-width: 768px) { .exh-body { grid-template-columns: 1fr; } }
+</style>

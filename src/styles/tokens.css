@@ -1,0 +1,38 @@
+/* ============================================
+   María Elvira Escallón — Design Tokens
+   Brutalista. Minimalista. Documental.
+   ============================================ */
+
+:root {
+  /* Palette */
+  --paper: #F2EDE8;
+  --paper-dark: #E8E2DA;
+  --ink: #111111;
+  --ink-soft: #2A2A2A;
+  --ash: #6B6560;
+  --ash-light: #9A948E;
+  --moss: #3A3D35;
+  --white: #FAF8F5;
+
+  /* Typography */
+  --mono: 'Space Mono', 'Courier New', monospace;
+  --serif: 'EB Garamond', 'Georgia', serif;
+
+  /* Spacing */
+  --s1: 0.5rem;
+  --s2: 1rem;
+  --s3: 2rem;
+  --s4: 4rem;
+  --s5: 8rem;
+  --s6: 12rem;
+
+  /* Layout */
+  --max-w: 1200px;
+  --text-w: 680px;
+}
+
+/* Chinese typography overrides */
+[lang="zh"] {
+  --serif: 'Noto Serif SC', 'Songti SC', 'Georgia', serif;
+  --mono: 'Noto Sans SC', 'PingFang SC', 'Space Mono', monospace;
+}

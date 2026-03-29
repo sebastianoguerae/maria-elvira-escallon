@@ -1,0 +1,402 @@
+---
+import Layout from '../../components/layout/Layout.astro';
+
+const lang = 'es' as const;
+const title = 'Prensa';
+
+const bioCorta = `María Elvira Escallón (Londres, 1954) es una artista visual colombiana. Su obra articula procesos escultóricos, fotografía y trabajo in situ, revelando un presente amenazado por fracasos históricos. Sus intervenciones se realizan en hospitales abandonados, estaciones de tren en ruinas, árboles nativos y edificios marcados por la violencia. Ha recibido el Premio Luis Caballero (2003), el Premio de Patrimonio (2006) y múltiples Becas de Creación del Ministerio de Cultura. Su obra se encuentra en colecciones como Art Gallery of NSW (Sydney), Banco de la República y ESCALA (Universidad de Essex). Está representada por Galería Espacio Continuo, Bogotá.`;
+
+const bioMedia = `María Elvira Escallón (Londres, 1954) es una artista visual colombiana cuya práctica articula procesos escultóricos, fotografía y trabajo in situ, revelando un presente amenazado por fracasos históricos. Formada en psicología en la Universidad Javeriana de Bogotá, su acercamiento al arte se distingue por una atención profunda a los procesos de deterioro, mortalidad y transformación de la materia.
+
+Sus intervenciones se realizan en hospitales abandonados, estaciones de tren en ruinas, árboles nativos y edificios marcados por la violencia. Obras como En estado de coma (2005-2007), realizada en el Hospital San Juan de Dios de Bogotá, Nuevas Floras (2003-2007), tallas sobre árboles nativos vivos que ganaron el III Premio Luis Caballero, y La herida (2006), intervención sobre la fachada de la Estación de la Sabana, definen una trayectoria centrada en la relación entre memoria, espacio y tiempo.
+
+En 2024, el Museo de Arte Miguel Urrutia (MAMU), Banco de la República, Bogotá, presentó Encuentros en la fábrica de polvo, su primera exposición antológica, curada por Ana María Lozano Rocha. La muestra reunió tres décadas de producción, confirmando la posición de Escallón en el canon del arte contemporáneo colombiano.
+
+Ha recibido el Premio Luis Caballero (2003), el Premio de Patrimonio (2006) y múltiples Becas de Creación del Ministerio de Cultura. Durante más de una década fue docente en la Universidad Javeriana. Su obra se encuentra en colecciones como Art Gallery of NSW (Sydney), Banco de la República, Colección Seguros Bolívar y ESCALA (Universidad de Essex). Está representada por Galería Espacio Continuo, Bogotá.`;
+
+const prensaArticulos = [
+  { titulo: 'Encuentros en la fábrica de polvo', medio: 'Artishock Revista', fecha: 'Febrero 2025', url: '#' },
+  { titulo: 'La antología de la mente de María Elvira Escallón', medio: 'El Espectador', fecha: '2024', url: '#' },
+  { titulo: 'El esqueleto de Dios de María Elvira Escallón', medio: 'El Tiempo', fecha: '2022', url: '#' },
+  { titulo: 'El arte de sentir un parentesco con otros seres vivos', medio: 'El Espectador', fecha: '2022', url: '#' },
+  { titulo: 'El cuerpo y el árbol', medio: 'Cambio Colombia', fecha: '2022', url: '#' },
+  { titulo: 'Sobre raíces y flores', medio: 'Las2Orillas', fecha: '2022', url: '#' },
+  { titulo: 'María Elvira Escallón: Moving Through Boundaries', medio: 'ArtNexus 58', fecha: '2005', url: '#' },
+  { titulo: 'Urban Impulses review', medio: 'Artlyst', fecha: '2019', url: '#' },
+];
+---
+
+<Layout
+  lang={lang}
+  title="Prensa"
+  description="Material de prensa, biografías y prensa seleccionada sobre María Elvira Escallón. Kit de medios para periodistas, curadores e investigadores."
+>
+
+  <article class="prensa-page">
+    <div class="container">
+
+      <header class="prensa-page__header">
+        <p class="label">Archivo / Prensa</p>
+        <h1>{title}</h1>
+        <p class="prensa-page__intro">
+          Material de prensa y recursos para periodistas, curadores e investigadores.
+        </p>
+      </header>
+
+      <!-- ==================== MATERIAL DE PRENSA ==================== -->
+      <section class="prensa-section">
+        <h2>Material de prensa</h2>
+
+        <div class="prensa-section__grid">
+
+          <!-- Bio corta -->
+          <div class="bio-block">
+            <h3>Biografía corta <span class="bio-count">(150 palabras)</span></h3>
+            <div class="bio-text" id="bio-corta">
+              <p>
+                María Elvira Escallón (Londres, 1954) es una artista visual colombiana. Su obra articula procesos escultóricos, fotografía y trabajo in situ, revelando un presente amenazado por fracasos históricos. Sus intervenciones se realizan en hospitales abandonados, estaciones de tren en ruinas, árboles nativos y edificios marcados por la violencia. Ha recibido el Premio Luis Caballero (2003), el Premio de Patrimonio (2006) y múltiples Becas de Creación del Ministerio de Cultura. Su obra se encuentra en colecciones como Art Gallery of NSW (Sydney), Banco de la República y ESCALA (Universidad de Essex). Está representada por Galería Espacio Continuo, Bogotá.
+              </p>
+            </div>
+            <button class="copy-btn" data-target="bio-corta">Copiar texto</button>
+          </div>
+
+          <!-- Bio media -->
+          <div class="bio-block">
+            <h3>Biografía media <span class="bio-count">(300 palabras)</span></h3>
+            <div class="bio-text" id="bio-media">
+              <p>
+                María Elvira Escallón (Londres, 1954) es una artista visual colombiana cuya práctica articula procesos escultóricos, fotografía y trabajo in situ, revelando un presente amenazado por fracasos históricos. Formada en psicología en la Universidad Javeriana de Bogotá, su acercamiento al arte se distingue por una atención profunda a los procesos de deterioro, mortalidad y transformación de la materia.
+              </p>
+              <p>
+                Sus intervenciones se realizan en hospitales abandonados, estaciones de tren en ruinas, árboles nativos y edificios marcados por la violencia. Obras como <em>En estado de coma</em> (2005&ndash;2007), realizada en el Hospital San Juan de Dios de Bogotá, <em>Nuevas Floras</em> (2003&ndash;2007), tallas sobre árboles nativos vivos que ganaron el III Premio Luis Caballero, y <em>La herida</em> (2006), intervención sobre la fachada de la Estación de la Sabana, definen una trayectoria centrada en la relación entre memoria, espacio y tiempo.
+              </p>
+              <p>
+                En 2024, el Museo de Arte Miguel Urrutia (MAMU), Banco de la República, Bogotá, presentó <em>Encuentros en la fábrica de polvo</em>, su primera exposición antológica, curada por Ana María Lozano Rocha. La muestra reunió tres décadas de producción, confirmando la posición de Escallón en el canon del arte contemporáneo colombiano.
+              </p>
+              <p>
+                Ha recibido el Premio Luis Caballero (2003), el Premio de Patrimonio (2006) y múltiples Becas de Creación del Ministerio de Cultura. Durante más de una década fue docente en la Universidad Javeriana. Su obra se encuentra en colecciones como Art Gallery of NSW (Sydney), Banco de la República, Colección Seguros Bolívar y ESCALA (Universidad de Essex). Está representada por Galería Espacio Continuo, Bogotá.
+              </p>
+            </div>
+            <button class="copy-btn" data-target="bio-media">Copiar texto</button>
+          </div>
+
+        </div>
+
+        <!-- Descargas -->
+        <div class="descargas">
+          <h3>Recursos descargables</h3>
+          <ul class="descargas__list">
+            <li>
+              <span class="descargas__label">Retrato de la artista</span>
+              <a href="#" class="descargas__link">Descargar JPG →</a>
+            </li>
+            <li>
+              <span class="descargas__label">CV completo</span>
+              <a href="#" class="descargas__link">Descargar PDF →</a>
+            </li>
+            <li>
+              <span class="descargas__label">Imágenes de obra en alta resolución</span>
+              <span class="descargas__note">Solicitar a <a href="mailto:prensa@mariaelviraescallon.com">prensa@mariaelviraescallon.com</a></span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ==================== PRENSA SELECCIONADA ==================== -->
+      <section class="prensa-section">
+        <h2>Prensa seleccionada</h2>
+
+        <ul class="prensa-list">
+          {prensaArticulos.map((art) => (
+            <li class="prensa-item">
+              <div class="prensa-item__info">
+                <span class="prensa-item__titulo">&laquo;{art.titulo}&raquo;</span>
+                <span class="prensa-item__medio">{art.medio}</span>
+              </div>
+              <span class="prensa-item__fecha">{art.fecha}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <!-- ==================== CONTACTO DE PRENSA ==================== -->
+      <section class="prensa-section prensa-contacto">
+        <h2>Contacto de prensa</h2>
+        <div class="prensa-contacto__grid">
+          <div>
+            <h4>EMAIL</h4>
+            <p><a href="mailto:prensa@mariaelviraescallon.com">prensa@mariaelviraescallon.com</a></p>
+          </div>
+          <div>
+            <h4>GALERÍA</h4>
+            <p>
+              <a href="https://www.espaciocontinuo.com" target="_blank" rel="noopener noreferrer">
+                Espacio Continuo
+              </a>, Bogotá
+            </p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </article>
+
+</Layout>
+
+<script>
+  document.querySelectorAll('.copy-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.getAttribute('data-target');
+      const el = document.getElementById(targetId!);
+      if (el) {
+        const text = el.innerText || el.textContent || '';
+        navigator.clipboard.writeText(text.trim()).then(() => {
+          const original = btn.textContent;
+          btn.textContent = 'Copiado';
+          setTimeout(() => { btn.textContent = original; }, 2000);
+        });
+      }
+    });
+  });
+</script>
+
+<style>
+  .prensa-page {
+    padding-top: calc(var(--s5) + 40px);
+  }
+
+  .prensa-page__header {
+    margin-bottom: var(--s4);
+  }
+
+  .prensa-page__header h1 {
+    font-family: var(--mono);
+    font-weight: 700;
+    font-size: clamp(2rem, 5vw, 4rem);
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    margin: var(--s1) 0;
+  }
+
+  .prensa-page__intro {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    color: var(--ash);
+    max-width: 50ch;
+    line-height: 1.7;
+  }
+
+  /* Sections */
+  .prensa-section {
+    margin-bottom: var(--s5);
+  }
+
+  .prensa-section h2 {
+    font-size: clamp(1rem, 2vw, 1.4rem);
+    letter-spacing: 0.05em;
+    padding-bottom: var(--s2);
+    border-bottom: 2px solid var(--ink);
+    margin-bottom: var(--s3);
+  }
+
+  .prensa-section h3 {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ink);
+    margin-bottom: var(--s2);
+  }
+
+  .bio-count {
+    font-weight: 400;
+    color: var(--ash);
+  }
+
+  /* Bio blocks */
+  .prensa-section__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--s3);
+    margin-bottom: var(--s4);
+  }
+
+  .bio-block {
+    border: 1px solid var(--paper-dark);
+    padding: var(--s2);
+  }
+
+  .bio-text {
+    font-family: var(--serif);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    margin-bottom: var(--s2);
+    user-select: all;
+  }
+
+  .bio-text p + p {
+    margin-top: var(--s2);
+  }
+
+  .copy-btn {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    background: var(--ink);
+    color: var(--paper);
+    border: none;
+    padding: var(--s1) var(--s2);
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .copy-btn:hover {
+    background: var(--moss);
+  }
+
+  /* Descargas */
+  .descargas {
+    margin-top: var(--s3);
+  }
+
+  .descargas__list {
+    list-style: none;
+  }
+
+  .descargas__list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--s2) 0;
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .descargas__label {
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    color: var(--ink);
+  }
+
+  .descargas__link {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    color: var(--moss);
+    border-bottom: 1px solid var(--moss);
+    padding-bottom: 1px;
+  }
+
+  .descargas__link:hover {
+    color: var(--ink);
+  }
+
+  .descargas__note {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    color: var(--ash);
+  }
+
+  .descargas__note a {
+    color: var(--moss);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  /* Prensa list */
+  .prensa-list {
+    list-style: none;
+  }
+
+  .prensa-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: var(--s2) 0;
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .prensa-item__info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .prensa-item__titulo {
+    font-family: var(--serif);
+    font-size: 1rem;
+    color: var(--ink);
+  }
+
+  .prensa-item__medio {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    color: var(--ash);
+    letter-spacing: 0.05em;
+  }
+
+  .prensa-item__fecha {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    color: var(--ash-light);
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+    margin-left: var(--s2);
+  }
+
+  /* Contacto */
+  .prensa-contacto__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--s3);
+  }
+
+  .prensa-contacto__grid h4 {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--ash);
+    margin-bottom: var(--s1);
+  }
+
+  .prensa-contacto__grid p {
+    font-family: var(--mono);
+    font-size: 0.85rem;
+  }
+
+  .prensa-contacto__grid a {
+    color: var(--moss);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .prensa-contacto__grid a:hover {
+    color: var(--ink);
+  }
+
+  @media (max-width: 768px) {
+    .prensa-section__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .prensa-contacto__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .prensa-item {
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .prensa-item__fecha {
+      margin-left: 0;
+    }
+
+    .descargas__list li {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+  }
+</style>

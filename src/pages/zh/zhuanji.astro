@@ -1,0 +1,527 @@
+---
+import Layout from '../../components/layout/Layout.astro';
+
+const lang = 'zh' as const;
+const title = '传记';
+
+const retrato = (await import('../../assets/images/retrato/retrato.jpg')).default;
+const libroEnEstadoDeComa = (await import('../../assets/images/libros/en-estado-de-coma-libro.jpg')).default;
+---
+
+<Layout
+  lang={lang}
+  title="传记 — María Elvira Escallón"
+  description="玛丽亚·埃尔维拉·埃斯卡隆传记。哥伦比亚视觉艺术家。1954年生于伦敦。雕塑、装置、摄影。"
+>
+
+  <article class="bio-page">
+    <div class="container">
+
+      <!-- ===== 1. 开篇 ===== -->
+      <header class="bio-page__header">
+        <p class="label">传记</p>
+        <h1>María Elvira<br>Escallón</h1>
+      </header>
+
+      <div class="bio-page__opening">
+        <div class="bio-page__portrait">
+          <img src={retrato.src} alt="玛丽亚·埃尔维拉·埃斯卡隆肖像" loading="eager">
+        </div>
+        <div class="bio-page__intro">
+          <p class="curatorial" style="font-style: italic; font-size: 1.3rem;">
+            玛丽亚·埃尔维拉·埃斯卡隆不描绘暴力。她指出。她不批评——她揭示。
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s3);">
+            1954年出生于伦敦，最初接受心理学训练，埃斯卡隆四十多年来一直在构建一个位于历史与记忆边界的艺术实践。她的创作融合了雕塑过程、摄影和现场创作，揭示了一个被历史失败所威胁的当下，通过物质文化元素建立门槛，连接不同的时间和叙事碎片。
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            她的干预——有时微妙而难以察觉，有时宏大壮观——发生在废弃的医院、破败的火车站、原生树木或被暴力标记的建筑中。衰败不是她的主题：而是她的材料。灰尘、融化的冰、树皮重新覆盖巴洛克雕刻——每件作品都使时间作为一种雕塑现象变得可见。
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            她属于一代哥伦比亚艺术家，他们以非字面的方式处理冲突记忆——与多丽丝·萨尔塞多、奥斯卡·穆尼奥斯和克莱门西亚·埃切维里等人并肩——但她的声音与众不同：更安静，更具文献性，更接近档案而非姿态。
+          </p>
+        </div>
+      </div>
+
+      <hr class="rule">
+
+      <!-- ===== 2. 奖项与荣誉 ===== -->
+      <section class="section">
+        <div class="section__header">
+          <h2>奖项与荣誉</h2>
+          <span class="label">1993–2019</span>
+        </div>
+
+        <div class="bio-entry">
+          <span class="bio-entry__year">2019</span>
+          <div class="bio-entry__info">
+            荣誉提名 — 个人创作资助，文化部
+          </div>
+        </div>
+
+        <div class="bio-entry">
+          <span class="bio-entry__year">2018</span>
+          <div class="bio-entry__info">
+            第十届路易斯·卡瓦列罗奖提名 — IDARTES (<em>En el fértil suelo</em>)
+          </div>
+        </div>
+
+        <div class="bio-entry">
+          <span class="bio-entry__year">2014</span>
+          <div class="bio-entry__info">
+            国家个人创作资助 — 文化部 (<em>Aerolito</em>)
+          </div>
+        </div>
+
+        <div class="bio-entry">
+          <span class="bio-entry__year">2006</span>
+          <div class="bio-entry__info">
+            一等奖，遗产类别 — IDCT (<em>En estado de coma</em>)
+          </div>
+        </div>
+
+        <div class="bio-entry">
+          <span class="bio-entry__year">2005</span>
+          <div class="bio-entry__info">
+            国家个人创作资助 — 文化部 (<em>En estado de coma</em>)
+          </div>
+        </div>
+
+        <div class="bio-entry bio-entry--highlight">
+          <span class="bio-entry__year">2003</span>
+          <div class="bio-entry__info">
+            <strong>一等奖 — 第三届路易斯·卡瓦列罗奖 (<em>Nuevas Floras</em>)</strong>
+          </div>
+        </div>
+
+        <div class="bio-entry bio-entry--highlight">
+          <span class="bio-entry__year">1997</span>
+          <div class="bio-entry__info">
+            <strong>一等奖 — 第八届地区沙龙，中部地区 (<em>In Vitro</em>)</strong>
+          </div>
+        </div>
+
+        <div class="bio-entry">
+          <span class="bio-entry__year">1993</span>
+          <div class="bio-entry__info">
+            首个个人创作资助 — Colcultura (<em>Turismo en la frontera</em>)
+          </div>
+        </div>
+      </section>
+
+      <hr class="rule--light">
+
+      <!-- ===== 3. 个展精选 ===== -->
+      <section class="section">
+        <div class="section__header">
+          <h2>个展精选</h2>
+          <span class="label">2000–2024</span>
+        </div>
+
+        <div class="bio-entry">
+          <span class="bio-entry__year">2024</span>
+          <div class="bio-entry__info">
+            <em>Encuentros en la fábrica de polvo</em> — MAMU, Banco de la República（80件作品）
+          </div>
+        </div>
+
+        <div class="bio-entry">
+          <span class="bio-entry__year">2019</span>
+          <div class="bio-entry__info">
+            <em>En el fértil suelo</em> — MAMBO
+          </div>
+        </div>
+
+        <div class="bio-entry">
+          <span class="bio-entry__year">2017</span>
+          <div class="bio-entry__info">
+            <em>Nuevas Floras Versalles</em> — 杜伊勒里花园/FIAC，雪弗勒卢树木园，法国
+          </div>
+        </div>
+
+        <div class="bio-entry">
+          <span class="bio-entry__year">2014</span>
+          <div class="bio-entry__info">
+            <em>Pequeño Museo del Aerolito</em> — 哥伦比亚国家博物馆
+          </div>
+        </div>
+
+        <div class="bio-entry">
+          <span class="bio-entry__year">2012</span>
+          <div class="bio-entry__info">
+            <em>Urgencias</em> — 国立大学艺术博物馆
+          </div>
+        </div>
+
+        <div class="bio-entry">
+          <span class="bio-entry__year">2007</span>
+          <div class="bio-entry__info">
+            <em>En estado de coma</em> — 波哥大博物馆 / 市立天文馆
+          </div>
+        </div>
+
+        <div class="bio-entry">
+          <span class="bio-entry__year">2003</span>
+          <div class="bio-entry__info">
+            <em>Nuevas Floras</em> — Galería Santa Fe（第三届路易斯·卡瓦列罗奖）
+          </div>
+        </div>
+
+        <div class="bio-entry">
+          <span class="bio-entry__year">2000</span>
+          <div class="bio-entry__info">
+            <em>El reino de este mundo</em> — MAMBO
+          </div>
+        </div>
+      </section>
+
+      <hr class="rule--light">
+
+      <!-- ===== 4. 国际群展 ===== -->
+      <section class="section">
+        <div class="section__header">
+          <h2>国际群展</h2>
+          <span class="label">2000–2019</span>
+        </div>
+
+        <div class="bio-entry">
+          <span class="bio-entry__year">2019</span>
+          <div class="bio-entry__info">
+            <em>Urban Impulses: Latin American Photography</em> — 摄影师画廊，伦敦
+          </div>
+        </div>
+
+        <div class="bio-entry">
+          <span class="bio-entry__year">2018</span>
+          <div class="bio-entry__info">
+            <em>Híbridos</em> — 德意志银行画廊，纽约
+          </div>
+        </div>
+
+        <div class="bio-entry">
+          <span class="bio-entry__year">2017</span>
+          <div class="bio-entry__info">
+            <em>La vuelta</em> — 阿尔勒国际摄影节，法国
+          </div>
+        </div>
+
+        <div class="bio-entry">
+          <span class="bio-entry__year">2013</span>
+          <div class="bio-entry__info">
+            <em>Palimpsestes</em> — Galerie Mor-Charpentier, 巴黎 / <em>In Motion</em> — Galeria Bianconi, 米兰
+          </div>
+        </div>
+
+        <div class="bio-entry">
+          <span class="bio-entry__year">2009</span>
+          <div class="bio-entry__info">
+            第十届哈瓦那双年展
+          </div>
+        </div>
+
+        <div class="bio-entry">
+          <span class="bio-entry__year">2008</span>
+          <div class="bio-entry__info">
+            <em>Focus on Contemporary</em> — 悉尼 / <em>Colombian Contemporary Photography</em> — FotoFest, 休斯顿
+          </div>
+        </div>
+
+        <div class="bio-entry">
+          <span class="bio-entry__year">2007</span>
+          <div class="bio-entry__info">
+            <em>Displaced: Contemporary Art from Colombia</em> — Glynn Vivian Gallery, 威尔士
+          </div>
+        </div>
+
+        <div class="bio-entry">
+          <span class="bio-entry__year">2000</span>
+          <div class="bio-entry__info">
+            第七届哈瓦那双年展 — <em>Escenas de Caza</em>
+          </div>
+        </div>
+      </section>
+
+      <hr class="rule">
+
+      <!-- ===== 5. 出版物 ===== -->
+      <section class="section">
+        <div class="section__header">
+          <h2>出版物</h2>
+          <span class="label">专著</span>
+        </div>
+
+        <div class="bio-publications">
+
+          <article class="bio-pub-card">
+            <div class="bio-pub-card__cover bio-pub-card__cover--placeholder">
+              <span>Colección Seguros Bolívar</span>
+            </div>
+            <div class="bio-pub-card__info">
+              <h3>Colección Seguros Bolívar de Arte Contemporáneo</h3>
+              <div class="ficha">
+                2018<br>
+                策展：José Roca<br>
+                专著，112页
+              </div>
+            </div>
+          </article>
+
+          <article class="bio-pub-card">
+            <div class="bio-pub-card__cover bio-pub-card__cover--placeholder">
+              <span>Polvo Eres</span>
+            </div>
+            <div class="bio-pub-card__info">
+              <h3>Polvo Eres: El correr del tiempo</h3>
+              <div class="ficha">
+                2014<br>
+                Julia Buenaventura<br>
+                文化部, 212页
+              </div>
+            </div>
+          </article>
+
+          <article class="bio-pub-card">
+            <div class="bio-pub-card__cover">
+              <img src={libroEnEstadoDeComa.src} alt="封面 — En estado de coma" loading="lazy">
+            </div>
+            <div class="bio-pub-card__info">
+              <h3>En estado de coma</h3>
+              <div class="ficha">
+                2007<br>
+                IDPC / Johns Hopkins
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <hr class="rule">
+
+      <!-- ===== 6. 收藏与代理 ===== -->
+      <section class="section">
+        <div class="section__header">
+          <h2>收藏与代理</h2>
+        </div>
+
+        <div class="bio-two-col">
+          <div class="bio-two-col__left">
+            <h4>收藏机构</h4>
+            <ul class="ficha">
+              <li>新南威尔士州美术馆，悉尼</li>
+              <li>Banco de la República, 波哥大</li>
+              <li>MAMBO — 波哥大现代艺术博物馆</li>
+              <li>哥伦比亚国家博物馆</li>
+              <li>ESCALA, 埃塞克斯大学，英国</li>
+              <li>Colección Seguros Bolívar</li>
+              <li>Fundación Alzate Avendaño</li>
+            </ul>
+          </div>
+
+          <div class="bio-two-col__right">
+            <h4>代理画廊</h4>
+            <div class="ficha" style="margin-bottom: var(--s3);">
+              Galería Espacio Continuo
+            </div>
+
+            <h4>教学</h4>
+            <div class="ficha">
+              哈韦里亚纳大学（2007年至今）<br>
+              艺术史与艺术理论硕士 — 国立大学
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </article>
+
+</Layout>
+
+<style>
+  /* ===== Page base ===== */
+  .bio-page {
+    padding-top: calc(var(--s5) + 40px);
+  }
+
+  .bio-page__header {
+    margin-bottom: var(--s4);
+  }
+
+  .bio-page__header h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(2.4rem, 6vw, 5rem);
+    line-height: 1;
+    margin: var(--s1) 0;
+  }
+
+  /* ===== Opening: portrait + text grid ===== */
+  .bio-page__opening {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: var(--s4);
+    margin-bottom: var(--s4);
+    align-items: start;
+  }
+
+  .bio-page__portrait img {
+    width: 100%;
+    display: block;
+    filter: grayscale(15%);
+  }
+
+  .bio-page__intro .curatorial {
+    font-size: 1.15rem;
+    line-height: 1.8;
+  }
+
+  /* ===== Bio entries (year + info) ===== */
+  .bio-entry {
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    gap: var(--s3);
+    padding: var(--s2) 0;
+    border-bottom: 1px solid var(--paper-dark);
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    line-height: 1.7;
+    color: var(--ink-soft);
+  }
+
+  .bio-entry__year {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    color: var(--ash-light);
+    padding-top: 0.15rem;
+    letter-spacing: 0.05em;
+  }
+
+  .bio-entry__info {
+    color: var(--ink-soft);
+  }
+
+  .bio-entry__info em {
+    font-style: italic;
+  }
+
+  .bio-entry__info strong {
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  .bio-entry--highlight {
+    background-color: var(--white);
+  }
+
+  /* ===== Publications grid ===== */
+  .bio-publications {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--s3);
+  }
+
+  .bio-pub-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bio-pub-card__cover {
+    aspect-ratio: 3/4;
+    background-color: var(--paper-dark);
+    overflow: hidden;
+    margin-bottom: var(--s2);
+  }
+
+  .bio-pub-card__cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .bio-pub-card__cover--placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bio-pub-card__cover--placeholder span {
+    font-family: var(--mono);
+    font-size: 0.55rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ash-light);
+  }
+
+  .bio-pub-card__info h3 {
+    font-family: var(--mono);
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: var(--s1);
+  }
+
+  /* ===== Two-column (Collections + Representation) ===== */
+  .bio-two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--s5);
+  }
+
+  .bio-two-col h4 {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--ash);
+    margin-bottom: var(--s2);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .bio-two-col ul {
+    list-style: none;
+  }
+
+  .bio-two-col ul li {
+    padding: var(--s1) 0;
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  /* ===== hr overrides inside bio-page ===== */
+  .bio-page .rule--light {
+    border: none;
+    border-top: 1px solid var(--paper-dark);
+    margin: var(--s4) 0;
+  }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 768px) {
+    .bio-page__opening {
+      grid-template-columns: 1fr;
+    }
+
+    .bio-page__portrait {
+      max-width: 280px;
+    }
+
+    .bio-entry {
+      grid-template-columns: 56px 1fr;
+      gap: var(--s2);
+    }
+
+    .bio-publications {
+      grid-template-columns: 1fr;
+    }
+
+    .bio-two-col {
+      grid-template-columns: 1fr;
+      gap: var(--s4);
+    }
+  }
+</style>

@@ -1,0 +1,280 @@
+---
+import Layout from '../../../components/layout/Layout.astro';
+
+const lang = 'en' as const;
+
+/* ── Solo Exhibitions ── */
+const solo = [
+  { year: '2024', title: 'Encuentros en la fabrica de polvo', note: 'anthological, 80 works', venue: 'MAMU, Banco de la Republica', city: 'Bogota', slug: 'encuentros-fabrica-polvo-2024' },
+  { year: '2021', title: 'Distorted Environments', note: 'virtual', venue: 'VORTIC sala', city: 'UK', slug: null },
+  { year: '2019', title: 'En el fertil suelo — La travesia', note: null, venue: 'MAMBO', city: 'Bogota', slug: null },
+  { year: '2018', title: 'Pequeno Museo del Aerolito', note: null, venue: 'Planetario Distrital', city: 'Bogota', slug: null },
+  { year: '2017', title: 'Nuevas Floras Versalles', note: null, venue: 'Tuileries Garden (FIAC) / Arboretum de Chevreloup', city: 'Paris / Versailles', slug: 'nuevas-floras-versalles-2017' },
+  { year: '2017', title: 'En el fertil suelo', note: null, venue: 'Facade, Biblioteca Luis Angel Arango', city: 'Bogota', slug: null },
+  { year: '2015', title: 'En estado de coma', note: null, venue: 'Hospital San Juan de Dios', city: 'Bogota', slug: null },
+  { year: '2015', title: 'Infraleve', note: 'organ', venue: 'Church', city: 'Bogota', slug: null },
+  { year: '2014', title: 'Pequeno Museo del Aerolito', note: null, venue: 'Museo Nacional de Colombia', city: 'Bogota', slug: null },
+  { year: '2012', title: 'Urgencias', note: null, venue: 'Museo de Arte U. Nacional', city: 'Bogota', slug: null },
+  { year: '2011', title: 'Urgencias', note: null, venue: 'Sala U', city: 'Medellin', slug: null },
+  { year: '2011', title: 'Nuevas Floras do Sul', note: null, venue: null, city: 'Brazil', slug: null },
+  { year: '2007', title: 'En estado de coma', note: null, venue: 'Museo de Bogota / Planetario', city: 'Bogota', slug: 'en-estado-de-coma-2007' },
+  { year: '2006', title: 'En estado de coma', note: null, venue: 'Hall, Faculty of Medicine, U. Nacional', city: 'Bogota', slug: null },
+  { year: '2004', title: 'Desde adentro', note: null, venue: 'Galeria Alcuadrado', city: 'Bogota', slug: null },
+  { year: '2004', title: 'Nuevas Floras', note: null, venue: 'Galeria Jenny Vila', city: 'Cali', slug: null },
+  { year: '2003', title: 'Nuevas Floras — III Premio Luis Caballero', note: null, venue: 'Galeria Santa Fe', city: 'Bogota', slug: 'premio-luis-caballero-2003' },
+  { year: '2001', title: 'In Memoriam', note: null, venue: 'Alianza Colombo Francesa', city: 'Bogota', slug: null },
+  { year: '2000', title: 'El reino de este mundo', note: null, venue: 'MAMBO', city: 'Bogota', slug: null },
+];
+
+/* ── International Group Exhibitions ── */
+const group = [
+  { year: '2021', title: 'Female Voices of Latin America', note: null, venue: null, city: 'UK', slug: null },
+  { year: '2019', title: 'Urban Impulses: Latin American Photography', note: null, venue: "The Photographers' Gallery", city: 'London', slug: 'urban-impulses-london-2019' },
+  { year: '2018', title: 'Hibridos', note: null, venue: 'Deutsche Bank Gallery', city: 'New York', slug: null },
+  { year: '2018', title: 'RECORDAR', note: null, venue: 'Centro de Memoria, Paz y Reconciliacion', city: 'Bogota', slug: null },
+  { year: '2017', title: 'La vuelta', note: null, venue: 'Les Rencontres de la Photographie', city: 'Arles, France', slug: 'la-vuelta-arles-2017' },
+  { year: '2017', title: 'Formas de la Memoria', note: null, venue: 'Museo de Arte, Banco de la Republica', city: 'Bogota', slug: null },
+  { year: '2016', title: 'La Tierra como Recurso', note: null, venue: 'Museo Nacional de Colombia', city: 'Bogota', slug: null },
+  { year: '2015', title: 'Evidencia de los hechos', note: null, venue: 'Museo de Arte, Banco de la Republica', city: 'Bogota', slug: null },
+  { year: '2015', title: 'ARCO Madrid', note: null, venue: null, city: 'Madrid', slug: null },
+  { year: '2013', title: 'Palimpsestes', note: null, venue: 'Galerie Mor-Charpentier', city: 'Paris', slug: null },
+  { year: '2013', title: 'In Motion', note: null, venue: 'Galeria Bianconi', city: 'Milan', slug: null },
+  { year: '2013', title: 'El Dorado', note: null, venue: 'Teoretica (Costa Rica) / Centro Gentil Carioca (Rio)', city: 'International', slug: null },
+  { year: '2010', title: 'Cronica, 1995–2005', note: null, venue: 'Museo de Arte Moderno', city: 'Medellin', slug: null },
+  { year: '2009', title: 'X Havana Biennial', note: null, venue: null, city: 'Havana, Cuba', slug: null },
+  { year: '2008', title: 'Focus on Contemporary', note: null, venue: null, city: 'Sydney, Australia', slug: null },
+  { year: '2008', title: 'Colombian Contemporary Photography', note: null, venue: 'FotoFest', city: 'Houston, USA', slug: null },
+  { year: '2008', title: 'Once more with feeling', note: null, venue: "Photographers Gallery / U. Essex", city: 'London / Essex', slug: null },
+  { year: '2007', title: 'Displaced: Contemporary Art from Colombia', note: null, venue: 'Glynn Vivian Gallery', city: 'Swansea, Wales', slug: null },
+  { year: '2006', title: 'Otras miradas', note: null, venue: 'Casa de America Latina', city: 'Paris', slug: null },
+  { year: '2005', title: 'After the fact', note: null, venue: 'Berlin Photography Festival', city: 'Berlin', slug: null },
+  { year: '2005', title: 'Subverting Realities', note: null, venue: 'University of Essex', city: 'Essex, UK', slug: null },
+  { year: '2005', title: 'Otras miradas', note: null, venue: 'Memorial America Latina / Museo de Bellas Artes', city: 'Sao Paulo / Buenos Aires', slug: null },
+  { year: '2004', title: 'Otras Miradas', note: null, venue: null, city: 'Caracas / Santiago de Chile', slug: null },
+  { year: '2002', title: 'IV Caribbean Biennial', note: null, venue: null, city: 'Dominican Republic', slug: null },
+  { year: '2000', title: 'Escenas de Caza — VII Havana Biennial', note: null, venue: null, city: 'Havana, Cuba', slug: 'bienal-habana-2000' },
+];
+---
+
+<Layout lang={lang} title="Exhibitions" description="Complete exhibition history of Maria Elvira Escallon: solo and international group exhibitions, 1997–2024. Bogota, Paris, London, Havana, New York.">
+
+  <div class="expo-index">
+    <div class="container">
+
+      <!-- Page header -->
+      <header class="section__header">
+        <h1>Exhibitions</h1>
+        <span class="label">1997–2024</span>
+      </header>
+
+      <!-- ── Solo Exhibitions ── -->
+      <section class="expo-section">
+        <h3 class="expo-section__title">Solo Exhibitions</h3>
+        <div class="expo-list">
+          {solo.map((e) => (
+            <div class="expo-entry">
+              <div class="expo-entry__year">{e.year}</div>
+              <div class="expo-entry__info">
+                {e.slug ? (
+                  <a href={`/en/exhibitions/${e.slug}/`} class="expo-entry__link">
+                    <strong>{e.title}</strong>
+                  </a>
+                ) : (
+                  <strong>{e.title}</strong>
+                )}
+                {e.note && <span class="expo-entry__note"> ({e.note})</span>}
+                <span class="expo-entry__venue">
+                  {e.venue ? `${e.venue}, ${e.city}` : e.city}
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <hr class="rule rule--light" />
+
+      <!-- ── International Group Exhibitions ── -->
+      <section class="expo-section">
+        <h3 class="expo-section__title">International Group Exhibitions</h3>
+        <div class="expo-list">
+          {group.map((e) => (
+            <div class="expo-entry">
+              <div class="expo-entry__year">{e.year}</div>
+              <div class="expo-entry__info">
+                {e.slug ? (
+                  <a href={`/en/exhibitions/${e.slug}/`} class="expo-entry__link">
+                    <strong>{e.title}</strong>
+                  </a>
+                ) : (
+                  <strong>{e.title}</strong>
+                )}
+                {e.note && <span class="expo-entry__note"> ({e.note})</span>}
+                <span class="expo-entry__venue">
+                  {e.venue ? `${e.venue}, ${e.city}` : e.city}
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- ── Footer note ── -->
+      <div class="expo-footnote">
+        <p>For a complete list, please refer to the artist's CV available at <a href="https://www.espaciocontinuo.com" target="_blank" rel="noopener noreferrer">Galeria Espacio Continuo</a>.</p>
+      </div>
+
+    </div>
+  </div>
+
+</Layout>
+
+<style>
+  /* ── Page wrapper ── */
+  .expo-index {
+    padding-top: calc(var(--s5) + 40px);
+    padding-bottom: var(--s5);
+  }
+
+  /* ── Section titles ── */
+  .expo-section {
+    margin-top: var(--s4);
+  }
+
+  .expo-section__title {
+    font-family: var(--mono);
+    font-weight: 700;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--ash);
+    padding-bottom: var(--s2);
+    border-bottom: 1px solid var(--ink);
+    margin-bottom: 0;
+  }
+
+  /* ── Entry grid ── */
+  .expo-list {
+    margin: 0;
+  }
+
+  .expo-entry {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: var(--s3);
+    padding: var(--s2) 0;
+    border-bottom: 1px solid var(--paper-dark);
+    align-items: baseline;
+  }
+
+  .expo-entry:last-child {
+    border-bottom: 1px solid var(--ash-light);
+  }
+
+  .expo-entry__year {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    color: var(--ash-light);
+    letter-spacing: 0.05em;
+    flex-shrink: 0;
+  }
+
+  .expo-entry__info {
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    line-height: 1.7;
+    color: var(--ink);
+  }
+
+  .expo-entry__info strong {
+    font-weight: 700;
+    font-size: 0.8rem;
+  }
+
+  .expo-entry__note {
+    font-size: 0.7rem;
+    color: var(--ash);
+    font-style: italic;
+  }
+
+  .expo-entry__venue {
+    display: block;
+    font-size: 0.7rem;
+    color: var(--ash);
+    margin-top: 2px;
+    line-height: 1.5;
+  }
+
+  /* ── Links ── */
+  .expo-entry__link {
+    text-decoration: none;
+    color: var(--ink);
+    border-bottom: 1px solid var(--ash-light);
+    padding-bottom: 1px;
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .expo-entry__link:hover {
+    border-bottom-color: var(--ink);
+  }
+
+  .expo-entry__link strong {
+    font-weight: 700;
+  }
+
+  /* ── Footnote ── */
+  .expo-footnote {
+    margin-top: var(--s5);
+    padding-top: var(--s3);
+    border-top: 1px dashed var(--ash-light);
+  }
+
+  .expo-footnote p {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    color: var(--ash);
+    letter-spacing: 0.04em;
+    line-height: 1.8;
+    max-width: var(--text-w);
+  }
+
+  .expo-footnote a {
+    color: var(--ash);
+    border-bottom: 1px solid var(--ash-light);
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .expo-footnote a:hover {
+    color: var(--ink);
+    border-bottom-color: var(--ink);
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 768px) {
+    .expo-entry {
+      grid-template-columns: 56px 1fr;
+      gap: var(--s2);
+      padding: var(--s1) 0;
+    }
+
+    .expo-entry__year {
+      font-size: 0.7rem;
+    }
+
+    .expo-entry__info {
+      font-size: 0.75rem;
+    }
+
+    .expo-entry__info strong {
+      font-size: 0.75rem;
+    }
+
+    .expo-entry__venue {
+      font-size: 0.65rem;
+    }
+
+    .expo-section__title {
+      font-size: 0.65rem;
+    }
+  }
+</style>

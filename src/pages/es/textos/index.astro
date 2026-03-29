@@ -1,0 +1,236 @@
+---
+import Layout from '../../../components/layout/Layout.astro';
+
+const lang = 'es' as const;
+
+const textos = [
+  {
+    slug: 'jose-roca-columna-arena-28',
+    author: 'José Ignacio Roca',
+    title: 'María Elvira Escallón: El reino de este mundo',
+    source: 'Columna de Arena 28, Universes in Universe',
+    year: '2000',
+    excerpt: 'In Vitro resaltaba por contraste el deterioro que la desidia y el olvido habían significado para el sitio, pero al hacerlo también evidenciaba la artificialidad de la adecuación cosmética del espacio.',
+  },
+  {
+    slug: 'jose-roca-columna-arena-53',
+    author: 'José Ignacio Roca',
+    title: 'María Elvira Escallón: Nuevas Floras',
+    source: 'Columna de Arena 53, Universes in Universe',
+    year: '2003',
+    excerpt: 'Cada obra sigue su propio derrotero, único y preciso. Es posible, sin embargo, encontrar una constante en la obra de María Elvira Escallón: el cuestionamiento de los límites entre lo natural y lo cultural.',
+  },
+  {
+    slug: 'julia-buenaventura-polvo-eres',
+    author: 'Julia Buenaventura',
+    title: 'Polvo Eres: El correr del tiempo en María Elvira Escallón',
+    source: 'Colección Artistas Colombianos, MinCultura',
+    year: '2014',
+    excerpt: 'Esta monografía traza el arco de la práctica de Escallón a través del lente del tiempo y la materialidad, desde el hielo derretido de In Memoriam hasta la arena cayendo de Precipitación.',
+  },
+  {
+    slug: null,
+    author: 'Ivonne Pini',
+    title: 'María Elvira Escallón: Moving Through Boundaries',
+    source: 'ArtNexus 58',
+    year: '2005',
+    excerpt: 'Pini examina cómo Escallón atraviesa fronteras entre lo natural y lo construido, lo efímero y lo permanente, el espacio público y la memoria colectiva.',
+  },
+  {
+    slug: null,
+    author: 'Carmen María Jaramillo',
+    title: 'La consistencia material del Tiempo',
+    source: 'Banrepcultural',
+    year: '2004–2024',
+    excerpt: 'Conversación con María Elvira Escallón sobre la consistencia material del tiempo: cómo las obras hacen visible aquello que normalmente se escapa a la percepción.',
+  },
+  {
+    slug: null,
+    author: 'Ana María Lozano Rocha',
+    title: 'Encuentros en la fábrica de polvo',
+    source: 'MAMU, Banco de la República',
+    year: '2024',
+    excerpt: 'Texto curatorial de la primera exposición antológica de Escallón. Lozano Rocha organiza casi tres décadas de producción en seis ejes que revelan las constantes de una obra en permanente transformación.',
+  },
+];
+---
+
+<Layout lang={lang} title="Textos curatoriales" description="Ensayos y textos críticos sobre la obra de María Elvira Escallón. José Roca, Julia Buenaventura, Ivonne Pini, Carmen María Jaramillo, Ana María Lozano Rocha.">
+
+  <div class="textos-index">
+    <div class="container">
+
+      <!-- Header -->
+      <header class="section__header">
+        <h1>Textos</h1>
+        <span class="label">Ensayos y textos críticos</span>
+      </header>
+
+      <!-- Texts list -->
+      <div class="textos-list">
+        {textos.map((texto) => (
+          <div class="texto-card">
+            {texto.slug ? (
+              <a href={`/es/textos/${texto.slug}/`} class="texto-card__link">
+                <span class="texto-card__author">{texto.author}</span>
+                <h3 class="texto-card__title">{texto.title}</h3>
+                <span class="texto-card__source">{texto.source}, {texto.year}</span>
+                <p class="texto-card__excerpt">{texto.excerpt}</p>
+              </a>
+            ) : (
+              <div class="texto-card__inner">
+                <span class="texto-card__author">{texto.author}</span>
+                <h3 class="texto-card__title">{texto.title}</h3>
+                <span class="texto-card__source">{texto.source}, {texto.year}</span>
+                <p class="texto-card__excerpt">{texto.excerpt}</p>
+                <span class="texto-card__soon">Próximamente</span>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+
+      <!-- Footnote -->
+      <div class="textos-footnote">
+        <p>Para una bibliografía completa, consultar el catálogo de la exposición <em>Encuentros en la fábrica de polvo</em> (MAMU, 2024) y la monografía de la <em>Colección Artistas Colombianos</em> (MinCultura, 2014).</p>
+      </div>
+
+    </div>
+  </div>
+
+</Layout>
+
+<style>
+  /* ── Page wrapper ── */
+  .textos-index {
+    padding-top: calc(var(--s5) + 40px);
+    padding-bottom: var(--s5);
+  }
+
+  /* ── Texts list ── */
+  .textos-list {
+    margin-top: var(--s3);
+  }
+
+  /* ── Card ── */
+  .texto-card {
+    border-bottom: 1px solid var(--paper-dark);
+    transition: background-color 0.2s;
+  }
+
+  .texto-card:last-child {
+    border-bottom: 1px solid var(--ink);
+  }
+
+  .texto-card:hover {
+    background-color: var(--white);
+  }
+
+  .texto-card__link,
+  .texto-card__inner {
+    display: block;
+    padding: var(--s3) 0;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .texto-card__link {
+    cursor: pointer;
+  }
+
+  .texto-card__inner {
+    position: relative;
+  }
+
+  /* Author label */
+  .texto-card__author {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--ash);
+    display: block;
+    margin-bottom: var(--s1);
+  }
+
+  /* Title in serif italic */
+  .texto-card__title {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-style: italic;
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    line-height: 1.4;
+    text-transform: none;
+    letter-spacing: 0;
+    margin-bottom: var(--s1);
+    color: var(--ink);
+  }
+
+  /* Source and year in mono */
+  .texto-card__source {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    color: var(--ash-light);
+    letter-spacing: 0.04em;
+    display: block;
+    margin-bottom: var(--s2);
+  }
+
+  /* Excerpt */
+  .texto-card__excerpt {
+    font-family: var(--serif);
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--ink-soft);
+    max-width: var(--text-w);
+  }
+
+  /* "Próximamente" tag */
+  .texto-card__soon {
+    display: inline-block;
+    margin-top: var(--s2);
+    font-family: var(--mono);
+    font-size: 0.55rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--ash-light);
+    border: 1px solid var(--paper-dark);
+    padding: 0.2rem 0.6rem;
+  }
+
+  /* ── Footnote ── */
+  .textos-footnote {
+    margin-top: var(--s5);
+    padding-top: var(--s3);
+    border-top: 1px dashed var(--ash-light);
+  }
+
+  .textos-footnote p {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    color: var(--ash);
+    letter-spacing: 0.04em;
+    line-height: 1.8;
+    max-width: var(--text-w);
+  }
+
+  .textos-footnote em {
+    font-style: italic;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 768px) {
+    .texto-card__link,
+    .texto-card__inner {
+      padding: var(--s2) 0;
+    }
+
+    .texto-card__title {
+      font-size: 1.1rem;
+    }
+
+    .texto-card__excerpt {
+      font-size: 0.9rem;
+    }
+  }
+</style>

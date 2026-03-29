@@ -1,0 +1,116 @@
+---
+import Layout from '../../../components/layout/Layout.astro';
+const lang = 'es' as const;
+---
+
+<Layout
+  lang={lang}
+  title="Urban Impulses: Latin American Photography — Exposición"
+  description="Urban Impulses: Latin American Photography 1959–2016. The Photographers' Gallery, Londres. María Elvira Escallón. Junio — Octubre 2019."
+>
+
+  <article class="exhibition-page">
+    <div class="container">
+
+      <!-- Header -->
+      <header class="exh-header">
+        <span class="label">Exposición colectiva (internacional) — 2019</span>
+        <h1>Urban Impulses: Latin American Photography 1959–2016</h1>
+        <p class="exh-meta">The Photographers' Gallery · Londres, Reino Unido · Junio 13 — Octubre 5, 2019</p>
+      </header>
+
+      <!-- Galería -->
+      <div class="exh-gallery">
+        <div class="placeholder-img" style="aspect-ratio:16/9;">[ Pendiente: Vista de sala — Urban Impulses, The Photographers' Gallery ]</div>
+        <div class="placeholder-img" style="aspect-ratio:16/9;">[ Pendiente: Obras de María Elvira Escallón en la muestra ]</div>
+      </div>
+
+      <!-- Cuerpo -->
+      <div class="exh-body">
+        <div class="exh-text">
+
+          <h3>SOBRE LA EXPOSICIÓN</h3>
+          <p class="curatorial" style="margin-top: var(--s2);">
+            <em>Urban Impulses</em> presenta más de doscientas imágenes de la colección de
+            Leticia y Stanislas Poniatowski, con más de setenta fotógrafos y artistas.
+            La muestra abarca medio siglo de fotografía latinoamericana, examinando
+            eventos históricos significativos: la revolución cubana, las dictaduras
+            militares en Argentina, Brasil, Chile y Paraguay.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            La exposición está organizada en dos grandes temas: <strong>"Gritos"</strong> —
+            el rol de la fotografía documentando ausencias y resistencia contra regímenes
+            autoritarios — y <strong>"Pop-ular"</strong> — imágenes de cultura de consumo
+            masivo que revelan las tensiones entre tradición y modernización en
+            las ciudades latinoamericanas.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            The Photographers' Gallery es una de las instituciones de fotografía más
+            importantes del mundo. La inclusión de la obra de Escallón en esta muestra
+            panorámica confirma su relevancia dentro de la tradición fotográfica
+            latinoamericana contemporánea.
+          </p>
+
+          <h3 style="margin-top: var(--s4);">CURADURÍA</h3>
+          <p style="margin-top: var(--s2);">
+            María Wills y Alexis Fabry
+          </p>
+
+          <div class="exh-works">
+            <h3>OBRAS EXHIBIDAS</h3>
+            <ul>
+              <li><a href="/es/obra/desde-adentro/">Desde Adentro</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <aside class="exh-aside">
+          <h4>DATOS</h4>
+          <div class="ficha">
+            <strong>Urban Impulses: Latin American<br>Photography 1959–2016</strong><br>
+            Exposición colectiva<br><br>
+            The Photographers' Gallery<br>
+            Londres, Reino Unido<br><br>
+            Junio 13 — Octubre 5, 2019<br><br>
+            Curaduría: María Wills y Alexis Fabry<br><br>
+            Colección Leticia y Stanislas Poniatowski<br>
+            Más de 200 imágenes<br>
+            Más de 70 fotógrafos y artistas
+          </div>
+
+          <h4 style="margin-top: var(--s3);">IDIOMAS</h4>
+          <div class="ficha">
+            <a href="/en/exhibitions/urban-impulses-london-2019/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">
+              View in English
+            </a>
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </article>
+
+</Layout>
+
+<style>
+  .exhibition-page { padding-top: calc(var(--s5) + 40px); }
+  .exh-header { margin-bottom: var(--s4); }
+  .exh-header h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(2rem, 5vw, 3.5rem); margin: var(--s1) 0; }
+  .exh-meta { font-size: 0.8rem; color: var(--ash); letter-spacing: 0.03em; }
+  .exh-body { display: grid; grid-template-columns: 2fr 1fr; gap: var(--s5); margin-bottom: var(--s5); }
+  .exh-gallery { display: grid; gap: var(--s2); margin-bottom: var(--s4); }
+  .exh-gallery img { width: 100%; }
+  .exh-text h3 { font-size: 0.8rem; letter-spacing: 0.08em; color: var(--ash); padding-bottom: var(--s1); border-bottom: 1px solid var(--paper-dark); }
+  .exh-aside h4 { font-family: var(--mono); font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: var(--ash); margin-bottom: var(--s1); padding-bottom: var(--s1); border-bottom: 1px solid var(--paper-dark); }
+  .exh-works { margin-top: var(--s3); }
+  .exh-works li { padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark); }
+  .exh-works a { color: var(--moss); border-bottom: 1px solid var(--paper-dark); }
+  .exh-works a:hover { border-color: var(--moss); }
+  .exh-press { margin-top: var(--s3); }
+  .exh-press li { padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark); font-size: 0.8rem; }
+  .exh-press a { color: var(--moss); }
+  .placeholder-img { width: 100%; background: var(--paper-dark); display: flex; align-items: center; justify-content: center; color: var(--ash-light); font-family: var(--mono); font-size: 0.55rem; letter-spacing: 0.08em; text-transform: uppercase; }
+  @media (max-width: 768px) { .exh-body { grid-template-columns: 1fr; } }
+</style>

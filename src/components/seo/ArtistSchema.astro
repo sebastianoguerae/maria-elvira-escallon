@@ -1,0 +1,30 @@
+---
+import SchemaOrg from './SchemaOrg.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "María Elvira Escallón",
+  "givenName": "María Elvira",
+  "familyName": "Escallón",
+  "birthDate": "1954",
+  "birthPlace": { "@type": "Place", "name": "London, United Kingdom" },
+  "nationality": { "@type": "Country", "name": "Colombia" },
+  "jobTitle": "Visual Artist",
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "Pontificia Universidad Javeriana" },
+    { "@type": "CollegeOrUniversity", "name": "Universidad Nacional de Colombia" }
+  ],
+  "workLocation": { "@type": "Place", "name": "Bogotá, Colombia" },
+  "url": "https://mariaelviraescallon.com",
+  "image": "https://mariaelviraescallon.com/images/retrato.jpg",
+  "sameAs": [
+    "https://www.artsy.net/artist/maria-elvira-escallon",
+    "https://espaciocontinuo.co/artists/37-maria-elvira-escallon/",
+    "https://es.wikipedia.org/wiki/María_Elvira_Escallón",
+    "https://icaa.mfah.org/s/en/item/1091921"
+  ],
+  "knowsAbout": ["Sculpture", "Installation Art", "Photography", "Video Art", "Site-specific Art"]
+};
+---
+<SchemaOrg schema={schema} />

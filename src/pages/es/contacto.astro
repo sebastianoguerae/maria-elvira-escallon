@@ -1,0 +1,298 @@
+---
+import Layout from '../../components/layout/Layout.astro';
+
+const lang = 'es' as const;
+const title = 'Contacto';
+---
+
+<Layout
+  lang={lang}
+  title="Contacto"
+  description="Contacto y representación de María Elvira Escallón. Galería Espacio Continuo, Bogotá. Consultas de prensa, académicas y adquisiciones."
+>
+
+  <article class="contacto-page">
+    <div class="container">
+
+      <header class="contacto-page__header">
+        <p class="label">Contacto</p>
+        <h1>{title}</h1>
+      </header>
+
+      <div class="contacto-page__grid">
+
+        <!-- ==================== LEFT: INFO ==================== -->
+        <div class="contacto-info">
+
+          <div class="info-block">
+            <h3>Representación</h3>
+            <p class="info-block__name">Galería Espacio Continuo</p>
+            <p>Calle 80 No. 12-55</p>
+            <p>Bogotá, Colombia</p>
+            <p style="margin-top: var(--s1);">
+              <a href="https://www.espaciocontinuo.com" target="_blank" rel="noopener noreferrer" class="info-link">
+                espaciocontinuo.com →
+              </a>
+            </p>
+          </div>
+
+          <div class="info-block">
+            <h3>Consultas de prensa</h3>
+            <p>
+              <a href="mailto:prensa@mariaelviraescallon.com" class="info-link">
+                prensa@mariaelviraescallon.com
+              </a>
+            </p>
+          </div>
+
+          <div class="info-block">
+            <h3>Consultas académicas</h3>
+            <p>
+              <a href="mailto:info@mariaelviraescallon.com" class="info-link">
+                info@mariaelviraescallon.com
+              </a>
+            </p>
+          </div>
+
+          <div class="info-block">
+            <h3>Perfiles</h3>
+            <ul class="perfiles-list">
+              <li>
+                <a href="https://www.artsy.net/artist/maria-elvira-escallon" target="_blank" rel="noopener noreferrer" class="info-link">Artsy</a>
+              </li>
+              <li>
+                <a href="https://www.artnet.com/artists/maria-elvira-escallon/" target="_blank" rel="noopener noreferrer" class="info-link">Artnet</a>
+              </li>
+              <li>
+                <a href="https://icaa.mfah.org/s/en/item/1299155" target="_blank" rel="noopener noreferrer" class="info-link">ICAA / MFAH</a>
+              </li>
+              <li>
+                <a href="https://www.phillips.com/artist/19498/maria-elvira-escallon" target="_blank" rel="noopener noreferrer" class="info-link">Phillips</a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- ==================== RIGHT: FORM ==================== -->
+        <div class="contacto-form-wrapper">
+          <h3>Enviar mensaje</h3>
+          <form class="contacto-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact" />
+            <p style="display:none;"><input name="bot-field" /></p>
+
+            <div class="form-field">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" name="nombre" required autocomplete="name" />
+            </div>
+
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required autocomplete="email" />
+            </div>
+
+            <div class="form-field">
+              <label for="asunto">Asunto</label>
+              <select id="asunto" name="asunto" required>
+                <option value="" disabled selected>Seleccionar...</option>
+                <option value="general">Consulta general</option>
+                <option value="prensa">Prensa</option>
+                <option value="academico">Académico / Investigación</option>
+                <option value="adquisiciones">Adquisiciones</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+            </div>
+
+            <button type="submit" class="form-submit">Enviar</button>
+
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </article>
+
+</Layout>
+
+<style>
+  .contacto-page {
+    padding-top: calc(var(--s5) + 40px);
+  }
+
+  .contacto-page__header {
+    margin-bottom: var(--s4);
+  }
+
+  .contacto-page__header h1 {
+    font-family: var(--mono);
+    font-weight: 700;
+    font-size: clamp(2rem, 5vw, 4rem);
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    margin: var(--s1) 0;
+  }
+
+  .contacto-page__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--s5);
+    margin-bottom: var(--s5);
+  }
+
+  /* Info blocks */
+  .info-block {
+    margin-bottom: var(--s3);
+  }
+
+  .info-block h3 {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--ash);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+    margin-bottom: var(--s2);
+  }
+
+  .info-block p {
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    line-height: 1.8;
+    color: var(--ink-soft);
+  }
+
+  .info-block__name {
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  .info-link {
+    color: var(--moss);
+    border-bottom: 1px solid var(--paper-dark);
+    transition: color 0.2s;
+  }
+
+  .info-link:hover {
+    color: var(--ink);
+  }
+
+  .perfiles-list {
+    list-style: none;
+  }
+
+  .perfiles-list li {
+    padding: var(--s1) 0;
+    border-bottom: 1px solid var(--paper-dark);
+    font-family: var(--mono);
+    font-size: 0.85rem;
+  }
+
+  .perfiles-list li:last-child {
+    border-bottom: none;
+  }
+
+  /* Form */
+  .contacto-form-wrapper h3 {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--ash);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+    margin-bottom: var(--s3);
+  }
+
+  .contacto-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s2);
+  }
+
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .form-field label {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ash);
+  }
+
+  .form-field input,
+  .form-field select,
+  .form-field textarea {
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    color: var(--ink);
+    background: var(--white);
+    border: 1px solid var(--ink);
+    border-radius: 0;
+    padding: var(--s1) var(--s2);
+    outline: none;
+    transition: border-color 0.2s;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  .form-field input:focus,
+  .form-field select:focus,
+  .form-field textarea:focus {
+    border-color: var(--moss);
+    box-shadow: 0 0 0 1px var(--moss);
+  }
+
+  .form-field select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236B6560' fill='none' stroke-width='1.5'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right var(--s2) center;
+    padding-right: var(--s4);
+  }
+
+  .form-field textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  .form-submit {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    background: var(--ink);
+    color: var(--paper);
+    border: 2px solid var(--ink);
+    border-radius: 0;
+    padding: var(--s2) var(--s3);
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    align-self: flex-start;
+  }
+
+  .form-submit:hover {
+    background: transparent;
+    color: var(--ink);
+  }
+
+  @media (max-width: 768px) {
+    .contacto-page__grid {
+      grid-template-columns: 1fr;
+      gap: var(--s4);
+    }
+  }
+</style>

@@ -1,0 +1,527 @@
+---
+import Layout from '../../components/layout/Layout.astro';
+
+const lang = 'fr' as const;
+const title = 'Biographie';
+
+const retrato = (await import('../../assets/images/retrato/retrato.jpg')).default;
+const libroEnEstadoDeComa = (await import('../../assets/images/libros/en-estado-de-coma-libro.jpg')).default;
+---
+
+<Layout
+  lang={lang}
+  title="Biographie — Maria Elvira Escallon"
+  description="Biographie de Maria Elvira Escallon. Artiste visuelle colombienne. Nee a Londres, 1954. Sculpture, installation, photographie."
+>
+
+  <article class="bio-page">
+    <div class="container">
+
+      <!-- ===== 1. OUVERTURE ===== -->
+      <header class="bio-page__header">
+        <p class="label">Biographie</p>
+        <h1>Maria Elvira<br>Escallon</h1>
+      </header>
+
+      <div class="bio-page__opening">
+        <div class="bio-page__portrait">
+          <img src={retrato.src} alt="Portrait de Maria Elvira Escallon" loading="eager">
+        </div>
+        <div class="bio-page__intro">
+          <p class="curatorial" style="font-style: italic; font-size: 1.3rem;">
+            Maria Elvira Escallon n'illustre pas la violence. Elle pointe. Elle ne critique pas — elle met en evidence.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s3);">
+            Nee a Londres en 1954 et initialement formee en psychologie, Escallon construit depuis plus de quatre decennies une oeuvre situee a la frontiere entre l'histoire et la memoire. Sa pratique articule des processus sculpturaux, la photographie et le travail in situ pour reveler un present menace par des echecs historiques, etablissant des seuils qui connectent des temps et des fragments de recits a travers des elements de culture materielle.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            Ses interventions — parfois subtiles et imperceptibles, parfois monumentales — se deroulent dans des hopitaux abandonnes, des gares en ruine, des arbres natifs ou des batiments marques par la violence. La deterioration n'est pas son sujet : c'est sa matiere. La poussiere, la glace fondante, l'ecorce reprenant une sculpture baroque — chaque oeuvre rend le temps visible en tant que phenomene sculptural.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            Elle appartient a une generation d'artistes colombiens qui travaillent avec la memoire du conflit sans etre litteraux — aux cotes de figures comme Doris Salcedo, Oscar Munoz et Clemencia Echeverri — mais sa voix est distincte : plus silencieuse, plus documentaire, plus proche de l'archive que du geste.
+          </p>
+        </div>
+      </div>
+
+      <hr class="rule">
+
+      <!-- ===== 2. PRIX ET DISTINCTIONS ===== -->
+      <section class="section">
+        <div class="section__header">
+          <h2>Prix et distinctions</h2>
+          <span class="label">1993–2019</span>
+        </div>
+
+        <div class="bio-entry">
+          <span class="bio-entry__year">2019</span>
+          <div class="bio-entry__info">
+            Mention honorable — Bourse de creation individuelle, Ministere de la Culture
+          </div>
+        </div>
+
+        <div class="bio-entry">
+          <span class="bio-entry__year">2018</span>
+          <div class="bio-entry__info">
+            Nomination X Premio Luis Caballero — IDARTES (<em>En el fertil suelo</em>)
+          </div>
+        </div>
+
+        <div class="bio-entry">
+          <span class="bio-entry__year">2014</span>
+          <div class="bio-entry__info">
+            Bourse nationale de creation individuelle — MinCultura (<em>Aerolito</em>)
+          </div>
+        </div>
+
+        <div class="bio-entry">
+          <span class="bio-entry__year">2006</span>
+          <div class="bio-entry__info">
+            Premier prix, categorie Patrimoine — IDCT (<em>En estado de coma</em>)
+          </div>
+        </div>
+
+        <div class="bio-entry">
+          <span class="bio-entry__year">2005</span>
+          <div class="bio-entry__info">
+            Bourse nationale de creation individuelle — MinCultura (<em>En estado de coma</em>)
+          </div>
+        </div>
+
+        <div class="bio-entry bio-entry--highlight">
+          <span class="bio-entry__year">2003</span>
+          <div class="bio-entry__info">
+            <strong>Premier prix — III Premio Luis Caballero (<em>Nuevas Floras</em>)</strong>
+          </div>
+        </div>
+
+        <div class="bio-entry bio-entry--highlight">
+          <span class="bio-entry__year">1997</span>
+          <div class="bio-entry__info">
+            <strong>Premier prix — VIII Salon regional, Zone centrale (<em>In Vitro</em>)</strong>
+          </div>
+        </div>
+
+        <div class="bio-entry">
+          <span class="bio-entry__year">1993</span>
+          <div class="bio-entry__info">
+            Premiere bourse de creation individuelle — Colcultura (<em>Turismo en la frontera</em>)
+          </div>
+        </div>
+      </section>
+
+      <hr class="rule--light">
+
+      <!-- ===== 3. EXPOSITIONS INDIVIDUELLES SELECTIONNEES ===== -->
+      <section class="section">
+        <div class="section__header">
+          <h2>Expositions individuelles selectionnees</h2>
+          <span class="label">2000–2024</span>
+        </div>
+
+        <div class="bio-entry">
+          <span class="bio-entry__year">2024</span>
+          <div class="bio-entry__info">
+            <em>Encuentros en la fabrica de polvo</em> — MAMU, Banco de la Republica (80 oeuvres)
+          </div>
+        </div>
+
+        <div class="bio-entry">
+          <span class="bio-entry__year">2019</span>
+          <div class="bio-entry__info">
+            <em>En el fertil suelo</em> — MAMBO
+          </div>
+        </div>
+
+        <div class="bio-entry">
+          <span class="bio-entry__year">2017</span>
+          <div class="bio-entry__info">
+            <em>Nuevas Floras Versalles</em> — Jardin des Tuileries/FIAC, Arboretum de Chevreloup, France
+          </div>
+        </div>
+
+        <div class="bio-entry">
+          <span class="bio-entry__year">2014</span>
+          <div class="bio-entry__info">
+            <em>Pequeno Museo del Aerolito</em> — Museo Nacional de Colombia
+          </div>
+        </div>
+
+        <div class="bio-entry">
+          <span class="bio-entry__year">2012</span>
+          <div class="bio-entry__info">
+            <em>Urgencias</em> — Museo de Arte Universidad Nacional
+          </div>
+        </div>
+
+        <div class="bio-entry">
+          <span class="bio-entry__year">2007</span>
+          <div class="bio-entry__info">
+            <em>En estado de coma</em> — Museo de Bogota / Planetario Distrital
+          </div>
+        </div>
+
+        <div class="bio-entry">
+          <span class="bio-entry__year">2003</span>
+          <div class="bio-entry__info">
+            <em>Nuevas Floras</em> — Galeria Santa Fe (III Premio Luis Caballero)
+          </div>
+        </div>
+
+        <div class="bio-entry">
+          <span class="bio-entry__year">2000</span>
+          <div class="bio-entry__info">
+            <em>El reino de este mundo</em> — MAMBO
+          </div>
+        </div>
+      </section>
+
+      <hr class="rule--light">
+
+      <!-- ===== 4. EXPOSITIONS COLLECTIVES INTERNATIONALES ===== -->
+      <section class="section">
+        <div class="section__header">
+          <h2>Expositions collectives internationales</h2>
+          <span class="label">2000–2019</span>
+        </div>
+
+        <div class="bio-entry">
+          <span class="bio-entry__year">2019</span>
+          <div class="bio-entry__info">
+            <em>Urban Impulses: Latin American Photography</em> — The Photographers' Gallery, Londres
+          </div>
+        </div>
+
+        <div class="bio-entry">
+          <span class="bio-entry__year">2018</span>
+          <div class="bio-entry__info">
+            <em>Hibridos</em> — Deutsche Bank Gallery, New York
+          </div>
+        </div>
+
+        <div class="bio-entry">
+          <span class="bio-entry__year">2017</span>
+          <div class="bio-entry__info">
+            <em>La vuelta</em> — Les Rencontres de la Photographie, Arles, France
+          </div>
+        </div>
+
+        <div class="bio-entry">
+          <span class="bio-entry__year">2013</span>
+          <div class="bio-entry__info">
+            <em>Palimpsestes</em> — Galerie Mor-Charpentier, Paris / <em>In Motion</em> — Galeria Bianconi, Milan
+          </div>
+        </div>
+
+        <div class="bio-entry">
+          <span class="bio-entry__year">2009</span>
+          <div class="bio-entry__info">
+            X Biennale de La Havane
+          </div>
+        </div>
+
+        <div class="bio-entry">
+          <span class="bio-entry__year">2008</span>
+          <div class="bio-entry__info">
+            <em>Focus on Contemporary</em> — Sydney / <em>Colombian Contemporary Photography</em> — FotoFest, Houston
+          </div>
+        </div>
+
+        <div class="bio-entry">
+          <span class="bio-entry__year">2007</span>
+          <div class="bio-entry__info">
+            <em>Displaced: Contemporary Art from Colombia</em> — Glynn Vivian Gallery, Pays de Galles
+          </div>
+        </div>
+
+        <div class="bio-entry">
+          <span class="bio-entry__year">2000</span>
+          <div class="bio-entry__info">
+            VII Biennale de La Havane — <em>Escenas de Caza</em>
+          </div>
+        </div>
+      </section>
+
+      <hr class="rule">
+
+      <!-- ===== 5. PUBLICATIONS ===== -->
+      <section class="section">
+        <div class="section__header">
+          <h2>Publications</h2>
+          <span class="label">Monographies</span>
+        </div>
+
+        <div class="bio-publications">
+
+          <article class="bio-pub-card">
+            <div class="bio-pub-card__cover bio-pub-card__cover--placeholder">
+              <span>Coleccion Seguros Bolivar</span>
+            </div>
+            <div class="bio-pub-card__info">
+              <h3>Coleccion Seguros Bolivar de Arte Contemporaneo</h3>
+              <div class="ficha">
+                2018<br>
+                Dir. Jose Roca<br>
+                Monographie, 112 p.
+              </div>
+            </div>
+          </article>
+
+          <article class="bio-pub-card">
+            <div class="bio-pub-card__cover bio-pub-card__cover--placeholder">
+              <span>Polvo Eres</span>
+            </div>
+            <div class="bio-pub-card__info">
+              <h3>Polvo Eres: El correr del tiempo</h3>
+              <div class="ficha">
+                2014<br>
+                Julia Buenaventura<br>
+                MinCultura, 212 p.
+              </div>
+            </div>
+          </article>
+
+          <article class="bio-pub-card">
+            <div class="bio-pub-card__cover">
+              <img src={libroEnEstadoDeComa.src} alt="Couverture — En estado de coma" loading="lazy">
+            </div>
+            <div class="bio-pub-card__info">
+              <h3>En estado de coma</h3>
+              <div class="ficha">
+                2007<br>
+                IDPC / Johns Hopkins
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <hr class="rule">
+
+      <!-- ===== 6. COLLECTIONS ET REPRESENTATION ===== -->
+      <section class="section">
+        <div class="section__header">
+          <h2>Collections et representation</h2>
+        </div>
+
+        <div class="bio-two-col">
+          <div class="bio-two-col__left">
+            <h4>COLLECTIONS</h4>
+            <ul class="ficha">
+              <li>Art Gallery of NSW, Sydney</li>
+              <li>Banco de la Republica, Bogota</li>
+              <li>MAMBO — Museo de Arte Moderno de Bogota</li>
+              <li>Museo Nacional de Colombia</li>
+              <li>ESCALA, University of Essex, Royaume-Uni</li>
+              <li>Coleccion Seguros Bolivar</li>
+              <li>Fundacion Alzate Avendano</li>
+            </ul>
+          </div>
+
+          <div class="bio-two-col__right">
+            <h4>REPRESENTATION</h4>
+            <div class="ficha" style="margin-bottom: var(--s3);">
+              Galeria Espacio Continuo
+            </div>
+
+            <h4>ENSEIGNEMENT</h4>
+            <div class="ficha">
+              Universidad Javeriana (2007–present)<br>
+              MA Histoire et theorie de l'art — Universidad Nacional
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </article>
+
+</Layout>
+
+<style>
+  /* ===== Page base ===== */
+  .bio-page {
+    padding-top: calc(var(--s5) + 40px);
+  }
+
+  .bio-page__header {
+    margin-bottom: var(--s4);
+  }
+
+  .bio-page__header h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(2.4rem, 6vw, 5rem);
+    line-height: 1;
+    margin: var(--s1) 0;
+  }
+
+  /* ===== Opening: portrait + text grid ===== */
+  .bio-page__opening {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: var(--s4);
+    margin-bottom: var(--s4);
+    align-items: start;
+  }
+
+  .bio-page__portrait img {
+    width: 100%;
+    display: block;
+    filter: grayscale(15%);
+  }
+
+  .bio-page__intro .curatorial {
+    font-size: 1.15rem;
+    line-height: 1.8;
+  }
+
+  /* ===== Bio entries (year + info) ===== */
+  .bio-entry {
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    gap: var(--s3);
+    padding: var(--s2) 0;
+    border-bottom: 1px solid var(--paper-dark);
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    line-height: 1.7;
+    color: var(--ink-soft);
+  }
+
+  .bio-entry__year {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    color: var(--ash-light);
+    padding-top: 0.15rem;
+    letter-spacing: 0.05em;
+  }
+
+  .bio-entry__info {
+    color: var(--ink-soft);
+  }
+
+  .bio-entry__info em {
+    font-style: italic;
+  }
+
+  .bio-entry__info strong {
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  .bio-entry--highlight {
+    background-color: var(--white);
+  }
+
+  /* ===== Publications grid ===== */
+  .bio-publications {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--s3);
+  }
+
+  .bio-pub-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bio-pub-card__cover {
+    aspect-ratio: 3/4;
+    background-color: var(--paper-dark);
+    overflow: hidden;
+    margin-bottom: var(--s2);
+  }
+
+  .bio-pub-card__cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .bio-pub-card__cover--placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bio-pub-card__cover--placeholder span {
+    font-family: var(--mono);
+    font-size: 0.55rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ash-light);
+  }
+
+  .bio-pub-card__info h3 {
+    font-family: var(--mono);
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: var(--s1);
+  }
+
+  /* ===== Two-column (Collections + Representation) ===== */
+  .bio-two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--s5);
+  }
+
+  .bio-two-col h4 {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--ash);
+    margin-bottom: var(--s2);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .bio-two-col ul {
+    list-style: none;
+  }
+
+  .bio-two-col ul li {
+    padding: var(--s1) 0;
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  /* ===== hr overrides inside bio-page ===== */
+  .bio-page .rule--light {
+    border: none;
+    border-top: 1px solid var(--paper-dark);
+    margin: var(--s4) 0;
+  }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 768px) {
+    .bio-page__opening {
+      grid-template-columns: 1fr;
+    }
+
+    .bio-page__portrait {
+      max-width: 280px;
+    }
+
+    .bio-entry {
+      grid-template-columns: 56px 1fr;
+      gap: var(--s2);
+    }
+
+    .bio-publications {
+      grid-template-columns: 1fr;
+    }
+
+    .bio-two-col {
+      grid-template-columns: 1fr;
+      gap: var(--s4);
+    }
+  }
+</style>

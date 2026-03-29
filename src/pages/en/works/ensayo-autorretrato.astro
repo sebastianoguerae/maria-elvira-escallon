@@ -1,0 +1,181 @@
+---
+import Layout from '../../../components/layout/Layout.astro';
+import QuoteBlock from '../../../components/content/QuoteBlock.astro';
+
+const lang = 'en' as const;
+const title = 'Ensayo Autorretrato';
+---
+
+<Layout
+  lang={lang}
+  title="Ensayo Autorretrato — Work"
+  description="Ensayo Autorretrato (2022). Video, Espacio Continuo. The artist's hands search, scratch, destroy, and model. Maria Elvira Escallon."
+>
+
+  <article class="work-page">
+    <div class="container">
+
+      <!-- Header -->
+      <header class="work-page__header">
+        <p class="label">Work / 014</p>
+        <h1>{title}</h1>
+        <p class="work-page__meta">2022 &nbsp;/&nbsp; Video &nbsp;/&nbsp; Espacio Continuo</p>
+      </header>
+
+      <!-- Main gallery -->
+      <div class="work-page__gallery">
+        <div class="placeholder-img" style="aspect-ratio:16/9;">[ Pending: Ensayo Autorretrato — Video still, hands searching a wall ]</div>
+        <div class="placeholder-img" style="aspect-ratio:16/9;">[ Pending: Ensayo Autorretrato — Video still, hands destroying Venus de Milo mask ]</div>
+        <div class="placeholder-img" style="aspect-ratio:16/9;">[ Pending: Ensayo Autorretrato — Video still, arm modeled connecting to frailejon ]</div>
+      </div>
+
+      <!-- Text + Technical sheet -->
+      <div class="work-page__body">
+        <div class="work-page__text">
+
+          <p class="curatorial">
+            In video, the artist's hands search a wall, scratch with their nails, find a
+            nail. In another sequence, her hands systematically destroy a Venus de Milo
+            mask, then model an arm connecting not to a shoulder but to a frailejon — a
+            plant of the Colombian paramos. The self-portrait is constructed not through
+            the face but through the hands — the instruments of the artist's practice.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            The title — <em>Ensayo Autorretrato</em> (Self-Portrait Essay) — signals both
+            an attempt and a literary form. This is not a definitive self-portrait but an
+            essay, a trial, an exploration. The video unfolds as a series of gestures that
+            reveal the artist's relationship to materials, surfaces, and the act of making
+            itself. To scratch, to find, to destroy, to model — these are the verbs of
+            Escallon's practice, distilled into their most elemental form.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            The destruction of the Venus de Milo mask — an icon of classical Western beauty —
+            and the subsequent modeling of an arm that connects to a frailejon enact a
+            symbolic displacement: from European canonical beauty to Colombian highland
+            ecology, from the idealized human form to the hybrid human-vegetal body. The
+            frailejon, a plant endemic to the paramos of the Andes, becomes a surrogate for
+            the shoulder, suggesting that the artist's body extends into and is completed
+            by the landscape she inhabits.
+          </p>
+
+          <h3 style="margin-top: var(--s4);">CONTEXT</h3>
+          <p style="margin-top: var(--s2);">
+            Presented at Espacio Continuo in 2022, <em>Ensayo Autorretrato</em> is one of
+            Escallon's most explicitly personal works, yet it avoids conventional
+            self-portraiture entirely. The face never appears; identity is conveyed through
+            action rather than image. The work connects to <em>Encuentros con Seres
+            Notables</em> (also 2022) in its exploration of human-vegetal kinship, and
+            to the broader arc of Escallon's practice in its engagement with destruction
+            as a creative act.
+          </p>
+        </div>
+
+        <aside class="work-page__ficha">
+          <h4>TECHNICAL SHEET</h4>
+          <div class="ficha">
+            <strong>Ensayo Autorretrato</strong><br>
+            2022<br><br>
+            Video.<br><br>
+            Espacio Continuo
+          </div>
+
+          <h4 style="margin-top: var(--s3);">EXHIBITIONS</h4>
+          <div class="ficha">
+            Espacio Continuo, 2022
+          </div>
+
+          <h4 style="margin-top: var(--s3);">HOW TO CITE</h4>
+          <div class="ficha" style="font-size: 0.65rem;">
+            Escallon, M.E. (2022). <em>Ensayo Autorretrato</em>.
+            Video. Available at:
+            mariaelviraescallon.com/en/works/ensayo-autorretrato/
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </article>
+
+</Layout>
+
+<style>
+  .work-page {
+    padding-top: calc(var(--s5) + 40px);
+  }
+
+  .work-page__header {
+    margin-bottom: var(--s4);
+  }
+
+  .work-page__header h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin: var(--s1) 0;
+  }
+
+  .work-page__meta {
+    font-size: 0.75rem;
+    color: var(--ash);
+    letter-spacing: 0.03em;
+  }
+
+  .work-page__gallery {
+    display: grid;
+    gap: var(--s2);
+    margin-bottom: var(--s4);
+  }
+
+  .work-page__gallery img {
+    width: 100%;
+    display: block;
+  }
+
+  .work-page__body {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--s5);
+    margin-bottom: var(--s5);
+  }
+
+  .work-page__text h3 {
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    color: var(--ash);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .work-page__ficha h4 {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--ash);
+    margin-bottom: var(--s1);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .placeholder-img {
+    width: 100%;
+    background-color: var(--paper-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ash-light);
+    font-family: var(--mono);
+    font-size: 0.55rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 768px) {
+    .work-page__body {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

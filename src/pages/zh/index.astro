@@ -1,0 +1,159 @@
+---
+import Layout from '../../components/layout/Layout.astro';
+import QuoteBlock from '../../components/content/QuoteBlock.astro';
+
+const lang = 'zh' as const;
+
+const featuredWorks = [
+  {
+    slug: 'in-vitro',
+    title: 'IN VITRO',
+    year: '1997',
+    image: '/placeholder-in-vitro.jpg',
+    hasImage: true,
+    importedImage: (await import('../../assets/images/obras/in-vitro/in-vitro-01.jpg')).default,
+  },
+  {
+    slug: 'desde-adentro',
+    title: 'DESDE ADENTRO',
+    year: '2003',
+    hasImage: true,
+    importedImage: (await import('../../assets/images/obras/desde-adentro/desde-adentro-01.jpg')).default,
+  },
+  {
+    slug: 'nuevas-floras',
+    title: 'NUEVAS FLORAS',
+    year: '2003–2007',
+    hasImage: true,
+    importedImage: (await import('../../assets/images/obras/nuevas-floras/nuevas-floras-01.jpg')).default,
+  },
+  {
+    slug: 'en-estado-de-coma',
+    title: 'EN ESTADO DE COMA',
+    year: '2005–2007',
+    hasImage: false,
+  },
+  {
+    slug: 'aerolito',
+    title: 'PEQUEÑO MUSEO DEL AEROLITO',
+    year: '2014–2015',
+    hasImage: false,
+  },
+  {
+    slug: 'en-el-fertil-suelo',
+    title: 'EN EL FÉRTIL SUELO',
+    year: '2017–2018',
+    hasImage: false,
+  },
+];
+---
+
+<Layout lang={lang} description="玛丽亚·埃尔维拉·埃斯卡隆官方页面。哥伦比亚视觉艺术家。雕塑、装置、摄影与影像。">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero__content">
+      <p class="hero__label">视觉艺术家 / 波哥大，哥伦比亚</p>
+      <h1 class="hero__name">María Elvira<br>Escallón</h1>
+      <p class="hero__sub">对自然与文化之间界限的质疑</p>
+      <p class="hero__meta">
+        1954年生于伦敦 — 现居波哥大 &nbsp;/&nbsp;
+        雕塑 · 装置 · 摄影 · 影像
+      </p>
+    </div>
+  </section>
+
+  <div class="container">
+
+    <!-- 何塞·罗卡引文 -->
+    <QuoteBlock
+      annotation="策展文本"
+      quote="每件作品都遵循着自己独特而精确的轨迹。然而，在玛丽亚·埃尔维拉·埃斯卡隆的作品中可以找到一个恒定的主题：对自然与文化之间界限的质疑。"
+      cite="何塞·罗卡 — 《沙之柱》第53期，2003年"
+    />
+
+    <hr class="rule">
+
+    <!-- 作品 -->
+    <section class="section">
+      <div class="section__header">
+        <h2>作品</h2>
+        <span class="label">1997–2024</span>
+      </div>
+
+      <div class="works-grid">
+        {featuredWorks.map((work) => (
+          <a href={`/zh/zuopin/${work.slug}/`} class="work-card-link" style="text-decoration:none; color:inherit;">
+            <article class="work-card-static">
+              <div class="work-card__thumb">
+                {work.hasImage && work.importedImage ? (
+                  <img
+                    src={work.importedImage.src}
+                    alt={`${work.title} — María Elvira Escallón`}
+                    loading="lazy"
+                    style="width:100%;height:100%;object-fit:cover;"
+                  />
+                ) : (
+                  <div class="placeholder-img" style="height:100%;aspect-ratio:4/3;background:var(--paper-dark);display:flex;align-items:center;justify-content:center;color:var(--ash-light);font-family:var(--mono);font-size:0.55rem;letter-spacing:0.08em;text-transform:uppercase;">
+                    [ {work.title} ]
+                  </div>
+                )}
+              </div>
+              <div class="work-card__title">
+                <h3>{work.title}</h3>
+                <span class="year">{work.year}</span>
+              </div>
+            </article>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <hr class="rule">
+
+    <!-- 第二段引文 -->
+    <QuoteBlock
+      annotation="关于艺术家"
+      quote="她的作品融合了雕塑过程、摄影和现场创作，揭示了一个被历史失败所威胁的当下，在历史与记忆之间建立门槛，通过物质文化元素连接不同的时间和叙事碎片。"
+      cite="Colección Seguros Bolívar de Arte Contemporáneo, 2018"
+    />
+
+  </div>
+</Layout>
+
+<style>
+  .work-card-static {
+    cursor: pointer;
+    border-bottom: 1px solid var(--paper-dark);
+  }
+  .work-card-static .work-card__thumb {
+    width: 100%;
+    aspect-ratio: 4/3;
+    background-color: var(--paper-dark);
+    overflow: hidden;
+  }
+  .work-card-static .work-card__thumb img {
+    transition: opacity 0.4s ease;
+  }
+  .work-card-static:hover .work-card__thumb img {
+    opacity: 0.8;
+  }
+  .work-card-static .work-card__title {
+    padding: var(--s2) 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .work-card-static .work-card__title h3 {
+    font-family: var(--mono);
+    font-weight: 400;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .work-card-static .work-card__title .year {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    color: var(--ash-light);
+  }
+</style>

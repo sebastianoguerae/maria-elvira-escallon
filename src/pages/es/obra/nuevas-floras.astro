@@ -1,0 +1,261 @@
+---
+import Layout from '../../../components/layout/Layout.astro';
+import QuoteBlock from '../../../components/content/QuoteBlock.astro';
+import BeforeAfterComparator from '../../../components/interactive/BeforeAfterComparator';
+import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
+
+const lang = 'es' as const;
+const title = 'Nuevas Floras';
+
+const img1 = (await import('../../../assets/images/obras/nuevas-floras/nuevas-floras-01.jpg')).default;
+const img2 = (await import('../../../assets/images/obras/nuevas-floras/nuevas-floras-02.jpg')).default;
+---
+
+<Layout
+  lang={lang}
+  title="Nuevas Floras — Obra"
+  description="Nuevas Floras (2003–2007). Intervención escultórica sobre árboles nativos. III Premio Luis Caballero. María Elvira Escallón."
+>
+
+  <ArtworkSchema
+    title="Nuevas Floras"
+    year="2003"
+    medium="Intervención escultórica sobre árboles nativos, fotografía cromogénica"
+    dimensions="120 × 80 cm (fotografías)"
+    description="Intervención sobre árboles nativos vivos con tallas barrocas. III Premio Luis Caballero."
+    url="https://mariaelviraescallon.com/es/obra/nuevas-floras/"
+    collections={["Banco de la República, Bogotá", "ESCALA, Universidad de Essex, UK", "Colección Seguros Bolívar"]}
+  />
+
+  <article class="work-page">
+    <div class="container">
+
+      <!-- Header -->
+      <header class="work-page__header">
+        <p class="label">Obra / 005</p>
+        <h1>{title}</h1>
+        <p class="work-page__meta">2003–2007 &nbsp;/&nbsp; Intervención escultórica sobre árboles nativos &nbsp;/&nbsp; Dimensiones variables</p>
+      </header>
+
+      <!-- Galería principal -->
+      <div class="work-page__gallery">
+        <img src={img1.src} alt="Nuevas Floras — Árbol intervenido con talla barroca, serie fotográfica" loading="eager">
+        <img src={img2.src} alt="Nuevas Floras — Detalle de corteza reclamando la talla con el paso de los años" loading="lazy">
+        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pendiente: Nuevas Floras Versalles, 2017 ]</div>
+        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pendiente: Nuevas Floras Bristol ]</div>
+      </div>
+
+      <!-- Comparador temporal -->
+      <hr class="rule--dashed" style="margin: var(--s4) 0;">
+      <div style="margin-bottom: var(--s4);">
+        <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: var(--s3); padding-bottom: var(--s1); border-bottom: 1px solid var(--ink);">
+          <h3 style="font-family: var(--mono); font-size: 0.85rem; font-weight: 400; text-transform: uppercase; letter-spacing: 0.05em;">COMPARADOR TEMPORAL</h3>
+          <span class="label">El &aacute;rbol responde a la intervenci&oacute;n</span>
+        </div>
+        <BeforeAfterComparator client:visible beforeLabel="2003 — Intervención" afterLabel="2020 — La corteza reclama" title="Nuevas Floras — Transformación temporal" />
+      </div>
+
+      <!-- Texto + Ficha -->
+      <div class="work-page__body">
+        <div class="work-page__text">
+
+          <p class="curatorial">
+            En <em>Nuevas Floras</em> la artista interviene árboles nativos vivos con tallas
+            o prótesis de formas generalmente evocativas de la arquitectura clásica y elementos
+            comunes en altares de iglesias barrocas. Basándose en investigación previa, Escallón
+            determinó cómo proceder sin causar daño colateral, y los fragmentos tallados fueron
+            ejecutados por expertos.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            En un segundo momento, los seres arbóreos responden a la acción interrumpiendo la
+            intervención, hasta hacerla casi imperceptible. Su práctica crea un espacio donde
+            lo «salvaje» y lo manejado convergen en el tiempo, donde naturaleza y cultura están
+            inextricablemente ligadas. La artista continúa fotografiando estos árboles a medida
+            que crecen, haciéndolos participantes activos en la obra.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            <em>Nuevas Floras</em> se presenta como una serie de fotografías cromogénicas de gran
+            formato (120 x 80 cm) tomadas inmediatamente después de completar la intervención.
+            Desde 2004, el proyecto se convirtió en una propuesta nómada que responde a las
+            especificidades de la relación entre cultura y naturaleza de cada lugar, con versiones
+            realizadas en Colombia, Reino Unido (Bristol), y Francia (Versalles y Chevreloup).
+          </p>
+
+          <QuoteBlock
+            annotation="Texto curatorial — José Roca"
+            quote="La obra de Escallón se encamina a perturbar la naturalidad de ese orden. <em>Nuevas Floras</em> posee dos aspectos fundamentales: su carácter nómada — porque la idea de la que parte puede desarrollarse en otros espacios — y el concepto de temporalidad — porque su duración es indefinida."
+            cite="José Roca — Columna de Arena 53, agosto 2003"
+          />
+
+          <h3 style="margin-top: var(--s4);">CONTEXTO</h3>
+          <p style="margin-top: var(--s2);">
+            En 2003, Escallón ganó el Primer Premio del III Concurso Luis Caballero
+            con este proyecto, presentado en la Galería Santa Fe de Bogotá. El jurado,
+            compuesto por el curador José Roca entre otros, destacó la manera en que
+            la obra cuestiona los límites entre lo natural y lo cultural — una constante
+            en la trayectoria de la artista.
+          </p>
+          <p style="margin-top: var(--s2);">
+            Las tallas realizadas sobre los árboles evocan formas del repertorio
+            ornamental colonial colombiano — columnas salomónicas, volutas, elementos
+            de retablos barrocos — creando una tensión entre la historia cultural
+            impuesta y la respuesta orgánica del ser vivo que la absorbe y la
+            transforma. Con el paso de los años, la corteza reclama las tallas,
+            las deforma, las integra o las hace desaparecer.
+          </p>
+
+          <h3 style="margin-top: var(--s4);">VERSIONES</h3>
+          <ul style="margin-top: var(--s2); list-style: none;">
+            <li style="padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark);">
+              <strong>Nuevas Floras Colombia</strong> — 2003. Árboles nativos, Cordillera Central. Versión original.
+            </li>
+            <li style="padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark);">
+              <strong>Nuevas Floras do Sul</strong> — 2011. Brasil.
+            </li>
+            <li style="padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark);">
+              <strong>Nuevas Floras Bristol</strong> — Reino Unido.
+            </li>
+            <li style="padding: var(--s1) 0;">
+              <strong>Nuevas Floras Versalles</strong> — 2017. Jardín de Tullerías (FIAC), Arboretum de Chevreloup, Francia.
+            </li>
+          </ul>
+        </div>
+
+        <aside class="work-page__ficha">
+          <h4>FICHA TÉCNICA</h4>
+          <div class="ficha">
+            <strong>Nuevas Floras</strong><br>
+            2003–2007 (en curso)<br><br>
+            Intervención escultórica sobre árboles nativos vivos.
+            Talla en madera, prótesis.<br>
+            Documentación: fotografía cromogénica.<br><br>
+            120 × 80 cm (fotografías)<br>
+            Edición de 5<br>
+            Dimensiones variables (intervenciones)
+          </div>
+
+          <h4 style="margin-top: var(--s3);">PREMIOS</h4>
+          <div class="ficha">
+            III Premio Luis Caballero — Primer premio<br>
+            Galería Santa Fe, Bogotá, 2003
+          </div>
+
+          <h4 style="margin-top: var(--s3);">COLECCIONES</h4>
+          <div class="ficha">
+            Banco de la República, Bogotá<br>
+            ESCALA, Universidad de Essex, UK<br>
+            Colección Seguros Bolívar
+          </div>
+
+          <h4 style="margin-top: var(--s3);">EXPOSICIONES</h4>
+          <div class="ficha">
+            Encuentros en la fábrica de polvo — MAMU, 2024<br>
+            Nuevas Floras Versalles — FIAC/Tullerías, 2017<br>
+            III Premio Luis Caballero — Galería Santa Fe, 2003
+          </div>
+
+          <h4 style="margin-top: var(--s3);">TEXTOS</h4>
+          <div class="ficha">
+            <a href="/es/textos/jose-roca-columna-arena-53/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">
+              José Roca, Columna de Arena 53 (2003)
+            </a><br>
+            <a href="/es/publicaciones/coleccion-seguros-bolivar/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">
+              Monografía Seguros Bolívar (2018)
+            </a>
+          </div>
+
+          <h4 style="margin-top: var(--s3);">CÓMO CITAR</h4>
+          <div class="ficha" style="font-size: 0.65rem;">
+            Escallón, M.E. (2003–). <em>Nuevas Floras</em>.
+            Intervención escultórica. Disponible en:
+            mariaelviraescallon.com/es/obra/nuevas-floras/
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </article>
+
+</Layout>
+
+<style>
+  .work-page {
+    padding-top: calc(var(--s5) + 40px);
+  }
+
+  .work-page__header {
+    margin-bottom: var(--s4);
+  }
+
+  .work-page__header h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin: var(--s1) 0;
+  }
+
+  .work-page__meta {
+    font-size: 0.75rem;
+    color: var(--ash);
+    letter-spacing: 0.03em;
+  }
+
+  .work-page__gallery {
+    display: grid;
+    gap: var(--s2);
+    margin-bottom: var(--s4);
+  }
+
+  .work-page__gallery img {
+    width: 100%;
+    display: block;
+  }
+
+  .work-page__body {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--s5);
+    margin-bottom: var(--s5);
+  }
+
+  .work-page__text h3 {
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    color: var(--ash);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .work-page__ficha h4 {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--ash);
+    margin-bottom: var(--s1);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .placeholder-img {
+    width: 100%;
+    background-color: var(--paper-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ash-light);
+    font-family: var(--mono);
+    font-size: 0.55rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 768px) {
+    .work-page__body {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

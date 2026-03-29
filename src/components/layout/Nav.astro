@@ -1,0 +1,159 @@
+---
+import type { Lang } from '../../i18n/languages';
+import { languages } from '../../i18n/languages';
+import { t, getLocalizedPath, switchLanguage } from '../../i18n/utils';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+
+const navLinks = [
+  { key: 'nav.works' as const, basePath: '/obra/' },
+  { key: 'nav.biography' as const, basePath: '/biografia/' },
+  { key: 'nav.exhibitions' as const, basePath: '/exposiciones/' },
+  { key: 'nav.timeline' as const, basePath: '/linea-de-tiempo/' },
+  { key: 'nav.map' as const, basePath: '/mapa/' },
+  { key: 'nav.press' as const, basePath: '/prensa/' },
+  { key: 'nav.contact' as const, basePath: '/contacto/' },
+];
+---
+
+<nav class="nav">
+  <div class="nav__inner">
+    <a href={getLocalizedPath(lang, '/')} class="nav__logo">M.E. ESCALLÓN</a>
+    <ul class="nav__links">
+      {navLinks.map(({ key, basePath }) => (
+        <li><a href={getLocalizedPath(lang, basePath)}>{t(lang, key)}</a></li>
+      ))}
+      <li>
+        <div class="nav__lang-group">
+          {Object.entries(languages).map(([code, { label }]) => (
+            <a
+              href={switchLanguage(Astro.url.pathname, code as Lang)}
+              class:list={['nav__lang-item', { active: code === lang }]}
+            >
+              {code.toUpperCase()}
+            </a>
+          ))}
+        </div>
+      </li>
+    </ul>
+    <button class="nav__hamburger" aria-label={lang === 'es' ? 'Menú' : lang === 'fr' ? 'Menu' : lang === 'zh' ? '菜单' : 'Menu'}>
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="nav__mobile">
+    <button class="nav__mobile-close" aria-label="Close">&times;</button>
+    {navLinks.map(({ key, basePath }) => (
+      <a href={getLocalizedPath(lang, basePath)}>{t(lang, key)}</a>
+    ))}
+    <div class="nav__mobile-langs">
+      {Object.entries(languages).map(([code]) => (
+        <a href={switchLanguage(Astro.url.pathname, code as Lang)} class:list={[{ active: code === lang }]}>
+          {code.toUpperCase()}
+        </a>
+      ))}
+    </div>
+  </div>
+</nav>
+
+<script>
+  const hamburger = document.querySelector('.nav__hamburger');
+  const mobileMenu = document.querySelector('.nav__mobile');
+  const mobileClose = document.querySelector('.nav__mobile-close');
+
+  hamburger?.addEventListener('click', () => {
+    mobileMenu?.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  });
+
+  mobileClose?.addEventListener('click', () => {
+    mobileMenu?.classList.remove('open');
+    document.body.style.overflow = '';
+  });
+
+  mobileMenu?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu?.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+</script>
+
+<style>
+  .nav__lang-group {
+    display: flex;
+    gap: 0.5rem;
+  }
+  .nav__lang-item {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ash-light);
+    padding: 0.15rem 0.4rem;
+    border: 1px solid transparent;
+    transition: all 0.2s;
+  }
+  .nav__lang-item:hover {
+    color: var(--ink);
+    border-color: var(--ink);
+  }
+  .nav__lang-item.active {
+    color: var(--ink);
+    border-color: var(--ash);
+  }
+  .nav__mobile {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--paper);
+    z-index: 999;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  .nav__mobile.open {
+    display: flex;
+  }
+  .nav__mobile a {
+    font-family: var(--serif);
+    font-size: 1.8rem;
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .nav__mobile-close {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--ink);
+    font-family: var(--mono);
+  }
+  .nav__mobile-langs {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  .nav__mobile-langs a {
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    color: var(--ash);
+    padding: 0.3rem 0.6rem;
+    border: 1px solid var(--ash-light);
+  }
+  .nav__mobile-langs a.active {
+    color: var(--ink);
+    border-color: var(--ink);
+  }
+</style>

@@ -1,0 +1,201 @@
+---
+import Layout from '../../../components/layout/Layout.astro';
+import QuoteBlock from '../../../components/content/QuoteBlock.astro';
+import AudioPlayer from '../../../components/interactive/AudioPlayer';
+
+const lang = 'es' as const;
+const title = 'In Vitro';
+
+const img1 = (await import('../../../assets/images/obras/in-vitro/in-vitro-01.jpg')).default;
+---
+
+<Layout
+  lang={lang}
+  title="In Vitro — Obra"
+  description="In Vitro (1997). Instalación — espejo, vidrio. Estación de La Sabana, Bogotá. 1er Premio, VIII Salón Regional de Artistas. María Elvira Escallón."
+>
+
+  <article class="work-page">
+    <div class="container">
+
+      <!-- Header -->
+      <header class="work-page__header">
+        <p class="label">Obra / 001</p>
+        <h1>{title}</h1>
+        <p class="work-page__meta">1997 &nbsp;/&nbsp; Instalación — espejo, vidrio &nbsp;/&nbsp; Estación de La Sabana, Bogotá</p>
+      </header>
+
+      <!-- Galería principal -->
+      <div class="work-page__gallery">
+        <img src={img1.src} alt="In Vitro — Instalación con espejo en la Estación de La Sabana, Bogotá" loading="eager">
+        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pendiente: In Vitro — Vista del espejo duplicando el espacio renovado ]</div>
+        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pendiente: In Vitro — Detalle del límite entre zona renovada y zona en ruinas ]</div>
+      </div>
+
+      <!-- Audio -->
+      <div style="margin: var(--s3) 0;">
+        <AudioPlayer client:visible title="María Elvira sobre In Vitro" />
+      </div>
+
+      <!-- Texto + Ficha -->
+      <div class="work-page__body">
+        <div class="work-page__text">
+
+          <p class="curatorial">
+            En los corredores de la Estación de La Sabana, Escallón instaló un espejo en el
+            límite entre el edificio renovado y el área deteriorada, bloqueando la visión del
+            deterioro y duplicando la sección renovada. El espejo estableció un límite que
+            oculta la evidencia de la desidia estatal hacia un edificio patrimonial en ruinas.
+            La ilusión creada sugiere una continuidad espacial donde no existe ninguna.
+          </p>
+
+          <QuoteBlock
+            annotation="Texto curatorial — José Roca"
+            quote="'In Vitro' resaltaba por contraste el deterioro que la desidia y el olvido habían significado para el sitio, pero al hacerlo también evidenciaba la artificialidad de la adecuación cosmética del espacio."
+            cite="José Roca — Columna de Arena 28, julio 2000"
+          />
+
+          <h3 style="margin-top: var(--s4);">CONTEXTO</h3>
+          <p style="margin-top: var(--s2);">
+            Esta fue la primera obra mayor reconocida de Escallón, marcando su transición de la
+            bidimensionalidad al espacio real. La Estación de La Sabana, edificio patrimonial
+            de 1917 diseñado por el arquitecto Mariano Santamaría, había sido parcialmente
+            renovada para albergar exposiciones mientras el resto permanecía en ruinas.
+          </p>
+          <p style="margin-top: var(--s2);">
+            La intervención revelaba, por medio de la duplicación especular, la brecha entre
+            lo que se muestra y lo que se oculta en las políticas de conservación del patrimonio
+            en Colombia. El espejo no solo duplicaba el espacio renovado — también hacía
+            desaparecer la ruina, exponiendo la lógica cosmética que rige la relación del
+            Estado con sus edificios históricos.
+          </p>
+          <p style="margin-top: var(--s2);">
+            <em>In Vitro</em> anticipó temas centrales en la obra posterior de Escallón:
+            la tensión entre apariencia y realidad, el patrimonio arquitectónico en abandono,
+            y la capacidad del arte para hacer visible lo que el poder pretende ocultar.
+          </p>
+        </div>
+
+        <aside class="work-page__ficha">
+          <h4>FICHA TÉCNICA</h4>
+          <div class="ficha">
+            <strong>In Vitro</strong><br>
+            1997<br><br>
+            Instalación.<br>
+            Espejo, vidrio.<br><br>
+            Estación de La Sabana, Bogotá.<br>
+            Dimensiones variables.
+          </div>
+
+          <h4 style="margin-top: var(--s3);">PREMIOS</h4>
+          <div class="ficha">
+            1er Premio — VIII Salón Regional de Artistas<br>
+            Zona Centro, 1997
+          </div>
+
+          <h4 style="margin-top: var(--s3);">EXPOSICIONES</h4>
+          <div class="ficha">
+            VIII Salón Regional de Artistas — Zona Centro, 1997<br>
+            Estación de La Sabana, Bogotá
+          </div>
+
+          <h4 style="margin-top: var(--s3);">TEXTOS</h4>
+          <div class="ficha">
+            <a href="/es/textos/jose-roca-columna-arena-28/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">
+              José Roca, Columna de Arena 28 (2000)
+            </a>
+          </div>
+
+          <h4 style="margin-top: var(--s3);">CÓMO CITAR</h4>
+          <div class="ficha" style="font-size: 0.65rem;">
+            Escallón, M.E. (1997). <em>In Vitro</em>.
+            Instalación. Disponible en:
+            mariaelviraescallon.com/es/obra/in-vitro/
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </article>
+
+</Layout>
+
+<style>
+  .work-page {
+    padding-top: calc(var(--s5) + 40px);
+  }
+
+  .work-page__header {
+    margin-bottom: var(--s4);
+  }
+
+  .work-page__header h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin: var(--s1) 0;
+  }
+
+  .work-page__meta {
+    font-size: 0.75rem;
+    color: var(--ash);
+    letter-spacing: 0.03em;
+  }
+
+  .work-page__gallery {
+    display: grid;
+    gap: var(--s2);
+    margin-bottom: var(--s4);
+  }
+
+  .work-page__gallery img {
+    width: 100%;
+    display: block;
+  }
+
+  .work-page__body {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--s5);
+    margin-bottom: var(--s5);
+  }
+
+  .work-page__text h3 {
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    color: var(--ash);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .work-page__ficha h4 {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--ash);
+    margin-bottom: var(--s1);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .placeholder-img {
+    width: 100%;
+    background-color: var(--paper-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ash-light);
+    font-family: var(--mono);
+    font-size: 0.55rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 768px) {
+    .work-page__body {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

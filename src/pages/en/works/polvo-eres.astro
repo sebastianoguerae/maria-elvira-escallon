@@ -1,0 +1,185 @@
+---
+import Layout from '../../../components/layout/Layout.astro';
+import QuoteBlock from '../../../components/content/QuoteBlock.astro';
+
+const lang = 'en' as const;
+const title = 'Polvo Eres';
+---
+
+<Layout
+  lang={lang}
+  title="Polvo Eres — Work"
+  description="Polvo Eres (2024). Wall carving — brick, plaster, paint, ~60x400cm, MAMU. Maria Elvira Escallon."
+>
+
+  <article class="work-page">
+    <div class="container">
+
+      <!-- Header -->
+      <header class="work-page__header">
+        <p class="label">Work / 012</p>
+        <h1>{title}</h1>
+        <p class="work-page__meta">2024 &nbsp;/&nbsp; Wall carving — brick, plaster, paint &nbsp;/&nbsp; ~60 x 400 cm</p>
+      </header>
+
+      <!-- Main gallery -->
+      <div class="work-page__gallery">
+        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pending: Polvo Eres — Words carved into museum wall, exposing brick layer ]</div>
+        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pending: Polvo Eres — Detail of carved lettering and debris at floor level ]</div>
+        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pending: Polvo Eres — Installation view at MAMU ]</div>
+      </div>
+
+      <!-- Text + Technical sheet -->
+      <div class="work-page__body">
+        <div class="work-page__text">
+
+          <p class="curatorial">
+            Words carved directly into a museum wall, exposing internal layers — beneath
+            white paint, the brick layer is revealed — while debris accumulates at floor
+            level. The biblical phrase "Thou art dust and unto dust thou shalt return"
+            is inscribed not on the wall's surface but into its body, requiring the
+            destruction of the wall itself to make the text legible.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            The act of carving reverses the usual relationship between writing and its
+            support. Rather than adding material (ink, paint) to a surface, Escallon
+            removes material, creating text through subtraction. The words emerge from
+            the wall's own substance — plaster, brick, the accumulated layers of
+            institutional architecture — making the medium and the message inseparable.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            The debris that falls to the floor as the carving proceeds becomes part of
+            the work: a material enactment of the very phrase being inscribed. The dust
+            from which we come and to which we return is not merely invoked but produced,
+            accumulating beneath the text as its inevitable byproduct. The wall itself
+            begins its return to dust in the act of speaking about it.
+          </p>
+
+          <h3 style="margin-top: var(--s4);">CONTEXT</h3>
+          <p style="margin-top: var(--s2);">
+            Presented at MAMU in 2024, <em>Polvo Eres</em> is a site-specific intervention
+            that will be destroyed when the exhibition ends and the wall is repaired or
+            demolished. This built-in impermanence reinforces the work's meditation on
+            mortality and the transience of all material forms — including the museum wall
+            that typically serves as a neutral, permanent backdrop for art.
+          </p>
+          <p style="margin-top: var(--s2);">
+            The work connects to Escallon's broader investigation of institutional
+            architecture as material rather than mere container, and to her sustained
+            engagement with processes of decay, erosion, and return to elemental states
+            — themes present across works from <em>In Memoriam</em> to <em>Precipitacion
+            de Arenas</em>.
+          </p>
+        </div>
+
+        <aside class="work-page__ficha">
+          <h4>TECHNICAL SHEET</h4>
+          <div class="ficha">
+            <strong>Polvo Eres</strong><br>
+            2024<br><br>
+            Wall carving.<br>
+            Brick, plaster, paint.<br><br>
+            ~60 x 400 cm<br>
+            Site-specific, MAMU
+          </div>
+
+          <h4 style="margin-top: var(--s3);">EXHIBITIONS</h4>
+          <div class="ficha">
+            Encounters in the Dust Factory — MAMU, 2024
+          </div>
+
+          <h4 style="margin-top: var(--s3);">HOW TO CITE</h4>
+          <div class="ficha" style="font-size: 0.65rem;">
+            Escallon, M.E. (2024). <em>Polvo Eres</em>.
+            Wall carving. Available at:
+            mariaelviraescallon.com/en/works/polvo-eres/
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </article>
+
+</Layout>
+
+<style>
+  .work-page {
+    padding-top: calc(var(--s5) + 40px);
+  }
+
+  .work-page__header {
+    margin-bottom: var(--s4);
+  }
+
+  .work-page__header h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin: var(--s1) 0;
+  }
+
+  .work-page__meta {
+    font-size: 0.75rem;
+    color: var(--ash);
+    letter-spacing: 0.03em;
+  }
+
+  .work-page__gallery {
+    display: grid;
+    gap: var(--s2);
+    margin-bottom: var(--s4);
+  }
+
+  .work-page__gallery img {
+    width: 100%;
+    display: block;
+  }
+
+  .work-page__body {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--s5);
+    margin-bottom: var(--s5);
+  }
+
+  .work-page__text h3 {
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    color: var(--ash);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .work-page__ficha h4 {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--ash);
+    margin-bottom: var(--s1);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .placeholder-img {
+    width: 100%;
+    background-color: var(--paper-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ash-light);
+    font-family: var(--mono);
+    font-size: 0.55rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 768px) {
+    .work-page__body {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

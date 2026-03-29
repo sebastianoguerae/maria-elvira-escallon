@@ -1,0 +1,180 @@
+---
+import Layout from '../../../components/layout/Layout.astro';
+import QuoteBlock from '../../../components/content/QuoteBlock.astro';
+
+const lang = 'en' as const;
+const title = 'Aerolito';
+---
+
+<Layout
+  lang={lang}
+  title="Aerolito — Work"
+  description="Aerolito (2014–2015). Research, installation, archives tracking the history of a meteorite that fell in Boyaca in 1810. Maria Elvira Escallon."
+>
+
+  <article class="work-page">
+    <div class="container">
+
+      <!-- Header -->
+      <header class="work-page__header">
+        <p class="label">Work / 007</p>
+        <h1>{title}</h1>
+        <p class="work-page__meta">2014–2015 &nbsp;/&nbsp; Research, installation, archives &nbsp;/&nbsp; Variable dimensions</p>
+      </header>
+
+      <!-- Main gallery -->
+      <div class="work-page__gallery">
+        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pending: Aerolito — Iron replica of the meteorite ]</div>
+        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pending: Aerolito — Archival documents and photographic research ]</div>
+        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pending: Aerolito — Installation view at MAMU 2024 ]</div>
+      </div>
+
+      <!-- Text + Technical sheet -->
+      <div class="work-page__body">
+        <div class="work-page__text">
+
+          <p class="curatorial">
+            Comprising various departments, collections, historical and photographic archives
+            tracking the history of the meteorite that fell in Boyaca on Holy Saturday 1810.
+            The project traces the extraordinary journey of this celestial object — from its
+            fall on the eve of Colombian independence to its current location at the Museo
+            Nacional — through a meticulous investigation that interweaves scientific, colonial,
+            and national narratives.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            At the center of the installation stands an iron replica of the aerolite from the
+            Museo Nacional. This duplicate — made of the same material as the original but
+            produced through human craft rather than cosmic accident — raises questions about
+            authenticity, reproduction, and the meaning we assign to objects based on their
+            origin stories.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            The most complete version of the installation was presented at MAMU in 2024,
+            where the full scope of the research — documents, photographs, the replica,
+            and contextual materials — could be experienced as an integrated whole. The work
+            operates simultaneously as art, archive, and investigation, blurring the
+            boundaries between these categories.
+          </p>
+
+          <h3 style="margin-top: var(--s4);">CONTEXT</h3>
+          <p style="margin-top: var(--s2);">
+            The meteorite's fall on Holy Saturday 1810 — months before Colombia's declaration
+            of independence — gave the object a symbolic charge that has been reinterpreted
+            across centuries. Escallon's research reveals how a natural phenomenon became
+            entangled with political mythology, scientific ambition, and the formation of
+            national collections.
+          </p>
+        </div>
+
+        <aside class="work-page__ficha">
+          <h4>TECHNICAL SHEET</h4>
+          <div class="ficha">
+            <strong>Aerolito</strong><br>
+            2014–2015<br><br>
+            Research, installation, archives.<br>
+            Iron replica of the aerolite from Museo Nacional.<br>
+            Historical and photographic archives.<br><br>
+            Variable dimensions
+          </div>
+
+          <h4 style="margin-top: var(--s3);">EXHIBITIONS</h4>
+          <div class="ficha">
+            Encounters in the Dust Factory — MAMU, 2024<br>
+            (most complete installation)
+          </div>
+
+          <h4 style="margin-top: var(--s3);">HOW TO CITE</h4>
+          <div class="ficha" style="font-size: 0.65rem;">
+            Escallon, M.E. (2014–2015). <em>Aerolito</em>.
+            Research, installation, archives. Available at:
+            mariaelviraescallon.com/en/works/aerolito/
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </article>
+
+</Layout>
+
+<style>
+  .work-page {
+    padding-top: calc(var(--s5) + 40px);
+  }
+
+  .work-page__header {
+    margin-bottom: var(--s4);
+  }
+
+  .work-page__header h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin: var(--s1) 0;
+  }
+
+  .work-page__meta {
+    font-size: 0.75rem;
+    color: var(--ash);
+    letter-spacing: 0.03em;
+  }
+
+  .work-page__gallery {
+    display: grid;
+    gap: var(--s2);
+    margin-bottom: var(--s4);
+  }
+
+  .work-page__gallery img {
+    width: 100%;
+    display: block;
+  }
+
+  .work-page__body {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--s5);
+    margin-bottom: var(--s5);
+  }
+
+  .work-page__text h3 {
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    color: var(--ash);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .work-page__ficha h4 {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--ash);
+    margin-bottom: var(--s1);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .placeholder-img {
+    width: 100%;
+    background-color: var(--paper-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ash-light);
+    font-family: var(--mono);
+    font-size: 0.55rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 768px) {
+    .work-page__body {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

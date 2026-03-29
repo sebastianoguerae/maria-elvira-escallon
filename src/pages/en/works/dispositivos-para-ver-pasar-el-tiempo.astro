@@ -1,0 +1,177 @@
+---
+import Layout from '../../../components/layout/Layout.astro';
+import QuoteBlock from '../../../components/content/QuoteBlock.astro';
+
+const lang = 'en' as const;
+const title = 'Dispositivos para Ver Pasar el Tiempo';
+---
+
+<Layout
+  lang={lang}
+  title="Dispositivos para Ver Pasar el Tiempo — Work"
+  description="Dispositivos para Ver Pasar el Tiempo (2020). Installation, sculpture. Devices for watching time pass. Maria Elvira Escallon."
+>
+
+  <article class="work-page">
+    <div class="container">
+
+      <!-- Header -->
+      <header class="work-page__header">
+        <p class="label">Work / 009</p>
+        <h1>{title}</h1>
+        <p class="work-page__meta">2020 &nbsp;/&nbsp; Installation, sculpture &nbsp;/&nbsp; Variable dimensions</p>
+      </header>
+
+      <!-- Main gallery -->
+      <div class="work-page__gallery">
+        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pending: Dispositivos para Ver Pasar el Tiempo — Overview of installation ]</div>
+        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pending: Dispositivos para Ver Pasar el Tiempo — Detail of sculptural device ]</div>
+        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pending: Dispositivos para Ver Pasar el Tiempo — Detail of temporal mechanism ]</div>
+      </div>
+
+      <!-- Text + Technical sheet -->
+      <div class="work-page__body">
+        <div class="work-page__text">
+
+          <p class="curatorial">
+            Is it possible to create a device to see time pass? This question articulates
+            a series of pieces that seek to make the intangible tangible. The work proposes
+            objects and mechanisms through which the passage of time — normally invisible,
+            perceivable only through its effects — becomes something one can witness directly.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            Each device in the series approaches the problem from a different angle,
+            using material processes — erosion, accumulation, dissolution, transformation —
+            as instruments for rendering time visible. The pieces function not as clocks
+            that measure time abstractly but as apparatuses that embody it materially,
+            making duration something experienced rather than counted.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            The title itself — <em>Devices for Watching Time Pass</em> — frames the work
+            as both poetic proposition and technical challenge. Escallon's devices are not
+            scientific instruments but sculptural ones, and their effectiveness lies not in
+            precision but in presence: they ask the viewer to pause and witness processes
+            that unfold at a pace radically different from the accelerated rhythms of
+            contemporary life.
+          </p>
+
+          <h3 style="margin-top: var(--s4);">CONTEXT</h3>
+          <p style="margin-top: var(--s2);">
+            Created in 2020, during a year of global pause and forced stillness, the work
+            resonates with a collective experience of time distorted — stretched, compressed,
+            made strange. The series extends Escallon's long engagement with temporality,
+            connecting to earlier works like <em>In Memoriam</em> (ice dissolving over 20
+            hours) and anticipating <em>Precipitacion de Arenas</em> (sand accumulating
+            over the duration of an exhibition).
+          </p>
+        </div>
+
+        <aside class="work-page__ficha">
+          <h4>TECHNICAL SHEET</h4>
+          <div class="ficha">
+            <strong>Dispositivos para Ver Pasar el Tiempo</strong><br>
+            2020<br><br>
+            Installation, sculpture.<br><br>
+            Variable dimensions
+          </div>
+
+          <h4 style="margin-top: var(--s3);">EXHIBITIONS</h4>
+          <div class="ficha">
+            [ Pending exhibition data ]
+          </div>
+
+          <h4 style="margin-top: var(--s3);">HOW TO CITE</h4>
+          <div class="ficha" style="font-size: 0.65rem;">
+            Escallon, M.E. (2020). <em>Dispositivos para Ver Pasar el Tiempo</em>.
+            Installation, sculpture. Available at:
+            mariaelviraescallon.com/en/works/dispositivos-para-ver-pasar-el-tiempo/
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </article>
+
+</Layout>
+
+<style>
+  .work-page {
+    padding-top: calc(var(--s5) + 40px);
+  }
+
+  .work-page__header {
+    margin-bottom: var(--s4);
+  }
+
+  .work-page__header h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin: var(--s1) 0;
+  }
+
+  .work-page__meta {
+    font-size: 0.75rem;
+    color: var(--ash);
+    letter-spacing: 0.03em;
+  }
+
+  .work-page__gallery {
+    display: grid;
+    gap: var(--s2);
+    margin-bottom: var(--s4);
+  }
+
+  .work-page__gallery img {
+    width: 100%;
+    display: block;
+  }
+
+  .work-page__body {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--s5);
+    margin-bottom: var(--s5);
+  }
+
+  .work-page__text h3 {
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    color: var(--ash);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .work-page__ficha h4 {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--ash);
+    margin-bottom: var(--s1);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .placeholder-img {
+    width: 100%;
+    background-color: var(--paper-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ash-light);
+    font-family: var(--mono);
+    font-size: 0.55rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 768px) {
+    .work-page__body {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

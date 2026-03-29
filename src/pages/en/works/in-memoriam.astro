@@ -1,0 +1,178 @@
+---
+import Layout from '../../../components/layout/Layout.astro';
+import QuoteBlock from '../../../components/content/QuoteBlock.astro';
+
+const lang = 'en' as const;
+const title = 'In Memoriam';
+---
+
+<Layout
+  lang={lang}
+  title="In Memoriam — Work"
+  description="In Memoriam (2001). Ephemeral sculpture — ice, glass, water, 300kg, 20 hours. Maria Elvira Escallon."
+>
+
+  <article class="work-page">
+    <div class="container">
+
+      <!-- Header -->
+      <header class="work-page__header">
+        <p class="label">Work / 003</p>
+        <h1>{title}</h1>
+        <p class="work-page__meta">2001 &nbsp;/&nbsp; Ephemeral sculpture — ice, glass, water &nbsp;/&nbsp; 300 kg, 20 hours</p>
+      </header>
+
+      <!-- Main gallery -->
+      <div class="work-page__gallery">
+        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pending: In Memoriam — Ice column at full height inside glass container ]</div>
+        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pending: In Memoriam — Column mid-dissolution, water rising ]</div>
+        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pending: In Memoriam — Final state, water and remnants ]</div>
+      </div>
+
+      <!-- Text + Technical sheet -->
+      <div class="work-page__body">
+        <div class="work-page__text">
+
+          <p class="curatorial">
+            A 300-kilogram ice column dissolving slowly in water over twenty hours inside
+            a glass container. The work captures the passage of time as irreversible material
+            loss. As the ice melts, the solid mass transforms into the very liquid that
+            surrounds and eventually replaces it — a process that is at once predictable
+            and deeply affecting.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            <em>In Memoriam</em> operates as a meditation on impermanence and the
+            impossibility of preservation. The glass container makes the process entirely
+            visible — the viewer witnesses a slow disappearance in real time. The title
+            invokes the language of commemoration, yet the work itself enacts the opposite:
+            not the fixing of memory but its dissolution.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            The ephemeral nature of the sculpture — existing fully only at the moment of
+            its inauguration and progressively ceasing to exist — places temporality at
+            the center of the work. What remains at the end is not the sculpture but its
+            trace: water, the memory of a form, and the experience of having witnessed
+            its passing.
+          </p>
+
+          <h3 style="margin-top: var(--s4);">CONTEXT</h3>
+          <p style="margin-top: var(--s2);">
+            <em>In Memoriam</em> belongs to a lineage of works in which Escallon engages
+            with materials undergoing transformation — processes of decay, dissolution, and
+            disappearance that would become central to her practice. The work anticipates
+            later explorations of time-based material processes, such as <em>Precipitacion
+            de Arenas</em> and <em>Dispositivos para Ver Pasar el Tiempo</em>.
+          </p>
+        </div>
+
+        <aside class="work-page__ficha">
+          <h4>TECHNICAL SHEET</h4>
+          <div class="ficha">
+            <strong>In Memoriam</strong><br>
+            2001<br><br>
+            Ephemeral sculpture.<br>
+            Ice, glass, water.<br><br>
+            300 kg<br>
+            Duration: 20 hours
+          </div>
+
+          <h4 style="margin-top: var(--s3);">EXHIBITIONS</h4>
+          <div class="ficha">
+            [ Pending exhibition data ]
+          </div>
+
+          <h4 style="margin-top: var(--s3);">HOW TO CITE</h4>
+          <div class="ficha" style="font-size: 0.65rem;">
+            Escallon, M.E. (2001). <em>In Memoriam</em>.
+            Ephemeral sculpture. Available at:
+            mariaelviraescallon.com/en/works/in-memoriam/
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </article>
+
+</Layout>
+
+<style>
+  .work-page {
+    padding-top: calc(var(--s5) + 40px);
+  }
+
+  .work-page__header {
+    margin-bottom: var(--s4);
+  }
+
+  .work-page__header h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin: var(--s1) 0;
+  }
+
+  .work-page__meta {
+    font-size: 0.75rem;
+    color: var(--ash);
+    letter-spacing: 0.03em;
+  }
+
+  .work-page__gallery {
+    display: grid;
+    gap: var(--s2);
+    margin-bottom: var(--s4);
+  }
+
+  .work-page__gallery img {
+    width: 100%;
+    display: block;
+  }
+
+  .work-page__body {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--s5);
+    margin-bottom: var(--s5);
+  }
+
+  .work-page__text h3 {
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    color: var(--ash);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .work-page__ficha h4 {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--ash);
+    margin-bottom: var(--s1);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .placeholder-img {
+    width: 100%;
+    background-color: var(--paper-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ash-light);
+    font-family: var(--mono);
+    font-size: 0.55rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 768px) {
+    .work-page__body {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

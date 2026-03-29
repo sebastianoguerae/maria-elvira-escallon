@@ -1,0 +1,180 @@
+---
+import Layout from '../../../components/layout/Layout.astro';
+import QuoteBlock from '../../../components/content/QuoteBlock.astro';
+
+const lang = 'en' as const;
+const title = 'Las Caminantes';
+---
+
+<Layout
+  lang={lang}
+  title="Las Caminantes — Work"
+  description="Las Caminantes (2024). Living installation — weeds, plants, Morse code, speaker, MAMU. Maria Elvira Escallon."
+>
+
+  <article class="work-page">
+    <div class="container">
+
+      <!-- Header -->
+      <header class="work-page__header">
+        <p class="label">Work / 013</p>
+        <h1>{title}</h1>
+        <p class="work-page__meta">2024 &nbsp;/&nbsp; Living installation — weeds, plants, Morse code, speaker &nbsp;/&nbsp; Variable dimensions</p>
+      </header>
+
+      <!-- Main gallery -->
+      <div class="work-page__gallery">
+        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pending: Las Caminantes — Garden of weeds growing inside exhibition hall ]</div>
+        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pending: Las Caminantes — Detail of plants and speaker emitting Morse code ]</div>
+        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pending: Las Caminantes — Installation view at MAMU ]</div>
+      </div>
+
+      <!-- Text + Technical sheet -->
+      <div class="work-page__body">
+        <div class="work-page__text">
+
+          <p class="curatorial">
+            A garden of weeds growing inside the exhibition hall. The plants emit via Morse
+            code a message: "In each inhalation we meet." The work transforms the museum
+            space into a living ecosystem where the boundary between the cultivated and the
+            wild, the institutional and the organic, is deliberately dissolved.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            The title — <em>Las Caminantes</em> (The Walkers) — refers to the plants
+            themselves, beings that move and migrate despite our perception of them as
+            stationary. Weeds are plants that appear uninvited, that cross boundaries,
+            that resist eradication — qualities that make them both resilient and marginal.
+            By giving them a place inside the museum, Escallon elevates these overlooked
+            organisms to the status of protagonists.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            The Morse code message — "In each inhalation we meet" — refers to the
+            fundamental biological exchange between humans and plants: we breathe what
+            they exhale, and they absorb what we release. This invisible reciprocity,
+            occurring with every breath, is the most intimate and constant encounter
+            between species. The coded transmission makes this invisible exchange audible,
+            translating a biological fact into a poetic declaration.
+          </p>
+
+          <h3 style="margin-top: var(--s4);">CONTEXT</h3>
+          <p style="margin-top: var(--s2);">
+            Presented at MAMU in 2024, <em>Las Caminantes</em> continues Escallon's
+            exploration of the vegetal world begun in <em>Nuevas Floras</em> (2003) and
+            developed in <em>Encuentros con Seres Notables</em> (2022). While those
+            earlier works focused on the morphological and material kinship between humans
+            and trees, here the relationship becomes atmospheric and respiratory — a
+            shared chemistry that sustains both forms of life.
+          </p>
+        </div>
+
+        <aside class="work-page__ficha">
+          <h4>TECHNICAL SHEET</h4>
+          <div class="ficha">
+            <strong>Las Caminantes</strong><br>
+            2024<br><br>
+            Living installation.<br>
+            Weeds, plants, Morse code transmitter, speaker.<br><br>
+            Variable dimensions<br>
+            Site-specific, MAMU
+          </div>
+
+          <h4 style="margin-top: var(--s3);">EXHIBITIONS</h4>
+          <div class="ficha">
+            Encounters in the Dust Factory — MAMU, 2024
+          </div>
+
+          <h4 style="margin-top: var(--s3);">HOW TO CITE</h4>
+          <div class="ficha" style="font-size: 0.65rem;">
+            Escallon, M.E. (2024). <em>Las Caminantes</em>.
+            Living installation. Available at:
+            mariaelviraescallon.com/en/works/las-caminantes/
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </article>
+
+</Layout>
+
+<style>
+  .work-page {
+    padding-top: calc(var(--s5) + 40px);
+  }
+
+  .work-page__header {
+    margin-bottom: var(--s4);
+  }
+
+  .work-page__header h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin: var(--s1) 0;
+  }
+
+  .work-page__meta {
+    font-size: 0.75rem;
+    color: var(--ash);
+    letter-spacing: 0.03em;
+  }
+
+  .work-page__gallery {
+    display: grid;
+    gap: var(--s2);
+    margin-bottom: var(--s4);
+  }
+
+  .work-page__gallery img {
+    width: 100%;
+    display: block;
+  }
+
+  .work-page__body {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--s5);
+    margin-bottom: var(--s5);
+  }
+
+  .work-page__text h3 {
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    color: var(--ash);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .work-page__ficha h4 {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--ash);
+    margin-bottom: var(--s1);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .placeholder-img {
+    width: 100%;
+    background-color: var(--paper-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ash-light);
+    font-family: var(--mono);
+    font-size: 0.55rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 768px) {
+    .work-page__body {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

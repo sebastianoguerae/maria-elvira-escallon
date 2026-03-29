@@ -1,0 +1,116 @@
+---
+import Layout from '../../../components/layout/Layout.astro';
+const lang = 'es' as const;
+---
+
+<Layout
+  lang={lang}
+  title="Nuevas Floras — III Premio Luis Caballero — Exposición"
+  description="María Elvira Escallón obtiene el Primer Premio del III Concurso Luis Caballero con Nuevas Floras. Galería Santa Fe, Bogotá, 2003."
+>
+
+  <article class="exhibition-page">
+    <div class="container">
+
+      <!-- Header -->
+      <header class="exh-header">
+        <span class="label">Premio — Exposición individual — 2003</span>
+        <h1>Nuevas Floras — III Premio Luis Caballero</h1>
+        <p class="exh-meta">Galería Santa Fe · Bogotá, Colombia · 2003</p>
+      </header>
+
+      <!-- Galería -->
+      <div class="exh-gallery">
+        <div class="placeholder-img" style="aspect-ratio:16/9;">[ Pendiente: Vista de sala — Nuevas Floras en Galería Santa Fe ]</div>
+        <div class="placeholder-img" style="aspect-ratio:4/3;">[ Pendiente: Detalle de intervención sobre árbol nativo ]</div>
+      </div>
+
+      <!-- Cuerpo -->
+      <div class="exh-body">
+        <div class="exh-text">
+
+          <h3>SOBRE LA EXPOSICIÓN</h3>
+          <p class="curatorial" style="margin-top: var(--s2);">
+            María Elvira Escallón obtuvo el Primer Premio del III Concurso Luis Caballero
+            con el proyecto <em>Nuevas Floras</em>. La obra consiste en intervenciones sobre
+            árboles nativos colombianos con tallas que evocan la arquitectura clásica y
+            elementos de altares barrocos.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            El jurado destacó el cuestionamiento de los límites entre lo natural y lo
+            cultural. José Roca escribió el texto curatorial del catálogo, señalando dos
+            aspectos fundamentales: el carácter nómada de la obra y el concepto de
+            temporalidad.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            El Premio Luis Caballero es uno de los reconocimientos más importantes del
+            arte contemporáneo en Colombia. La presentación en la Galería Santa Fe
+            consolidó a Escallón como una de las artistas más relevantes de su
+            generación, inaugurando un proyecto que continuaría desarrollándose durante
+            más de dos décadas en múltiples países.
+          </p>
+
+          <div class="exh-works">
+            <h3>OBRAS EXHIBIDAS</h3>
+            <ul>
+              <li><a href="/es/obra/nuevas-floras/">Nuevas Floras</a> — Versión original, árboles nativos colombianos</li>
+            </ul>
+          </div>
+
+          <div class="exh-press">
+            <h3>TEXTOS Y PRENSA</h3>
+            <ul>
+              <li><a href="/es/textos/jose-roca-columna-arena-53/">José Roca, Columna de Arena 53</a> — Texto curatorial, agosto 2003</li>
+            </ul>
+          </div>
+        </div>
+
+        <aside class="exh-aside">
+          <h4>DATOS</h4>
+          <div class="ficha">
+            <strong>Nuevas Floras</strong><br>
+            III Premio Luis Caballero — Primer premio<br><br>
+            Galería Santa Fe<br>
+            Bogotá, Colombia<br><br>
+            2003<br><br>
+            Intervención escultórica sobre árboles nativos<br>
+            vivos. Talla en madera, prótesis.<br>
+            Documentación: fotografía cromogénica.
+          </div>
+
+          <h4 style="margin-top: var(--s3);">IDIOMAS</h4>
+          <div class="ficha">
+            <a href="/en/exhibitions/premio-luis-caballero-2003/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">
+              View in English
+            </a>
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </article>
+
+</Layout>
+
+<style>
+  .exhibition-page { padding-top: calc(var(--s5) + 40px); }
+  .exh-header { margin-bottom: var(--s4); }
+  .exh-header h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(2rem, 5vw, 3.5rem); margin: var(--s1) 0; }
+  .exh-meta { font-size: 0.8rem; color: var(--ash); letter-spacing: 0.03em; }
+  .exh-body { display: grid; grid-template-columns: 2fr 1fr; gap: var(--s5); margin-bottom: var(--s5); }
+  .exh-gallery { display: grid; gap: var(--s2); margin-bottom: var(--s4); }
+  .exh-gallery img { width: 100%; }
+  .exh-text h3 { font-size: 0.8rem; letter-spacing: 0.08em; color: var(--ash); padding-bottom: var(--s1); border-bottom: 1px solid var(--paper-dark); }
+  .exh-aside h4 { font-family: var(--mono); font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: var(--ash); margin-bottom: var(--s1); padding-bottom: var(--s1); border-bottom: 1px solid var(--paper-dark); }
+  .exh-works { margin-top: var(--s3); }
+  .exh-works li { padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark); }
+  .exh-works a { color: var(--moss); border-bottom: 1px solid var(--paper-dark); }
+  .exh-works a:hover { border-color: var(--moss); }
+  .exh-press { margin-top: var(--s3); }
+  .exh-press li { padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark); font-size: 0.8rem; }
+  .exh-press a { color: var(--moss); }
+  .placeholder-img { width: 100%; background: var(--paper-dark); display: flex; align-items: center; justify-content: center; color: var(--ash-light); font-family: var(--mono); font-size: 0.55rem; letter-spacing: 0.08em; text-transform: uppercase; }
+  @media (max-width: 768px) { .exh-body { grid-template-columns: 1fr; } }
+</style>

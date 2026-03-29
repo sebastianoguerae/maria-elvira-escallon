@@ -1,0 +1,184 @@
+---
+import Layout from '../../../components/layout/Layout.astro';
+import QuoteBlock from '../../../components/content/QuoteBlock.astro';
+
+const lang = 'en' as const;
+const title = 'Encuentros con Seres Notables';
+---
+
+<Layout
+  lang={lang}
+  title="Encuentros con Seres Notables — Work"
+  description="Encuentros con Seres Notables (2022). Sculpture — branches, eucalyptus, clay. Inspired by Gurdjieff. Maria Elvira Escallon."
+>
+
+  <article class="work-page">
+    <div class="container">
+
+      <!-- Header -->
+      <header class="work-page__header">
+        <p class="label">Work / 011</p>
+        <h1>{title}</h1>
+        <p class="work-page__meta">2022 &nbsp;/&nbsp; Sculpture — branches, eucalyptus, clay &nbsp;/&nbsp; Variable dimensions</p>
+      </header>
+
+      <!-- Main gallery -->
+      <div class="work-page__gallery">
+        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pending: Encuentros con Seres Notables — Branch resembling human skeletal anatomy ]</div>
+        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pending: Encuentros con Seres Notables — Brazo (sub-work detail) ]</div>
+        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pending: Encuentros con Seres Notables — Desclavada (sub-work detail) ]</div>
+      </div>
+
+      <!-- Text + Technical sheet -->
+      <div class="work-page__body">
+        <div class="work-page__text">
+
+          <p class="curatorial">
+            The title is inspired by the Russian mystic George Gurdjieff's book
+            <em>Meetings with Remarkable Men</em>. The exhibition explores kinship between
+            humans and other living beings — trees and plants — proposing an encounter
+            that dissolves the boundaries between the human body and the vegetal world.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            Escallon discovered branches that bear an uncanny resemblance to human skeletal
+            anatomy — arms, joints, the articulations of a body. These found forms become
+            the basis for a series of sculptures in which the distinction between the
+            organic structures of trees and those of the human body becomes impossible
+            to maintain. The branches are not carved or manipulated to look human; they
+            simply do, revealing a morphological kinship that is both scientific and poetic.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            The series includes sub-works such as <em>Brazo</em> and <em>Desclavada</em>,
+            each developing specific aspects of this human-vegetal correspondence. The use
+            of eucalyptus and clay alongside the found branches creates a material vocabulary
+            that bridges the natural and the sculptural, the discovered and the composed.
+          </p>
+
+          <h3 style="margin-top: var(--s4);">CONTEXT</h3>
+          <p style="margin-top: var(--s2);">
+            Gurdjieff's <em>Meetings with Remarkable Men</em> recounts the author's
+            spiritual journeys and encounters with teachers who transformed his understanding
+            of the world. Escallon's appropriation of the title reframes the 'remarkable
+            beings' as trees and plants — shifting the encounter from the human-spiritual
+            to the inter-species, proposing that the most transformative meetings may be
+            those between humans and the other living forms with which we share the world.
+          </p>
+          <p style="margin-top: var(--s2);">
+            The work extends Escallon's longstanding engagement with the vegetal world,
+            begun in <em>Nuevas Floras</em> (2003), but here the relationship is inverted:
+            rather than imposing human forms onto trees, the artist discovers human forms
+            already present within them.
+          </p>
+        </div>
+
+        <aside class="work-page__ficha">
+          <h4>TECHNICAL SHEET</h4>
+          <div class="ficha">
+            <strong>Encuentros con Seres Notables</strong><br>
+            2022<br><br>
+            Sculpture.<br>
+            Branches, eucalyptus, clay.<br><br>
+            Variable dimensions<br><br>
+            Sub-works: <em>Brazo</em>, <em>Desclavada</em>
+          </div>
+
+          <h4 style="margin-top: var(--s3);">EXHIBITIONS</h4>
+          <div class="ficha">
+            [ Pending exhibition data ]
+          </div>
+
+          <h4 style="margin-top: var(--s3);">HOW TO CITE</h4>
+          <div class="ficha" style="font-size: 0.65rem;">
+            Escallon, M.E. (2022). <em>Encuentros con Seres Notables</em>.
+            Sculpture. Available at:
+            mariaelviraescallon.com/en/works/encuentros-con-seres-notables/
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </article>
+
+</Layout>
+
+<style>
+  .work-page {
+    padding-top: calc(var(--s5) + 40px);
+  }
+
+  .work-page__header {
+    margin-bottom: var(--s4);
+  }
+
+  .work-page__header h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin: var(--s1) 0;
+  }
+
+  .work-page__meta {
+    font-size: 0.75rem;
+    color: var(--ash);
+    letter-spacing: 0.03em;
+  }
+
+  .work-page__gallery {
+    display: grid;
+    gap: var(--s2);
+    margin-bottom: var(--s4);
+  }
+
+  .work-page__gallery img {
+    width: 100%;
+    display: block;
+  }
+
+  .work-page__body {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--s5);
+    margin-bottom: var(--s5);
+  }
+
+  .work-page__text h3 {
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    color: var(--ash);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .work-page__ficha h4 {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--ash);
+    margin-bottom: var(--s1);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .placeholder-img {
+    width: 100%;
+    background-color: var(--paper-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ash-light);
+    font-family: var(--mono);
+    font-size: 0.55rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 768px) {
+    .work-page__body {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

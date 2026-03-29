@@ -1,0 +1,208 @@
+---
+import Layout from '../../../components/layout/Layout.astro';
+
+const lang = 'es' as const;
+const title = 'Polvo Eres: El correr del tiempo en María Elvira Escallón';
+
+const coverPolvo = (await import('../../../assets/images/libros/polvo-eres.jpg')).default;
+---
+
+<Layout
+  lang={lang}
+  title={`${title} — Publicaciones`}
+  description="Polvo Eres: El correr del tiempo en María Elvira Escallón. Monografía de Julia Buenaventura, Ministerio de Cultura de Colombia, 2014."
+>
+
+  <article class="pub-page">
+    <div class="container">
+
+      <header class="pub-page__header">
+        <p class="label">Publicaciones / 002</p>
+        <h1>{title}</h1>
+        <p class="pub-page__meta">2014 &nbsp;/&nbsp; Monografía &nbsp;/&nbsp; 212 páginas</p>
+      </header>
+
+      <div class="pub-page__body">
+        <div class="pub-page__text">
+
+          <div class="pub-page__cover-area">
+            <img src={coverPolvo.src} alt="Portada — Polvo Eres: El correr del tiempo en María Elvira Escallón" loading="eager" style="width:100%;">
+          </div>
+
+          <p class="curatorial">
+            Monografía que traza el arco de la práctica de Escallón a través del lente del tiempo
+            y la materialidad. Julia Buenaventura examina cómo cada obra funciona como un dispositivo
+            para hacer visible el paso del tiempo — desde las intervenciones en hospitales abandonados
+            hasta las tallas sobre árboles vivos que la corteza lentamente reclama.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            El título conecta la frase bíblica — <em>polvo eres y en polvo te convertirás</em> —
+            con la preocupación fundamental de la artista por el deterioro, la mortalidad y la
+            transformación de la materia. Buenaventura argumenta que la obra de Escallón no documenta
+            la ruina sino que la activa, convirtiendo cada pieza en un reloj que marca un tiempo
+            distinto al cronológico.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            Publicado dentro de la Colección Artistas Colombianos del Ministerio de Cultura, el
+            volumen ofrece un recorrido exhaustivo por la trayectoria de la artista, con reproduccciones
+            de obras, textos analíticos y documentación de procesos.
+          </p>
+
+          <h3 style="margin-top: var(--s4);">DISPONIBILIDAD</h3>
+          <p style="margin-top: var(--s2);">
+            El libro completo está disponible para lectura en línea a través de Issuu:
+          </p>
+          <p style="margin-top: var(--s1);">
+            <a
+              href="https://issuu.com/artesvisualesmincultura/docs/mc8_polvoeres-meescallon-jbuenavent"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="pub-link"
+            >
+              Leer en Issuu →
+            </a>
+          </p>
+
+          <h3 style="margin-top: var(--s4);">OBRAS ANALIZADAS</h3>
+          <ul style="margin-top: var(--s2); list-style: none;">
+            <li style="padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark);">
+              <a href="/es/obra/nuevas-floras/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">Nuevas Floras (2003–2007)</a>
+            </li>
+            <li style="padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark);">
+              <a href="/es/obra/en-estado-de-coma/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">En estado de coma (2005–2007)</a>
+            </li>
+            <li style="padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark);">
+              <a href="/es/obra/desde-adentro/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">Desde adentro (2003)</a>
+            </li>
+            <li style="padding: var(--s1) 0;">
+              <a href="/es/obra/in-vitro/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">In Vitro (1997)</a>
+            </li>
+          </ul>
+
+        </div>
+
+        <aside class="pub-page__ficha">
+          <h4>FICHA BIBLIOGRÁFICA</h4>
+          <div class="ficha">
+            <strong>{title}</strong><br>
+            2014<br><br>
+            Autora: Julia Buenaventura<br>
+            Editorial: Ministerio de Cultura de Colombia<br>
+            Colección: Artistas Colombianos<br>
+            Páginas: 212
+          </div>
+
+          <h4 style="margin-top: var(--s3);">LEER EN LÍNEA</h4>
+          <div class="ficha">
+            <a
+              href="https://issuu.com/artesvisualesmincultura/docs/mc8_polvoeres-meescallon-jbuenavent"
+              target="_blank"
+              rel="noopener noreferrer"
+              style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);"
+            >
+              Issuu — Artes Visuales MinCultura
+            </a>
+          </div>
+
+          <h4 style="margin-top: var(--s3);">VOLVER</h4>
+          <div class="ficha">
+            <a href="/es/publicaciones/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">
+              ← Todas las publicaciones
+            </a>
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </article>
+
+</Layout>
+
+<style>
+  .pub-page {
+    padding-top: calc(var(--s5) + 40px);
+  }
+
+  .pub-page__header {
+    margin-bottom: var(--s4);
+  }
+
+  .pub-page__header h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    margin: var(--s1) 0;
+  }
+
+  .pub-page__meta {
+    font-size: 0.75rem;
+    color: var(--ash);
+    letter-spacing: 0.03em;
+  }
+
+  .pub-page__cover-area {
+    max-width: 320px;
+    margin-bottom: var(--s3);
+  }
+
+  .pub-page__body {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--s5);
+    margin-bottom: var(--s5);
+  }
+
+  .pub-page__text h3 {
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    color: var(--ash);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .pub-page__ficha h4 {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--ash);
+    margin-bottom: var(--s1);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .pub-link {
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    color: var(--moss);
+    border-bottom: 1px solid var(--moss);
+    padding-bottom: 2px;
+    transition: color 0.2s;
+  }
+
+  .pub-link:hover {
+    color: var(--ink);
+  }
+
+  .placeholder-img {
+    width: 100%;
+    background-color: var(--paper-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ash-light);
+    font-family: var(--mono);
+    font-size: 0.55rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 768px) {
+    .pub-page__body {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

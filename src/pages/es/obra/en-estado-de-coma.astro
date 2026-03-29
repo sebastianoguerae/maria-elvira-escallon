@@ -1,0 +1,237 @@
+---
+import Layout from '../../../components/layout/Layout.astro';
+import QuoteBlock from '../../../components/content/QuoteBlock.astro';
+import AudioPlayer from '../../../components/interactive/AudioPlayer';
+
+const lang = 'es' as const;
+const title = 'En estado de coma';
+---
+
+<Layout
+  lang={lang}
+  title="En estado de coma — Obra"
+  description="En estado de coma (2005–2007). 5 series fotográficas, video, instalación escultórica. Hospital San Juan de Dios, Bogotá. María Elvira Escallón."
+>
+
+  <article class="work-page">
+    <div class="container">
+
+      <!-- Header -->
+      <header class="work-page__header">
+        <p class="label">Obra / 006</p>
+        <h1>{title}</h1>
+        <p class="work-page__meta">2005–2007 &nbsp;/&nbsp; 5 series fotográficas, video, instalación escultórica &nbsp;/&nbsp; Hospital San Juan de Dios, Bogotá</p>
+      </header>
+
+      <!-- Galería principal -->
+      <div class="work-page__gallery">
+        <div class="placeholder-img" role="img" aria-label="Imagen pendiente" style="aspect-ratio:16/10;">[ Pendiente: En estado de coma — Vista general del Hospital San Juan de Dios ]</div>
+        <div class="placeholder-img" role="img" aria-label="Imagen pendiente" style="aspect-ratio:16/10;">[ Pendiente: En estado de coma — Serie Postales ]</div>
+        <div class="placeholder-img" role="img" aria-label="Imagen pendiente" style="aspect-ratio:16/10;">[ Pendiente: En estado de coma — Serie Recorridos nocturnos ]</div>
+        <div class="placeholder-img" role="img" aria-label="Imagen pendiente" style="aspect-ratio:16/10;">[ Pendiente: En estado de coma — Serie Cultivos ]</div>
+      </div>
+
+      <!-- Audio -->
+      <div style="margin: var(--s3) 0;">
+        <AudioPlayer client:visible title="María Elvira sobre En estado de coma" />
+      </div>
+
+      <!-- Texto + Ficha -->
+      <div class="work-page__body">
+        <div class="work-page__text">
+
+          <p class="curatorial">
+            El proyecto comenzó en 2005 como un documental que buscaba hacer visibles las
+            condiciones del Hospital San Juan de Dios — fundado en 1564, destacado por su
+            nivel de especialización — tras caer en el abandono. Incluye cinco series
+            fotográficas: <em>Postales</em>, <em>Recorridos nocturnos</em>, <em>Tejido
+            blando</em>, <em>Extracciones</em> y <em>Cultivos</em>.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            El hospital fue cerrado en 2001 como consecuencia de la mala administración y
+            la privatización del sistema de salud. Un pequeño grupo de empleados continuó
+            dándole «oxígeno al paciente terminal». El nombre de la obra se refiere a
+            «una entidad que no está muerta y sobre la cual hay esperanza».
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            Escallón no documentó el hospital como ruina pintoresca sino como organismo
+            en estado de suspensión. Las cinco series abordan distintas facetas de esa
+            condición liminal: las postales turísticas invertidas, los recorridos
+            nocturnos que revelan lo que la luz del día oculta, el tejido blando de las
+            sábanas que aún cubren camas vacías, las extracciones de elementos
+            arquitectónicos como si fueran muestras clínicas, y los cultivos de vegetación
+            que reclaman los espacios abandonados.
+          </p>
+
+          <h3 style="margin-top: var(--s4);">SERIES</h3>
+          <ul style="margin-top: var(--s2); list-style: none;">
+            <li style="padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark);">
+              <strong>Postales</strong> — Fotografías del hospital tratadas como postales turísticas, invirtiendo la lógica promocional para evidenciar el deterioro.
+            </li>
+            <li style="padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark);">
+              <strong>Recorridos nocturnos</strong> — Registro fotográfico de los pasillos y salas del hospital en la noche, cuando la ausencia se hace más palpable.
+            </li>
+            <li style="padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark);">
+              <strong>Tejido blando</strong> — Documentación de las sábanas, cortinas y textiles hospitalarios que permanecen como vestigios de la actividad médica.
+            </li>
+            <li style="padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark);">
+              <strong>Extracciones</strong> — Elementos arquitectónicos y hospitalarios aislados de su contexto, tratados como muestras de un cuerpo enfermo.
+            </li>
+            <li style="padding: var(--s1) 0;">
+              <strong>Cultivos</strong> — Registro de la vegetación que invade y reclama los espacios abandonados del hospital.
+            </li>
+          </ul>
+
+          <h3 style="margin-top: var(--s4);">CONTEXTO</h3>
+          <p style="margin-top: var(--s2);">
+            El Hospital San Juan de Dios, fundado en 1564, fue uno de los hospitales públicos
+            más importantes de Colombia, brindando atención a los más pobres. Tras su cierre
+            en 2001, fue declarado patrimonio cultural nacional en 2002. El edificio, diseñado
+            por el arquitecto Pablo de la Cruz, representa un capítulo central en la historia
+            de la salud pública colombiana.
+          </p>
+          <p style="margin-top: var(--s2);">
+            La obra de Escallón se inscribe en su línea de investigación sobre el patrimonio
+            en abandono y la relación entre el Estado y los edificios que encarnan la memoria
+            colectiva. Como en <em>In Vitro</em>, la artista trabaja con un edificio
+            patrimonial que el Estado ha dejado en ruinas, pero aquí la escala es monumental
+            y el deterioro se extiende durante años.
+          </p>
+          <p style="margin-top: var(--s2);">
+            El proyecto fue publicado como libro por el IDPC y Johns Hopkins University Press
+            (Project MUSE), consolidando su importancia tanto en el ámbito artístico como
+            en la discusión sobre patrimonio cultural y salud pública en Colombia.
+          </p>
+        </div>
+
+        <aside class="work-page__ficha">
+          <h4>FICHA TÉCNICA</h4>
+          <div class="ficha">
+            <strong>En estado de coma</strong><br>
+            2005–2007<br><br>
+            5 series fotográficas, video,<br>
+            instalación escultórica.<br><br>
+            Hospital San Juan de Dios, Bogotá.<br>
+            Dimensiones variables.
+          </div>
+
+          <h4 style="margin-top: var(--s3);">PREMIOS</h4>
+          <div class="ficha">
+            Primer Premio Categoría Patrimonio — IDCT, 2006<br><br>
+            Beca Nacional de Creación Individual — MinCultura, 2005
+          </div>
+
+          <h4 style="margin-top: var(--s3);">PUBLICACIÓN</h4>
+          <div class="ficha">
+            IDPC / Johns Hopkins University Press<br>
+            (Project MUSE)
+          </div>
+
+          <h4 style="margin-top: var(--s3);">EXPOSICIONES</h4>
+          <div class="ficha">
+            Hospital San Juan de Dios, Bogotá<br>
+            Exposiciones nacionales e internacionales
+          </div>
+
+          <h4 style="margin-top: var(--s3);">TEXTOS</h4>
+          <div class="ficha">
+            <a href="/es/textos/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">
+              Textos relacionados
+            </a>
+          </div>
+
+          <h4 style="margin-top: var(--s3);">CÓMO CITAR</h4>
+          <div class="ficha" style="font-size: 0.65rem;">
+            Escallón, M.E. (2005–2007). <em>En estado de coma</em>.
+            Series fotográficas, video e instalación. Disponible en:
+            mariaelviraescallon.com/es/obra/en-estado-de-coma/
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </article>
+
+</Layout>
+
+<style>
+  .work-page {
+    padding-top: calc(var(--s5) + 40px);
+  }
+
+  .work-page__header {
+    margin-bottom: var(--s4);
+  }
+
+  .work-page__header h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin: var(--s1) 0;
+  }
+
+  .work-page__meta {
+    font-size: 0.75rem;
+    color: var(--ash);
+    letter-spacing: 0.03em;
+  }
+
+  .work-page__gallery {
+    display: grid;
+    gap: var(--s2);
+    margin-bottom: var(--s4);
+  }
+
+  .work-page__gallery img {
+    width: 100%;
+    display: block;
+  }
+
+  .work-page__body {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--s5);
+    margin-bottom: var(--s5);
+  }
+
+  .work-page__text h3 {
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    color: var(--ash);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .work-page__ficha h4 {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--ash);
+    margin-bottom: var(--s1);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .placeholder-img {
+    width: 100%;
+    background-color: var(--paper-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ash-light);
+    font-family: var(--mono);
+    font-size: 0.55rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 768px) {
+    .work-page__body {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

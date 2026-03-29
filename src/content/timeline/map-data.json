@@ -1,0 +1,192 @@
+{
+  "locations": [
+    {
+      "name": "Bogota",
+      "country": "Colombia",
+      "lat": 4.711,
+      "lng": -74.072,
+      "type": "base",
+      "events": [
+        { "title": "Encuentros en la fabrica de polvo", "venue": "MAMU", "year": 2024, "type": "solo" },
+        { "title": "Encuentro con seres notables", "venue": "Espacio Continuo", "year": 2022, "type": "solo" },
+        { "title": "En el fertil suelo", "venue": "Galeria Santa Fe", "year": 2018, "type": "solo" },
+        { "title": "Nuevas Floras", "venue": "Galeria Santa Fe", "year": 2003, "type": "solo" },
+        { "title": "En estado de coma", "venue": "Museo de Bogota", "year": 2007, "type": "solo" },
+        { "title": "El reino de este mundo", "venue": "MAMBO", "year": 2000, "type": "solo" }
+      ]
+    },
+    {
+      "name": "Paris",
+      "country": "Francia",
+      "lat": 48.856,
+      "lng": 2.352,
+      "type": "exhibition",
+      "events": [
+        { "title": "Nuevas Floras Versalles", "venue": "Jardin de Tullerias / FIAC", "year": 2017, "type": "solo" },
+        { "title": "Palimpsestes", "venue": "Galeria Mor-Charpentier", "year": 2013, "type": "group" }
+      ]
+    },
+    {
+      "name": "Arles",
+      "country": "Francia",
+      "lat": 43.677,
+      "lng": 4.631,
+      "type": "exhibition",
+      "events": [
+        { "title": "La vuelta", "venue": "Rencontres de la Photographie", "year": 2017, "type": "group" }
+      ]
+    },
+    {
+      "name": "Londres",
+      "country": "Reino Unido",
+      "lat": 51.507,
+      "lng": -0.128,
+      "type": "exhibition",
+      "events": [
+        { "title": "Urban Impulses", "venue": "The Photographers' Gallery", "year": 2019, "type": "group" }
+      ]
+    },
+    {
+      "name": "Swansea",
+      "country": "Gales",
+      "lat": 51.622,
+      "lng": -3.943,
+      "type": "exhibition",
+      "events": [
+        { "title": "Displaced", "venue": "Glynn Vivian Gallery", "year": 2007, "type": "group" }
+      ]
+    },
+    {
+      "name": "Essex",
+      "country": "Reino Unido",
+      "lat": 51.877,
+      "lng": 0.944,
+      "type": "collection",
+      "events": [
+        { "title": "ESCALA Collection", "venue": "University of Essex", "year": 2005, "type": "collection" }
+      ]
+    },
+    {
+      "name": "Nueva York",
+      "country": "Estados Unidos",
+      "lat": 40.713,
+      "lng": -74.006,
+      "type": "exhibition",
+      "events": [
+        { "title": "Hibridos", "venue": "Deutsche Bank Gallery", "year": 2018, "type": "group" }
+      ]
+    },
+    {
+      "name": "Houston",
+      "country": "Estados Unidos",
+      "lat": 29.760,
+      "lng": -95.370,
+      "type": "exhibition",
+      "events": [
+        { "title": "Colombian Contemporary Photography", "venue": "FotoFest", "year": 2008, "type": "group" }
+      ]
+    },
+    {
+      "name": "Sydney",
+      "country": "Australia",
+      "lat": -33.868,
+      "lng": 151.209,
+      "type": "collection",
+      "events": [
+        { "title": "Focus on Contemporary", "venue": "Art Gallery of NSW", "year": 2008, "type": "group" },
+        { "title": "Desde Adentro (collection)", "venue": "Art Gallery of NSW", "year": 2008, "type": "collection" }
+      ]
+    },
+    {
+      "name": "La Habana",
+      "country": "Cuba",
+      "lat": 23.113,
+      "lng": -82.366,
+      "type": "exhibition",
+      "events": [
+        { "title": "VII Bienal de La Habana", "venue": "Bienal", "year": 2000, "type": "biennial" },
+        { "title": "X Bienal de La Habana", "venue": "Bienal", "year": 2009, "type": "biennial" }
+      ]
+    },
+    {
+      "name": "Milan",
+      "country": "Italia",
+      "lat": 45.464,
+      "lng": 9.190,
+      "type": "exhibition",
+      "events": [
+        { "title": "In Motion", "venue": "Galeria Bianconi", "year": 2013, "type": "group" }
+      ]
+    },
+    {
+      "name": "Berlin",
+      "country": "Alemania",
+      "lat": 52.520,
+      "lng": 13.405,
+      "type": "exhibition",
+      "events": [
+        { "title": "After the fact", "venue": "Berlin Photography Festival", "year": 2005, "type": "group" }
+      ]
+    },
+    {
+      "name": "Madrid",
+      "country": "Espana",
+      "lat": 40.417,
+      "lng": -3.704,
+      "type": "exhibition",
+      "events": [
+        { "title": "ARCO Madrid", "venue": "ARCO", "year": 2015, "type": "fair" }
+      ]
+    },
+    {
+      "name": "Sao Paulo",
+      "country": "Brasil",
+      "lat": -23.550,
+      "lng": -46.633,
+      "type": "exhibition",
+      "events": [
+        { "title": "Otras miradas", "venue": "Memorial America Latina", "year": 2005, "type": "group" }
+      ]
+    },
+    {
+      "name": "Versalles",
+      "country": "Francia",
+      "lat": 48.804,
+      "lng": 2.121,
+      "type": "exhibition",
+      "events": [
+        { "title": "Nuevas Floras", "venue": "Arboretum de Chevreloup", "year": 2017, "type": "solo" }
+      ]
+    },
+    {
+      "name": "Bristol",
+      "country": "Reino Unido",
+      "lat": 51.455,
+      "lng": -2.588,
+      "type": "exhibition",
+      "events": [
+        { "title": "Nuevas Floras Bristol", "venue": "\u2014", "year": 2009, "type": "solo" }
+      ]
+    },
+    {
+      "name": "Santo Domingo",
+      "country": "Republica Dominicana",
+      "lat": 18.486,
+      "lng": -69.931,
+      "type": "exhibition",
+      "events": [
+        { "title": "IV Bienal del Caribe", "venue": "Bienal", "year": 2002, "type": "biennial" }
+      ]
+    },
+    {
+      "name": "Santa Rosa de Viterbo",
+      "country": "Colombia",
+      "lat": 5.877,
+      "lng": -72.872,
+      "type": "site",
+      "events": [
+        { "title": "Pequeno Museo del Aerolito", "venue": "Sitio de intervencion", "year": 2014, "type": "site" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+---
+import Layout from '../../../components/layout/Layout.astro';
+const lang = 'es' as const;
+
+const arlesImg = (await import('../../../assets/images/exposiciones/arles-2017.jpg')).default;
+---
+
+<Layout
+  lang={lang}
+  title="La vuelta — Les Rencontres d'Arles — Exposición"
+  description="La vuelta. Exposición colectiva en Les Rencontres de la Photographie d'Arles, Francia. Julio — Septiembre 2017. María Elvira Escallón."
+>
+
+  <article class="exhibition-page">
+    <div class="container">
+
+      <!-- Header -->
+      <header class="exh-header">
+        <span class="label">Exposición colectiva (internacional) — 2017</span>
+        <h1>La vuelta</h1>
+        <p class="exh-meta">Les Rencontres de la Photographie d'Arles · Arles, Francia · Julio 3 — Septiembre 24, 2017</p>
+      </header>
+
+      <!-- Galería -->
+      <div class="exh-gallery">
+        <img src={arlesImg.src} alt="La vuelta — Vista de la exposición en Les Rencontres de la Photographie d'Arles, 2017" loading="eager">
+      </div>
+
+      <!-- Cuerpo -->
+      <div class="exh-body">
+        <div class="exh-text">
+
+          <h3>SOBRE LA EXPOSICIÓN</h3>
+          <p class="curatorial" style="margin-top: var(--s2);">
+            <em>La vuelta</em> es una exposición colectiva que reúne el trabajo de 28 artistas
+            de varias generaciones. La muestra destaca la fotografía latinoamericana
+            contemporánea en el contexto del festival de fotografía más importante del mundo.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            María Elvira Escallón participó junto a Oscar Muñoz, representados por la
+            galería Mor-Charpentier de París. La inclusión de Escallón en Arles la sitúa
+            en el circuito de la fotografía contemporánea internacional al más alto nivel,
+            confirmando la dimensión global de su práctica artística.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            Les Rencontres de la Photographie d'Arles, fundado en 1970, es el evento anual
+            de fotografía más relevante a nivel mundial. La edición de 2017 incluyó esta
+            muestra dedicada a la fotografía latinoamericana, reconociendo la riqueza y
+            diversidad de las prácticas fotográficas del continente.
+          </p>
+
+          <div class="exh-works">
+            <h3>OBRAS EXHIBIDAS</h3>
+            <ul>
+              <li><a href="/es/obra/desde-adentro/">Serie Desde Adentro</a></li>
+              <li><a href="/es/obra/nuevas-floras/">Nuevas Floras</a></li>
+            </ul>
+          </div>
+
+          <div class="exh-press">
+            <h3>PRENSA</h3>
+            <ul>
+              <li><a href="#">Galería Mor-Charpentier, París</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <aside class="exh-aside">
+          <h4>DATOS</h4>
+          <div class="ficha">
+            <strong>La vuelta</strong><br>
+            Exposición colectiva — 28 artistas<br><br>
+            Les Rencontres de la Photographie d'Arles<br>
+            Arles, Francia<br><br>
+            Julio 3 — Septiembre 24, 2017<br><br>
+            Galería: Mor-Charpentier, París
+          </div>
+
+          <h4 style="margin-top: var(--s3);">IDIOMAS</h4>
+          <div class="ficha">
+            <a href="/en/exhibitions/la-vuelta-arles-2017/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">
+              View in English
+            </a>
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </article>
+
+</Layout>
+
+<style>
+  .exhibition-page { padding-top: calc(var(--s5) + 40px); }
+  .exh-header { margin-bottom: var(--s4); }
+  .exh-header h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(2rem, 5vw, 3.5rem); margin: var(--s1) 0; }
+  .exh-meta { font-size: 0.8rem; color: var(--ash); letter-spacing: 0.03em; }
+  .exh-body { display: grid; grid-template-columns: 2fr 1fr; gap: var(--s5); margin-bottom: var(--s5); }
+  .exh-gallery { display: grid; gap: var(--s2); margin-bottom: var(--s4); }
+  .exh-gallery img { width: 100%; }
+  .exh-text h3 { font-size: 0.8rem; letter-spacing: 0.08em; color: var(--ash); padding-bottom: var(--s1); border-bottom: 1px solid var(--paper-dark); }
+  .exh-aside h4 { font-family: var(--mono); font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: var(--ash); margin-bottom: var(--s1); padding-bottom: var(--s1); border-bottom: 1px solid var(--paper-dark); }
+  .exh-works { margin-top: var(--s3); }
+  .exh-works li { padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark); }
+  .exh-works a { color: var(--moss); border-bottom: 1px solid var(--paper-dark); }
+  .exh-works a:hover { border-color: var(--moss); }
+  .exh-press { margin-top: var(--s3); }
+  .exh-press li { padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark); font-size: 0.8rem; }
+  .exh-press a { color: var(--moss); }
+  .placeholder-img { width: 100%; background: var(--paper-dark); display: flex; align-items: center; justify-content: center; color: var(--ash-light); font-family: var(--mono); font-size: 0.55rem; letter-spacing: 0.08em; text-transform: uppercase; }
+  @media (max-width: 768px) { .exh-body { grid-template-columns: 1fr; } }
+</style>

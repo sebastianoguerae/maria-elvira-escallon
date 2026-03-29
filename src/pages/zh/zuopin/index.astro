@@ -1,0 +1,199 @@
+---
+import Layout from '../../../components/layout/Layout.astro';
+
+const lang = 'zh' as const;
+
+const imgInVitro = (await import('../../../assets/images/obras/in-vitro/in-vitro-01.jpg')).default;
+const imgDesdeAdentro = (await import('../../../assets/images/obras/desde-adentro/desde-adentro-01.jpg')).default;
+const imgNuevasFloras = (await import('../../../assets/images/obras/nuevas-floras/nuevas-floras-01.jpg')).default;
+
+const works = [
+  {
+    num: '001',
+    slug: 'in-vitro',
+    title: 'In Vitro',
+    year: '1997',
+    description: '装置——镜子、玻璃 — Estación de La Sabana',
+    hasImage: true,
+    image: imgInVitro,
+  },
+  {
+    num: '002',
+    slug: 'el-reino-de-este-mundo',
+    title: 'El reino de este mundo',
+    year: '2000',
+    description: '装置——混凝土 — MAMBO',
+    hasImage: false,
+    image: null,
+  },
+  {
+    num: '003',
+    slug: 'in-memoriam',
+    title: 'In Memoriam',
+    year: '2001',
+    description: '短暂雕塑——冰 — Alianza Colombo Francesa',
+    hasImage: false,
+    image: null,
+  },
+  {
+    num: '004',
+    slug: 'desde-adentro',
+    title: 'Desde Adentro',
+    year: '2003',
+    description: '12幅摄影、影像 — Club El Nogal',
+    hasImage: true,
+    image: imgDesdeAdentro,
+  },
+  {
+    num: '005',
+    slug: 'nuevas-floras',
+    title: 'Nuevas Floras',
+    year: '2003–2007',
+    description: '雕塑干预 — 第三届路易斯·卡瓦列罗奖',
+    hasImage: true,
+    image: imgNuevasFloras,
+  },
+  {
+    num: '006',
+    slug: 'en-estado-de-coma',
+    title: 'En estado de coma',
+    year: '2005–2007',
+    description: '摄影、影像、装置 — Hospital San Juan de Dios',
+    hasImage: false,
+    image: null,
+  },
+  {
+    num: '007',
+    slug: 'aerolito',
+    title: 'Pequeño Museo del Aerolito',
+    year: '2014–2015',
+    description: '研究、装置 — 哥伦比亚国家博物馆',
+    hasImage: false,
+    image: null,
+  },
+  {
+    num: '008',
+    slug: 'en-el-fertil-suelo',
+    title: 'En el fértil suelo',
+    year: '2017–2018',
+    description: '影像、雕塑 — 第十届路易斯·卡瓦列罗奖',
+    hasImage: false,
+    image: null,
+  },
+  {
+    num: '009',
+    slug: 'dispositivos-para-ver-pasar-el-tiempo',
+    title: 'Dispositivos para ver pasar el tiempo',
+    year: '2020',
+    description: '装置',
+    hasImage: false,
+    image: null,
+  },
+  {
+    num: '010',
+    slug: 'precipitacion-de-arenas',
+    title: 'Precipitación de arenas',
+    year: '2024',
+    description: '装置 — MAMU',
+    hasImage: false,
+    image: null,
+  },
+  {
+    num: '011',
+    slug: 'encuentros-con-seres-notables',
+    title: 'Encuentros con seres notables',
+    year: '2022',
+    description: '雕塑——雕刻树枝 — Galería Espacio Continuo',
+    hasImage: false,
+    image: null,
+  },
+  {
+    num: '012',
+    slug: 'polvo-eres',
+    title: 'Polvo eres',
+    year: '2024',
+    description: '墙面雕刻 — MAMU, 波哥大',
+    hasImage: false,
+    image: null,
+  },
+  {
+    num: '013',
+    slug: 'las-caminantes',
+    title: 'Las caminantes',
+    year: '2024',
+    description: '活体装置——摩尔斯电码 — MAMU, 波哥大',
+    hasImage: false,
+    image: null,
+  },
+  {
+    num: '014',
+    slug: 'ensayo-autorretrato',
+    title: 'Ensayo autorretrato',
+    year: '2022',
+    description: '影像 — Galería Espacio Continuo',
+    hasImage: false,
+    image: null,
+  },
+];
+---
+
+<Layout lang={lang} title="作品全集" description="玛丽亚·埃尔维拉·埃斯卡隆作品全集。1997–2024年项目目录。雕塑、装置、摄影与影像。">
+
+  <div class="obra-index">
+    <div class="container">
+
+      <!-- 页面标题 -->
+      <header class="section__header">
+        <h1>作品全集</h1>
+        <span class="label">1997–2024</span>
+      </header>
+
+      <!-- 作品列表 -->
+      <div class="works-catalog">
+        {works.map((work) => (
+          <a href={`/zh/zuopin/${work.slug}/`} class="work-entry-link" style="text-decoration:none; color:inherit;">
+            <div class="work-entry">
+              <div class="work-entry__num">{work.num}</div>
+              <div class="work-entry__info">
+                <h3>{work.title}</h3>
+                <div class="ficha">
+                  {work.year} &nbsp;/&nbsp; {work.description}
+                </div>
+              </div>
+              <div class="work-entry__image">
+                {work.hasImage && work.image ? (
+                  <img
+                    src={work.image.src}
+                    alt={`${work.title} — María Elvira Escallón`}
+                    loading="lazy"
+                  />
+                ) : (
+                  <div class="placeholder-img" style="height:100%;display:flex;align-items:center;justify-content:center;color:var(--ash-light);font-family:var(--mono);font-size:0.55rem;letter-spacing:0.08em;text-transform:uppercase;">
+                    [ {work.title} ]
+                  </div>
+                )}
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+
+    </div>
+  </div>
+
+</Layout>
+
+<style>
+  .obra-index {
+    padding-top: calc(var(--s5) + 40px);
+    padding-bottom: var(--s5);
+  }
+
+  .works-catalog {
+    margin-top: var(--s3);
+  }
+
+  .work-entry-link:last-child .work-entry {
+    border-bottom: 1px solid var(--ink);
+  }
+</style>

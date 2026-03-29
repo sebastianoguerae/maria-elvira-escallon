@@ -1,0 +1,199 @@
+---
+import Layout from '../../../components/layout/Layout.astro';
+import QuoteBlock from '../../../components/content/QuoteBlock.astro';
+
+const lang = 'es' as const;
+const title = 'In Memoriam';
+---
+
+<Layout
+  lang={lang}
+  title="In Memoriam — Obra"
+  description="In Memoriam (2001). Escultura efímera — hielo, vidrio, agua. 300 kg, 20 horas. Alianza Colombo Francesa, Bogotá. María Elvira Escallón."
+>
+
+  <article class="work-page">
+    <div class="container">
+
+      <!-- Header -->
+      <header class="work-page__header">
+        <p class="label">Obra / 003</p>
+        <h1>{title}</h1>
+        <p class="work-page__meta">2001 &nbsp;/&nbsp; Escultura efímera — hielo, vidrio, agua &nbsp;/&nbsp; 300 kg, duración 20 horas &nbsp;/&nbsp; Alianza Colombo Francesa, Bogotá</p>
+      </header>
+
+      <!-- Galería principal -->
+      <div class="work-page__gallery">
+        <div class="placeholder-img" role="img" aria-label="Imagen pendiente" style="aspect-ratio:16/10;">[ Pendiente: In Memoriam — Columna de hielo al inicio del proceso de disolución ]</div>
+        <div class="placeholder-img" role="img" aria-label="Imagen pendiente" style="aspect-ratio:16/10;">[ Pendiente: In Memoriam — Estado intermedio de la disolución ]</div>
+        <div class="placeholder-img" role="img" aria-label="Imagen pendiente" style="aspect-ratio:16/10;">[ Pendiente: In Memoriam — Contenedor de vidrio con agua al final del proceso ]</div>
+      </div>
+
+      <!-- Texto + Ficha -->
+      <div class="work-page__body">
+        <div class="work-page__text">
+
+          <p class="curatorial">
+            Una columna de hielo de 300 kilogramos disolviéndose lentamente en agua durante
+            veinte horas dentro de un contenedor de vidrio. La obra captura el paso del tiempo
+            como pérdida material irreversible, haciendo visible la duración como fenómeno
+            escultórico. El espectador presencia la transformación — del monumento sólido a
+            la ausencia líquida. No queda nada.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            El proceso de disolución es la obra misma. No hay un momento privilegiado de
+            contemplación: cada instante es igualmente válido y simultáneamente efímero.
+            La columna de hielo funciona como un reloj que mide su propia desaparición,
+            un monumento que se consume en el acto mismo de existir.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            El contenedor de vidrio opera como vitrina y como recipiente — exhibe la
+            escultura mientras recoge sus restos. Al final de las veinte horas, lo que
+            fue columna monumental es solo agua: la forma ha desaparecido por completo,
+            pero la materia permanece transformada. La transparencia del vidrio hace
+            visible cada etapa de esta metamorfosis.
+          </p>
+
+          <h3 style="margin-top: var(--s4);">CONTEXTO</h3>
+          <p style="margin-top: var(--s2);">
+            Esta escultura efímera encarna el interés de Escallón en los procesos temporales
+            y la vulnerabilidad de los materiales. La columna de hielo funciona como monumento
+            y anti-monumento a la vez — su grandeza reside precisamente en su impermanencia.
+          </p>
+          <p style="margin-top: var(--s2);">
+            <em>In Memoriam</em> se inscribe en una tradición de escultura procesual que
+            incluye desde las intervenciones con grasa y fieltro de Joseph Beuys hasta las
+            esculturas de hielo de Andy Goldsworthy. Sin embargo, la obra de Escallón se
+            distingue por su carga simbólica específica: en el contexto colombiano de 2001,
+            la disolución de un monumento adquiere resonancias políticas y sociales
+            inevitables — la fragilidad de las instituciones, la pérdida de la memoria
+            colectiva, la impermanencia de todo lo construido.
+          </p>
+          <p style="margin-top: var(--s2);">
+            La obra anticipa la preocupación central de Escallón por la temporalidad como
+            material escultórico, un tema que desarrollará con mayor complejidad en
+            <em>Nuevas Floras</em> (donde el tiempo transforma la intervención a lo largo
+            de años) y en <em>En estado de coma</em> (donde documenta la disolución lenta
+            de un edificio patrimonial).
+          </p>
+        </div>
+
+        <aside class="work-page__ficha">
+          <h4>FICHA TÉCNICA</h4>
+          <div class="ficha">
+            <strong>In Memoriam</strong><br>
+            2001<br><br>
+            Escultura efímera.<br>
+            Hielo, vidrio, agua.<br><br>
+            Peso: 300 kg<br>
+            Duración: 20 horas<br><br>
+            Alianza Colombo Francesa, Bogotá.
+          </div>
+
+          <h4 style="margin-top: var(--s3);">EXPOSICIONES</h4>
+          <div class="ficha">
+            Alianza Colombo Francesa, Bogotá, 2001
+          </div>
+
+          <h4 style="margin-top: var(--s3);">TEXTOS</h4>
+          <div class="ficha">
+            <a href="/es/textos/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">
+              Textos relacionados
+            </a>
+          </div>
+
+          <h4 style="margin-top: var(--s3);">CÓMO CITAR</h4>
+          <div class="ficha" style="font-size: 0.65rem;">
+            Escallón, M.E. (2001). <em>In Memoriam</em>.
+            Escultura efímera. Disponible en:
+            mariaelviraescallon.com/es/obra/in-memoriam/
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </article>
+
+</Layout>
+
+<style>
+  .work-page {
+    padding-top: calc(var(--s5) + 40px);
+  }
+
+  .work-page__header {
+    margin-bottom: var(--s4);
+  }
+
+  .work-page__header h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin: var(--s1) 0;
+  }
+
+  .work-page__meta {
+    font-size: 0.75rem;
+    color: var(--ash);
+    letter-spacing: 0.03em;
+  }
+
+  .work-page__gallery {
+    display: grid;
+    gap: var(--s2);
+    margin-bottom: var(--s4);
+  }
+
+  .work-page__gallery img {
+    width: 100%;
+    display: block;
+  }
+
+  .work-page__body {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--s5);
+    margin-bottom: var(--s5);
+  }
+
+  .work-page__text h3 {
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    color: var(--ash);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .work-page__ficha h4 {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--ash);
+    margin-bottom: var(--s1);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .placeholder-img {
+    width: 100%;
+    background-color: var(--paper-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ash-light);
+    font-family: var(--mono);
+    font-size: 0.55rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 768px) {
+    .work-page__body {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

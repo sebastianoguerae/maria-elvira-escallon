@@ -1,0 +1,83 @@
+---
+import type { Lang } from '../../i18n/languages';
+import { t, switchLanguage } from '../../i18n/utils';
+import Nav from './Nav.astro';
+import Footer from './Footer.astro';
+import DustParticles from '../interactive/DustParticles';
+import '../../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  lang: Lang;
+  ogImage?: string;
+  showDust?: boolean;
+}
+
+const { title, description, lang, ogImage, showDust = true } = Astro.props;
+const siteTitle = t(lang, 'site.title');
+const pageTitle = title ? `${title} — ${siteTitle}` : siteTitle;
+const pageDescription = description ?? t(lang, 'site.description');
+---
+
+<!DOCTYPE html>
+<html lang={lang}>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{pageTitle}</title>
+  <meta name="description" content={pageDescription}>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Noto+Serif+SC:wght@400;500&family=Noto+Sans+SC:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content={pageTitle}>
+  <meta property="og:description" content={pageDescription}>
+  <meta property="og:type" content="website">
+  {ogImage && <meta property="og:image" content={ogImage}>}
+
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="es" href={`https://mariaelviraescallon.com${switchLanguage(Astro.url.pathname, 'es')}`}>
+  <link rel="alternate" hreflang="en" href={`https://mariaelviraescallon.com${switchLanguage(Astro.url.pathname, 'en')}`}>
+  <link rel="alternate" hreflang="fr" href={`https://mariaelviraescallon.com${switchLanguage(Astro.url.pathname, 'fr')}`}>
+  <link rel="alternate" hreflang="zh" href={`https://mariaelviraescallon.com${switchLanguage(Astro.url.pathname, 'zh')}`}>
+  <link rel="alternate" hreflang="x-default" href={`https://mariaelviraescallon.com${switchLanguage(Astro.url.pathname, 'en')}`}>
+</head>
+<body>
+  {showDust && <DustParticles client:load intensity={0.4} />}
+  <Nav lang={lang} />
+  <main>
+    <slot />
+  </main>
+  <Footer lang={lang} />
+
+  <script>
+    // Fade-in on scroll (Intersection Observer)
+    document.addEventListener('DOMContentLoaded', () => {
+      const fadeElements = document.querySelectorAll('.fade-in');
+      if (fadeElements.length > 0) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        fadeElements.forEach(el => observer.observe(el));
+      }
+
+      // Nav scroll effect
+      const nav = document.querySelector('.nav');
+      if (nav) {
+        window.addEventListener('scroll', () => {
+          nav.classList.toggle('scrolled', window.scrollY > 60);
+        });
+      }
+    });
+  </script>
+</body>
+</html>

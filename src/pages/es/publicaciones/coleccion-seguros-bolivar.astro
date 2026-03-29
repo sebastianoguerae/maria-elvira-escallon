@@ -1,0 +1,200 @@
+---
+import Layout from '../../../components/layout/Layout.astro';
+
+const lang = 'es' as const;
+const title = 'Colección de Arte Contemporáneo Seguros Bolívar';
+---
+
+<Layout
+  lang={lang}
+  title={`${title} — Publicaciones`}
+  description="Monografía dedicada a María Elvira Escallón en la Colección de Arte Contemporáneo Seguros Bolívar (2018). Dirección editorial: José Roca y Sylvia Juliana Suárez Segura."
+>
+
+  <article class="pub-page">
+    <div class="container">
+
+      <header class="pub-page__header">
+        <p class="label">Publicaciones / 001</p>
+        <h1>{title}</h1>
+        <p class="pub-page__meta">2018 &nbsp;/&nbsp; Monografía &nbsp;/&nbsp; 112 páginas</p>
+      </header>
+
+      <div class="pub-page__body">
+        <div class="pub-page__text">
+
+          <div class="pub-page__cover-area">
+            <div class="placeholder-img" style="aspect-ratio:3/4;">[ Portada pendiente ]</div>
+          </div>
+
+          <p class="curatorial">
+            Monografía dedicada a la obra de María Elvira Escallón, publicada como parte de la
+            Colección de Arte Contemporáneo Seguros Bolívar. El volumen recoge 85 obras de la
+            artista con portada encuadernada en tela, tipografía Ovink diseñada por Sofie Beir,
+            e impreso en papel Olin Smooth libre de ácido con certificación FSC.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            La colección, dirigida y curada por José Roca y Sylvia Juliana Suárez Segura,
+            fue publicada anualmente entre 2013 y 2019, presentando tres artistas colombianos
+            por año. La edición de 2018 reúne a Gabriel Sierra, Alicia Barney y María Elvira
+            Escallón — posicionando a Escallón junto a algunas de las figuras más importantes
+            del arte contemporáneo colombiano.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            José Roca, curador de la totalidad de la colección, ha sido una figura central en
+            la valoración crítica de la obra de Escallón desde sus primeros textos sobre
+            <em>Nuevas Floras</em> en 2003. Su decisión de incluir a Escallón en esta serie
+            editorial confirma la posición de la artista en el canon del arte contemporáneo
+            colombiano.
+          </p>
+
+          <h3 style="margin-top: var(--s4);">DIRECCIÓN EDITORIAL</h3>
+          <p style="margin-top: var(--s2);">
+            José Roca y Sylvia Juliana Suárez Segura dirigieron la selección editorial y
+            curatorial de toda la serie. Cada volumen funciona como una monografía autónoma
+            que contextualiza la trayectoria del artista dentro del panorama del arte
+            colombiano contemporáneo.
+          </p>
+
+          <h3 style="margin-top: var(--s4);">ARTISTAS 2018</h3>
+          <ul style="margin-top: var(--s2); list-style: none;">
+            <li style="padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark);">
+              <strong>Gabriel Sierra</strong>
+            </li>
+            <li style="padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark);">
+              <strong>Alicia Barney</strong>
+            </li>
+            <li style="padding: var(--s1) 0;">
+              <strong>María Elvira Escallón</strong>
+            </li>
+          </ul>
+
+          <h3 style="margin-top: var(--s4);">OBRAS RELACIONADAS</h3>
+          <ul style="margin-top: var(--s2); list-style: none;">
+            <li style="padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark);">
+              <a href="/es/obra/nuevas-floras/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">Nuevas Floras (2003–2007)</a>
+            </li>
+            <li style="padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark);">
+              <a href="/es/obra/desde-adentro/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">Desde adentro (2003)</a>
+            </li>
+            <li style="padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark);">
+              <a href="/es/obra/in-vitro/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">In Vitro (1997)</a>
+            </li>
+            <li style="padding: var(--s1) 0;">
+              <span style="color: var(--ash);">La Herida (2006)</span>
+            </li>
+          </ul>
+
+        </div>
+
+        <aside class="pub-page__ficha">
+          <h4>FICHA BIBLIOGRÁFICA</h4>
+          <div class="ficha">
+            <strong>{title}</strong><br>
+            2018<br><br>
+            Dirección editorial: José Roca y Sylvia Juliana Suárez Segura<br>
+            Editorial: Seguros Bolívar<br>
+            Páginas: 112<br>
+            Obras reproducidas: 85<br><br>
+            Encuadernación: Tela<br>
+            Tipografía: Ovink (Sofie Beir)<br>
+            Papel: Olin Smooth, libre de ácido, FSC
+          </div>
+
+          <h4 style="margin-top: var(--s3);">SERIE</h4>
+          <div class="ficha">
+            Colección de Arte Contemporáneo<br>
+            Seguros Bolívar<br>
+            2013–2019<br>
+            3 artistas por año
+          </div>
+
+          <h4 style="margin-top: var(--s3);">VOLVER</h4>
+          <div class="ficha">
+            <a href="/es/publicaciones/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">
+              ← Todas las publicaciones
+            </a>
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </article>
+
+</Layout>
+
+<style>
+  .pub-page {
+    padding-top: calc(var(--s5) + 40px);
+  }
+
+  .pub-page__header {
+    margin-bottom: var(--s4);
+  }
+
+  .pub-page__header h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    margin: var(--s1) 0;
+  }
+
+  .pub-page__meta {
+    font-size: 0.75rem;
+    color: var(--ash);
+    letter-spacing: 0.03em;
+  }
+
+  .pub-page__cover-area {
+    max-width: 320px;
+    margin-bottom: var(--s3);
+  }
+
+  .pub-page__body {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--s5);
+    margin-bottom: var(--s5);
+  }
+
+  .pub-page__text h3 {
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    color: var(--ash);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .pub-page__ficha h4 {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--ash);
+    margin-bottom: var(--s1);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .placeholder-img {
+    width: 100%;
+    background-color: var(--paper-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ash-light);
+    font-family: var(--mono);
+    font-size: 0.55rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 768px) {
+    .pub-page__body {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

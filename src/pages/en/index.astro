@@ -1,0 +1,696 @@
+---
+import Layout from '../../components/layout/Layout.astro';
+import QuoteBlock from '../../components/content/QuoteBlock.astro';
+import ArtistSchema from '../../components/seo/ArtistSchema.astro';
+
+const lang = 'en' as const;
+
+const nuevasFloras = (await import('../../assets/images/obras/nuevas-floras/nuevas-floras-01.jpg')).default;
+const desdeAdentro = (await import('../../assets/images/obras/desde-adentro/desde-adentro-01.jpg')).default;
+const retrato = (await import('../../assets/images/retrato/retrato.jpg')).default;
+const enEstadoDeComaLibro = (await import('../../assets/images/libros/en-estado-de-coma-libro.jpg')).default;
+
+const featuredWorks = [
+  {
+    slug: 'in-vitro',
+    title: 'IN VITRO',
+    year: '1997',
+    hasImage: true,
+    importedImage: (await import('../../assets/images/obras/in-vitro/in-vitro-01.jpg')).default,
+  },
+  {
+    slug: 'el-reino-de-este-mundo',
+    title: 'THE KINGDOM OF THIS WORLD',
+    year: '2000',
+    hasImage: true,
+    importedImage: (await import('../../assets/images/obras/el-reino/el-reino-01.jpg')).default,
+  },
+  {
+    slug: 'desde-adentro',
+    title: 'FROM WITHIN',
+    year: '2003',
+    hasImage: true,
+    importedImage: (await import('../../assets/images/obras/desde-adentro/desde-adentro-01.jpg')).default,
+  },
+  {
+    slug: 'nuevas-floras',
+    title: 'NEW FLORAS',
+    year: '2003-2007',
+    hasImage: true,
+    importedImage: (await import('../../assets/images/obras/nuevas-floras/nuevas-floras-01.jpg')).default,
+  },
+  {
+    slug: 'en-estado-de-coma',
+    title: 'IN A STATE OF COMA',
+    year: '2005-2007',
+    hasImage: false,
+  },
+  {
+    slug: 'aerolito',
+    title: 'SMALL MUSEUM OF THE AEROLITE',
+    year: '2014-2015',
+    hasImage: false,
+  },
+  {
+    slug: 'en-el-fertil-suelo',
+    title: 'IN THE FERTILE GROUND',
+    year: '2017-2018',
+    hasImage: false,
+  },
+];
+
+const timelineEntries = [
+  { year: '1997', title: 'In Vitro' },
+  { year: '2000', title: 'Havana Biennial' },
+  { year: '2003', title: 'From Within' },
+  { year: '2007', title: 'In a State of Coma' },
+  { year: '2014', title: 'Aerolite' },
+  { year: '2017', title: 'New Floras, Versailles' },
+  { year: '2022', title: 'Notable Beings' },
+  { year: '2024', title: 'Dust Factory' },
+];
+---
+
+<Layout lang={lang} description="Official page of Mar\u00eda Elvira Escall\u00f3n. Colombian visual artist. Sculpture, installation, photography and video.">
+
+  <ArtistSchema />
+
+  <!-- Section 1: HERO -->
+  <section class="hero home-section">
+    <div class="hero__content">
+      <p class="hero__label">Visual artist / Bogot\u00e1, Colombia</p>
+      <h1 class="hero__name">Mar\u00eda Elvira<br>Escall\u00f3n</h1>
+      <p class="hero__sub">Questioning the limits between the natural and the cultural</p>
+      <p class="hero__meta">
+        B. 1954, London &mdash; Lives and works in Bogot\u00e1 &nbsp;/&nbsp;
+        Sculpture &middot; Installation &middot; Photography &middot; Video
+      </p>
+    </div>
+    <div class="home-scroll-indicator" aria-hidden="true">
+      <span>&darr;</span>
+    </div>
+  </section>
+
+  <!-- Section 2: QUOTE (Jos\u00e9 Roca) -->
+  <section class="home-section home-section--quote fade-in">
+    <div class="container">
+      <QuoteBlock
+        annotation="Curatorial text"
+        quote="Each work follows its own unique and precise path. It is possible, however, to find a constant in the work of Mar\u00eda Elvira Escall\u00f3n: the questioning of the limits between the natural and the cultural."
+        cite="Jos\u00e9 Roca &mdash; Columna de Arena 53, 2003"
+      />
+    </div>
+  </section>
+
+  <!-- Section 3: FEATURED WORK -->
+  <section class="home-section home-section--alt fade-in">
+    <div class="container">
+      <p class="label">Featured work</p>
+      <a href="/en/works/nuevas-floras/" class="home-featured">
+        <img
+          src={nuevasFloras.src}
+          alt="New Floras &mdash; Mar\u00eda Elvira Escall\u00f3n"
+          loading="lazy"
+        />
+        <div class="home-featured__caption">
+          <h3>NEW FLORAS</h3>
+          <span class="ficha">2003&ndash;2007 &middot; Installation / Sculpture</span>
+        </div>
+      </a>
+      <a href="/en/works/nuevas-floras/" class="home-teaser-link">View complete work &rarr;</a>
+    </div>
+  </section>
+
+  <!-- Section 4: WORKS PREVIEW -->
+  <section class="home-section fade-in">
+    <div class="container">
+      <div class="section__header">
+        <h2>Works</h2>
+        <span class="label">1997&ndash;2024</span>
+      </div>
+
+      <div class="works-grid">
+        {featuredWorks.map((work) => (
+          <a href={`/en/works/${work.slug}/`} class="work-card-link" style="text-decoration:none; color:inherit;">
+            <article class="work-card-static">
+              <div class="work-card__thumb">
+                {work.hasImage && work.importedImage ? (
+                  <img
+                    src={work.importedImage.src}
+                    alt={`${work.title} \u2014 Mar\u00eda Elvira Escall\u00f3n`}
+                    loading="lazy"
+                    style="width:100%;height:100%;object-fit:cover;"
+                  />
+                ) : (
+                  <div class="placeholder-img" role="img" aria-label="Image pending" style="height:100%;aspect-ratio:4/3;background:var(--paper-dark);display:flex;align-items:center;justify-content:center;color:var(--ash-light);font-family:var(--mono);font-size:0.55rem;letter-spacing:0.08em;text-transform:uppercase;">
+                    [ {work.title} ]
+                  </div>
+                )}
+              </div>
+              <div class="work-card__title">
+                <h3>{work.title}</h3>
+                <span class="year">{work.year}</span>
+              </div>
+            </article>
+          </a>
+        ))}
+      </div>
+
+      <div class="home-section__cta">
+        <a href="/en/works/" class="home-teaser-link">View complete catalogue &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: EXHIBITION HIGHLIGHT -->
+  <section class="home-section home-section--alt fade-in">
+    <div class="container">
+      <div class="home-exhibition">
+        <p class="label">Current exhibition</p>
+        <h2 class="home-exhibition__title">Encounters in the Dust Factory</h2>
+        <p class="home-exhibition__subtitle">
+          Anthological exhibition &mdash; 80 works &mdash; MAMU, Banco de la Rep\u00fablica, 2024
+        </p>
+        <p class="home-exhibition__desc curatorial">
+          A retrospective look at three decades of work interrogating the boundaries between nature and culture, memory and history, decay and permanence. The exhibition brings together for the first time the broadest collection of Escall\u00f3n's work in a single space.
+        </p>
+        <!-- Links to ES detail page until EN exhibition detail pages are created -->
+        <a href="/es/exposiciones/encuentros-fabrica-polvo-2024/" class="home-teaser-link">View exhibition &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: SECOND QUOTE (Seguros Bol\u00edvar) -->
+  <section class="home-section home-section--quote fade-in">
+    <div class="container">
+      <QuoteBlock
+        annotation="About the artist"
+        quote="Her work articulates sculptural processes, photography and in-situ work, revealing a present threatened by historical failures, positioning itself between history and memory by establishing thresholds to connect times and fragments of stories through elements of material culture."
+        cite="Colecci\u00f3n Seguros Bol\u00edvar de Arte Contempor\u00e1neo, 2018"
+      />
+    </div>
+  </section>
+
+  <!-- Section 7: TIMELINE TEASER -->
+  <section class="home-section home-timeline-strip fade-in">
+    <div class="container">
+      <p class="label" style="color: var(--ash-light);">Timeline</p>
+      <div class="home-timeline__entries">
+        {timelineEntries.map((entry) => (
+          <div class="home-timeline__entry">
+            <span class="home-timeline__year">{entry.year}</span>
+            <span class="home-timeline__title">{entry.title}</span>
+          </div>
+        ))}
+      </div>
+      <a href="/en/timeline/" class="home-teaser-link home-teaser-link--light">Explore timeline &rarr;</a>
+    </div>
+  </section>
+
+  <!-- Section 8: MAP TEASER -->
+  <section class="home-section home-section--alt fade-in">
+    <div class="container">
+      <p class="label">Geography</p>
+      <div class="home-stats">
+        <div class="home-stats__item">
+          <span class="home-stats__number">15+</span>
+          <span class="home-stats__label">cities</span>
+        </div>
+        <span class="home-stats__sep">&middot;</span>
+        <div class="home-stats__item">
+          <span class="home-stats__number">12+</span>
+          <span class="home-stats__label">countries</span>
+        </div>
+        <span class="home-stats__sep">&middot;</span>
+        <div class="home-stats__item">
+          <span class="home-stats__number">44</span>
+          <span class="home-stats__label">exhibitions</span>
+        </div>
+      </div>
+      <a href="/en/map/" class="home-teaser-link">Explore map &rarr;</a>
+    </div>
+  </section>
+
+  <!-- Section 9: PUBLICATIONS -->
+  <section class="home-section fade-in">
+    <div class="container">
+      <div class="section__header">
+        <h2>Publications</h2>
+        <span class="label">Catalogues</span>
+      </div>
+      <!-- Links to ES publication pages until EN publication pages are created -->
+      <div class="home-publications">
+        <a href="/es/publicaciones/en-estado-de-coma-libro/" class="home-publications__book">
+          <div class="home-publications__cover">
+            <img src={enEstadoDeComaLibro.src} alt="In a State of Coma &mdash; Catalogue" loading="lazy" />
+          </div>
+          <p class="home-publications__title">In a State of Coma</p>
+          <p class="home-publications__year">2007</p>
+        </a>
+        <a href="/es/publicaciones/polvo-eres-libro/" class="home-publications__book">
+          <div class="home-publications__cover home-publications__cover--placeholder">
+            <span>[ Dust Thou Art ]</span>
+          </div>
+          <p class="home-publications__title">Dust Thou Art</p>
+          <p class="home-publications__year">2014</p>
+        </a>
+        <a href="/es/publicaciones/coleccion-seguros-bolivar/" class="home-publications__book">
+          <div class="home-publications__cover home-publications__cover--placeholder">
+            <span>[ Seguros Bolívar Collection ]</span>
+          </div>
+          <p class="home-publications__title">Seguros Bolívar Collection</p>
+          <p class="home-publications__year">2018</p>
+        </a>
+      </div>
+      <div class="home-section__cta">
+        <a href="/es/publicaciones/" class="home-teaser-link">View publications &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 10: BIOGRAPHY TEASER -->
+  <section class="home-section home-section--alt fade-in">
+    <div class="container">
+      <div class="home-bio-teaser">
+        <div class="home-bio-teaser__portrait">
+          <img src={retrato.src} alt="Mar\u00eda Elvira Escall\u00f3n &mdash; Portrait" loading="lazy" />
+        </div>
+        <div class="home-bio-teaser__text">
+          <p class="label">Biography</p>
+          <p class="curatorial home-bio-teaser__quote">
+            Mar\u00eda Elvira Escall\u00f3n does not illustrate violence. She points. She does not criticize &mdash; she evidences.
+          </p>
+          <p class="home-bio-teaser__body">
+            Born in London in 1954, Escall\u00f3n has developed over three decades a body of work that interrogates the boundaries between the natural and the constructed, memory and oblivion, decay and permanence.
+          </p>
+          <a href="/en/biography/" class="home-teaser-link">Read full biography &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 11: CONTACT TEASER -->
+  <section class="home-section home-section--contact fade-in">
+    <div class="container">
+      <p class="label">Representation</p>
+      <p class="home-contact__gallery">Galer\u00eda Espacio Continuo, Bogot\u00e1</p>
+      <!-- Links to ES contact page until EN contact page is created -->
+      <a href="/es/contacto/" class="home-teaser-link">Contact &rarr;</a>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  /* ============================================
+     Home — Long scroll immersive experience
+     ============================================ */
+
+  /* --- Base section rhythm --- */
+  .home-section {
+    padding: var(--s6) 0;
+    position: relative;
+  }
+
+  .home-section--alt {
+    background-color: var(--paper-dark);
+  }
+
+  .home-section--quote {
+    padding: var(--s6) 0;
+  }
+
+  .home-section--contact {
+    padding: var(--s5) 0;
+    text-align: center;
+  }
+
+  .home-section__cta {
+    margin-top: var(--s4);
+  }
+
+  /* --- Scroll indicator --- */
+  .home-scroll-indicator {
+    position: absolute;
+    bottom: var(--s3);
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--mono);
+    font-size: 1.4rem;
+    color: var(--ash-light);
+    animation: home-bounce 2s ease infinite;
+  }
+
+  @keyframes home-bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(8px); }
+  }
+
+  /* --- Featured work (hero image) --- */
+  .home-featured {
+    display: block;
+    margin-top: var(--s3);
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .home-featured img {
+    width: 100%;
+    max-height: 75vh;
+    object-fit: cover;
+    transition: opacity 0.4s ease;
+  }
+
+  .home-featured:hover img {
+    opacity: 0.9;
+  }
+
+  .home-featured__caption {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: var(--s2) 0;
+  }
+
+  .home-featured__caption h3 {
+    font-family: var(--mono);
+    font-weight: 400;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .home-featured__caption .ficha {
+    text-align: right;
+  }
+
+  /* --- Teaser links --- */
+  .home-teaser-link {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ash);
+    text-decoration: none;
+    margin-top: var(--s3);
+    transition: color 0.2s ease;
+  }
+
+  .home-teaser-link:hover {
+    color: var(--ink);
+  }
+
+  .home-teaser-link--light {
+    color: var(--ash-light);
+  }
+
+  .home-teaser-link--light:hover {
+    color: var(--paper);
+  }
+
+  /* --- Work cards (reused) --- */
+  .work-card-static {
+    cursor: pointer;
+    border-bottom: 1px solid var(--paper-dark);
+  }
+  .work-card-static .work-card__thumb {
+    width: 100%;
+    aspect-ratio: 4/3;
+    background-color: var(--paper-dark);
+    overflow: hidden;
+  }
+  .work-card-static .work-card__thumb img {
+    transition: opacity 0.4s ease;
+  }
+  .work-card-static:hover .work-card__thumb img {
+    opacity: 0.8;
+  }
+  .work-card-static .work-card__title {
+    padding: var(--s2) 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .work-card-static .work-card__title h3 {
+    font-family: var(--mono);
+    font-weight: 400;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .work-card-static .work-card__title .year {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    color: var(--ash-light);
+  }
+
+  /* --- Exhibition highlight --- */
+  .home-exhibition {
+    max-width: var(--text-w);
+  }
+
+  .home-exhibition__title {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    line-height: 1.15;
+    margin-top: var(--s2);
+    margin-bottom: var(--s2);
+    text-transform: none;
+    letter-spacing: -0.01em;
+  }
+
+  .home-exhibition__subtitle {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    color: var(--ash);
+    letter-spacing: 0.05em;
+    margin-bottom: var(--s3);
+  }
+
+  .home-exhibition__desc {
+    margin-bottom: var(--s3);
+    max-width: 50ch;
+  }
+
+  /* --- Timeline strip --- */
+  .home-timeline-strip {
+    background-color: var(--ink);
+    color: var(--paper);
+    padding: var(--s5) 0;
+  }
+
+  .home-timeline__entries {
+    display: flex;
+    gap: var(--s4);
+    overflow-x: auto;
+    padding: var(--s4) 0 var(--s3);
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+
+  .home-timeline__entry {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s1);
+    flex-shrink: 0;
+    min-width: 100px;
+  }
+
+  .home-timeline__year {
+    font-family: var(--mono);
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 700;
+    color: var(--paper);
+    letter-spacing: -0.02em;
+  }
+
+  .home-timeline__title {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    color: var(--ash-light);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+  }
+
+  /* --- Stats (map teaser) --- */
+  .home-stats {
+    display: flex;
+    align-items: baseline;
+    gap: var(--s3);
+    margin: var(--s4) 0;
+    flex-wrap: wrap;
+  }
+
+  .home-stats__item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s1);
+  }
+
+  .home-stats__number {
+    font-family: var(--mono);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.03em;
+  }
+
+  .home-stats__label {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    color: var(--ash);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .home-stats__sep {
+    font-size: 2rem;
+    color: var(--ash-light);
+    align-self: center;
+  }
+
+  /* --- Publications --- */
+  .home-publications {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--s3);
+    margin-top: var(--s4);
+  }
+
+  .home-publications__book {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .home-publications__cover {
+    aspect-ratio: 3/4;
+    background-color: var(--paper-dark);
+    overflow: hidden;
+    margin-bottom: var(--s2);
+  }
+
+  .home-publications__cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.4s ease;
+  }
+
+  .home-publications__book:hover .home-publications__cover img {
+    opacity: 0.85;
+  }
+
+  .home-publications__cover--placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    color: var(--ash-light);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .home-publications__title {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .home-publications__year {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    color: var(--ash-light);
+    margin-top: var(--s1);
+  }
+
+  /* --- Biography teaser --- */
+  .home-bio-teaser {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: var(--s5);
+    align-items: start;
+  }
+
+  .home-bio-teaser__portrait {
+    aspect-ratio: 3/4;
+    overflow: hidden;
+    background-color: var(--paper);
+  }
+
+  .home-bio-teaser__portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .home-bio-teaser__text {
+    padding-top: var(--s2);
+  }
+
+  .home-bio-teaser__quote {
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    line-height: 1.6;
+    margin: var(--s3) 0;
+    max-width: 40ch;
+  }
+
+  .home-bio-teaser__body {
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    line-height: 1.8;
+    color: var(--ash);
+    max-width: 50ch;
+    margin-bottom: var(--s2);
+  }
+
+  /* --- Contact teaser --- */
+  .home-contact__gallery {
+    font-family: var(--serif);
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+    margin: var(--s3) 0 0;
+    color: var(--ink-soft);
+  }
+
+  /* --- Responsive --- */
+  @media (max-width: 768px) {
+    .home-section {
+      padding: var(--s5) 0;
+    }
+
+    .home-bio-teaser {
+      grid-template-columns: 1fr;
+      gap: var(--s3);
+    }
+
+    .home-bio-teaser__portrait {
+      max-width: 280px;
+    }
+
+    .home-publications {
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--s2);
+    }
+
+    .home-stats {
+      gap: var(--s2);
+    }
+
+    .home-stats__sep {
+      display: none;
+    }
+
+    .home-timeline__entries {
+      gap: var(--s3);
+    }
+
+    .home-featured__caption {
+      flex-direction: column;
+      gap: var(--s1);
+    }
+  }
+</style>

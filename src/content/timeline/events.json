@@ -1,0 +1,39 @@
+{
+  "works": [
+    {"year": 1993, "title": "Primera Beca Colcultura", "type": "award", "slug": null},
+    {"year": 1997, "title": "In Vitro", "type": "work", "slug": "in-vitro", "desc": "Instalación con espejo en la Estación de La Sabana"},
+    {"year": 1997, "title": "1er Premio Salón Regional", "type": "award", "slug": null},
+    {"year": 2000, "title": "El reino de este mundo", "type": "work", "slug": "el-reino-de-este-mundo", "desc": "Instalación con escombros en MAMBO"},
+    {"year": 2000, "title": "VII Bienal de La Habana", "type": "exhibition", "slug": null},
+    {"year": 2001, "title": "In Memoriam", "type": "work", "slug": "in-memoriam", "desc": "Columna de hielo, 300kg, 20 horas"},
+    {"year": 2003, "title": "Desde Adentro", "type": "work", "slug": "desde-adentro", "desc": "12 fotografías del Club El Nogal"},
+    {"year": 2003, "title": "Nuevas Floras", "type": "work", "slug": "nuevas-floras", "desc": "Intervención sobre árboles nativos"},
+    {"year": 2003, "title": "1er Premio Luis Caballero", "type": "award", "slug": null},
+    {"year": 2005, "title": "En estado de coma (inicio)", "type": "work", "slug": "en-estado-de-coma", "desc": "Hospital San Juan de Dios"},
+    {"year": 2006, "title": "Premio Patrimonio", "type": "award", "slug": null},
+    {"year": 2007, "title": "Arles / Gales / Sydney", "type": "exhibition", "slug": null},
+    {"year": 2009, "title": "X Bienal de La Habana", "type": "exhibition", "slug": null},
+    {"year": 2014, "title": "Pequeño Museo del Aerolito", "type": "work", "slug": "aerolito", "desc": "Meteorito de 1810 en Boyacá"},
+    {"year": 2017, "title": "Nuevas Floras Versalles", "type": "exhibition", "slug": null, "desc": "FIAC / Tullerías / Arboretum de Chevreloup"},
+    {"year": 2017, "title": "La vuelta — Arles", "type": "exhibition", "slug": null},
+    {"year": 2018, "title": "En el fértil suelo", "type": "work", "slug": "en-el-fertil-suelo", "desc": "X Premio Luis Caballero"},
+    {"year": 2019, "title": "Urban Impulses — Londres", "type": "exhibition", "slug": null},
+    {"year": 2020, "title": "Dispositivos para ver pasar el tiempo", "type": "work", "slug": "dispositivos-para-ver-pasar-el-tiempo"},
+    {"year": 2022, "title": "Encuentros con seres notables", "type": "work", "slug": "encuentros-con-seres-notables"},
+    {"year": 2022, "title": "Precipitación de arenas", "type": "work", "slug": "precipitacion-de-arenas"},
+    {"year": 2024, "title": "MAMU — Encuentros en la fábrica de polvo", "type": "exhibition", "slug": null, "desc": "Exposición antológica, 80 obras"},
+    {"year": 2024, "title": "Polvo eres / Las caminantes", "type": "work", "slug": "polvo-eres", "desc": "Nuevas obras para el MAMU"}
+  ],
+  "context": [
+    {"year": 1993, "title": "Constitución de 1991 en vigor", "desc": "Nueva constitución democrática de Colombia"},
+    {"year": 1997, "title": "Crisis humanitaria", "desc": "Escalada del conflicto armado colombiano"},
+    {"year": 2000, "title": "Plan Colombia", "desc": "Inicio del Plan Colombia con Estados Unidos"},
+    {"year": 2003, "title": "Atentado Club El Nogal", "desc": "7 de febrero, 36 muertos. Bogotá", "related": "desde-adentro"},
+    {"year": 2005, "title": "Cierre Hospital San Juan de Dios", "desc": "Cerrado en 2001, declarado patrimonio 2002", "related": "en-estado-de-coma"},
+    {"year": 2008, "title": "Operación Jaque", "desc": "Liberación de Ingrid Betancourt"},
+    {"year": 2010, "title": "Aerolito cae en 1810", "desc": "Boyacá, Sábado Santo — año de independencia", "related": "aerolito"},
+    {"year": 2016, "title": "Acuerdo de Paz", "desc": "Firma del acuerdo con las FARC", "related": "en-el-fertil-suelo"},
+    {"year": 2020, "title": "Pandemia COVID-19", "desc": "Confinamiento mundial"},
+    {"year": 2024, "title": "Hospital San Juan de Dios reabre", "desc": "Después de 23 años, inicia proceso de reapertura"}
+  ]
+}

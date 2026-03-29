@@ -1,0 +1,125 @@
+---
+import Layout from '../../../components/layout/Layout.astro';
+const lang = 'es' as const;
+---
+
+<Layout
+  lang={lang}
+  title="Encuentro con seres notables — Exposición"
+  description="Exposición individual de María Elvira Escallón en Galería Espacio Continuo, Bogotá. Curaduría de Ana María Lozano Rocha. Mayo — Junio 2022."
+>
+
+  <article class="exhibition-page">
+    <div class="container">
+
+      <!-- Header -->
+      <header class="exh-header">
+        <span class="label">Exposición individual — 2022</span>
+        <h1>Encuentro con seres notables</h1>
+        <p class="exh-meta">Galería Espacio Continuo · Bogotá, Colombia · Mayo 18 — Junio 30, 2022</p>
+      </header>
+
+      <!-- Galería -->
+      <div class="exh-gallery">
+        <div class="placeholder-img" style="aspect-ratio:16/9;">[ Pendiente: Vista de sala — Encuentro con seres notables, Espacio Continuo ]</div>
+        <div class="placeholder-img" style="aspect-ratio:16/9;">[ Pendiente: Precipitación de arenas — arena del río Cauca cayendo del techo ]</div>
+        <div class="placeholder-img" style="aspect-ratio:4/3;">[ Pendiente: Detalle — ramas talladas que semejan huesos humanos ]</div>
+      </div>
+
+      <!-- Cuerpo -->
+      <div class="exh-body">
+        <div class="exh-text">
+
+          <h3>SOBRE LA EXPOSICIÓN</h3>
+          <p class="curatorial" style="margin-top: var(--s2);">
+            El título se inspira en el libro del místico ruso George Gurdjieff.
+            <em>Encuentro con seres notables</em> explora el parentesco entre humanos
+            y otros seres vivos. La exposición incluye esculturas de ramas talladas
+            que semejan huesos humanos, arena del río Cauca cayendo del techo, piezas
+            de madera talladas por el mar, y videos de las manos de la artista.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            Los materiales — arena, arcilla, ramas de jazmín de la sabana y eucalipto —
+            actúan como mediadores entre lo humano y lo vegetal, lo orgánico y lo
+            cultural. La muestra propone un reconocimiento de los vínculos profundos
+            que compartimos con otros seres, cuestionando las jerarquías establecidas
+            entre lo humano y lo no-humano.
+          </p>
+
+          <h3 style="margin-top: var(--s4);">CURADURÍA</h3>
+          <p style="margin-top: var(--s2);">
+            Ana María Lozano Rocha
+          </p>
+
+          <div class="exh-works">
+            <h3>OBRAS EXHIBIDAS</h3>
+            <ul>
+              <li>Encuentros con seres notables — escultura, 290 x 160 x 70 cm</li>
+              <li>Brazo</li>
+              <li><a href="/es/obra/precipitacion-de-arenas/">Precipitación de arenas</a></li>
+              <li>Piezas llegadas de lejos</li>
+              <li>Mesa de trabajo — video, 8'10"</li>
+              <li>Ensayo autorretrato</li>
+            </ul>
+          </div>
+
+          <div class="exh-press">
+            <h3>PRENSA</h3>
+            <ul>
+              <li><a href="#">Artishock Revista</a> — Junio 2022</li>
+              <li><a href="#">El Espectador</a></li>
+              <li><a href="#">El Tiempo</a></li>
+              <li><a href="#">Cambio Colombia</a></li>
+              <li><a href="#">Las2Orillas</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <aside class="exh-aside">
+          <h4>DATOS</h4>
+          <div class="ficha">
+            <strong>Encuentro con seres notables</strong><br>
+            Exposición individual<br><br>
+            Galería Espacio Continuo<br>
+            Bogotá, Colombia<br><br>
+            Mayo 18 — Junio 30, 2022<br><br>
+            Curaduría: Ana María Lozano Rocha<br><br>
+            Materiales: arena, arcilla, ramas de jazmín<br>
+            de la sabana y eucalipto
+          </div>
+
+          <h4 style="margin-top: var(--s3);">IDIOMAS</h4>
+          <div class="ficha">
+            <a href="/en/exhibitions/encuentro-seres-notables-2022/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">
+              View in English
+            </a>
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </article>
+
+</Layout>
+
+<style>
+  .exhibition-page { padding-top: calc(var(--s5) + 40px); }
+  .exh-header { margin-bottom: var(--s4); }
+  .exh-header h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(2rem, 5vw, 3.5rem); margin: var(--s1) 0; }
+  .exh-meta { font-size: 0.8rem; color: var(--ash); letter-spacing: 0.03em; }
+  .exh-body { display: grid; grid-template-columns: 2fr 1fr; gap: var(--s5); margin-bottom: var(--s5); }
+  .exh-gallery { display: grid; gap: var(--s2); margin-bottom: var(--s4); }
+  .exh-gallery img { width: 100%; }
+  .exh-text h3 { font-size: 0.8rem; letter-spacing: 0.08em; color: var(--ash); padding-bottom: var(--s1); border-bottom: 1px solid var(--paper-dark); }
+  .exh-aside h4 { font-family: var(--mono); font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: var(--ash); margin-bottom: var(--s1); padding-bottom: var(--s1); border-bottom: 1px solid var(--paper-dark); }
+  .exh-works { margin-top: var(--s3); }
+  .exh-works li { padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark); }
+  .exh-works a { color: var(--moss); border-bottom: 1px solid var(--paper-dark); }
+  .exh-works a:hover { border-color: var(--moss); }
+  .exh-press { margin-top: var(--s3); }
+  .exh-press li { padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark); font-size: 0.8rem; }
+  .exh-press a { color: var(--moss); }
+  .placeholder-img { width: 100%; background: var(--paper-dark); display: flex; align-items: center; justify-content: center; color: var(--ash-light); font-family: var(--mono); font-size: 0.55rem; letter-spacing: 0.08em; text-transform: uppercase; }
+  @media (max-width: 768px) { .exh-body { grid-template-columns: 1fr; } }
+</style>

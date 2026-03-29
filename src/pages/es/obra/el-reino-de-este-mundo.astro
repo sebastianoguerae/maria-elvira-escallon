@@ -1,0 +1,205 @@
+---
+import Layout from '../../../components/layout/Layout.astro';
+import QuoteBlock from '../../../components/content/QuoteBlock.astro';
+
+const lang = 'es' as const;
+const title = 'El reino de este mundo';
+
+const img1 = (await import('../../../assets/images/obras/el-reino/el-reino-01.jpg')).default;
+const img2 = (await import('../../../assets/images/obras/el-reino/el-reino-02.jpg')).default;
+const img3 = (await import('../../../assets/images/obras/el-reino/el-reino-03.jpg')).default;
+const img4 = (await import('../../../assets/images/obras/el-reino/el-reino-04.jpg')).default;
+---
+
+<Layout
+  lang={lang}
+  title="El reino de este mundo — Obra"
+  description="El reino de este mundo (2000). Instalación — bloques de concreto, escombros. Museo de Arte Moderno de Bogotá (MAMBO). María Elvira Escallón."
+>
+
+  <article class="work-page">
+    <div class="container">
+
+      <!-- Header -->
+      <header class="work-page__header">
+        <p class="label">Obra / 002</p>
+        <h1>{title}</h1>
+        <p class="work-page__meta">2000 &nbsp;/&nbsp; Instalación — bloques de concreto, escombros &nbsp;/&nbsp; Museo de Arte Moderno de Bogotá (MAMBO)</p>
+      </header>
+
+      <!-- Galería principal -->
+      <div class="work-page__gallery">
+        <img src={img1.src} alt="El reino de este mundo — Vista frontal del muro de concreto con escombros" loading="eager">
+        <img src={img2.src} alt="El reino de este mundo — Sombra de escombros en el piso del museo" loading="lazy">
+        <img src={img3.src} alt="El reino de este mundo — Detalle de escombros aglomerados en bloques" loading="lazy">
+        <img src={img4.src} alt="El reino de este mundo — Vista general de la instalación, MAMBO" loading="lazy">
+      </div>
+
+      <!-- Texto + Ficha -->
+      <div class="work-page__body">
+        <div class="work-page__text">
+
+          <p class="curatorial">
+            Un muro construido con bloques de concreto que aglomeran escombros de una casa
+            familiar demolida. El muro proyecta una «sombra» formada con escombros dispersos
+            sobre el piso del museo. Escallón se enfoca en la reconstrucción y la reutilización,
+            tejiendo una narrativa que resalta la resiliencia.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            Una mujer llamada Fanny rescataba los ladrillos de edificios demolidos — la
+            historia humana está incrustada en el material. Los escombros no son desechos
+            sino materia cargada de historia doméstica: fragmentos de muros que alguna vez
+            delimitaron habitaciones, pisos que sostuvieron vidas cotidianas, estructuras
+            que dieron forma a un hogar.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            La «sombra» de escombros en el suelo del museo establece una relación entre el
+            muro vertical y su proyección horizontal — entre la construcción y la destrucción,
+            entre lo que permanece en pie y lo que cae. El muro es simultáneamente monumento
+            y ruina, construcción nueva hecha de destrucción vieja, presencia física de la
+            ausencia doméstica.
+          </p>
+
+          <h3 style="margin-top: var(--s4);">CONTEXTO</h3>
+          <p style="margin-top: var(--s2);">
+            El título hace referencia a la novela de Alejo Carpentier sobre el realismo mágico
+            latinoamericano y la revolución. La obra transforma la destrucción doméstica en
+            presencia monumental. Carpentier acuñó el concepto de «lo real maravilloso» para
+            describir una realidad latinoamericana que supera la ficción — Escallón lo traduce
+            al lenguaje material: los escombros de una casa se convierten en los bloques de
+            un nuevo muro.
+          </p>
+          <p style="margin-top: var(--s2);">
+            La obra se sitúa en un momento de intensa transformación urbana en Bogotá, donde
+            la demolición de casas y barrios enteros para dar paso a proyectos de renovación
+            producía enormes cantidades de escombros. La figura de Fanny — una mujer que
+            sobrevivía rescatando material de construcción de los edificios demolidos —
+            encarna la economía informal de la supervivencia y la resistencia silenciosa
+            ante la destrucción del tejido urbano.
+          </p>
+          <p style="margin-top: var(--s2);">
+            <em>El reino de este mundo</em> establece temas que Escallón continuará
+            explorando: la relación entre destrucción y memoria, el patrimonio material
+            como depositario de historias invisibilizadas, y la capacidad de los materiales
+            para contar las historias que las narrativas oficiales omiten.
+          </p>
+        </div>
+
+        <aside class="work-page__ficha">
+          <h4>FICHA TÉCNICA</h4>
+          <div class="ficha">
+            <strong>El reino de este mundo</strong><br>
+            2000<br><br>
+            Instalación.<br>
+            Bloques de concreto, escombros.<br><br>
+            Museo de Arte Moderno de Bogotá (MAMBO).<br>
+            Dimensiones variables.
+          </div>
+
+          <h4 style="margin-top: var(--s3);">EXPOSICIONES</h4>
+          <div class="ficha">
+            Museo de Arte Moderno de Bogotá (MAMBO), 2000
+          </div>
+
+          <h4 style="margin-top: var(--s3);">TEXTOS</h4>
+          <div class="ficha">
+            <a href="/es/textos/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">
+              Textos relacionados
+            </a>
+          </div>
+
+          <h4 style="margin-top: var(--s3);">CÓMO CITAR</h4>
+          <div class="ficha" style="font-size: 0.65rem;">
+            Escallón, M.E. (2000). <em>El reino de este mundo</em>.
+            Instalación. Disponible en:
+            mariaelviraescallon.com/es/obra/el-reino-de-este-mundo/
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </article>
+
+</Layout>
+
+<style>
+  .work-page {
+    padding-top: calc(var(--s5) + 40px);
+  }
+
+  .work-page__header {
+    margin-bottom: var(--s4);
+  }
+
+  .work-page__header h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin: var(--s1) 0;
+  }
+
+  .work-page__meta {
+    font-size: 0.75rem;
+    color: var(--ash);
+    letter-spacing: 0.03em;
+  }
+
+  .work-page__gallery {
+    display: grid;
+    gap: var(--s2);
+    margin-bottom: var(--s4);
+  }
+
+  .work-page__gallery img {
+    width: 100%;
+    display: block;
+  }
+
+  .work-page__body {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--s5);
+    margin-bottom: var(--s5);
+  }
+
+  .work-page__text h3 {
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    color: var(--ash);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .work-page__ficha h4 {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--ash);
+    margin-bottom: var(--s1);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .placeholder-img {
+    width: 100%;
+    background-color: var(--paper-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ash-light);
+    font-family: var(--mono);
+    font-size: 0.55rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 768px) {
+    .work-page__body {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

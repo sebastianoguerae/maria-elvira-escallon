@@ -1,0 +1,186 @@
+---
+import Layout from '../../../components/layout/Layout.astro';
+import QuoteBlock from '../../../components/content/QuoteBlock.astro';
+
+const lang = 'en' as const;
+const title = 'Precipitacion de Arenas';
+---
+
+<Layout
+  lang={lang}
+  title="Precipitacion de Arenas — Work"
+  description="Precipitacion de Arenas (2022–2024). Installation — sand, furniture, security glass, speaker. Maria Elvira Escallon."
+>
+
+  <article class="work-page">
+    <div class="container">
+
+      <!-- Header -->
+      <header class="work-page__header">
+        <p class="label">Work / 010</p>
+        <h1>{title}</h1>
+        <p class="work-page__meta">2022–2024 &nbsp;/&nbsp; Installation — sand, furniture, security glass, speaker &nbsp;/&nbsp; Variable dimensions</p>
+      </header>
+
+      <!-- Main gallery -->
+      <div class="work-page__gallery">
+        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pending: Precipitacion de Arenas — Sand falling from ceiling onto domestic furniture ]</div>
+        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pending: Precipitacion de Arenas — Detail of furniture partially buried in sand ]</div>
+        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pending: Precipitacion de Arenas — MAMU 2024 installation with 10 tons of sand ]</div>
+      </div>
+
+      <!-- Text + Technical sheet -->
+      <div class="work-page__body">
+        <div class="work-page__text">
+
+          <p class="curatorial">
+            Golden sand from the Guamo river falls from the ceiling at different intervals,
+            covering surfaces and constantly transforming the state of the room. Domestic
+            furniture is gradually buried under tons of sand. The installation creates a
+            landscape of slow catastrophe — a domestic interior undergoing geological
+            transformation in real time.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            The sand's precipitation is both relentless and gentle. It does not crash or
+            explode; it accumulates grain by grain, yet the cumulative effect is devastating.
+            Tables, chairs, and other recognizable objects of domestic life slowly disappear
+            under dunes that form and shift throughout the exhibition. The security glass
+            allows viewers to observe this process from a position of proximity but
+            separation — witnessing a burial they cannot halt.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            A speaker embedded in the installation introduces sound as an additional
+            temporal marker, punctuating the visual rhythm of the falling sand. The work
+            engages with themes of displacement, the erasure of domestic space, and the
+            overwhelming force of natural processes acting upon human constructions.
+          </p>
+
+          <h3 style="margin-top: var(--s4);">CONTEXT</h3>
+          <p style="margin-top: var(--s2);">
+            The MAMU 2024 version of <em>Precipitacion de Arenas</em> used 10 tons of sand
+            for the first time, representing the most ambitious iteration of the work to
+            date. This scale allowed the installation to achieve a fully immersive quality,
+            transforming the exhibition room into a site where the distinction between
+            interior and landscape collapses entirely.
+          </p>
+          <p style="margin-top: var(--s2);">
+            The work connects to Escallon's sustained investigation of time as material
+            force — joining <em>In Memoriam</em> (ice), <em>Dispositivos para Ver Pasar
+            el Tiempo</em>, and <em>Polvo Eres</em> in a body of work concerned with
+            making visible the processes of transformation and entropy that shape both
+            objects and lives.
+          </p>
+        </div>
+
+        <aside class="work-page__ficha">
+          <h4>TECHNICAL SHEET</h4>
+          <div class="ficha">
+            <strong>Precipitacion de Arenas</strong><br>
+            2022–2024<br><br>
+            Installation.<br>
+            Sand (Guamo river), domestic furniture,<br>
+            security glass, speaker.<br><br>
+            Variable dimensions<br>
+            MAMU 2024: 10 tons of sand
+          </div>
+
+          <h4 style="margin-top: var(--s3);">EXHIBITIONS</h4>
+          <div class="ficha">
+            Encounters in the Dust Factory — MAMU, 2024
+          </div>
+
+          <h4 style="margin-top: var(--s3);">HOW TO CITE</h4>
+          <div class="ficha" style="font-size: 0.65rem;">
+            Escallon, M.E. (2022–2024). <em>Precipitacion de Arenas</em>.
+            Installation. Available at:
+            mariaelviraescallon.com/en/works/precipitacion-de-arenas/
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </article>
+
+</Layout>
+
+<style>
+  .work-page {
+    padding-top: calc(var(--s5) + 40px);
+  }
+
+  .work-page__header {
+    margin-bottom: var(--s4);
+  }
+
+  .work-page__header h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin: var(--s1) 0;
+  }
+
+  .work-page__meta {
+    font-size: 0.75rem;
+    color: var(--ash);
+    letter-spacing: 0.03em;
+  }
+
+  .work-page__gallery {
+    display: grid;
+    gap: var(--s2);
+    margin-bottom: var(--s4);
+  }
+
+  .work-page__gallery img {
+    width: 100%;
+    display: block;
+  }
+
+  .work-page__body {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--s5);
+    margin-bottom: var(--s5);
+  }
+
+  .work-page__text h3 {
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    color: var(--ash);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .work-page__ficha h4 {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--ash);
+    margin-bottom: var(--s1);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .placeholder-img {
+    width: 100%;
+    background-color: var(--paper-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ash-light);
+    font-family: var(--mono);
+    font-size: 0.55rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 768px) {
+    .work-page__body {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

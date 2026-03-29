@@ -1,0 +1,280 @@
+---
+import Layout from '../../../components/layout/Layout.astro';
+
+const lang = 'zh' as const;
+
+/* -- 个展 -- */
+const solo = [
+  { year: '2024', title: 'Encuentros en la fábrica de polvo', note: '回顾展，80件作品', venue: 'MAMU, Banco de la República', city: '波哥大', slug: 'encuentros-fabrica-polvo-2024' },
+  { year: '2021', title: 'Distorted Environments', note: '虚拟展览', venue: 'VORTIC sala', city: '英国', slug: null },
+  { year: '2019', title: 'En el fértil suelo — La travesía', note: null, venue: 'MAMBO', city: '波哥大', slug: null },
+  { year: '2018', title: 'Pequeño Museo del Aerolito', note: null, venue: 'Planetario Distrital', city: '波哥大', slug: null },
+  { year: '2017', title: 'Nuevas Floras Versalles', note: null, venue: '杜伊勒里花园 (FIAC) / 雪弗勒卢树木园', city: '巴黎 / 凡尔赛', slug: 'nuevas-floras-versalles-2017' },
+  { year: '2017', title: 'En el fértil suelo', note: null, venue: 'Biblioteca Luis Ángel Arango正面', city: '波哥大', slug: null },
+  { year: '2015', title: 'En estado de coma', note: null, venue: 'Hospital San Juan de Dios', city: '波哥大', slug: null },
+  { year: '2015', title: 'Infraleve', note: '管风琴', venue: '教堂', city: '波哥大', slug: null },
+  { year: '2014', title: 'Pequeño Museo del Aerolito', note: null, venue: '哥伦比亚国家博物馆', city: '波哥大', slug: null },
+  { year: '2012', title: 'Urgencias', note: null, venue: '国立大学艺术博物馆', city: '波哥大', slug: null },
+  { year: '2011', title: 'Urgencias', note: null, venue: 'Sala U', city: '麦德林', slug: null },
+  { year: '2011', title: 'Nuevas Floras do Sul', note: null, venue: null, city: '巴西', slug: null },
+  { year: '2007', title: 'En estado de coma', note: null, venue: '波哥大博物馆 / 天文馆', city: '波哥大', slug: 'en-estado-de-coma-2007' },
+  { year: '2006', title: 'En estado de coma', note: null, venue: '国立大学医学院大厅', city: '波哥大', slug: null },
+  { year: '2004', title: 'Desde adentro', note: null, venue: 'Galería Alcuadrado', city: '波哥大', slug: null },
+  { year: '2004', title: 'Nuevas Floras', note: null, venue: 'Galería Jenny Vila', city: '卡利', slug: null },
+  { year: '2003', title: 'Nuevas Floras — III Premio Luis Caballero', note: null, venue: 'Galería Santa Fe', city: '波哥大', slug: 'premio-luis-caballero-2003' },
+  { year: '2001', title: 'In Memoriam', note: null, venue: 'Alianza Colombo Francesa', city: '波哥大', slug: null },
+  { year: '2000', title: 'El reino de este mundo', note: null, venue: 'MAMBO', city: '波哥大', slug: null },
+];
+
+/* -- 国际群展 -- */
+const group = [
+  { year: '2021', title: 'Female Voices of Latin America', note: null, venue: null, city: '英国', slug: null },
+  { year: '2019', title: 'Urban Impulses: Latin American Photography', note: null, venue: '摄影师画廊', city: '伦敦', slug: 'urban-impulses-london-2019' },
+  { year: '2018', title: 'Híbridos', note: null, venue: '德意志银行画廊', city: '纽约', slug: null },
+  { year: '2018', title: 'RECORDAR', note: null, venue: '记忆、和平与和解中心', city: '波哥大', slug: null },
+  { year: '2017', title: 'La vuelta', note: null, venue: '阿尔勒国际摄影节', city: '阿尔勒，法国', slug: 'la-vuelta-arles-2017' },
+  { year: '2017', title: 'Formas de la Memoria', note: null, venue: '共和国银行艺术博物馆', city: '波哥大', slug: null },
+  { year: '2016', title: 'La Tierra como Recurso', note: null, venue: '哥伦比亚国家博物馆', city: '波哥大', slug: null },
+  { year: '2015', title: 'Evidencia de los hechos', note: null, venue: '共和国银行艺术博物馆', city: '波哥大', slug: null },
+  { year: '2015', title: 'ARCO Madrid', note: null, venue: null, city: '马德里', slug: null },
+  { year: '2013', title: 'Palimpsestes', note: null, venue: 'Galerie Mor-Charpentier', city: '巴黎', slug: null },
+  { year: '2013', title: 'In Motion', note: null, venue: 'Galeria Bianconi', city: '米兰', slug: null },
+  { year: '2013', title: 'El Dorado', note: null, venue: 'Teóretica (哥斯达黎加) / Centro Gentil Carioca (里约)', city: '国际', slug: null },
+  { year: '2010', title: 'Crónica, 1995–2005', note: null, venue: '现代艺术博物馆', city: '麦德林', slug: null },
+  { year: '2009', title: '第十届哈瓦那双年展', note: null, venue: null, city: '哈瓦那，古巴', slug: null },
+  { year: '2008', title: 'Focus on Contemporary', note: null, venue: null, city: '悉尼，澳大利亚', slug: null },
+  { year: '2008', title: 'Colombian Contemporary Photography', note: null, venue: 'FotoFest', city: '休斯顿，美国', slug: null },
+  { year: '2008', title: 'Once more with feeling', note: null, venue: '摄影师画廊 / 埃塞克斯大学', city: '伦敦 / 埃塞克斯', slug: null },
+  { year: '2007', title: 'Displaced: Contemporary Art from Colombia', note: null, venue: 'Glynn Vivian Gallery', city: '斯旺西，威尔士', slug: null },
+  { year: '2006', title: 'Otras miradas', note: null, venue: 'Casa de América Latina', city: '巴黎', slug: null },
+  { year: '2005', title: 'After the fact', note: null, venue: '柏林摄影节', city: '柏林', slug: null },
+  { year: '2005', title: 'Subverting Realities', note: null, venue: '埃塞克斯大学', city: '埃塞克斯，英国', slug: null },
+  { year: '2005', title: 'Otras miradas', note: null, venue: 'Memorial América Latina / 美术博物馆', city: '圣保罗 / 布宜诺斯艾利斯', slug: null },
+  { year: '2004', title: 'Otras Miradas', note: null, venue: null, city: '加拉加斯 / 圣地亚哥', slug: null },
+  { year: '2002', title: '第四届加勒比双年展', note: null, venue: null, city: '多米尼加共和国', slug: null },
+  { year: '2000', title: 'Escenas de Caza — VII Bienal de La Habana', note: null, venue: null, city: '哈瓦那，古巴', slug: 'bienal-habana-2000' },
+];
+---
+
+<Layout lang={lang} title="展览" description="玛丽亚·埃尔维拉·埃斯卡隆完整展览历史：个展与国际群展，1997–2024。波哥大、巴黎、伦敦、哈瓦那、纽约。">
+
+  <div class="expo-index">
+    <div class="container">
+
+      <!-- 页面标题 -->
+      <header class="section__header">
+        <h1>展览</h1>
+        <span class="label">1997–2024</span>
+      </header>
+
+      <!-- -- 个展 -- -->
+      <section class="expo-section">
+        <h3 class="expo-section__title">个展</h3>
+        <div class="expo-list">
+          {solo.map((e) => (
+            <div class="expo-entry">
+              <div class="expo-entry__year">{e.year}</div>
+              <div class="expo-entry__info">
+                {e.slug ? (
+                  <a href={`/zh/zhanlan/${e.slug}/`} class="expo-entry__link">
+                    <strong>{e.title}</strong>
+                  </a>
+                ) : (
+                  <strong>{e.title}</strong>
+                )}
+                {e.note && <span class="expo-entry__note"> ({e.note})</span>}
+                <span class="expo-entry__venue">
+                  {e.venue ? `${e.venue}, ${e.city}` : e.city}
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <hr class="rule rule--light" />
+
+      <!-- -- 国际群展 -- -->
+      <section class="expo-section">
+        <h3 class="expo-section__title">国际群展</h3>
+        <div class="expo-list">
+          {group.map((e) => (
+            <div class="expo-entry">
+              <div class="expo-entry__year">{e.year}</div>
+              <div class="expo-entry__info">
+                {e.slug ? (
+                  <a href={`/zh/zhanlan/${e.slug}/`} class="expo-entry__link">
+                    <strong>{e.title}</strong>
+                  </a>
+                ) : (
+                  <strong>{e.title}</strong>
+                )}
+                {e.note && <span class="expo-entry__note"> ({e.note})</span>}
+                <span class="expo-entry__venue">
+                  {e.venue ? `${e.venue}, ${e.city}` : e.city}
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- -- 页脚说明 -- -->
+      <div class="expo-footnote">
+        <p>完整列表请参阅艺术家简历，可在<a href="https://www.espaciocontinuo.com" target="_blank" rel="noopener noreferrer">Galería Espacio Continuo</a>获取。</p>
+      </div>
+
+    </div>
+  </div>
+
+</Layout>
+
+<style>
+  /* -- Page wrapper -- */
+  .expo-index {
+    padding-top: calc(var(--s5) + 40px);
+    padding-bottom: var(--s5);
+  }
+
+  /* -- Section titles -- */
+  .expo-section {
+    margin-top: var(--s4);
+  }
+
+  .expo-section__title {
+    font-family: var(--mono);
+    font-weight: 700;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--ash);
+    padding-bottom: var(--s2);
+    border-bottom: 1px solid var(--ink);
+    margin-bottom: 0;
+  }
+
+  /* -- Entry grid -- */
+  .expo-list {
+    margin: 0;
+  }
+
+  .expo-entry {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: var(--s3);
+    padding: var(--s2) 0;
+    border-bottom: 1px solid var(--paper-dark);
+    align-items: baseline;
+  }
+
+  .expo-entry:last-child {
+    border-bottom: 1px solid var(--ash-light);
+  }
+
+  .expo-entry__year {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    color: var(--ash-light);
+    letter-spacing: 0.05em;
+    flex-shrink: 0;
+  }
+
+  .expo-entry__info {
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    line-height: 1.7;
+    color: var(--ink);
+  }
+
+  .expo-entry__info strong {
+    font-weight: 700;
+    font-size: 0.8rem;
+  }
+
+  .expo-entry__note {
+    font-size: 0.7rem;
+    color: var(--ash);
+    font-style: italic;
+  }
+
+  .expo-entry__venue {
+    display: block;
+    font-size: 0.7rem;
+    color: var(--ash);
+    margin-top: 2px;
+    line-height: 1.5;
+  }
+
+  /* -- Links -- */
+  .expo-entry__link {
+    text-decoration: none;
+    color: var(--ink);
+    border-bottom: 1px solid var(--ash-light);
+    padding-bottom: 1px;
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .expo-entry__link:hover {
+    border-bottom-color: var(--ink);
+  }
+
+  .expo-entry__link strong {
+    font-weight: 700;
+  }
+
+  /* -- Footnote -- */
+  .expo-footnote {
+    margin-top: var(--s5);
+    padding-top: var(--s3);
+    border-top: 1px dashed var(--ash-light);
+  }
+
+  .expo-footnote p {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    color: var(--ash);
+    letter-spacing: 0.04em;
+    line-height: 1.8;
+    max-width: var(--text-w);
+  }
+
+  .expo-footnote a {
+    color: var(--ash);
+    border-bottom: 1px solid var(--ash-light);
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .expo-footnote a:hover {
+    color: var(--ink);
+    border-bottom-color: var(--ink);
+  }
+
+  /* -- Responsive -- */
+  @media (max-width: 768px) {
+    .expo-entry {
+      grid-template-columns: 56px 1fr;
+      gap: var(--s2);
+      padding: var(--s1) 0;
+    }
+
+    .expo-entry__year {
+      font-size: 0.7rem;
+    }
+
+    .expo-entry__info {
+      font-size: 0.75rem;
+    }
+
+    .expo-entry__info strong {
+      font-size: 0.75rem;
+    }
+
+    .expo-entry__venue {
+      font-size: 0.65rem;
+    }
+
+    .expo-section__title {
+      font-size: 0.65rem;
+    }
+  }
+</style>

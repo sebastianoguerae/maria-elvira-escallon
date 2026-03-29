@@ -1,0 +1,193 @@
+---
+import Layout from '../../../components/layout/Layout.astro';
+import QuoteBlock from '../../../components/content/QuoteBlock.astro';
+
+const lang = 'es' as const;
+const title = 'Encuentros con seres notables';
+---
+
+<Layout
+  lang={lang}
+  title="Encuentros con seres notables — Obra"
+  description="Encuentros con seres notables (2022). Escultura — ramas de jazmín de la sabana, eucalipto, talla en madera, arcilla. María Elvira Escallón."
+>
+
+  <article class="work-page">
+    <div class="container">
+
+      <!-- Header -->
+      <header class="work-page__header">
+        <p class="label">Obra / 011</p>
+        <h1>{title}</h1>
+        <p class="work-page__meta">2022 &nbsp;/&nbsp; Escultura — ramas de jazmín de la sabana, eucalipto, talla en madera, arcilla &nbsp;/&nbsp; Dimensiones variables</p>
+      </header>
+
+      <!-- Galería principal -->
+      <div class="work-page__gallery">
+        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pendiente: Encuentros con seres notables — vista general exposición ]</div>
+        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pendiente: Encuentros con seres notables — ramas talladas semejando huesos ]</div>
+        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pendiente: Brazo — arcilla fresca, manos modelando conexión con frailejón ]</div>
+        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pendiente: Desclavada — escultura ]</div>
+      </div>
+
+      <!-- Texto + Ficha -->
+      <div class="work-page__body">
+        <div class="work-page__text">
+
+          <p class="curatorial">
+            El título se inspira en el libro del místico ruso George Gurdjieff, "Encuentros con
+            hombres notables", reimaginado para celebrar las conexiones con la naturaleza. La
+            exposición explora el parentesco entre los seres humanos y otros seres vivos — árboles
+            y plantas — destacando aspectos sensibles que muestran grandes similitudes entre seres vivos.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            Escallón descubrió en el bosque ramas que se asemejan a la anatomía esquelética humana:
+            fémures, húmeros, escápulas, radios y cúbitos, falanges. Mediante talla cuidadosa,
+            reveló formas donde "sus dos ramas estiran sus dedos para tratar de tocarse", creando
+            ecos visuales de la escena de la Creación de Miguel Ángel.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            La exposición incluye esculturas hechas de ramas talladas que semejan huesos humanos,
+            sugiriendo una correspondencia estructural entre organismos vegetales y animales. Los
+            materiales incluyen arena, arcilla en varios estados (fresca y cocida), y piezas
+            modeladas por el agua y la arena del mar.
+          </p>
+
+          <h3 style="margin-top: var(--s4);">CONTEXTO</h3>
+          <p style="margin-top: var(--s2);">
+            Escallón investigó híbridos entre naturaleza y humanos en la historia del arte,
+            encontrando que los híbridos entre humanos y plantas son escasos — la mandrágora,
+            Dafne, los Ents de Tolkien. Esta escasez motivó una exploración profunda de las
+            correspondencias estructurales entre lo vegetal y lo animal, revelando parentescos
+            que normalmente pasan desapercibidos.
+          </p>
+
+          <h3 style="margin-top: var(--s4);">PIEZAS INCLUIDAS</h3>
+          <ul style="margin-top: var(--s2); list-style: none;">
+            <li style="padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark);">
+              <strong>Brazo</strong> — 2022. Arcilla fresca, 10 × 60 × 12 cm. Manos modelando un brazo que se conecta a un frailejón.
+            </li>
+            <li style="padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark);">
+              <strong>Desclavada</strong> — 2022. Escultura.
+            </li>
+            <li style="padding: var(--s1) 0;">
+              <strong>Esculturas de ramas talladas</strong> — Ramas de jazmín de la sabana y eucalipto talladas semejando huesos humanos.
+            </li>
+          </ul>
+        </div>
+
+        <aside class="work-page__ficha">
+          <h4>FICHA TÉCNICA</h4>
+          <div class="ficha">
+            <strong>Encuentros con seres notables</strong><br>
+            2022<br><br>
+            Escultura — ramas de jazmín de la sabana, eucalipto, talla en madera, arcilla.<br><br>
+            Dimensiones variables<br>
+            Galería Espacio Continuo, Bogotá
+          </div>
+
+          <h4 style="margin-top: var(--s3);">CURADURÍA</h4>
+          <div class="ficha">
+            Ana María Lozano Rocha
+          </div>
+
+          <h4 style="margin-top: var(--s3);">EXPOSICIONES</h4>
+          <div class="ficha">
+            Encuentros con seres notables — Galería Espacio Continuo, Bogotá, 2022
+          </div>
+
+          <h4 style="margin-top: var(--s3);">CÓMO CITAR</h4>
+          <div class="ficha" style="font-size: 0.65rem;">
+            Escallón, M.E. (2022). <em>Encuentros con seres notables</em>.
+            Escultura. Disponible en:
+            mariaelviraescallon.com/es/obra/encuentros-con-seres-notables/
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </article>
+
+</Layout>
+
+<style>
+  .work-page {
+    padding-top: calc(var(--s5) + 40px);
+  }
+
+  .work-page__header {
+    margin-bottom: var(--s4);
+  }
+
+  .work-page__header h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin: var(--s1) 0;
+  }
+
+  .work-page__meta {
+    font-size: 0.75rem;
+    color: var(--ash);
+    letter-spacing: 0.03em;
+  }
+
+  .work-page__gallery {
+    display: grid;
+    gap: var(--s2);
+    margin-bottom: var(--s4);
+  }
+
+  .work-page__gallery img {
+    width: 100%;
+    display: block;
+  }
+
+  .work-page__body {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--s5);
+    margin-bottom: var(--s5);
+  }
+
+  .work-page__text h3 {
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    color: var(--ash);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .work-page__ficha h4 {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--ash);
+    margin-bottom: var(--s1);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .placeholder-img {
+    width: 100%;
+    background-color: var(--paper-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ash-light);
+    font-family: var(--mono);
+    font-size: 0.55rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 768px) {
+    .work-page__body {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

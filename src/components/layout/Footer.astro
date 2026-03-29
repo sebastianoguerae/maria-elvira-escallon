@@ -1,0 +1,22 @@
+---
+import type { Lang } from '../../i18n/languages';
+import { t } from '../../i18n/utils';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+---
+
+<footer class="footer">
+  <div class="footer__inner">
+    <span>© {new Date().getFullYear()} María Elvira Escallón</span>
+    <ul class="footer__links">
+      <li><a href="https://espaciocontinuo.co/artists/37-maria-elvira-escallon/" target="_blank" rel="noopener">Espacio Continuo</a></li>
+      <li><a href="https://www.artsy.net/artist/maria-elvira-escallon" target="_blank" rel="noopener">Artsy</a></li>
+      <li><a href="https://icaa.mfah.org/s/en/item/1091921" target="_blank" rel="noopener">ICAA/MFAH</a></li>
+    </ul>
+    <span>{t(lang, 'footer.city')}</span>
+  </div>
+</footer>

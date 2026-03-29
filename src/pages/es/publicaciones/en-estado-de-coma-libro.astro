@@ -1,0 +1,209 @@
+---
+import Layout from '../../../components/layout/Layout.astro';
+
+const lang = 'es' as const;
+const title = 'En estado de coma: Hospital San Juan de Dios';
+
+const cover = (await import('../../../assets/images/libros/en-estado-de-coma-libro.jpg')).default;
+---
+
+<Layout
+  lang={lang}
+  title={`${title} — Publicaciones`}
+  description="En estado de coma: Hospital San Juan de Dios. Publicación de María Elvira Escallón, IDPC / Johns Hopkins University Press, 2007."
+>
+
+  <article class="pub-page">
+    <div class="container">
+
+      <header class="pub-page__header">
+        <p class="label">Publicaciones / 003</p>
+        <h1>{title}</h1>
+        <p class="pub-page__meta">2007 &nbsp;/&nbsp; Publicación &nbsp;/&nbsp; 77 páginas</p>
+      </header>
+
+      <div class="pub-page__body">
+        <div class="pub-page__text">
+
+          <div class="pub-page__cover-area">
+            <img src={cover.src} alt={`Portada — ${title}`} loading="eager" />
+          </div>
+
+          <p class="curatorial">
+            Publicación que documenta el proyecto realizado en el Hospital San Juan de Dios de
+            Bogotá entre 2005 y 2007. Incluye las cinco series fotográficas, textos y documentación
+            del proceso. El hospital, fundado en 1564, fue cerrado al público en 2001 y declarado
+            bien de interés cultural nacional en 2002.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            El libro recoge el trabajo de Escallón dentro de un edificio que, al momento de la
+            intervención, llevaba años cerrado y en proceso de deterioro. Las cinco series
+            fotográficas documentan la tensión entre el espacio arquitectónico y su abandono:
+            las camas vacías, los quirófanos en desuso, la vegetación que invade los corredores,
+            y las intervenciones de la artista que hacen visible el estado de coma del edificio.
+          </p>
+
+          <h3 style="margin-top: var(--s4);">DISPONIBILIDAD</h3>
+          <div style="margin-top: var(--s2);">
+            <p style="margin-bottom: var(--s2);">
+              <a
+                href="https://idpc.gov.co/publicaciones/producto/en-estado-de-coma/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="pub-link"
+              >
+                Adquirir en IDPC →
+              </a>
+            </p>
+            <p style="margin-bottom: var(--s2);">
+              <a
+                href="https://idpc.gov.co/publicaciones/descargas/coma.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="pub-link"
+              >
+                Descargar PDF (IDPC) →
+              </a>
+            </p>
+            <p>
+              También disponible en Project MUSE (Johns Hopkins University Press).
+            </p>
+          </div>
+
+          <h3 style="margin-top: var(--s4);">OBRA RELACIONADA</h3>
+          <p style="margin-top: var(--s2);">
+            <a href="/es/obra/en-estado-de-coma/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">
+              En estado de coma (2005–2007) — Página de la obra
+            </a>
+          </p>
+
+        </div>
+
+        <aside class="pub-page__ficha">
+          <h4>FICHA BIBLIOGRÁFICA</h4>
+          <div class="ficha">
+            <strong>{title}</strong><br>
+            2007<br><br>
+            Autora: María Elvira Escallón<br>
+            Editorial: Instituto Distrital de Patrimonio Cultural (IDPC)<br>
+            Co-publicación: Johns Hopkins University Press (Project MUSE)<br>
+            Páginas: 77
+          </div>
+
+          <h4 style="margin-top: var(--s3);">DESCARGAR</h4>
+          <div class="ficha">
+            <a
+              href="https://idpc.gov.co/publicaciones/descargas/coma.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);"
+            >
+              PDF — IDPC
+            </a>
+          </div>
+
+          <h4 style="margin-top: var(--s3);">ADQUIRIR</h4>
+          <div class="ficha">
+            <a
+              href="https://idpc.gov.co/publicaciones/producto/en-estado-de-coma/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);"
+            >
+              IDPC — Tienda
+            </a>
+          </div>
+
+          <h4 style="margin-top: var(--s3);">VOLVER</h4>
+          <div class="ficha">
+            <a href="/es/publicaciones/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">
+              ← Todas las publicaciones
+            </a>
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </article>
+
+</Layout>
+
+<style>
+  .pub-page {
+    padding-top: calc(var(--s5) + 40px);
+  }
+
+  .pub-page__header {
+    margin-bottom: var(--s4);
+  }
+
+  .pub-page__header h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    margin: var(--s1) 0;
+  }
+
+  .pub-page__meta {
+    font-size: 0.75rem;
+    color: var(--ash);
+    letter-spacing: 0.03em;
+  }
+
+  .pub-page__cover-area {
+    max-width: 320px;
+    margin-bottom: var(--s3);
+  }
+
+  .pub-page__cover-area img {
+    width: 100%;
+    display: block;
+  }
+
+  .pub-page__body {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--s5);
+    margin-bottom: var(--s5);
+  }
+
+  .pub-page__text h3 {
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    color: var(--ash);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .pub-page__ficha h4 {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--ash);
+    margin-bottom: var(--s1);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .pub-link {
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    color: var(--moss);
+    border-bottom: 1px solid var(--moss);
+    padding-bottom: 2px;
+    transition: color 0.2s;
+  }
+
+  .pub-link:hover {
+    color: var(--ink);
+  }
+
+  @media (max-width: 768px) {
+    .pub-page__body {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

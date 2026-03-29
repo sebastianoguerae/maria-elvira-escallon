@@ -1,0 +1,183 @@
+---
+import Layout from '../../../components/layout/Layout.astro';
+import QuoteBlock from '../../../components/content/QuoteBlock.astro';
+
+const lang = 'en' as const;
+const title = 'El Reino de Este Mundo';
+
+const img1 = (await import('../../../assets/images/obras/el-reino/el-reino-01.jpg')).default;
+const img2 = (await import('../../../assets/images/obras/el-reino/el-reino-02.jpg')).default;
+const img3 = (await import('../../../assets/images/obras/el-reino/el-reino-03.jpg')).default;
+const img4 = (await import('../../../assets/images/obras/el-reino/el-reino-04.jpg')).default;
+---
+
+<Layout
+  lang={lang}
+  title="El Reino de Este Mundo — Work"
+  description="El Reino de Este Mundo (2000). Installation — concrete blocks, debris, MAMBO. Maria Elvira Escallon."
+>
+
+  <article class="work-page">
+    <div class="container">
+
+      <!-- Header -->
+      <header class="work-page__header">
+        <p class="label">Work / 002</p>
+        <h1>{title}</h1>
+        <p class="work-page__meta">2000 &nbsp;/&nbsp; Installation — concrete blocks, debris &nbsp;/&nbsp; Variable dimensions</p>
+      </header>
+
+      <!-- Main gallery -->
+      <div class="work-page__gallery">
+        <img src={img1.src} alt="El Reino de Este Mundo — Front view of the concrete wall with debris" loading="eager">
+        <img src={img2.src} alt="El Reino de Este Mundo — Shadow of debris on the museum floor" loading="lazy">
+        <img src={img3.src} alt="El Reino de Este Mundo — Detail of agglomerated debris in blocks" loading="lazy">
+        <img src={img4.src} alt="El Reino de Este Mundo — Installation view, MAMBO" loading="lazy">
+      </div>
+
+      <!-- Text + Technical sheet -->
+      <div class="work-page__body">
+        <div class="work-page__text">
+
+          <p class="curatorial">
+            A wall built with concrete blocks agglomerating debris from a demolished family
+            house. The wall projects a 'shadow' formed with scattered debris on the museum
+            floor. The installation transforms domestic destruction into monumental presence,
+            converting the remnants of private life into a public architectural gesture.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            The title references Alejo Carpentier's novel <em>The Kingdom of This World</em>
+            (1949), establishing a dialogue between the literary notion of the marvelous real
+            and the material reality of destruction. The debris — fragments of tiles, plaster,
+            domestic materials — carry the memory of the house they once formed, now reorganized
+            into a new structure that simultaneously commemorates and displaces the original.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            The 'shadow' cast by the wall onto the floor operates as a metaphor for absence:
+            the debris that does not make it into the consolidated structure spreads across the
+            ground, suggesting the impossibility of fully containing the remains of what has
+            been lost. The work oscillates between construction and ruin, between monument
+            and residue.
+          </p>
+
+          <h3 style="margin-top: var(--s4);">CONTEXT</h3>
+          <p style="margin-top: var(--s2);">
+            Presented at the Museo de Arte Moderno de Bogota (MAMBO), <em>El Reino de Este
+            Mundo</em> marks an early instance of Escallon's engagement with architecture,
+            demolition, and the material traces of lived experience. The work anticipates
+            themes that would recur throughout her practice — the transformation of domestic
+            space, the tension between presence and absence, and the use of debris as both
+            material and meaning.
+          </p>
+        </div>
+
+        <aside class="work-page__ficha">
+          <h4>TECHNICAL SHEET</h4>
+          <div class="ficha">
+            <strong>El Reino de Este Mundo</strong><br>
+            2000<br><br>
+            Installation.<br>
+            Concrete blocks, debris from demolished house.<br><br>
+            Variable dimensions
+          </div>
+
+          <h4 style="margin-top: var(--s3);">EXHIBITIONS</h4>
+          <div class="ficha">
+            MAMBO — Museo de Arte Moderno de Bogota, 2000
+          </div>
+
+          <h4 style="margin-top: var(--s3);">HOW TO CITE</h4>
+          <div class="ficha" style="font-size: 0.65rem;">
+            Escallon, M.E. (2000). <em>El Reino de Este Mundo</em>.
+            Installation. Available at:
+            mariaelviraescallon.com/en/works/el-reino-de-este-mundo/
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </article>
+
+</Layout>
+
+<style>
+  .work-page {
+    padding-top: calc(var(--s5) + 40px);
+  }
+
+  .work-page__header {
+    margin-bottom: var(--s4);
+  }
+
+  .work-page__header h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin: var(--s1) 0;
+  }
+
+  .work-page__meta {
+    font-size: 0.75rem;
+    color: var(--ash);
+    letter-spacing: 0.03em;
+  }
+
+  .work-page__gallery {
+    display: grid;
+    gap: var(--s2);
+    margin-bottom: var(--s4);
+  }
+
+  .work-page__gallery img {
+    width: 100%;
+    display: block;
+  }
+
+  .work-page__body {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--s5);
+    margin-bottom: var(--s5);
+  }
+
+  .work-page__text h3 {
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    color: var(--ash);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .work-page__ficha h4 {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--ash);
+    margin-bottom: var(--s1);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .placeholder-img {
+    width: 100%;
+    background-color: var(--paper-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ash-light);
+    font-family: var(--mono);
+    font-size: 0.55rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 768px) {
+    .work-page__body {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

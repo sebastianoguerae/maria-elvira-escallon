@@ -1,0 +1,193 @@
+---
+import Layout from '../../../components/layout/Layout.astro';
+import QuoteBlock from '../../../components/content/QuoteBlock.astro';
+
+const lang = 'es' as const;
+const title = 'Pequeño Museo del Aerolito de Santa Rosa de Viterbo';
+---
+
+<Layout
+  lang={lang}
+  title="Pequeño Museo del Aerolito — Obra"
+  description="Pequeño Museo del Aerolito de Santa Rosa de Viterbo (2014–2015). Investigación, instalación, archivos históricos y fotográficos, réplica en hierro. María Elvira Escallón."
+>
+
+  <article class="work-page">
+    <div class="container">
+
+      <!-- Header -->
+      <header class="work-page__header">
+        <p class="label">Obra / 007</p>
+        <h1>{title}</h1>
+        <p class="work-page__meta">2014–2015 &nbsp;/&nbsp; Investigación, instalación, archivos históricos y fotográficos, réplica en hierro &nbsp;/&nbsp; Dimensiones variables</p>
+      </header>
+
+      <!-- Galería principal -->
+      <div class="work-page__gallery">
+        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pendiente: Aerolito — Vista general de la instalación, Museo Nacional ]</div>
+        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pendiente: Aerolito — Réplica en hierro ]</div>
+        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pendiente: Aerolito — Montaje en El Parqueadero, MAMU 2024 ]</div>
+        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pendiente: Aerolito — Archivos históricos y fotográficos ]</div>
+      </div>
+
+      <!-- Texto + Ficha -->
+      <div class="work-page__body">
+        <div class="work-page__text">
+
+          <p class="curatorial">
+            Constituido por diversos departamentos, acervos, archivos históricos y fotográficos
+            que dan seguimiento a la historia del meteorito que cayó en el departamento de Boyacá
+            un Sábado Santo de 1810. El proyecto incluye una réplica en hierro del aerolito que
+            actualmente custodia el Museo Nacional.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            El montaje realizado para "Encuentros en la fábrica de polvo" en el MAMU (2024) fue
+            el más completo que se haya realizado, instalado en la sala El Parqueadero. El Pequeño
+            Museo funciona como una institución dentro de la institución — un museo ficticio que
+            cuestiona las formas en que se construye, preserva y exhibe el conocimiento.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            Cada "departamento" del museo aborda un aspecto diferente: la historia geológica,
+            el impacto cultural, las narrativas locales, la documentación científica.
+          </p>
+
+          <h3 style="margin-top: var(--s4);">CONTEXTO</h3>
+          <p style="margin-top: var(--s2);">
+            El meteorito cayó en Santa Rosa de Viterbo, Boyacá, un Sábado Santo de 1810 —
+            el mismo año del movimiento de independencia de Colombia. Esta coincidencia
+            temporal añade capas de significado sobre los orígenes, los eventos cósmicos
+            y la identidad nacional.
+          </p>
+          <p style="margin-top: var(--s2);">
+            La pieza original del aerolito reposa en el Museo Nacional de Colombia y ha sido
+            objeto de múltiples narrativas: científicas, religiosas, populares e institucionales.
+            Escallón construye un dispositivo museográfico que las reúne todas, cuestionando la
+            autoridad de cada una y revelando cómo el conocimiento se fabrica tanto como se descubre.
+          </p>
+
+        </div>
+
+        <aside class="work-page__ficha">
+          <h4>FICHA TÉCNICA</h4>
+          <div class="ficha">
+            <strong>Pequeño Museo del Aerolito de Santa Rosa de Viterbo</strong><br>
+            2014–2015<br><br>
+            Investigación, instalación, archivos históricos
+            y fotográficos, réplica en hierro.<br>
+            Dimensiones variables
+          </div>
+
+          <h4 style="margin-top: var(--s3);">PREMIOS</h4>
+          <div class="ficha">
+            Beca Nacional de Creación Individual<br>
+            MinCultura, 2014
+          </div>
+
+          <h4 style="margin-top: var(--s3);">EXPOSICIONES</h4>
+          <div class="ficha">
+            Encuentros en la fábrica de polvo — MAMU, 2024<br>
+            Planetario Distrital, Bogotá, 2018<br>
+            Museo Nacional de Colombia, Bogotá, 2014
+          </div>
+
+          <h4 style="margin-top: var(--s3);">UBICACIÓN</h4>
+          <div class="ficha">
+            Museo Nacional de Colombia, Bogotá<br>
+            MAMU, Bogotá, 2024
+          </div>
+
+          <h4 style="margin-top: var(--s3);">CÓMO CITAR</h4>
+          <div class="ficha" style="font-size: 0.65rem;">
+            Escallón, M.E. (2014–2015). <em>Pequeño Museo del Aerolito de Santa Rosa de Viterbo</em>.
+            Investigación, instalación. Disponible en:
+            mariaelviraescallon.com/es/obra/aerolito/
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </article>
+
+</Layout>
+
+<style>
+  .work-page {
+    padding-top: calc(var(--s5) + 40px);
+  }
+
+  .work-page__header {
+    margin-bottom: var(--s4);
+  }
+
+  .work-page__header h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin: var(--s1) 0;
+  }
+
+  .work-page__meta {
+    font-size: 0.75rem;
+    color: var(--ash);
+    letter-spacing: 0.03em;
+  }
+
+  .work-page__gallery {
+    display: grid;
+    gap: var(--s2);
+    margin-bottom: var(--s4);
+  }
+
+  .work-page__gallery img {
+    width: 100%;
+    display: block;
+  }
+
+  .work-page__body {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--s5);
+    margin-bottom: var(--s5);
+  }
+
+  .work-page__text h3 {
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    color: var(--ash);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .work-page__ficha h4 {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--ash);
+    margin-bottom: var(--s1);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .placeholder-img {
+    width: 100%;
+    background-color: var(--paper-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ash-light);
+    font-family: var(--mono);
+    font-size: 0.55rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 768px) {
+    .work-page__body {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

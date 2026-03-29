@@ -1,0 +1,155 @@
+---
+import Layout from '../../../components/layout/Layout.astro';
+import ExhibitionSchema from '../../../components/seo/ExhibitionSchema.astro';
+const lang = 'es' as const;
+
+const mamuImg = (await import('../../../assets/images/exposiciones/mamu-exclama.jpg')).default;
+---
+
+<Layout
+  lang={lang}
+  title="Encuentros en la fábrica de polvo — Exposición"
+  description="Exposición antológica de María Elvira Escallón en el MAMU, Banco de la República, Bogotá. 80 obras, 1997–2024. Curaduría de Ana María Lozano Rocha."
+>
+
+  <ExhibitionSchema
+    title="Encuentros en la fábrica de polvo"
+    venue="Museo de Arte Miguel Urrutia (MAMU), Banco de la República"
+    city="Bogotá"
+    country="Colombia"
+    startDate="2024-06-15"
+    endDate="2025-01-27"
+    description="Primera exposición antológica de María Elvira Escallón. 80 obras, 1997–2024. Curaduría de Ana María Lozano Rocha."
+    url="https://mariaelviraescallon.com/es/exposiciones/encuentros-fabrica-polvo-2024/"
+  />
+
+  <article class="exhibition-page">
+    <div class="container">
+
+      <!-- Header -->
+      <header class="exh-header">
+        <span class="label">Exposición individual — Antológica — 2024</span>
+        <h1>Encuentros en la fábrica de polvo</h1>
+        <p class="exh-meta">Museo de Arte Miguel Urrutia (MAMU), Banco de la República · Bogotá, Colombia · Junio 15, 2024 — Enero 27, 2025</p>
+      </header>
+
+      <!-- Galería -->
+      <div class="exh-gallery">
+        <img src={mamuImg.src} alt="Encuentros en la fábrica de polvo — Vista de instalación, MAMU 2024" loading="eager">
+        <div class="placeholder-img" style="aspect-ratio:16/9;">[ Pendiente: Vista de sala — MAMU, eje "Nuevas Floras" ]</div>
+        <div class="placeholder-img" style="aspect-ratio:16/9;">[ Pendiente: Vista de sala — MAMU, eje "Pequeño Museo del Aerolito" en El Parqueadero ]</div>
+      </div>
+
+      <!-- Cuerpo -->
+      <div class="exh-body">
+        <div class="exh-text">
+
+          <h3>SOBRE LA EXPOSICIÓN</h3>
+          <p class="curatorial" style="margin-top: var(--s2);">
+            <em>Encuentros en la fábrica de polvo</em> es la primera exposición antológica de
+            María Elvira Escallón. Reúne 80 obras — nueve de ellas exhibidas por primera vez —
+            que cubren un arco temporal de casi tres décadas (1997–2024). La curaduría de
+            Ana María Lozano Rocha organiza la muestra en seis ejes interconectados que
+            atraviesan la obra de la artista.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            <strong>En la fábrica de polvo</strong> — El polvo como exponente de la acumulación de
+            tiempo, vulnerabilidad y mortalidad. <strong>Ante el tiempo</strong> — La frase como
+            materia plástica arrancada de sustratos culturales profundos.
+            <strong>Nuevas Floras</strong> — Representaciones del mundo vegetal en muebles,
+            arquitectura y diseño. <strong>Explorando parentescos</strong> — Los enormes parentescos
+            entre seres arbóreos y humanos. <strong>Del otro lado</strong> — Piezas que interrogan
+            superficies, paredes y estructuras que guardan o ocultan historias.
+            <strong>Pequeño Museo del Aerolito de Santa Rosa de Viterbo</strong> — El montaje más
+            completo del proyecto, presentado en la sala El Parqueadero.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            La muestra invita a reflexionar sobre el tiempo, la memoria y el olvido,
+            cuestionando los límites entre naturaleza y cultura.
+          </p>
+
+          <h3 style="margin-top: var(--s4);">CURADURÍA</h3>
+          <p style="margin-top: var(--s2);">
+            Ana María Lozano Rocha
+          </p>
+
+          <div class="exh-works">
+            <h3>OBRAS EXHIBIDAS</h3>
+            <ul>
+              <li><a href="/es/obra/precipitacion-de-arenas/">Precipitación de arenas</a></li>
+              <li><a href="/es/obra/polvo-eres/">Polvo eres</a></li>
+              <li><a href="/es/obra/las-caminantes/">Las caminantes</a></li>
+              <li><a href="/es/obra/nuevas-floras/">Nuevas Floras</a></li>
+              <li><a href="/es/obra/en-estado-de-coma/">En estado de coma</a></li>
+              <li><a href="/es/obra/desde-adentro/">Desde Adentro</a></li>
+              <li><a href="/es/obra/in-vitro/">In Vitro</a></li>
+              <li><a href="/es/obra/aerolito/">Pequeño Museo del Aerolito</a></li>
+              <li><a href="/es/obra/dispositivos-para-ver-pasar-el-tiempo/">Dispositivos para ver pasar el tiempo</a></li>
+              <li>Y más de 70 obras adicionales del período 1997–2024</li>
+            </ul>
+          </div>
+
+          <div class="exh-press">
+            <h3>PRENSA Y PUBLICACIONES</h3>
+            <ul>
+              <li><a href="#">Artishock Revista</a> — Febrero 2025</li>
+              <li><a href="#">Revista Exclama</a> — Julio 2024</li>
+              <li><a href="#">Radiónica</a></li>
+              <li><a href="#">Plaza Capital</a></li>
+              <li><a href="#">La Gran Noticia</a></li>
+              <li><a href="#">El Espectador</a></li>
+              <li><a href="#">Revista DC</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <aside class="exh-aside">
+          <h4>DATOS</h4>
+          <div class="ficha">
+            <strong>Encuentros en la fábrica de polvo</strong><br>
+            Exposición antológica<br><br>
+            Museo de Arte Miguel Urrutia (MAMU)<br>
+            Banco de la República<br>
+            Bogotá, Colombia<br><br>
+            Junio 15, 2024 — Enero 27, 2025<br><br>
+            Curaduría: Ana María Lozano Rocha<br>
+            80 obras (9 exhibidas por primera vez)<br>
+            Arco temporal: 1997–2024
+          </div>
+
+          <h4 style="margin-top: var(--s3);">IDIOMAS</h4>
+          <div class="ficha">
+            <a href="/en/exhibitions/encuentros-fabrica-polvo-2024/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">
+              View in English
+            </a>
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </article>
+
+</Layout>
+
+<style>
+  .exhibition-page { padding-top: calc(var(--s5) + 40px); }
+  .exh-header { margin-bottom: var(--s4); }
+  .exh-header h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(2rem, 5vw, 3.5rem); margin: var(--s1) 0; }
+  .exh-meta { font-size: 0.8rem; color: var(--ash); letter-spacing: 0.03em; }
+  .exh-body { display: grid; grid-template-columns: 2fr 1fr; gap: var(--s5); margin-bottom: var(--s5); }
+  .exh-gallery { display: grid; gap: var(--s2); margin-bottom: var(--s4); }
+  .exh-gallery img { width: 100%; }
+  .exh-text h3 { font-size: 0.8rem; letter-spacing: 0.08em; color: var(--ash); padding-bottom: var(--s1); border-bottom: 1px solid var(--paper-dark); }
+  .exh-aside h4 { font-family: var(--mono); font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: var(--ash); margin-bottom: var(--s1); padding-bottom: var(--s1); border-bottom: 1px solid var(--paper-dark); }
+  .exh-works { margin-top: var(--s3); }
+  .exh-works li { padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark); }
+  .exh-works a { color: var(--moss); border-bottom: 1px solid var(--paper-dark); }
+  .exh-works a:hover { border-color: var(--moss); }
+  .exh-press { margin-top: var(--s3); }
+  .exh-press li { padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark); font-size: 0.8rem; }
+  .exh-press a { color: var(--moss); }
+  .placeholder-img { width: 100%; background: var(--paper-dark); display: flex; align-items: center; justify-content: center; color: var(--ash-light); font-family: var(--mono); font-size: 0.55rem; letter-spacing: 0.08em; text-transform: uppercase; }
+  @media (max-width: 768px) { .exh-body { grid-template-columns: 1fr; } }
+</style>

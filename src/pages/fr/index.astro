@@ -1,0 +1,159 @@
+---
+import Layout from '../../components/layout/Layout.astro';
+import QuoteBlock from '../../components/content/QuoteBlock.astro';
+
+const lang = 'fr' as const;
+
+const featuredWorks = [
+  {
+    slug: 'in-vitro',
+    title: 'IN VITRO',
+    year: '1997',
+    image: '/placeholder-in-vitro.jpg',
+    hasImage: true,
+    importedImage: (await import('../../assets/images/obras/in-vitro/in-vitro-01.jpg')).default,
+  },
+  {
+    slug: 'desde-adentro',
+    title: 'DESDE ADENTRO',
+    year: '2003',
+    hasImage: true,
+    importedImage: (await import('../../assets/images/obras/desde-adentro/desde-adentro-01.jpg')).default,
+  },
+  {
+    slug: 'nuevas-floras',
+    title: 'NUEVAS FLORAS',
+    year: '2003–2007',
+    hasImage: true,
+    importedImage: (await import('../../assets/images/obras/nuevas-floras/nuevas-floras-01.jpg')).default,
+  },
+  {
+    slug: 'en-estado-de-coma',
+    title: 'EN ESTADO DE COMA',
+    year: '2005–2007',
+    hasImage: false,
+  },
+  {
+    slug: 'aerolito',
+    title: 'PEQUENO MUSEO DEL AEROLITO',
+    year: '2014–2015',
+    hasImage: false,
+  },
+  {
+    slug: 'en-el-fertil-suelo',
+    title: 'EN EL FERTIL SUELO',
+    year: '2017–2018',
+    hasImage: false,
+  },
+];
+---
+
+<Layout lang={lang} description="Page officielle de Maria Elvira Escallon. Artiste visuelle colombienne. Sculpture, installation, photographie et video.">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero__content">
+      <p class="hero__label">Artiste visuelle / Bogota, Colombie</p>
+      <h1 class="hero__name">Maria Elvira<br>Escallon</h1>
+      <p class="hero__sub">Le questionnement des limites entre le naturel et le culturel</p>
+      <p class="hero__meta">
+        Nee en 1954, Londres — Vit et travaille a Bogota &nbsp;/&nbsp;
+        Sculpture · Installation · Photographie · Video
+      </p>
+    </div>
+  </section>
+
+  <div class="container">
+
+    <!-- Citation Jose Roca -->
+    <QuoteBlock
+      annotation="Texte curatorial"
+      quote="Chaque oeuvre suit sa propre voie, unique et precise. Il est cependant possible de trouver une constante dans l'oeuvre de Maria Elvira Escallon : le questionnement des limites entre le naturel et le culturel."
+      cite="Jose Roca — Columna de Arena 53, 2003"
+    />
+
+    <hr class="rule">
+
+    <!-- Oeuvres -->
+    <section class="section">
+      <div class="section__header">
+        <h2>Oeuvres</h2>
+        <span class="label">1997–2024</span>
+      </div>
+
+      <div class="works-grid">
+        {featuredWorks.map((work) => (
+          <a href={`/fr/oeuvres/${work.slug}/`} class="work-card-link" style="text-decoration:none; color:inherit;">
+            <article class="work-card-static">
+              <div class="work-card__thumb">
+                {work.hasImage && work.importedImage ? (
+                  <img
+                    src={work.importedImage.src}
+                    alt={`${work.title} — Maria Elvira Escallon`}
+                    loading="lazy"
+                    style="width:100%;height:100%;object-fit:cover;"
+                  />
+                ) : (
+                  <div class="placeholder-img" style="height:100%;aspect-ratio:4/3;background:var(--paper-dark);display:flex;align-items:center;justify-content:center;color:var(--ash-light);font-family:var(--mono);font-size:0.55rem;letter-spacing:0.08em;text-transform:uppercase;">
+                    [ {work.title} ]
+                  </div>
+                )}
+              </div>
+              <div class="work-card__title">
+                <h3>{work.title}</h3>
+                <span class="year">{work.year}</span>
+              </div>
+            </article>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <hr class="rule">
+
+    <!-- Seconde citation -->
+    <QuoteBlock
+      annotation="Sur l'artiste"
+      quote="Son oeuvre articule des processus sculpturaux, la photographie et le travail in situ, revelant un present menace par des echecs historiques, se positionnant entre l'histoire et la memoire en etablissant des seuils pour connecter des temps et des fragments de recits a travers des elements de culture materielle."
+      cite="Coleccion Seguros Bolivar de Arte Contemporaneo, 2018"
+    />
+
+  </div>
+</Layout>
+
+<style>
+  .work-card-static {
+    cursor: pointer;
+    border-bottom: 1px solid var(--paper-dark);
+  }
+  .work-card-static .work-card__thumb {
+    width: 100%;
+    aspect-ratio: 4/3;
+    background-color: var(--paper-dark);
+    overflow: hidden;
+  }
+  .work-card-static .work-card__thumb img {
+    transition: opacity 0.4s ease;
+  }
+  .work-card-static:hover .work-card__thumb img {
+    opacity: 0.8;
+  }
+  .work-card-static .work-card__title {
+    padding: var(--s2) 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .work-card-static .work-card__title h3 {
+    font-family: var(--mono);
+    font-weight: 400;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .work-card-static .work-card__title .year {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    color: var(--ash-light);
+  }
+</style>

@@ -1,0 +1,193 @@
+---
+import Layout from '../../../components/layout/Layout.astro';
+
+const lang = 'es' as const;
+const title = 'Publicaciones';
+
+const coverComa = (await import('../../../assets/images/libros/en-estado-de-coma-libro.jpg')).default;
+const coverPolvo = (await import('../../../assets/images/libros/polvo-eres.jpg')).default;
+
+const books = [
+  {
+    slug: 'coleccion-seguros-bolivar',
+    title: 'Coleccion de Arte Contemporaneo Seguros Bolivar',
+    displayTitle: 'Colección de Arte Contemporáneo Seguros Bolívar',
+    year: 2018,
+    editor: 'Dir. José Roca y Sylvia Suárez',
+    publisher: 'Seguros Bolívar',
+    pages: 112,
+    cover: null,
+  },
+  {
+    slug: 'polvo-eres-libro',
+    title: 'Polvo Eres: El correr del tiempo',
+    displayTitle: 'Polvo Eres: El correr del tiempo en María Elvira Escallón',
+    year: 2014,
+    editor: 'Julia Buenaventura',
+    publisher: 'Ministerio de Cultura de Colombia',
+    pages: 212,
+    cover: coverPolvo,
+  },
+  {
+    slug: 'en-estado-de-coma-libro',
+    title: 'En estado de coma: Hospital San Juan de Dios',
+    displayTitle: 'En estado de coma: Hospital San Juan de Dios',
+    year: 2007,
+    editor: 'María Elvira Escallón',
+    publisher: 'IDPC / Johns Hopkins University Press',
+    pages: 77,
+    cover: coverComa,
+  },
+];
+---
+
+<Layout
+  lang={lang}
+  title="Publicaciones"
+  description="Publicaciones y monografías sobre la obra de María Elvira Escallón. Libros, catálogos y textos críticos."
+>
+
+  <article class="pub-index">
+    <div class="container">
+
+      <header class="pub-index__header">
+        <p class="label">Archivo / Publicaciones</p>
+        <h1>{title}</h1>
+        <p class="pub-index__intro">
+          Monografías y catálogos dedicados a la obra de María Elvira Escallón.
+        </p>
+      </header>
+
+      <div class="pub-index__grid">
+        {books.map((book) => (
+          <a href={`/es/publicaciones/${book.slug}/`} class="pub-card">
+            <div class="pub-card__cover">
+              {book.cover ? (
+                <img src={book.cover.src} alt={`Portada — ${book.displayTitle}`} loading="lazy" />
+              ) : (
+                <div class="placeholder-cover">
+                  <span>[ Portada pendiente ]</span>
+                </div>
+              )}
+            </div>
+            <div class="pub-card__info">
+              <span class="pub-card__year">{book.year}</span>
+              <h2 class="pub-card__title">{book.displayTitle}</h2>
+              <p class="pub-card__meta">{book.editor}</p>
+              <p class="pub-card__meta">{book.publisher} &middot; {book.pages} pp.</p>
+            </div>
+          </a>
+        ))}
+      </div>
+
+    </div>
+  </article>
+
+</Layout>
+
+<style>
+  .pub-index {
+    padding-top: calc(var(--s5) + 40px);
+  }
+
+  .pub-index__header {
+    margin-bottom: var(--s4);
+  }
+
+  .pub-index__header h1 {
+    font-family: var(--mono);
+    font-weight: 700;
+    font-size: clamp(2rem, 5vw, 4rem);
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    margin: var(--s1) 0;
+  }
+
+  .pub-index__intro {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    color: var(--ash);
+    max-width: 50ch;
+    line-height: 1.7;
+  }
+
+  .pub-index__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--s3);
+    margin-bottom: var(--s5);
+  }
+
+  .pub-card {
+    display: block;
+    text-decoration: none;
+    color: var(--ink);
+    border: 1px solid var(--paper-dark);
+    transition: border-color 0.2s;
+  }
+
+  .pub-card:hover {
+    border-color: var(--ink);
+  }
+
+  .pub-card__cover {
+    aspect-ratio: 3/4;
+    overflow: hidden;
+    background: var(--paper-dark);
+  }
+
+  .pub-card__cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .placeholder-cover {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ash-light);
+  }
+
+  .pub-card__info {
+    padding: var(--s2);
+  }
+
+  .pub-card__year {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    color: var(--ash);
+    text-transform: uppercase;
+  }
+
+  .pub-card__title {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 1.1rem;
+    line-height: 1.3;
+    margin: var(--s1) 0;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+
+  .pub-card__meta {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    color: var(--ash);
+    line-height: 1.6;
+  }
+
+  @media (max-width: 768px) {
+    .pub-index__grid {
+      grid-template-columns: 1fr;
+      gap: var(--s2);
+    }
+  }
+</style>

@@ -1,0 +1,105 @@
+---
+import Layout from '../../../components/layout/Layout.astro';
+const lang = 'es' as const;
+---
+
+<Layout
+  lang={lang}
+  title="VII Bienal de La Habana — Escenas de Caza — Exposición"
+  description="María Elvira Escallón en la VII Bienal de La Habana con Escenas de Caza. La Habana, Cuba, 2000."
+>
+
+  <article class="exhibition-page">
+    <div class="container">
+
+      <!-- Header -->
+      <header class="exh-header">
+        <span class="label">Bienal (internacional) — 2000</span>
+        <h1>VII Bienal de La Habana — Escenas de Caza</h1>
+        <p class="exh-meta">Bienal de La Habana · La Habana, Cuba · 2000</p>
+      </header>
+
+      <!-- Galería -->
+      <div class="exh-gallery">
+        <div class="placeholder-img" style="aspect-ratio:16/9;">[ Pendiente: Escenas de Caza — VII Bienal de La Habana ]</div>
+        <div class="placeholder-img" style="aspect-ratio:4/3;">[ Pendiente: Detalle de la instalación ]</div>
+      </div>
+
+      <!-- Cuerpo -->
+      <div class="exh-body">
+        <div class="exh-text">
+
+          <h3>SOBRE LA EXPOSICIÓN</h3>
+          <p class="curatorial" style="margin-top: var(--s2);">
+            La VII Bienal de La Habana es uno de los eventos de arte contemporáneo más
+            importantes de América Latina y el Caribe. María Elvira Escallón participó
+            con el proyecto <em>Escenas de Caza</em>, marcando uno de sus primeros
+            reconocimientos internacionales significativos.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            La Bienal de La Habana se distingue por su enfoque en el arte del Sur Global,
+            alejándose del eje euroamericano tradicional del arte contemporáneo. Fundada
+            en 1984, ha sido un espacio fundamental para la visibilización de prácticas
+            artísticas de África, Asia, América Latina y el Caribe, proponiendo una
+            lectura alternativa del arte contemporáneo desde perspectivas no hegemónicas.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            La participación de Escallón en este contexto situó su trabajo en diálogo
+            con artistas de todo el mundo que comparten una mirada crítica sobre las
+            estructuras de poder, la memoria y la historia.
+          </p>
+
+          <div class="exh-works">
+            <h3>OBRAS EXHIBIDAS</h3>
+            <ul>
+              <li>Escenas de Caza</li>
+            </ul>
+          </div>
+        </div>
+
+        <aside class="exh-aside">
+          <h4>DATOS</h4>
+          <div class="ficha">
+            <strong>VII Bienal de La Habana</strong><br>
+            Bienal internacional<br><br>
+            La Habana, Cuba<br><br>
+            2000<br><br>
+            Proyecto presentado: Escenas de Caza
+          </div>
+
+          <h4 style="margin-top: var(--s3);">IDIOMAS</h4>
+          <div class="ficha">
+            <a href="/en/exhibitions/bienal-habana-2000/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">
+              View in English
+            </a>
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </article>
+
+</Layout>
+
+<style>
+  .exhibition-page { padding-top: calc(var(--s5) + 40px); }
+  .exh-header { margin-bottom: var(--s4); }
+  .exh-header h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(2rem, 5vw, 3.5rem); margin: var(--s1) 0; }
+  .exh-meta { font-size: 0.8rem; color: var(--ash); letter-spacing: 0.03em; }
+  .exh-body { display: grid; grid-template-columns: 2fr 1fr; gap: var(--s5); margin-bottom: var(--s5); }
+  .exh-gallery { display: grid; gap: var(--s2); margin-bottom: var(--s4); }
+  .exh-gallery img { width: 100%; }
+  .exh-text h3 { font-size: 0.8rem; letter-spacing: 0.08em; color: var(--ash); padding-bottom: var(--s1); border-bottom: 1px solid var(--paper-dark); }
+  .exh-aside h4 { font-family: var(--mono); font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: var(--ash); margin-bottom: var(--s1); padding-bottom: var(--s1); border-bottom: 1px solid var(--paper-dark); }
+  .exh-works { margin-top: var(--s3); }
+  .exh-works li { padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark); }
+  .exh-works a { color: var(--moss); border-bottom: 1px solid var(--paper-dark); }
+  .exh-works a:hover { border-color: var(--moss); }
+  .exh-press { margin-top: var(--s3); }
+  .exh-press li { padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark); font-size: 0.8rem; }
+  .exh-press a { color: var(--moss); }
+  .placeholder-img { width: 100%; background: var(--paper-dark); display: flex; align-items: center; justify-content: center; color: var(--ash-light); font-family: var(--mono); font-size: 0.55rem; letter-spacing: 0.08em; text-transform: uppercase; }
+  @media (max-width: 768px) { .exh-body { grid-template-columns: 1fr; } }
+</style>

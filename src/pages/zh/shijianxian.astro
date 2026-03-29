@@ -1,0 +1,87 @@
+---
+import Layout from '../../components/layout/Layout.astro';
+import Timeline from '../../components/interactive/Timeline';
+
+const lang = 'zh' as const;
+---
+
+<Layout
+  lang={lang}
+  title="时间线"
+  description="Maria Elvira Escallon的作品在哥伦比亚历史背景下的时间线。互动时间线1993-2024。"
+>
+
+  <article class="timeline-page">
+    <div class="container">
+
+      <header class="timeline-page__header">
+        <div class="timeline-page__title-row">
+          <h1>时间线</h1>
+          <span class="label">1993–2024</span>
+        </div>
+        <p class="curatorial">
+          Maria Elvira Escallon的作品在哥伦比亚历史背景下
+        </p>
+        <p class="timeline-page__instructions">
+          水平滚动以浏览时间线
+        </p>
+      </header>
+
+    </div>
+
+    <div class="timeline-page__canvas">
+      <Timeline client:visible lang="zh" />
+    </div>
+
+  </article>
+
+</Layout>
+
+<style>
+  .timeline-page {
+    padding-top: calc(var(--s5) + 40px);
+    padding-bottom: var(--s5);
+  }
+
+  .timeline-page__header {
+    margin-bottom: var(--s4);
+  }
+
+  .timeline-page__title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: var(--s2);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--ink);
+  }
+
+  .timeline-page__title-row h1 {
+    font-family: var(--mono);
+    font-weight: 700;
+    font-size: clamp(1.6rem, 4vw, 2.8rem);
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+  }
+
+  .timeline-page__header .curatorial {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    max-width: 55ch;
+    margin-bottom: var(--s2);
+  }
+
+  .timeline-page__instructions {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    color: var(--ash-light);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .timeline-page__canvas {
+    width: 100%;
+    padding: var(--s3) 0;
+  }
+</style>

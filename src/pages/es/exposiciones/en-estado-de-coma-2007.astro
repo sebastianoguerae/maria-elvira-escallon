@@ -1,0 +1,133 @@
+---
+import Layout from '../../../components/layout/Layout.astro';
+const lang = 'es' as const;
+---
+
+<Layout
+  lang={lang}
+  title="En estado de coma — Exposición"
+  description="En estado de coma. Exposición individual de María Elvira Escallón en el Museo de Bogotá y Planetario Distrital. Hospital San Juan de Dios. Bogotá, 2007."
+>
+
+  <article class="exhibition-page">
+    <div class="container">
+
+      <!-- Header -->
+      <header class="exh-header">
+        <span class="label">Exposición individual — 2007</span>
+        <h1>En estado de coma</h1>
+        <p class="exh-meta">Museo de Bogotá / Planetario Distrital · Bogotá, Colombia · 2007</p>
+      </header>
+
+      <!-- Galería -->
+      <div class="exh-gallery">
+        <div class="placeholder-img" style="aspect-ratio:16/9;">[ Pendiente: Vista de sala — En estado de coma, Museo de Bogotá ]</div>
+        <div class="placeholder-img" style="aspect-ratio:16/9;">[ Pendiente: Serie Postales — Hospital San Juan de Dios ]</div>
+        <div class="placeholder-img" style="aspect-ratio:4/3;">[ Pendiente: Serie Cultivos — intervención escultórica sobre mobiliario hospitalario ]</div>
+      </div>
+
+      <!-- Cuerpo -->
+      <div class="exh-body">
+        <div class="exh-text">
+
+          <h3>SOBRE LA EXPOSICIÓN</h3>
+          <p class="curatorial" style="margin-top: var(--s2);">
+            Primera exhibición completa del proyecto <em>En estado de coma</em>, que
+            María Elvira Escallón desarrolló entre 2005 y 2007 en el Hospital San Juan
+            de Dios de Bogotá. La muestra presentó las cinco series fotográficas —
+            <em>Postales</em>, <em>Recorridos nocturnos</em>, <em>Tejido blando</em>,
+            <em>Extracciones</em> y <em>Cultivos</em> —, las video-instalaciones y las
+            intervenciones escultóricas realizadas sobre mobiliario hospitalario.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            La exposición hizo visible la crisis de un hospital fundado en 1564, declarado
+            patrimonio cultural nacional en 2002, que había sido cerrado al público en 2001.
+            El trabajo de Escallón registró el deterioro progresivo del edificio y sus
+            objetos, transformando la ruina en materia artística y en documento de una
+            crisis social y política.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            El proyecto fue reconocido con el Primer Premio en la categoría de Patrimonio
+            del IDCT (Instituto Distrital de Cultura y Turismo) en 2006, destacando su
+            contribución a la reflexión sobre el patrimonio cultural y la memoria
+            institucional de Bogotá.
+          </p>
+
+          <div class="exh-works">
+            <h3>OBRAS EXHIBIDAS</h3>
+            <ul>
+              <li><a href="/es/obra/en-estado-de-coma/">En estado de coma</a> — Todas las sub-series:</li>
+              <li style="padding-left: var(--s2);">Postales</li>
+              <li style="padding-left: var(--s2);">Recorridos nocturnos</li>
+              <li style="padding-left: var(--s2);">Tejido blando</li>
+              <li style="padding-left: var(--s2);">Extracciones</li>
+              <li style="padding-left: var(--s2);">Cultivos</li>
+              <li style="padding-left: var(--s2);">Video-instalaciones</li>
+              <li style="padding-left: var(--s2);">Intervenciones escultóricas sobre mobiliario hospitalario</li>
+            </ul>
+          </div>
+
+          <div class="exh-press">
+            <h3>PUBLICACIONES</h3>
+            <ul>
+              <li><a href="#">Publicación del libro <em>En estado de coma</em></a> — IDPC (Instituto Distrital de Patrimonio Cultural)</li>
+            </ul>
+          </div>
+        </div>
+
+        <aside class="exh-aside">
+          <h4>DATOS</h4>
+          <div class="ficha">
+            <strong>En estado de coma</strong><br>
+            Exposición individual<br><br>
+            Museo de Bogotá / Planetario Distrital<br>
+            Bogotá, Colombia<br><br>
+            2007<br><br>
+            Proyecto desarrollado: 2005–2007<br>
+            Hospital San Juan de Dios<br><br>
+            5 series fotográficas, video-instalaciones,<br>
+            intervenciones escultóricas
+          </div>
+
+          <h4 style="margin-top: var(--s3);">PREMIOS</h4>
+          <div class="ficha">
+            Primer Premio — Categoría Patrimonio<br>
+            IDCT, 2006
+          </div>
+
+          <h4 style="margin-top: var(--s3);">IDIOMAS</h4>
+          <div class="ficha">
+            <a href="/en/exhibitions/en-estado-de-coma-2007/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">
+              View in English
+            </a>
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </article>
+
+</Layout>
+
+<style>
+  .exhibition-page { padding-top: calc(var(--s5) + 40px); }
+  .exh-header { margin-bottom: var(--s4); }
+  .exh-header h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(2rem, 5vw, 3.5rem); margin: var(--s1) 0; }
+  .exh-meta { font-size: 0.8rem; color: var(--ash); letter-spacing: 0.03em; }
+  .exh-body { display: grid; grid-template-columns: 2fr 1fr; gap: var(--s5); margin-bottom: var(--s5); }
+  .exh-gallery { display: grid; gap: var(--s2); margin-bottom: var(--s4); }
+  .exh-gallery img { width: 100%; }
+  .exh-text h3 { font-size: 0.8rem; letter-spacing: 0.08em; color: var(--ash); padding-bottom: var(--s1); border-bottom: 1px solid var(--paper-dark); }
+  .exh-aside h4 { font-family: var(--mono); font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: var(--ash); margin-bottom: var(--s1); padding-bottom: var(--s1); border-bottom: 1px solid var(--paper-dark); }
+  .exh-works { margin-top: var(--s3); }
+  .exh-works li { padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark); }
+  .exh-works a { color: var(--moss); border-bottom: 1px solid var(--paper-dark); }
+  .exh-works a:hover { border-color: var(--moss); }
+  .exh-press { margin-top: var(--s3); }
+  .exh-press li { padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark); font-size: 0.8rem; }
+  .exh-press a { color: var(--moss); }
+  .placeholder-img { width: 100%; background: var(--paper-dark); display: flex; align-items: center; justify-content: center; color: var(--ash-light); font-family: var(--mono); font-size: 0.55rem; letter-spacing: 0.08em; text-transform: uppercase; }
+  @media (max-width: 768px) { .exh-body { grid-template-columns: 1fr; } }
+</style>

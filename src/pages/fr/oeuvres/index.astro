@@ -1,0 +1,199 @@
+---
+import Layout from '../../../components/layout/Layout.astro';
+
+const lang = 'fr' as const;
+
+const imgInVitro = (await import('../../../assets/images/obras/in-vitro/in-vitro-01.jpg')).default;
+const imgDesdeAdentro = (await import('../../../assets/images/obras/desde-adentro/desde-adentro-01.jpg')).default;
+const imgNuevasFloras = (await import('../../../assets/images/obras/nuevas-floras/nuevas-floras-01.jpg')).default;
+
+const works = [
+  {
+    num: '001',
+    slug: 'in-vitro',
+    title: 'In Vitro',
+    year: '1997',
+    description: 'Installation, miroir — Estacion de La Sabana',
+    hasImage: true,
+    image: imgInVitro,
+  },
+  {
+    num: '002',
+    slug: 'el-reino-de-este-mundo',
+    title: 'El reino de este mundo',
+    year: '2000',
+    description: 'Installation, beton — MAMBO',
+    hasImage: false,
+    image: null,
+  },
+  {
+    num: '003',
+    slug: 'in-memoriam',
+    title: 'In Memoriam',
+    year: '2001',
+    description: 'Sculpture ephemere, glace — Alianza Colombo Francesa',
+    hasImage: false,
+    image: null,
+  },
+  {
+    num: '004',
+    slug: 'desde-adentro',
+    title: 'Desde Adentro',
+    year: '2003',
+    description: '12 photographies, video — Club El Nogal',
+    hasImage: true,
+    image: imgDesdeAdentro,
+  },
+  {
+    num: '005',
+    slug: 'nuevas-floras',
+    title: 'Nuevas Floras',
+    year: '2003–2007',
+    description: 'Intervention sculpturale — III Premio Luis Caballero',
+    hasImage: true,
+    image: imgNuevasFloras,
+  },
+  {
+    num: '006',
+    slug: 'en-estado-de-coma',
+    title: 'En estado de coma',
+    year: '2005–2007',
+    description: 'Photographie, video, installation — Hospital San Juan de Dios',
+    hasImage: false,
+    image: null,
+  },
+  {
+    num: '007',
+    slug: 'aerolito',
+    title: 'Pequeno Museo del Aerolito',
+    year: '2014–2015',
+    description: 'Recherche, installation — Museo Nacional',
+    hasImage: false,
+    image: null,
+  },
+  {
+    num: '008',
+    slug: 'en-el-fertil-suelo',
+    title: 'En el fertil suelo',
+    year: '2017–2018',
+    description: 'Video, sculpture — X Premio Luis Caballero',
+    hasImage: false,
+    image: null,
+  },
+  {
+    num: '009',
+    slug: 'dispositivos-para-ver-pasar-el-tiempo',
+    title: 'Dispositivos para ver pasar el tiempo',
+    year: '2020',
+    description: 'Installation',
+    hasImage: false,
+    image: null,
+  },
+  {
+    num: '010',
+    slug: 'precipitacion-de-arenas',
+    title: 'Precipitacion de arenas',
+    year: '2024',
+    description: 'Installation — MAMU',
+    hasImage: false,
+    image: null,
+  },
+  {
+    num: '011',
+    slug: 'encuentros-con-seres-notables',
+    title: 'Encuentros con seres notables',
+    year: '2022',
+    description: 'Sculpture, branches sculptees — Galeria Espacio Continuo',
+    hasImage: false,
+    image: null,
+  },
+  {
+    num: '012',
+    slug: 'polvo-eres',
+    title: 'Polvo eres',
+    year: '2024',
+    description: 'Sculpture murale — MAMU, Bogota',
+    hasImage: false,
+    image: null,
+  },
+  {
+    num: '013',
+    slug: 'las-caminantes',
+    title: 'Las caminantes',
+    year: '2024',
+    description: 'Installation vivante, code Morse — MAMU, Bogota',
+    hasImage: false,
+    image: null,
+  },
+  {
+    num: '014',
+    slug: 'ensayo-autorretrato',
+    title: 'Ensayo autorretrato',
+    year: '2022',
+    description: 'Video — Galeria Espacio Continuo',
+    hasImage: false,
+    image: null,
+  },
+];
+---
+
+<Layout lang={lang} title="Oeuvres" description="Oeuvres completes de Maria Elvira Escallon. Catalogue de projets 1997–2024. Sculpture, installation, photographie et video.">
+
+  <div class="obra-index">
+    <div class="container">
+
+      <!-- En-tete -->
+      <header class="section__header">
+        <h1>Oeuvres completes</h1>
+        <span class="label">1997–2024</span>
+      </header>
+
+      <!-- Liste des oeuvres -->
+      <div class="works-catalog">
+        {works.map((work) => (
+          <a href={`/fr/oeuvres/${work.slug}/`} class="work-entry-link" style="text-decoration:none; color:inherit;">
+            <div class="work-entry">
+              <div class="work-entry__num">{work.num}</div>
+              <div class="work-entry__info">
+                <h3>{work.title}</h3>
+                <div class="ficha">
+                  {work.year} &nbsp;/&nbsp; {work.description}
+                </div>
+              </div>
+              <div class="work-entry__image">
+                {work.hasImage && work.image ? (
+                  <img
+                    src={work.image.src}
+                    alt={`${work.title} — Maria Elvira Escallon`}
+                    loading="lazy"
+                  />
+                ) : (
+                  <div class="placeholder-img" style="height:100%;display:flex;align-items:center;justify-content:center;color:var(--ash-light);font-family:var(--mono);font-size:0.55rem;letter-spacing:0.08em;text-transform:uppercase;">
+                    [ {work.title} ]
+                  </div>
+                )}
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+
+    </div>
+  </div>
+
+</Layout>
+
+<style>
+  .obra-index {
+    padding-top: calc(var(--s5) + 40px);
+    padding-bottom: var(--s5);
+  }
+
+  .works-catalog {
+    margin-top: var(--s3);
+  }
+
+  .work-entry-link:last-child .work-entry {
+    border-bottom: 1px solid var(--ink);
+  }
+</style>

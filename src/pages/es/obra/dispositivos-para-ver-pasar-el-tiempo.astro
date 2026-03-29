@@ -1,0 +1,162 @@
+---
+import Layout from '../../../components/layout/Layout.astro';
+import QuoteBlock from '../../../components/content/QuoteBlock.astro';
+
+const lang = 'es' as const;
+const title = 'Dispositivos para ver pasar el tiempo';
+---
+
+<Layout
+  lang={lang}
+  title="Dispositivos para ver pasar el tiempo — Obra"
+  description="Dispositivos para ver pasar el tiempo (2020). Instalación, escultura. María Elvira Escallón."
+>
+
+  <article class="work-page">
+    <div class="container">
+
+      <!-- Header -->
+      <header class="work-page__header">
+        <p class="label">Obra / 009</p>
+        <h1>{title}</h1>
+        <p class="work-page__meta">2020 &nbsp;/&nbsp; Instalación, escultura &nbsp;/&nbsp; Dimensiones variables</p>
+      </header>
+
+      <!-- Galería principal -->
+      <div class="work-page__gallery">
+        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pendiente: Dispositivos para ver pasar el tiempo — vista general ]</div>
+        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pendiente: Dispositivos para ver pasar el tiempo — detalle de mecanismo ]</div>
+        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pendiente: Dispositivos para ver pasar el tiempo — transformación material ]</div>
+      </div>
+
+      <!-- Texto + Ficha -->
+      <div class="work-page__body">
+        <div class="work-page__text">
+
+          <p class="curatorial">
+            ¿Es posible crear un dispositivo para ver pasar el tiempo? Esta pregunta articula una
+            serie de piezas que buscan hacer tangible lo intangible — la duración, la acumulación,
+            el desgaste. La artista crea mecanismos poéticos que registran el paso del tiempo a
+            través de la transformación de materiales: arena que cae, superficies que se erosionan,
+            objetos que se acumulan.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            Cada dispositivo funciona como un reloj poético — no mide el tiempo en unidades
+            convencionales sino en transformaciones materiales visibles.
+          </p>
+
+          <h3 style="margin-top: var(--s4);">CONTEXTO</h3>
+          <p style="margin-top: var(--s2);">
+            Esta serie conecta conceptualmente con <em>Precipitación de arenas</em> y con el eje
+            más amplio "En la fábrica de polvo." La pregunta "¿Es posible crear un dispositivo
+            para ver pasar el tiempo?" se convirtió en la pregunta inaugural de la exposición
+            antológica del MAMU en 2024, articulando una reflexión que atraviesa toda la
+            trayectoria de Escallón: la obsesión por hacer visible lo que normalmente escapa
+            a la percepción — el tiempo, la transformación, el desgaste inevitable de todo
+            lo que existe.
+          </p>
+        </div>
+
+        <aside class="work-page__ficha">
+          <h4>FICHA TÉCNICA</h4>
+          <div class="ficha">
+            <strong>Dispositivos para ver pasar el tiempo</strong><br>
+            2020<br><br>
+            Instalación, escultura.<br><br>
+            Dimensiones variables
+          </div>
+
+          <h4 style="margin-top: var(--s3);">CÓMO CITAR</h4>
+          <div class="ficha" style="font-size: 0.65rem;">
+            Escallón, M.E. (2020). <em>Dispositivos para ver pasar el tiempo</em>.
+            Instalación, escultura. Disponible en:
+            mariaelviraescallon.com/es/obra/dispositivos-para-ver-pasar-el-tiempo/
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </article>
+
+</Layout>
+
+<style>
+  .work-page {
+    padding-top: calc(var(--s5) + 40px);
+  }
+
+  .work-page__header {
+    margin-bottom: var(--s4);
+  }
+
+  .work-page__header h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin: var(--s1) 0;
+  }
+
+  .work-page__meta {
+    font-size: 0.75rem;
+    color: var(--ash);
+    letter-spacing: 0.03em;
+  }
+
+  .work-page__gallery {
+    display: grid;
+    gap: var(--s2);
+    margin-bottom: var(--s4);
+  }
+
+  .work-page__gallery img {
+    width: 100%;
+    display: block;
+  }
+
+  .work-page__body {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--s5);
+    margin-bottom: var(--s5);
+  }
+
+  .work-page__text h3 {
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    color: var(--ash);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .work-page__ficha h4 {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--ash);
+    margin-bottom: var(--s1);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .placeholder-img {
+    width: 100%;
+    background-color: var(--paper-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ash-light);
+    font-family: var(--mono);
+    font-size: 0.55rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 768px) {
+    .work-page__body {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

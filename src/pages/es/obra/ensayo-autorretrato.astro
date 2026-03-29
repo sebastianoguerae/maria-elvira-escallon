@@ -1,0 +1,168 @@
+---
+import Layout from '../../../components/layout/Layout.astro';
+import QuoteBlock from '../../../components/content/QuoteBlock.astro';
+
+const lang = 'es' as const;
+const title = 'Ensayo autorretrato';
+---
+
+<Layout
+  lang={lang}
+  title="Ensayo autorretrato — Obra"
+  description="Ensayo autorretrato (2022). Video. María Elvira Escallón."
+>
+
+  <article class="work-page">
+    <div class="container">
+
+      <!-- Header -->
+      <header class="work-page__header">
+        <p class="label">Obra / 014</p>
+        <h1>{title}</h1>
+        <p class="work-page__meta">2022 &nbsp;/&nbsp; Video &nbsp;/&nbsp; Galería Espacio Continuo, Bogotá</p>
+      </header>
+
+      <!-- Galería principal -->
+      <div class="work-page__gallery">
+        <div class="placeholder-img" style="aspect-ratio:16/9;">[ Pendiente: Ensayo autorretrato — fotograma: manos escarbando en la pared ]</div>
+        <div class="placeholder-img" style="aspect-ratio:16/9;">[ Pendiente: Ensayo autorretrato — fotograma: destrucción de máscara de Venus de Milo ]</div>
+        <div class="placeholder-img" style="aspect-ratio:16/9;">[ Pendiente: Ensayo autorretrato — fotograma: manos modelando brazo conectado a frailejón ]</div>
+      </div>
+
+      <!-- Texto + Ficha -->
+      <div class="work-page__body">
+        <div class="work-page__text">
+
+          <p class="curatorial">
+            En video, las manos de la artista buscan algo en una pared, escarban con las uñas
+            y encuentran un clavo. En otra secuencia, sus manos destruyen sistemáticamente una
+            máscara de Venus de Milo con diversos mazos, para luego modelar un brazo que no se
+            conecta a un hombro sino a un frailejón — planta de los páramos colombianos.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            El autorretrato se construye no desde el rostro sino desde las manos: las manos que
+            extraen, que destruyen cánones de belleza, que modelan la conexión entre lo humano
+            y lo vegetal. La obra utiliza moldes que buscan recrear el rostro de la artista, que
+            son rallados con un rallador de queso en un gesto que deshace la representación
+            convencional.
+          </p>
+
+          <h3 style="margin-top: var(--s4);">CONTEXTO</h3>
+          <p style="margin-top: var(--s2);">
+            <em>Ensayo autorretrato</em> forma parte de la exposición "Encuentros con seres
+            notables" en la Galería Espacio Continuo (2022). Los trabajos en video revelan el
+            proceso de Escallón — las manos como agentes escultóricos, destruyendo y creando
+            simultáneamente. El autorretrato se define no por la representación del rostro sino
+            por la acción de las manos: la identidad artística como gesto, como proceso, como
+            relación con la materia.
+          </p>
+        </div>
+
+        <aside class="work-page__ficha">
+          <h4>FICHA TÉCNICA</h4>
+          <div class="ficha">
+            <strong>Ensayo autorretrato</strong><br>
+            2022<br><br>
+            Video.<br><br>
+            Galería Espacio Continuo, Bogotá
+          </div>
+
+          <h4 style="margin-top: var(--s3);">EXPOSICIONES</h4>
+          <div class="ficha">
+            Encuentros con seres notables — Galería Espacio Continuo, Bogotá, 2022
+          </div>
+
+          <h4 style="margin-top: var(--s3);">CÓMO CITAR</h4>
+          <div class="ficha" style="font-size: 0.65rem;">
+            Escallón, M.E. (2022). <em>Ensayo autorretrato</em>.
+            Video. Disponible en:
+            mariaelviraescallon.com/es/obra/ensayo-autorretrato/
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </article>
+
+</Layout>
+
+<style>
+  .work-page {
+    padding-top: calc(var(--s5) + 40px);
+  }
+
+  .work-page__header {
+    margin-bottom: var(--s4);
+  }
+
+  .work-page__header h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin: var(--s1) 0;
+  }
+
+  .work-page__meta {
+    font-size: 0.75rem;
+    color: var(--ash);
+    letter-spacing: 0.03em;
+  }
+
+  .work-page__gallery {
+    display: grid;
+    gap: var(--s2);
+    margin-bottom: var(--s4);
+  }
+
+  .work-page__gallery img {
+    width: 100%;
+    display: block;
+  }
+
+  .work-page__body {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--s5);
+    margin-bottom: var(--s5);
+  }
+
+  .work-page__text h3 {
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    color: var(--ash);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .work-page__ficha h4 {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--ash);
+    margin-bottom: var(--s1);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .placeholder-img {
+    width: 100%;
+    background-color: var(--paper-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ash-light);
+    font-family: var(--mono);
+    font-size: 0.55rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 768px) {
+    .work-page__body {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

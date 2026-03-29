@@ -1,0 +1,337 @@
+---
+import Layout from '../../components/layout/Layout.astro';
+import WorldMap from '../../components/interactive/WorldMap';
+
+const lang = 'zh' as const;
+---
+
+<Layout
+  lang={lang}
+  title="地图"
+  description="Maria Elvira Escallon在世界各地的展览、收藏和干预的互动地图。"
+>
+
+  <article class="map-page">
+    <div class="container">
+
+      <!-- Header -->
+      <header class="map-page__header">
+        <p class="label">展览、收藏和干预地图</p>
+        <h1>作品遍布<br>世界</h1>
+      </header>
+
+    </div>
+
+    <!-- Map component — full width -->
+    <div class="map-page__map">
+      <WorldMap client:visible />
+    </div>
+
+    <div class="container">
+
+      <!-- Legend -->
+      <section class="map-page__legend">
+        <h3 class="map-page__legend-title">图例</h3>
+        <div class="map-page__legend-grid">
+
+          <div class="legend-item">
+            <span class="legend-dot legend-dot--solo"></span>
+            <span class="legend-label">个展</span>
+          </div>
+
+          <div class="legend-item">
+            <span class="legend-dot legend-dot--group"></span>
+            <span class="legend-label">群展</span>
+          </div>
+
+          <div class="legend-item">
+            <span class="legend-dot legend-dot--collection"></span>
+            <span class="legend-label">永久收藏</span>
+          </div>
+
+          <div class="legend-item">
+            <span class="legend-dot legend-dot--biennial"></span>
+            <span class="legend-label">双年展</span>
+          </div>
+
+          <div class="legend-item">
+            <span class="legend-dot legend-dot--base"></span>
+            <span class="legend-label">波哥大 — 基地</span>
+          </div>
+
+          <div class="legend-item">
+            <span class="legend-dot legend-dot--size-sm"></span>
+            <span class="legend-dot legend-dot--size-md"></span>
+            <span class="legend-dot legend-dot--size-lg"></span>
+            <span class="legend-label">活动数量</span>
+          </div>
+
+        </div>
+      </section>
+
+      <hr class="rule" />
+
+      <!-- Statistics -->
+      <section class="map-page__stats">
+        <h3 class="map-page__stats-title">数据概览</h3>
+        <div class="map-page__stats-grid">
+
+          <div class="stat-block">
+            <span class="stat-block__number">15+</span>
+            <span class="stat-block__label">城市</span>
+          </div>
+
+          <div class="stat-block">
+            <span class="stat-block__number">12+</span>
+            <span class="stat-block__label">国家</span>
+          </div>
+
+          <div class="stat-block">
+            <span class="stat-block__number">44</span>
+            <span class="stat-block__label">展览</span>
+          </div>
+
+          <div class="stat-block">
+            <span class="stat-block__number">19</span>
+            <span class="stat-block__label">个展</span>
+          </div>
+
+          <div class="stat-block">
+            <span class="stat-block__number">25</span>
+            <span class="stat-block__label">群展</span>
+          </div>
+
+          <div class="stat-block">
+            <span class="stat-block__number">7</span>
+            <span class="stat-block__label">永久收藏</span>
+          </div>
+
+        </div>
+      </section>
+
+      <hr class="rule--dashed rule" />
+
+      <!-- Footnote -->
+      <footer class="map-page__footer">
+        <p class="catalog-num">
+          MAP-001 &mdash; 等距圆柱投影地图 &mdash; 数据更新至2024年
+        </p>
+      </footer>
+
+    </div>
+  </article>
+
+</Layout>
+
+<style>
+  /* ===== Map Page ===== */
+
+  .map-page {
+    padding-top: calc(var(--s5) + 40px);
+  }
+
+  .map-page__header {
+    padding-bottom: var(--s4);
+    margin-bottom: var(--s3);
+    border-bottom: 1px solid var(--ink);
+  }
+
+  .map-page__header .label {
+    margin-bottom: var(--s2);
+  }
+
+  .map-page__header h1 {
+    font-family: var(--mono);
+    font-weight: 700;
+    font-size: clamp(2.5rem, 7vw, 5.5rem);
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+  }
+
+  /* Map container */
+  .map-page__map {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--s2);
+  }
+
+  /* ===== Legend ===== */
+
+  .map-page__legend {
+    padding-top: var(--s4);
+    padding-bottom: var(--s3);
+  }
+
+  .map-page__legend-title {
+    font-family: var(--mono);
+    font-weight: 400;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ash);
+    margin-bottom: var(--s3);
+  }
+
+  .map-page__legend-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: var(--s2) var(--s4);
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .legend-label {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ash);
+  }
+
+  .legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .legend-dot--solo {
+    background: var(--ink);
+  }
+
+  .legend-dot--group {
+    background: var(--ash);
+  }
+
+  .legend-dot--collection {
+    background: var(--moss);
+  }
+
+  .legend-dot--biennial {
+    background: var(--ink);
+    box-shadow: 0 0 0 2px var(--paper), 0 0 0 3px var(--ink);
+  }
+
+  .legend-dot--base {
+    background: var(--ink);
+    box-shadow: 0 0 0 3px var(--paper), 0 0 0 4px rgba(17, 17, 17, 0.3);
+    animation: pulse-legend 3s ease-in-out infinite;
+  }
+
+  .legend-dot--size-sm {
+    width: 5px;
+    height: 5px;
+    background: var(--ink);
+  }
+
+  .legend-dot--size-md {
+    width: 7px;
+    height: 7px;
+    background: var(--ink);
+  }
+
+  .legend-dot--size-lg {
+    width: 10px;
+    height: 10px;
+    background: var(--ink);
+  }
+
+  @keyframes pulse-legend {
+    0%, 100% {
+      box-shadow: 0 0 0 3px var(--paper), 0 0 0 4px rgba(17, 17, 17, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 0 3px var(--paper), 0 0 0 8px rgba(17, 17, 17, 0);
+    }
+  }
+
+  /* ===== Statistics ===== */
+
+  .map-page__stats {
+    padding: var(--s4) 0;
+  }
+
+  .map-page__stats-title {
+    font-family: var(--mono);
+    font-weight: 400;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ash);
+    margin-bottom: var(--s3);
+  }
+
+  .map-page__stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: var(--s3);
+  }
+
+  .stat-block {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: var(--s2) 0;
+    border-top: 1px solid var(--paper-dark);
+  }
+
+  .stat-block__number {
+    font-family: var(--mono);
+    font-weight: 700;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+  }
+
+  .stat-block__label {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ash);
+  }
+
+  /* ===== Footer ===== */
+
+  .map-page__footer {
+    padding: var(--s3) 0 var(--s5);
+  }
+
+  .map-page__footer .catalog-num {
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+  }
+
+  /* ===== Responsive ===== */
+
+  @media (max-width: 768px) {
+    .map-page__legend-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .map-page__stats-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .map-page__map {
+      padding: 0;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .map-page__legend-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .map-page__stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

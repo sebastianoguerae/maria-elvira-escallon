@@ -1,0 +1,194 @@
+---
+import Layout from '../../../components/layout/Layout.astro';
+import QuoteBlock from '../../../components/content/QuoteBlock.astro';
+
+const lang = 'es' as const;
+const title = 'En el fértil suelo — La travesía';
+---
+
+<Layout
+  lang={lang}
+  title="En el fértil suelo — Obra"
+  description="En el fértil suelo — La travesía (2017–2018). Video, escultura. Nominación X Premio Luis Caballero. María Elvira Escallón."
+>
+
+  <article class="work-page">
+    <div class="container">
+
+      <!-- Header -->
+      <header class="work-page__header">
+        <p class="label">Obra / 008</p>
+        <h1>{title}</h1>
+        <p class="work-page__meta">2017–2018 &nbsp;/&nbsp; Video, escultura &nbsp;/&nbsp; Dimensiones variables</p>
+      </header>
+
+      <!-- Galería principal -->
+      <div class="work-page__gallery">
+        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pendiente: En el fértil suelo — Vista de la instalación, Galería Santa Fe ]</div>
+        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pendiente: En el fértil suelo — Detalle escultórico ]</div>
+        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pendiente: En el fértil suelo — Instalación lumínica y sonora ]</div>
+        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pendiente: En el fértil suelo — Montaje MAMBO 2019 ]</div>
+      </div>
+
+      <!-- Texto + Ficha -->
+      <div class="work-page__body">
+        <div class="work-page__text">
+
+          <p class="curatorial">
+            Inspirada en la <em>Ilíada</em> de Homero — específicamente el pasaje en que aqueos
+            y troyanos, tras diez años de guerra, deciden deponer las armas en el campo de
+            batalla — la obra presenta dos personajes que, a pesar de enormes impedimentos,
+            se han encontrado para avanzar.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            La artista los percibe como "antiguos adversarios que regresan de la guerra y
+            emprenden un viaje que con frecuencia se lleva a cabo en soledad y hacia la
+            incertidumbre." La obra relaciona este momento histórico de vulnerabilidad entre
+            antiguos enemigos con el contexto sociopolítico contemporáneo de Colombia y su
+            proceso de paz.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            El proyecto incluye instalaciones lumínicas y sonoras que exploran "la enredada
+            administración de justicia en la Colombia contemporánea", utilizando elementos
+            sensoriales — sonidos, sombras, pasos — en lugar de representar directamente
+            a los protagonistas.
+          </p>
+
+          <h3 style="margin-top: var(--s4);">CONTEXTO</h3>
+          <p style="margin-top: var(--s2);">
+            Creada durante el período posterior al acuerdo de paz de Colombia (firmado en 2016),
+            la obra aborda la difícil transición del conflicto a la coexistencia sin ser literal.
+            La referencia homérica permite a Escallón hablar del presente a través de la
+            antigüedad, encontrando en la épica griega un espejo para el momento colombiano.
+          </p>
+          <p style="margin-top: var(--s2);">
+            El título mismo — <em>En el fértil suelo</em> — evoca tanto la tierra colombiana
+            como el campo de batalla donde se deponen las armas, estableciendo una tensión
+            entre fertilidad y destrucción, entre lo que crece y lo que se ha devastado.
+          </p>
+
+        </div>
+
+        <aside class="work-page__ficha">
+          <h4>FICHA TÉCNICA</h4>
+          <div class="ficha">
+            <strong>En el fértil suelo — La travesía</strong><br>
+            2017–2018<br><br>
+            Video, escultura.<br>
+            Instalaciones lumínicas y sonoras.<br>
+            Dimensiones variables
+          </div>
+
+          <h4 style="margin-top: var(--s3);">PREMIOS</h4>
+          <div class="ficha">
+            Nominación X Premio Luis Caballero<br>
+            IDARTES, 2018
+          </div>
+
+          <h4 style="margin-top: var(--s3);">EXPOSICIONES</h4>
+          <div class="ficha">
+            MAMBO, Bogotá, 2019<br>
+            X Premio Luis Caballero — Galería Santa Fe, Bogotá, 2018
+          </div>
+
+          <h4 style="margin-top: var(--s3);">UBICACIÓN</h4>
+          <div class="ficha">
+            Galería Santa Fe, Bogotá (X Premio Luis Caballero)<br>
+            MAMBO, Bogotá, 2019
+          </div>
+
+          <h4 style="margin-top: var(--s3);">CÓMO CITAR</h4>
+          <div class="ficha" style="font-size: 0.65rem;">
+            Escallón, M.E. (2017–2018). <em>En el fértil suelo — La travesía</em>.
+            Video, escultura. Disponible en:
+            mariaelviraescallon.com/es/obra/en-el-fertil-suelo/
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </article>
+
+</Layout>
+
+<style>
+  .work-page {
+    padding-top: calc(var(--s5) + 40px);
+  }
+
+  .work-page__header {
+    margin-bottom: var(--s4);
+  }
+
+  .work-page__header h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin: var(--s1) 0;
+  }
+
+  .work-page__meta {
+    font-size: 0.75rem;
+    color: var(--ash);
+    letter-spacing: 0.03em;
+  }
+
+  .work-page__gallery {
+    display: grid;
+    gap: var(--s2);
+    margin-bottom: var(--s4);
+  }
+
+  .work-page__gallery img {
+    width: 100%;
+    display: block;
+  }
+
+  .work-page__body {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--s5);
+    margin-bottom: var(--s5);
+  }
+
+  .work-page__text h3 {
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    color: var(--ash);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .work-page__ficha h4 {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--ash);
+    margin-bottom: var(--s1);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .placeholder-img {
+    width: 100%;
+    background-color: var(--paper-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ash-light);
+    font-family: var(--mono);
+    font-size: 0.55rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 768px) {
+    .work-page__body {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

@@ -1,0 +1,50 @@
+---
+import SchemaOrg from './SchemaOrg.astro';
+
+interface Props {
+  title: string;
+  year: string;
+  medium: string;
+  dimensions?: string;
+  description: string;
+  image?: string;
+  url?: string;
+  collections?: string[];
+}
+
+const { title, year, medium, dimensions, description, image, url, collections } = Astro.props;
+
+const schema: Record<string, any> = {
+  "@context": "https://schema.org",
+  "@type": "VisualArtwork",
+  "name": title,
+  "dateCreated": year,
+  "artMedium": medium,
+  "description": description,
+  "creator": {
+    "@type": "Person",
+    "name": "María Elvira Escallón",
+    "url": "https://mariaelviraescallon.com"
+  }
+};
+
+if (dimensions) {
+  schema["size"] = dimensions;
+}
+
+if (image) {
+  schema["image"] = image;
+}
+
+if (url) {
+  schema["url"] = url;
+}
+
+if (collections && collections.length > 0) {
+  schema["isPartOf"] = collections.map((name) => ({
+    "@type": "Collection",
+    "name": name
+  }));
+}
+---
+<SchemaOrg schema={schema} />
