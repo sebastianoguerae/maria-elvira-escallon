@@ -50,19 +50,25 @@ const routeMap: Record<string, Record<Lang, string>> = {
   '/contacto/': { es: '/contacto/', en: '/contacto/', fr: '/contacto/', zh: '/contacto/' },
   '/textos/': { es: '/textos/', en: '/textos/', fr: '/textos/', zh: '/textos/' },
   '/publicaciones/': { es: '/publicaciones/', en: '/publicaciones/', fr: '/publicaciones/', zh: '/publicaciones/' },
+  '/voz-del-artista/': { es: '/voz-del-artista/', en: '/artist-statement/', fr: '/voz-del-artista/', zh: '/voz-del-artista/' },
 };
 
 export function getLocalizedPath(lang: Lang, basePath: string): string {
+  const base = import.meta.env.BASE_URL?.replace(/\/$/, '') || '';
   const mapped = routeMap[basePath];
-  if (mapped) return `/${lang}${mapped[lang]}`;
-  return `/${lang}${basePath}`;
+  if (mapped) return `${base}/${lang}${mapped[lang]}`;
+  return `${base}/${lang}${basePath}`;
 }
 
 /** Get the equivalent URL in another language from a full pathname */
 export function switchLanguage(currentPathname: string, targetLang: Lang): string {
+  const base = import.meta.env.BASE_URL?.replace(/\/$/, '') || '';
+  // Strip base from pathname for matching
+  const pathWithoutBase = base ? currentPathname.replace(base, '') : currentPathname;
+
   // Extract current lang and path
-  const match = currentPathname.match(/^\/(es|en|fr|zh)(\/.*)?$/);
-  if (!match) return `/${targetLang}/`;
+  const match = pathWithoutBase.match(/^\/(es|en|fr|zh)(\/.*)?$/);
+  if (!match) return `${base}/${targetLang}/`;
 
   const currentLang = match[1] as Lang;
   const currentPath = match[2] || '/';
@@ -71,10 +77,10 @@ export function switchLanguage(currentPathname: string, targetLang: Lang): strin
   for (const [baseRoute, langMap] of Object.entries(routeMap)) {
     if (currentPath === langMap[currentLang] || currentPath.startsWith(langMap[currentLang])) {
       const remainder = currentPath.slice(langMap[currentLang].length);
-      return `/${targetLang}${langMap[targetLang]}${remainder}`;
+      return `${base}/${targetLang}${langMap[targetLang]}${remainder}`;
     }
   }
 
   // Fallback: just swap the language prefix
-  return `/${targetLang}${currentPath}`;
+  return `${base}/${targetLang}${currentPath}`;
 }

@@ -71,33 +71,36 @@ const timelineEntries = [
 ];
 ---
 
-<Layout lang={lang} description="Official page of Mar\u00eda Elvira Escall\u00f3n. Colombian visual artist. Sculpture, installation, photography and video.">
+<Layout lang={lang} description="Official page of María Elvira Escallón. Colombian visual artist. Sculpture, installation, photography and video.">
 
   <ArtistSchema />
 
-  <!-- Section 1: HERO -->
-  <section class="hero home-section">
-    <div class="hero__content">
-      <p class="hero__label">Visual artist / Bogot\u00e1, Colombia</p>
-      <h1 class="hero__name">Mar\u00eda Elvira<br>Escall\u00f3n</h1>
+  <!-- Section 1: HERO with video -->
+  <section class="hero home-section" style="position: relative; overflow: hidden;">
+    <video autoplay muted loop playsinline class="hero-video">
+      <source src="/maria-elvira-escallon/video/dust.mp4" type="video/mp4">
+    </video>
+    <div class="hero__content" style="position: relative; z-index: 2;">
+      <p class="hero__label">Visual artist / Bogotá, Colombia</p>
+      <h1 class="hero__name">María Elvira<br>Escallón</h1>
       <p class="hero__sub">Questioning the limits between the natural and the cultural</p>
       <p class="hero__meta">
-        B. 1954, London &mdash; Lives and works in Bogot\u00e1 &nbsp;/&nbsp;
+        B. 1954, London &mdash; Lives and works in Bogotá &nbsp;/&nbsp;
         Sculpture &middot; Installation &middot; Photography &middot; Video
       </p>
     </div>
-    <div class="home-scroll-indicator" aria-hidden="true">
+    <div class="home-scroll-indicator" aria-hidden="true" style="position: relative; z-index: 2;">
       <span>&darr;</span>
     </div>
   </section>
 
-  <!-- Section 2: QUOTE (Jos\u00e9 Roca) -->
+  <!-- Section 2: QUOTE (José Roca) -->
   <section class="home-section home-section--quote fade-in">
     <div class="container">
       <QuoteBlock
         annotation="Curatorial text"
-        quote="Each work follows its own unique and precise path. It is possible, however, to find a constant in the work of Mar\u00eda Elvira Escall\u00f3n: the questioning of the limits between the natural and the cultural."
-        cite="Jos\u00e9 Roca &mdash; Columna de Arena 53, 2003"
+        quote="Each work follows its own unique and precise path. It is possible, however, to find a constant in the work of María Elvira Escallón: the questioning of the limits between the natural and the cultural."
+        cite="José Roca &mdash; Columna de Arena 53, 2003"
       />
     </div>
   </section>
@@ -106,10 +109,10 @@ const timelineEntries = [
   <section class="home-section home-section--alt fade-in">
     <div class="container">
       <p class="label">Featured work</p>
-      <a href="/en/works/nuevas-floras/" class="home-featured">
+      <a href="/maria-elvira-escallon/en/works/nuevas-floras/" class="home-featured">
         <img
           src={nuevasFloras.src}
-          alt="New Floras &mdash; Mar\u00eda Elvira Escall\u00f3n"
+          alt="New Floras &mdash; María Elvira Escallón"
           loading="lazy"
         />
         <div class="home-featured__caption">
@@ -117,7 +120,7 @@ const timelineEntries = [
           <span class="ficha">2003&ndash;2007 &middot; Installation / Sculpture</span>
         </div>
       </a>
-      <a href="/en/works/nuevas-floras/" class="home-teaser-link">View complete work &rarr;</a>
+      <a href="/maria-elvira-escallon/en/works/nuevas-floras/" class="home-teaser-link">View complete work &rarr;</a>
     </div>
   </section>
 
@@ -131,13 +134,13 @@ const timelineEntries = [
 
       <div class="works-grid">
         {featuredWorks.map((work) => (
-          <a href={`/en/works/${work.slug}/`} class="work-card-link" style="text-decoration:none; color:inherit;">
+          <a href={`/maria-elvira-escallon/en/works/${work.slug}/`} class="work-card-link" style="text-decoration:none; color:inherit;">
             <article class="work-card-static">
               <div class="work-card__thumb">
                 {work.hasImage && work.importedImage ? (
                   <img
                     src={work.importedImage.src}
-                    alt={`${work.title} \u2014 Mar\u00eda Elvira Escall\u00f3n`}
+                    alt={`${work.title} \u2014 María Elvira Escallón`}
                     loading="lazy"
                     style="width:100%;height:100%;object-fit:cover;"
                   />
@@ -157,7 +160,7 @@ const timelineEntries = [
       </div>
 
       <div class="home-section__cta">
-        <a href="/en/works/" class="home-teaser-link">View complete catalogue &rarr;</a>
+        <a href="/maria-elvira-escallon/en/works/" class="home-teaser-link">View complete catalogue &rarr;</a>
       </div>
     </div>
   </section>
@@ -169,24 +172,24 @@ const timelineEntries = [
         <p class="label">Current exhibition</p>
         <h2 class="home-exhibition__title">Encounters in the Dust Factory</h2>
         <p class="home-exhibition__subtitle">
-          Anthological exhibition &mdash; 80 works &mdash; MAMU, Banco de la Rep\u00fablica, 2024
+          Anthological exhibition &mdash; 80 works &mdash; MAMU, Banco de la República, 2024
         </p>
         <p class="home-exhibition__desc curatorial">
-          A retrospective look at three decades of work interrogating the boundaries between nature and culture, memory and history, decay and permanence. The exhibition brings together for the first time the broadest collection of Escall\u00f3n's work in a single space.
+          A retrospective look at three decades of work interrogating the boundaries between nature and culture, memory and history, decay and permanence. The exhibition brings together for the first time the broadest collection of Escallón's work in a single space.
         </p>
         <!-- Links to ES detail page until EN exhibition detail pages are created -->
-        <a href="/es/exposiciones/encuentros-fabrica-polvo-2024/" class="home-teaser-link">View exhibition &rarr;</a>
+        <a href="/maria-elvira-escallon/es/exposiciones/encuentros-fabrica-polvo-2024/" class="home-teaser-link">View exhibition &rarr;</a>
       </div>
     </div>
   </section>
 
-  <!-- Section 6: SECOND QUOTE (Seguros Bol\u00edvar) -->
+  <!-- Section 6: SECOND QUOTE (Seguros Bolívar) -->
   <section class="home-section home-section--quote fade-in">
     <div class="container">
       <QuoteBlock
         annotation="About the artist"
         quote="Her work articulates sculptural processes, photography and in-situ work, revealing a present threatened by historical failures, positioning itself between history and memory by establishing thresholds to connect times and fragments of stories through elements of material culture."
-        cite="Colecci\u00f3n Seguros Bol\u00edvar de Arte Contempor\u00e1neo, 2018"
+        cite="Colección Seguros Bolívar de Arte Contemporáneo, 2018"
       />
     </div>
   </section>
@@ -203,7 +206,7 @@ const timelineEntries = [
           </div>
         ))}
       </div>
-      <a href="/en/timeline/" class="home-teaser-link home-teaser-link--light">Explore timeline &rarr;</a>
+      <a href="/maria-elvira-escallon/en/timeline/" class="home-teaser-link home-teaser-link--light">Explore timeline &rarr;</a>
     </div>
   </section>
 
@@ -227,7 +230,7 @@ const timelineEntries = [
           <span class="home-stats__label">exhibitions</span>
         </div>
       </div>
-      <a href="/en/map/" class="home-teaser-link">Explore map &rarr;</a>
+      <a href="/maria-elvira-escallon/en/map/" class="home-teaser-link">Explore map &rarr;</a>
     </div>
   </section>
 
@@ -240,21 +243,21 @@ const timelineEntries = [
       </div>
       <!-- Links to ES publication pages until EN publication pages are created -->
       <div class="home-publications">
-        <a href="/es/publicaciones/en-estado-de-coma-libro/" class="home-publications__book">
+        <a href="/maria-elvira-escallon/es/publicaciones/en-estado-de-coma-libro/" class="home-publications__book">
           <div class="home-publications__cover">
             <img src={enEstadoDeComaLibro.src} alt="In a State of Coma &mdash; Catalogue" loading="lazy" />
           </div>
           <p class="home-publications__title">In a State of Coma</p>
           <p class="home-publications__year">2007</p>
         </a>
-        <a href="/es/publicaciones/polvo-eres-libro/" class="home-publications__book">
+        <a href="/maria-elvira-escallon/es/publicaciones/polvo-eres-libro/" class="home-publications__book">
           <div class="home-publications__cover home-publications__cover--placeholder">
             <span>[ Dust Thou Art ]</span>
           </div>
           <p class="home-publications__title">Dust Thou Art</p>
           <p class="home-publications__year">2014</p>
         </a>
-        <a href="/es/publicaciones/coleccion-seguros-bolivar/" class="home-publications__book">
+        <a href="/maria-elvira-escallon/es/publicaciones/coleccion-seguros-bolivar/" class="home-publications__book">
           <div class="home-publications__cover home-publications__cover--placeholder">
             <span>[ Seguros Bolívar Collection ]</span>
           </div>
@@ -263,7 +266,7 @@ const timelineEntries = [
         </a>
       </div>
       <div class="home-section__cta">
-        <a href="/es/publicaciones/" class="home-teaser-link">View publications &rarr;</a>
+        <a href="/maria-elvira-escallon/es/publicaciones/" class="home-teaser-link">View publications &rarr;</a>
       </div>
     </div>
   </section>
@@ -273,17 +276,17 @@ const timelineEntries = [
     <div class="container">
       <div class="home-bio-teaser">
         <div class="home-bio-teaser__portrait">
-          <img src={retrato.src} alt="Mar\u00eda Elvira Escall\u00f3n &mdash; Portrait" loading="lazy" />
+          <img src={retrato.src} alt="María Elvira Escallón &mdash; Portrait" loading="lazy" />
         </div>
         <div class="home-bio-teaser__text">
           <p class="label">Biography</p>
           <p class="curatorial home-bio-teaser__quote">
-            Mar\u00eda Elvira Escall\u00f3n does not illustrate violence. She points. She does not criticize &mdash; she evidences.
+            María Elvira Escallón does not illustrate violence. She points. She does not criticize &mdash; she evidences.
           </p>
           <p class="home-bio-teaser__body">
-            Born in London in 1954, Escall\u00f3n has developed over three decades a body of work that interrogates the boundaries between the natural and the constructed, memory and oblivion, decay and permanence.
+            Born in London in 1954, Escallón has developed over three decades a body of work that interrogates the boundaries between the natural and the constructed, memory and oblivion, decay and permanence.
           </p>
-          <a href="/en/biography/" class="home-teaser-link">Read full biography &rarr;</a>
+          <a href="/maria-elvira-escallon/en/biography/" class="home-teaser-link">Read full biography &rarr;</a>
         </div>
       </div>
     </div>
@@ -293,9 +296,9 @@ const timelineEntries = [
   <section class="home-section home-section--contact fade-in">
     <div class="container">
       <p class="label">Representation</p>
-      <p class="home-contact__gallery">Galer\u00eda Espacio Continuo, Bogot\u00e1</p>
+      <p class="home-contact__gallery">Galería Espacio Continuo, Bogotá</p>
       <!-- Links to ES contact page until EN contact page is created -->
-      <a href="/es/contacto/" class="home-teaser-link">Contact &rarr;</a>
+      <a href="/maria-elvira-escallon/es/contacto/" class="home-teaser-link">Contact &rarr;</a>
     </div>
   </section>
 
@@ -305,6 +308,20 @@ const timelineEntries = [
   /* ============================================
      Home — Long scroll immersive experience
      ============================================ */
+
+  /* --- Hero video background --- */
+  .hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.15;
+    z-index: 1;
+    filter: grayscale(100%) contrast(1.2);
+    mix-blend-mode: multiply;
+  }
 
   /* --- Base section rhythm --- */
   .home-section {

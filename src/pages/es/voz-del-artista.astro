@@ -1,0 +1,142 @@
+---
+import Layout from '../../components/layout/Layout.astro';
+
+const lang = 'es' as const;
+const title = 'Voz del Artista';
+
+const retrato = (await import('../../assets/images/retrato/retrato-fernando-gomez.jpg')).default;
+---
+
+<Layout
+  lang={lang}
+  title="Voz del Artista — María Elvira Escallón"
+  description="Declaración de la artista. María Elvira Escallón en sus propias palabras. Artista visual colombiana. Escultura, instalación, fotografía."
+>
+
+  <article class="statement-page">
+    <div class="container">
+
+      <!-- ===== 1. RETRATO + DECLARACIÓN ===== -->
+      <header class="statement-page__header">
+        <p class="label">Voz del Artista</p>
+        <h1>En Sus<br>Propias Palabras</h1>
+      </header>
+
+      <div class="statement-page__opening">
+        <div class="statement-page__portrait">
+          <img src={retrato.src} alt="Retrato de María Elvira Escallón" loading="eager">
+          <p class="statement-page__credit">Fotografía: Fernando Gómez</p>
+        </div>
+
+        <div class="statement-page__text">
+          <p class="statement-page__voice">
+            Muchas de mis obras surgen de situaciones encontradas por azar con total capacidad expresiva. Mi intervención consiste en señalarlas casi sin tocar, a través de dispositivos mínimos que invitan a la observación — colocar un vidrio que bloquea el paso, acompañar escenas con pequeño código morse descifrado cerca de la instalación. A veces las estrategias son menos sutiles, desplazando grandes bloques de sinsentido ante los espectadores. También persigo imágenes que llegan inesperadamente o a través de sueños, materializándolas.
+          </p>
+
+          <p class="statement-page__voice" style="margin-top: var(--s3);">
+            Muchas obras son efímeras o están en lugares inaccesibles, y se encuentran públicamente a través de la fotografía o el video.
+          </p>
+
+          <p class="statement-page__voice" style="margin-top: var(--s3);">
+            Mis investigaciones se concentran en el paso del tiempo, la fragilidad de los monumentos, los bienes públicos. Proponiendo eventos que señalan experiencias respecto a procedimientos de invisibilización y borrado. O superficies que acomodan estados cualitativamente diferentes de materia idéntica.
+          </p>
+
+          <p class="statement-page__voice" style="margin-top: var(--s3);">
+            Recientemente, he dedicado mi trabajo a la capacidad de respuesta de la naturaleza y a reconstruir el parentesco olvidado entre los seres humanos y la vida vegetal.
+          </p>
+        </div>
+      </div>
+
+      <hr class="rule">
+
+      <!-- ===== 2. SOBRE SU PRÁCTICA ===== -->
+      <section class="statement-page__about">
+        <p class="label" style="margin-bottom: var(--s2);">Sobre su práctica</p>
+
+        <p class="statement-page__practice">
+          Escultora, instaladora y fotógrafa colombiana caracterizada por investigaciones y procesos prolongados. Su práctica frecuentemente involucra acciones escultóricas efímeras o intervenciones en lugares inaccesibles, documentadas posteriormente a través de fotografía o video. También crea dispositivos para señalar o establecer condiciones especiales de observación.
+        </p>
+      </section>
+
+    </div>
+  </article>
+
+</Layout>
+
+<style>
+  /* ===== Page base ===== */
+  .statement-page {
+    padding-top: calc(var(--s5) + 40px);
+    padding-bottom: var(--s5);
+  }
+
+  .statement-page__header {
+    margin-bottom: var(--s4);
+  }
+
+  .statement-page__header h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(2.4rem, 6vw, 5rem);
+    line-height: 1;
+    margin: var(--s1) 0;
+  }
+
+  /* ===== Opening: portrait + statement grid ===== */
+  .statement-page__opening {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: var(--s5);
+    margin-bottom: var(--s4);
+    align-items: start;
+  }
+
+  .statement-page__portrait img {
+    width: 100%;
+    display: block;
+    filter: grayscale(15%);
+  }
+
+  .statement-page__credit {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ash-light);
+    margin-top: var(--s1);
+  }
+
+  /* ===== Artist's voice — large serif italic ===== */
+  .statement-page__voice {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    line-height: 1.9;
+    color: var(--ink-soft);
+  }
+
+  /* ===== About section ===== */
+  .statement-page__about {
+    margin-top: var(--s4);
+    margin-bottom: var(--s5);
+    max-width: var(--text-w);
+  }
+
+  .statement-page__practice {
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    line-height: 2;
+    color: var(--ash);
+  }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 768px) {
+    .statement-page__opening {
+      grid-template-columns: 1fr;
+    }
+
+    .statement-page__portrait {
+      max-width: 300px;
+    }
+  }
+</style>

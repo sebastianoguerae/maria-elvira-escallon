@@ -1,0 +1,181 @@
+---
+import Layout from '../../../components/layout/Layout.astro';
+import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
+
+const lang = 'es' as const;
+const title = 'Un mensaje';
+---
+
+<Layout
+  lang={lang}
+  title="Un mensaje — Obra"
+  description="Un mensaje. Instalación, código morse. María Elvira Escallón."
+>
+
+  <ArtworkSchema
+    title="Un mensaje"
+    year="fecha por confirmar"
+    medium="Instalación, código morse"
+    description="Instalación que utiliza código morse como medio para transmitir un mensaje."
+    url="https://mariaelviraescallon.com/es/obra/un-mensaje/"
+  />
+
+  <article class="work-page">
+    <div class="container">
+
+      <!-- Header -->
+      <header class="work-page__header">
+        <p class="label">Obra / 017</p>
+        <h1>{title}</h1>
+        <p class="work-page__meta">Fecha por confirmar &nbsp;/&nbsp; Instalación, código morse</p>
+      </header>
+
+      <!-- Galería principal -->
+      <div class="work-page__gallery">
+        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pendiente: Un mensaje — Instalación ]</div>
+        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pendiente: Un mensaje — Detalle código morse ]</div>
+      </div>
+
+      <!-- Texto + Ficha -->
+      <div class="work-page__body">
+        <div class="work-page__text">
+
+          <p class="curatorial">
+            Relacionada con el interés de la artista en dispositivos mínimos de comunicación.
+            La obra utiliza código morse como medio para transmitir un mensaje, creando un
+            puente entre lo visible y lo invisible, lo audible y lo silencioso.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            <em>Un mensaje</em> conecta con <em>Las caminantes</em> (2024), donde las plantas
+            también emiten un mensaje en código morse. En ambas obras, el código morse funciona
+            como un dispositivo mínimo — una forma de comunicación que exige atención y
+            desciframiento, invitando al espectador a detenerse y observar.
+          </p>
+
+          <h3 style="margin-top: var(--s4);">CONTEXTO</h3>
+          <p style="margin-top: var(--s2);">
+            El uso del código morse es recurrente en la práctica de Escallón. Como la propia
+            artista describe: su intervención consiste en señalar situaciones «casi sin tocar,
+            a través de dispositivos mínimos que invitan a la observación — acompañar escenas
+            con pequeño código morse descifrado cerca de la instalación». <em>Un mensaje</em>
+            lleva esta estrategia a su forma más esencial.
+          </p>
+        </div>
+
+        <aside class="work-page__ficha">
+          <h4>FICHA TÉCNICA</h4>
+          <div class="ficha">
+            <strong>Un mensaje</strong><br>
+            Fecha por confirmar<br><br>
+            Instalación, código morse.
+          </div>
+
+          <h4 style="margin-top: var(--s3);">TEMAS</h4>
+          <div class="ficha">
+            Comunicación mínima<br>
+            Código morse<br>
+            Lo visible y lo invisible<br>
+            Dispositivos de observación
+          </div>
+
+          <h4 style="margin-top: var(--s3);">OBRAS RELACIONADAS</h4>
+          <div class="ficha">
+            <a href="/maria-elvira-escallon/es/obra/las-caminantes/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">
+              Las caminantes (2024)
+            </a>
+          </div>
+
+          <h4 style="margin-top: var(--s3);">CÓMO CITAR</h4>
+          <div class="ficha" style="font-size: 0.65rem;">
+            Escallón, M.E. <em>Un mensaje</em>.
+            Instalación, código morse. Disponible en:
+            mariaelviraescallon.com/es/obra/un-mensaje/
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </article>
+
+</Layout>
+
+<style>
+  .work-page {
+    padding-top: calc(var(--s5) + 40px);
+  }
+
+  .work-page__header {
+    margin-bottom: var(--s4);
+  }
+
+  .work-page__header h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin: var(--s1) 0;
+  }
+
+  .work-page__meta {
+    font-size: 0.75rem;
+    color: var(--ash);
+    letter-spacing: 0.03em;
+  }
+
+  .work-page__gallery {
+    display: grid;
+    gap: var(--s2);
+    margin-bottom: var(--s4);
+  }
+
+  .work-page__gallery img {
+    width: 100%;
+    display: block;
+  }
+
+  .work-page__body {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--s5);
+    margin-bottom: var(--s5);
+  }
+
+  .work-page__text h3 {
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    color: var(--ash);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .work-page__ficha h4 {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--ash);
+    margin-bottom: var(--s1);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .placeholder-img {
+    width: 100%;
+    background-color: var(--paper-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ash-light);
+    font-family: var(--mono);
+    font-size: 0.55rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 768px) {
+    .work-page__body {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

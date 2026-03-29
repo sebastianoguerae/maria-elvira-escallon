@@ -135,6 +135,33 @@ const works = [
     hasImage: false,
     image: null,
   },
+  {
+    num: '015',
+    slug: 'divino-fragmento',
+    title: 'Divino Fragmento',
+    year: '2003',
+    description: 'Fotografía — British Museum, Londres',
+    hasImage: false,
+    image: null,
+  },
+  {
+    num: '016',
+    slug: 'ejercicios-cultivo-maiz',
+    title: 'Ejercicios para un cultivo de maíz en Samacá',
+    year: 'Fecha por confirmar',
+    description: 'Instalación, proceso agrícola — Samacá, Boyacá',
+    hasImage: false,
+    image: null,
+  },
+  {
+    num: '017',
+    slug: 'un-mensaje',
+    title: 'Un mensaje',
+    year: 'Fecha por confirmar',
+    description: 'Instalación, código morse',
+    hasImage: false,
+    image: null,
+  },
 ];
 ---
 
@@ -152,7 +179,7 @@ const works = [
       <!-- Works list -->
       <div class="works-catalog">
         {works.map((work) => (
-          <a href={`/es/obra/${work.slug}/`} class="work-entry-link" style="text-decoration:none; color:inherit;">
+          <a href={`/maria-elvira-escallon/es/obra/${work.slug}/`} class="work-entry-link" style="text-decoration:none; color:inherit;">
             <div class="work-entry">
               <div class="work-entry__num">{work.num}</div>
               <div class="work-entry__info">
