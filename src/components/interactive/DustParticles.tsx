@@ -194,7 +194,7 @@ export default function DustParticles({ intensity = 0.5 }: DustParticlesProps) {
         width: '100vw',
         height: '100vh',
         pointerEvents: 'none',
-        zIndex: 9999,
+        zIndex: 1,
       }}
     />
   );

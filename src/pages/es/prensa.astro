@@ -15,14 +15,14 @@ En 2024, el Museo de Arte Miguel Urrutia (MAMU), Banco de la República, Bogotá
 Ha recibido el Premio Luis Caballero (2003), el Premio de Patrimonio (2006) y múltiples Becas de Creación del Ministerio de Cultura. Durante más de una década fue docente en la Universidad Javeriana. Su obra se encuentra en colecciones como Art Gallery of NSW (Sydney), Banco de la República, Colección Seguros Bolívar y ESCALA (Universidad de Essex). Está representada por Galería Espacio Continuo, Bogotá.`;
 
 const prensaArticulos = [
-  { titulo: 'Encuentros en la fábrica de polvo', medio: 'Artishock Revista', fecha: 'Febrero 2025', url: '#' },
-  { titulo: 'La antología de la mente de María Elvira Escallón', medio: 'El Espectador', fecha: '2024', url: '#' },
-  { titulo: 'El esqueleto de Dios de María Elvira Escallón', medio: 'El Tiempo', fecha: '2022', url: '#' },
-  { titulo: 'El arte de sentir un parentesco con otros seres vivos', medio: 'El Espectador', fecha: '2022', url: '#' },
-  { titulo: 'El cuerpo y el árbol', medio: 'Cambio Colombia', fecha: '2022', url: '#' },
-  { titulo: 'Sobre raíces y flores', medio: 'Las2Orillas', fecha: '2022', url: '#' },
-  { titulo: 'María Elvira Escallón: Moving Through Boundaries', medio: 'ArtNexus 58', fecha: '2005', url: '#' },
-  { titulo: 'Urban Impulses review', medio: 'Artlyst', fecha: '2019', url: '#' },
+  { titulo: 'Encuentros en la fábrica de polvo', medio: 'Artishock Revista', fecha: 'Febrero 2025', url: 'https://artishockrevista.com/2025/02/05/maria-elvira-escallon-encuentros-en-la-fabrica-de-polvo/' },
+  { titulo: 'La antología de la mente de María Elvira Escallón', medio: 'El Espectador', fecha: '2024', url: 'https://www.elespectador.com/el-magazin-cultural/encuentros-en-la-fabrica-de-polvo-la-antologia-de-la-mente-de-maria-elvira-escallon-en-bogota-noticias-hoy/' },
+  { titulo: 'El esqueleto de Dios de María Elvira Escallón', medio: 'El Tiempo', fecha: '2022', url: 'https://www.eltiempo.com/cultura/arte-y-teatro/el-esqueleto-de-dios-de-maria-elvira-escallon-682757' },
+  { titulo: 'El arte de sentir un parentesco con otros seres vivos', medio: 'El Espectador', fecha: '2022', url: 'https://www.elespectador.com/el-magazin-cultural/maria-elvira-escallon-el-arte-de-sentir-un-parentesco-con-otros-seres-vivos/' },
+  { titulo: 'El cuerpo y el árbol', medio: 'Cambio Colombia', fecha: '2022', url: 'https://cambiocolombia.com/articulo/placer/el-cuerpo-y-el-arbol-una-nueva-exploracion-de-maria-elvira-escallon' },
+  { titulo: 'Sobre raíces y flores', medio: 'Las2Orillas', fecha: '2022', url: 'https://www.las2orillas.co/sobre-raices-y-flores/' },
+  { titulo: 'María Elvira Escallón: Moving Through Boundaries', medio: 'ArtNexus 58', fecha: '2005', url: 'https://www.artnexus.com/en/magazines/article-magazine-artnexus/5d63263090cc21cf7c09f4ea/58/maria-elvira-escallon' },
+  { titulo: 'Urban Impulses', medio: 'Artlyst', fecha: '2019', url: 'https://artlyst.com/reviews/urban-impulses-latin-american-photography-photographers-gallery-london-edward-lucie-smith/' },
 ];
 ---
 
@@ -109,11 +109,13 @@ const prensaArticulos = [
         <ul class="prensa-list">
           {prensaArticulos.map((art) => (
             <li class="prensa-item">
-              <div class="prensa-item__info">
-                <span class="prensa-item__titulo">&laquo;{art.titulo}&raquo;</span>
-                <span class="prensa-item__medio">{art.medio}</span>
-              </div>
-              <span class="prensa-item__fecha">{art.fecha}</span>
+              <a href={art.url} target="_blank" rel="noopener noreferrer" class="prensa-item__link">
+                <div class="prensa-item__info">
+                  <span class="prensa-item__titulo">&laquo;{art.titulo}&raquo;</span>
+                  <span class="prensa-item__medio">{art.medio}</span>
+                </div>
+                <span class="prensa-item__fecha">{art.fecha} &rarr;</span>
+              </a>
             </li>
           ))}
         </ul>
@@ -308,11 +310,21 @@ const prensaArticulos = [
     list-style: none;
   }
 
-  .prensa-item {
+  .prensa-item__link {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    text-decoration: none;
+    color: inherit;
+    transition: background-color 0.2s;
     padding: var(--s2) 0;
+  }
+
+  .prensa-item__link:hover {
+    background-color: var(--white);
+  }
+
+  .prensa-item {
     border-bottom: 1px solid var(--paper-dark);
   }
 
