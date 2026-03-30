@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../components/layout/Layout.astro';
+import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
 
 const lang = 'es' as const;
 const title = 'Recelaron del cielo';
@@ -16,6 +17,15 @@ const img5 = (await import('../../../assets/images/obras/recelaron-del-cielo/por
   title="Recelaron del cielo — Obra"
   description="Recelaron del cielo (2008). Fotografía Backlight en caja de luz, instalación. María Elvira Escallón."
 >
+
+  
+  <ArtworkSchema
+    title="Recelaron del cielo"
+    year="2008"
+    medium="Fotografía Backlight en caja de luz"
+    description="Fotografías retroiluminadas del Hospital Santa Rosa de Viterbo."
+    url="https://mariaelviraescallon.com/es/obra/recelaron-del-cielo/"
+  />
 
   <article class="work-page">
     <div class="container">

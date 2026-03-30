@@ -7,11 +7,11 @@
       "lng": -74.072,
       "type": "base",
       "events": [
-        { "title": "Encuentros en la fabrica de polvo", "venue": "MAMU", "year": 2024, "type": "solo" },
-        { "title": "Encuentro con seres notables", "venue": "Espacio Continuo", "year": 2022, "type": "solo" },
-        { "title": "En el fertil suelo", "venue": "Galeria Santa Fe", "year": 2018, "type": "solo" },
-        { "title": "Nuevas Floras", "venue": "Galeria Santa Fe", "year": 2003, "type": "solo" },
-        { "title": "En estado de coma", "venue": "Museo de Bogota", "year": 2007, "type": "solo" },
+        { "title": "Encuentros en la fábrica de polvo", "venue": "MAMU", "year": 2024, "type": "solo" },
+        { "title": "Encuentros con seres notables", "venue": "Espacio Continuo", "year": 2022, "type": "solo" },
+        { "title": "En el fértil suelo", "venue": "Galería Santa Fe", "year": 2018, "type": "solo" },
+        { "title": "Nuevas Floras", "venue": "Galería Santa Fe", "year": 2003, "type": "solo" },
+        { "title": "En estado de coma", "venue": "Museo de Bogotá", "year": 2007, "type": "solo" },
         { "title": "El reino de este mundo", "venue": "MAMBO", "year": 2000, "type": "solo" }
       ]
     },

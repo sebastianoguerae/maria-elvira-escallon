@@ -1,0 +1,89 @@
+---
+import Layout from '../../../components/layout/Layout.astro';
+import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
+
+const lang = 'en' as const;
+const title = 'Nuevas Floras Versalles';
+
+const img1 = (await import('../../../assets/images/obras/nuevas-floras-versalles/versalles-01.jpg')).default;
+const img2 = (await import('../../../assets/images/obras/nuevas-floras-versalles/versalles-02.jpg')).default;
+---
+
+<Layout
+  lang={lang}
+  title="Nuevas Floras Versalles — Works"
+  description="Nuevas Floras Versalles (2017). Sculptural intervention on trees at the Arboretum de Chevreloup and Jardin des Tuileries (FIAC), France. Maria Elvira Escallon."
+>
+
+  <ArtworkSchema
+    title="Nuevas Floras Versalles"
+    year="2017"
+    medium="Sculptural intervention on trees, photography"
+    description="Intervention on trees at the Arboretum de Chevreloup and the Jardin des Tuileries during FIAC, Versailles/Paris, France."
+    url="https://mariaelviraescallon.com/en/works/nuevas-floras-versalles/"
+  />
+
+  <article class="work-page">
+    <div class="container">
+
+      <header class="work-page__header">
+        <p class="label">Works / 005b</p>
+        <h1>{title}</h1>
+        <p class="work-page__meta">2017 &nbsp;/&nbsp; Sculptural intervention on trees &nbsp;/&nbsp; Arboretum de Chevreloup &amp; Jardin des Tuileries, France</p>
+      </header>
+
+      <div class="work-page__gallery">
+        <img src={img1.src} alt="Nuevas Floras Versalles — Intervention at the Jardin des Tuileries, FIAC 2017" loading="eager">
+        <img src={img2.src} alt="Nuevas Floras Versalles — Baroque carving at the Arboretum de Chevreloup" loading="lazy">
+      </div>
+
+      <div class="work-page__body">
+        <div class="work-page__text">
+
+          <p class="curatorial">
+            In 2017, Maria Elvira Escallon brought <em>Nuevas Floras</em> to France, intervening
+            on trees at the Arboretum de Chevreloup and presenting the work at the Jardin des
+            Tuileries during FIAC (Foire Internationale d'Art Contemporain) in Paris.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            This version responds to the specificities of the French landscape and history —
+            a dialogue between baroque carved forms and the formal gardens of the European
+            landscape tradition. Unlike the Colombian version, where the carvings dialogue
+            with colonial baroque, in Versailles the work is situated at the heart of the
+            tradition that originated that same ornamental repertoire — closing a cycle between
+            the European source and its Latin American reinterpretation.
+          </p>
+
+          <h3 style="margin-top: var(--s4);">ORIGINAL WORK</h3>
+          <ul style="margin-top: var(--s2); list-style: none;">
+            <li style="padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark);">
+              <a href="/maria-elvira-escallon/en/works/nuevas-floras/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">Nuevas Floras (2003) — Colombia</a>
+            </li>
+          </ul>
+        </div>
+
+        <aside class="work-page__ficha">
+          <h4>TECHNICAL DETAILS</h4>
+          <div class="ficha">
+            <strong>Nuevas Floras Versalles</strong><br>
+            2017<br><br>
+            Sculptural intervention on trees.<br>
+            Wood carving.<br>
+            Documentation: photography.<br><br>
+            Variable dimensions
+          </div>
+
+          <h4 style="margin-top: var(--s3);">LOCATION</h4>
+          <div class="ficha">
+            Arboretum de Chevreloup, Versailles<br>
+            Jardin des Tuileries, FIAC, Paris<br>
+            France, 2017
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </article>
+
+</Layout>

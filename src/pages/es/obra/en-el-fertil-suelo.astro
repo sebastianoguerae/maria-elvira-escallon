@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../components/layout/Layout.astro';
+import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
 
 const lang = 'es' as const;
 const title = 'En el fértil suelo — La travesía';
@@ -19,6 +20,15 @@ const img8 = (await import('../../../assets/images/obras/fertil-suelo/port-173.j
   title="En el fértil suelo — Obra"
   description="En el fértil suelo — La travesía (2017–2018). Video, escultura. Nominación X Premio Luis Caballero. María Elvira Escallón."
 >
+
+  
+  <ArtworkSchema
+    title="En el fértil suelo"
+    year="2017–2018"
+    medium="Video, escultura"
+    description="Instalación para el X Premio Luis Caballero. Arena acumulándose en un espacio doméstico."
+    url="https://mariaelviraescallon.com/es/obra/en-el-fertil-suelo/"
+  />
 
   <article class="work-page">
     <div class="container">

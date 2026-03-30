@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../components/layout/Layout.astro';
+import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
 
 const lang = 'es' as const;
 const title = 'Encuentros con seres notables';
@@ -12,6 +13,15 @@ const img1 = (await import('../../../assets/images/obras/encuentros-seres/encuen
   title="Encuentros con seres notables — Obra"
   description="Encuentros con seres notables (2022). Escultura — ramas de jazmín de la sabana, eucalipto, talla en madera, arcilla. María Elvira Escallón."
 >
+
+  
+  <ArtworkSchema
+    title="Encuentros con seres notables"
+    year="2022"
+    medium="Escultura, ramas talladas"
+    description="Esculturas talladas sobre ramas que exploran la relación entre el cuerpo humano y el vegetal."
+    url="https://mariaelviraescallon.com/es/obra/encuentros-con-seres-notables/"
+  />
 
   <article class="work-page">
     <div class="container">

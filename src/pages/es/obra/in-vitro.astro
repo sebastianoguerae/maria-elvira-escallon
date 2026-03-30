@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../components/layout/Layout.astro';
+import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
 import QuoteBlock from '../../../components/content/QuoteBlock.astro';
 import AudioPlayer from '../../../components/interactive/AudioPlayer';
 
@@ -18,6 +19,15 @@ const img5 = (await import('../../../assets/images/obras/in-vitro/port-002.jpg')
   title="In Vitro — Obra"
   description="In Vitro (1997). Instalación — espejo, vidrio. Estación de La Sabana, Bogotá. 1er Premio, VIII Salón Regional de Artistas. María Elvira Escallón."
 >
+
+  
+  <ArtworkSchema
+    title="In Vitro"
+    year="1997"
+    medium="Instalación, espejo"
+    description="Intervención site-specific en la Estación de La Sabana, Bogotá. Espejo de 30 metros que reflejaba el deterioro del edificio histórico."
+    url="https://mariaelviraescallon.com/es/obra/in-vitro/"
+  />
 
   <article class="work-page">
     <div class="container">
