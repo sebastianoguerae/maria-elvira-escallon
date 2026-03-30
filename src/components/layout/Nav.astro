@@ -10,22 +10,28 @@ interface Props {
 const { lang } = Astro.props;
 
 const navLinks = [
-  { key: 'nav.works' as const, basePath: '/obra/' },
-  { key: 'nav.biography' as const, basePath: '/biografia/' },
-  { key: 'nav.exhibitions' as const, basePath: '/exposiciones/' },
-  { key: 'nav.timeline' as const, basePath: '/linea-de-tiempo/' },
-  { key: 'nav.map' as const, basePath: '/mapa/' },
-  { key: 'nav.press' as const, basePath: '/prensa/' },
-  { key: 'nav.contact' as const, basePath: '/contacto/' },
+  { key: 'nav.works' as const, basePath: '/obra/', allLangs: true },
+  { key: 'nav.biography' as const, basePath: '/biografia/', allLangs: true },
+  { key: 'nav.exhibitions' as const, basePath: '/exposiciones/', allLangs: true },
+  { key: 'nav.timeline' as const, basePath: '/linea-de-tiempo/', allLangs: true },
+  { key: 'nav.map' as const, basePath: '/mapa/', allLangs: true },
+  { key: 'nav.press' as const, basePath: '/prensa/', allLangs: false },
+  { key: 'nav.contact' as const, basePath: '/contacto/', allLangs: false },
 ];
+
+/** For ES-only pages, always link to the ES version */
+function navHref(basePath: string, allLangs: boolean): string {
+  if (allLangs) return getLocalizedPath(lang, basePath);
+  return getLocalizedPath('es', basePath);
+}
 ---
 
 <nav class="nav">
   <div class="nav__inner">
     <a href={getLocalizedPath(lang, '/')} class="nav__logo">M.E. ESCALLÓN</a>
     <ul class="nav__links">
-      {navLinks.map(({ key, basePath }) => (
-        <li><a href={getLocalizedPath(lang, basePath)}>{t(lang, key)}</a></li>
+      {navLinks.map(({ key, basePath, allLangs }) => (
+        <li><a href={navHref(basePath, allLangs)}>{t(lang, key)}</a></li>
       ))}
       <li>
         <div class="nav__lang-group">
@@ -47,8 +53,8 @@ const navLinks = [
 
   <div class="nav__mobile">
     <button class="nav__mobile-close" aria-label="Close">&times;</button>
-    {navLinks.map(({ key, basePath }) => (
-      <a href={getLocalizedPath(lang, basePath)}>{t(lang, key)}</a>
+    {navLinks.map(({ key, basePath, allLangs }) => (
+      <a href={navHref(basePath, allLangs)}>{t(lang, key)}</a>
     ))}
     <div class="nav__mobile-langs">
       {Object.entries(languages).map(([code]) => (

@@ -6,6 +6,8 @@ const lang = 'en' as const;
 const title = 'Desde Adentro';
 
 const img1 = (await import('../../../assets/images/obras/desde-adentro/desde-adentro-01.jpg')).default;
+const img2 = (await import('../../../assets/images/obras/desde-adentro/desde-adentro-02.jpg')).default;
+const img3 = (await import('../../../assets/images/obras/desde-adentro/desde-adentro-03.jpg')).default;
 ---
 
 <Layout
@@ -27,8 +29,8 @@ const img1 = (await import('../../../assets/images/obras/desde-adentro/desde-ade
       <!-- Main gallery -->
       <div class="work-page__gallery">
         <img src={img1.src} alt="Desde Adentro — Photographic documentation of the interior of Club El Nogal after the attack" loading="eager">
-        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pending: Desde Adentro — Traces and marks on ash-covered surfaces ]</div>
-        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pending: Desde Adentro — Detail of everyday objects after the explosion ]</div>
+        <img src={img2.src} alt="Desde Adentro — Traces and marks on ash-covered surfaces" loading="lazy">
+        <img src={img3.src} alt="Desde Adentro — Detail of everyday objects after the explosion" loading="lazy">
       </div>
 
       <!-- Text + Technical sheet -->

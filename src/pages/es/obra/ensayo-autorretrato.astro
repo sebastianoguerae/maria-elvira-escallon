@@ -4,6 +4,14 @@ import QuoteBlock from '../../../components/content/QuoteBlock.astro';
 
 const lang = 'es' as const;
 const title = 'Ensayo autorretrato';
+
+const img1 = (await import('../../../assets/images/obras/ensayo-autorretrato/ensayo-01.jpg')).default;
+const img2 = (await import('../../../assets/images/obras/ensayo-autorretrato/port-061.jpg')).default;
+const img3 = (await import('../../../assets/images/obras/ensayo-autorretrato/port-062.jpg')).default;
+const img4 = (await import('../../../assets/images/obras/ensayo-autorretrato/port-063.jpg')).default;
+const img5 = (await import('../../../assets/images/obras/ensayo-autorretrato/port-064.jpg')).default;
+const img6 = (await import('../../../assets/images/obras/ensayo-autorretrato/port-065.jpg')).default;
+const img7 = (await import('../../../assets/images/obras/ensayo-autorretrato/port-066.jpg')).default;
 ---
 
 <Layout
@@ -24,9 +32,13 @@ const title = 'Ensayo autorretrato';
 
       <!-- Galería principal -->
       <div class="work-page__gallery">
-        <div class="placeholder-img" style="aspect-ratio:16/9;">[ Pendiente: Ensayo autorretrato — fotograma: manos escarbando en la pared ]</div>
-        <div class="placeholder-img" style="aspect-ratio:16/9;">[ Pendiente: Ensayo autorretrato — fotograma: destrucción de máscara de Venus de Milo ]</div>
-        <div class="placeholder-img" style="aspect-ratio:16/9;">[ Pendiente: Ensayo autorretrato — fotograma: manos modelando brazo conectado a frailejón ]</div>
+        <img src={img1.src} alt="Ensayo autorretrato — Fotograma del video, manos de la artista" loading="eager">
+        <img src={img2.src} alt="Ensayo autorretrato — Manos escarbando en la pared buscando un clavo" loading="lazy">
+        <img src={img3.src} alt="Ensayo autorretrato — Destrucción de máscara de Venus de Milo" loading="lazy">
+        <img src={img4.src} alt="Ensayo autorretrato — Manos modelando brazo conectado a frailejón" loading="lazy">
+        <img src={img5.src} alt="Ensayo autorretrato — Moldes del rostro rallados con rallador de queso" loading="lazy">
+        <img src={img6.src} alt="Ensayo autorretrato — Proceso de destrucción y creación simultánea" loading="lazy">
+        <img src={img7.src} alt="Ensayo autorretrato — Detalle de la acción escultórica de las manos" loading="lazy">
       </div>
 
       <!-- Texto + Ficha -->

@@ -4,6 +4,8 @@ import QuoteBlock from '../../../components/content/QuoteBlock.astro';
 
 const lang = 'en' as const;
 const title = 'In Memoriam';
+
+const img1 = (await import('../../../assets/images/obras/in-memoriam/in-memoriam-01.jpg')).default;
 ---
 
 <Layout
@@ -24,7 +26,7 @@ const title = 'In Memoriam';
 
       <!-- Main gallery -->
       <div class="work-page__gallery">
-        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pending: In Memoriam — Ice column at full height inside glass container ]</div>
+        <img src={img1.src} alt="In Memoriam — Doric ice column dissolving in water urn, 2001" loading="eager">
         <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pending: In Memoriam — Column mid-dissolution, water rising ]</div>
         <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pending: In Memoriam — Final state, water and remnants ]</div>
       </div>

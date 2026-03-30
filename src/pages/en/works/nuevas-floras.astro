@@ -8,6 +8,9 @@ const title = 'Nuevas Floras';
 
 const img1 = (await import('../../../assets/images/obras/nuevas-floras/nuevas-floras-01.jpg')).default;
 const img2 = (await import('../../../assets/images/obras/nuevas-floras/nuevas-floras-02.jpg')).default;
+const img3 = (await import('../../../assets/images/obras/nuevas-floras/nuevas-floras-versalles.jpg')).default;
+const img4 = (await import('../../../assets/images/obras/nuevas-floras/nuevas-floras-brasil-detalle.jpg')).default;
+const img5 = (await import('../../../assets/images/obras/nuevas-floras/nuevas-floras-tocones.jpg')).default;
 ---
 
 <Layout
@@ -30,8 +33,9 @@ const img2 = (await import('../../../assets/images/obras/nuevas-floras/nuevas-fl
       <div class="work-page__gallery">
         <img src={img1.src} alt="Nuevas Floras — Tree intervened with baroque carving, photographic series" loading="eager">
         <img src={img2.src} alt="Nuevas Floras — Detail of bark reclaiming the carving over the years" loading="lazy">
-        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pending: Nuevas Floras Versailles, 2017 ]</div>
-        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pending: Nuevas Floras Bristol ]</div>
+        <img src={img3.src} alt="Nuevas Floras Versailles — Intervention at the Arboretum de Chevreloup, France, 2017" loading="lazy">
+        <img src={img4.src} alt="Nuevas Floras do Sul — Detail of intervention in Brazil" loading="lazy">
+        <img src={img5.src} alt="Nuevas Floras — Tree stumps intervened with baroque carving" loading="lazy">
       </div>
 
       <!-- Temporal comparator -->

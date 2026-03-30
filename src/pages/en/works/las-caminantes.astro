@@ -4,6 +4,8 @@ import QuoteBlock from '../../../components/content/QuoteBlock.astro';
 
 const lang = 'en' as const;
 const title = 'Las Caminantes';
+
+const img1 = (await import('../../../assets/images/obras/las-caminantes/caminantes-mamu-01.jpg')).default;
 ---
 
 <Layout
@@ -24,7 +26,7 @@ const title = 'Las Caminantes';
 
       <!-- Main gallery -->
       <div class="work-page__gallery">
-        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pending: Las Caminantes — Garden of weeds growing inside exhibition hall ]</div>
+        <img src={img1.src} alt="Las Caminantes — Weed garden growing inside MAMU gallery" loading="eager">
         <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pending: Las Caminantes — Detail of plants and speaker emitting Morse code ]</div>
         <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pending: Las Caminantes — Installation view at MAMU ]</div>
       </div>

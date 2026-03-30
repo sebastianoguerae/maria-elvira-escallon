@@ -1,0 +1,168 @@
+---
+import Layout from '../../../components/layout/Layout.astro';
+
+const lang = 'es' as const;
+const title = 'Paisaje doméstico';
+---
+
+<Layout
+  lang={lang}
+  title="Paisaje doméstico — Obra"
+  description="Paisaje doméstico (2005). Impresión digital giclée sobre papel de algodón. María Elvira Escallón."
+>
+
+  <article class="work-page">
+    <div class="container">
+
+      <!-- Header -->
+      <header class="work-page__header">
+        <p class="label">Obra / 006</p>
+        <h1>{title}</h1>
+        <p class="work-page__meta">2005 &nbsp;/&nbsp; Impresión digital giclée sobre papel de algodón &nbsp;/&nbsp; 183 × 324 cm (42 × 42 cm c/u)</p>
+      </header>
+
+      <!-- Galería principal -->
+      <div class="work-page__gallery">
+        <div class="placeholder-img" style="aspect-ratio: 4/3;">[ Paisaje doméstico ]</div>
+      </div>
+
+      <!-- Texto + Ficha -->
+      <div class="work-page__body">
+        <div class="work-page__text">
+
+          <p class="curatorial">
+            En el 2005 el Gobierno decidió extender el programa de erradicación de cultivos ilícitos mediante fumigación con Glifosato a varios de los Parques Nacionales de Colombia. <em>Paisaje doméstico</em> puede considerarse una micro fumigación. Se inició el día 25 de agosto de 2005 en una mínima porción de tierra de 40 × 40 cm en un Parque Nacional cercano a Bogotá. Se consiguieron y mezclaron los mismos agentes químicos en las mismas proporciones que se utilizan en los programas de erradicación de cultivos ilícitos y se aplicaron una sola vez.
+          </p>
+
+          <h3 style="margin-top: var(--s4);">CONTEXTO</h3>
+          <p style="margin-top: var(--s2);">
+            Día tras día, por el espacio de 26 días, se visitó este lugar y se registró lo que en él aconteció. El proyecto permite atestiguar de cerca los efectos de acciones enormes, distantes e invisibles.
+          </p>
+        </div>
+
+        <aside class="work-page__ficha">
+          <h4>FICHA TÉCNICA</h4>
+          <div class="ficha">
+            <strong>Paisaje doméstico</strong><br>
+            2005<br><br>
+            Impresión digital giclée sobre papel de algodón.<br><br>
+            183 × 324 cm (42 × 42 cm c/u)
+          </div>
+
+          <h4 style="margin-top: var(--s3);">CÓMO CITAR</h4>
+          <div class="ficha" style="font-size: 0.65rem;">
+            Escallón, M.E. (2005). <em>Paisaje doméstico</em>.
+            Impresión digital giclée sobre papel de algodón. Disponible en:
+            mariaelviraescallon.com/es/obra/paisaje-domestico/
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </article>
+
+</Layout>
+
+<style>
+  .work-page {
+    padding-top: calc(var(--s5) + 40px);
+  }
+
+  .work-page__header {
+    margin-bottom: var(--s4);
+  }
+
+  .work-page__header h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin: var(--s1) 0;
+  }
+
+  .work-page__meta {
+    font-size: 0.75rem;
+    color: var(--ash);
+    letter-spacing: 0.03em;
+  }
+
+  .work-page__gallery {
+    display: grid;
+    gap: var(--s2);
+    margin-bottom: var(--s4);
+  }
+
+  .work-page__gallery img {
+    width: 100%;
+    display: block;
+  }
+
+  .work-page__body {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--s5);
+    margin-bottom: var(--s5);
+  }
+
+  .work-page__text h3 {
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    color: var(--ash);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .work-page__ficha h4 {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--ash);
+    margin-bottom: var(--s1);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .placeholder-img {
+    width: 100%;
+    background-color: var(--paper-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ash-light);
+    font-family: var(--mono);
+    font-size: 0.55rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .work-page__video {
+    margin: var(--s4) 0;
+  }
+  .work-page__video-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: var(--s2);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--ink);
+  }
+  .work-page__video-header h3 {
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .work-page__video video {
+    width: 100%;
+    background: var(--ink);
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    .work-page__body {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

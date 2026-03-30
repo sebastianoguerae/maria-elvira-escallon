@@ -6,6 +6,8 @@ const lang = 'en' as const;
 const imgInVitro = (await import('../../../assets/images/obras/in-vitro/in-vitro-01.jpg')).default;
 const imgDesdeAdentro = (await import('../../../assets/images/obras/desde-adentro/desde-adentro-01.jpg')).default;
 const imgNuevasFloras = (await import('../../../assets/images/obras/nuevas-floras/nuevas-floras-01.jpg')).default;
+const imgInMemoriam = (await import('../../../assets/images/obras/in-memoriam/in-memoriam-01.jpg')).default;
+const imgPrecipitacion = (await import('../../../assets/images/obras/precipitacion/precipitacion-mamu-2024.jpg')).default;
 
 const works = [
   {
@@ -32,8 +34,8 @@ const works = [
     title: 'In Memoriam',
     year: '2001',
     description: 'Ephemeral sculpture, ice — Alianza Colombo Francesa',
-    hasImage: false,
-    image: null,
+    hasImage: true,
+    image: imgInMemoriam,
   },
   {
     num: '004',
@@ -95,8 +97,8 @@ const works = [
     title: 'Precipitacion de arenas',
     year: '2024',
     description: 'Installation — MAMU',
-    hasImage: false,
-    image: null,
+    hasImage: true,
+    image: imgPrecipitacion,
   },
   {
     num: '011',

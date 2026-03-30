@@ -4,6 +4,16 @@ import QuoteBlock from '../../../components/content/QuoteBlock.astro';
 
 const lang = 'es' as const;
 const title = 'Polvo eres';
+
+const img1 = (await import('../../../assets/images/obras/polvo-eres/polvo-eres-01.jpg')).default;
+const img2 = (await import('../../../assets/images/obras/polvo-eres/port-116.jpg')).default;
+const img3 = (await import('../../../assets/images/obras/polvo-eres/port-117.jpg')).default;
+const img4 = (await import('../../../assets/images/obras/polvo-eres/port-118.jpg')).default;
+const img5 = (await import('../../../assets/images/obras/polvo-eres/port-119.jpg')).default;
+const img6 = (await import('../../../assets/images/obras/polvo-eres/port-120.jpg')).default;
+const img7 = (await import('../../../assets/images/obras/polvo-eres/port-121.jpg')).default;
+const img8 = (await import('../../../assets/images/obras/polvo-eres/port-122.jpg')).default;
+const img9 = (await import('../../../assets/images/obras/polvo-eres/port-123.jpg')).default;
 ---
 
 <Layout
@@ -24,9 +34,27 @@ const title = 'Polvo eres';
 
       <!-- Galería principal -->
       <div class="work-page__gallery">
-        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pendiente: Polvo eres — vista general de la inscripción tallada ]</div>
-        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pendiente: Polvo eres — detalle de capas expuestas: pintura, yeso, ladrillo ]</div>
-        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pendiente: Polvo eres — escombros acumulados al pie del muro ]</div>
+        <img src={img1.src} alt="Polvo eres — Inscripción tallada sobre pared del museo, capas de ladrillo expuestas" loading="eager">
+        <img src={img2.src} alt="Polvo eres — Vista general de la intervención sobre el muro" loading="lazy">
+        <img src={img3.src} alt="Polvo eres — Detalle de las letras talladas sobre ladrillo" loading="lazy">
+        <img src={img4.src} alt="Polvo eres — Residuos de la talla acumulados al pie del muro" loading="lazy">
+        <img src={img5.src} alt="Polvo eres — Capas de pintura y ladrillo expuestas por la talla" loading="lazy">
+        <img src={img6.src} alt="Polvo eres — Vista lateral de la inscripción en el muro del museo" loading="lazy">
+        <img src={img7.src} alt="Polvo eres — Detalle de la textura del ladrillo revelado" loading="lazy">
+        <img src={img8.src} alt="Polvo eres — Fragmento de la inscripción y escombros" loading="lazy">
+        <img src={img9.src} alt="Polvo eres — Vista de la obra en contexto de la sala del MAMU" loading="lazy">
+      </div>
+
+      <!-- Video -->
+      <div class="work-page__video">
+        <div class="work-page__video-header">
+          <h3>VIDEO</h3>
+          <span class="label">Polvo eres · 2:00 min</span>
+        </div>
+        <video controls preload="metadata" poster="">
+          <source src="/maria-elvira-escallon/video/polvo-eres-obra.mp4" type="video/mp4">
+          Tu navegador no soporta video HTML5.
+        </video>
       </div>
 
       <!-- Texto + Ficha -->
@@ -162,6 +190,30 @@ const title = 'Polvo eres';
     font-size: 0.55rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
+  }
+
+  .work-page__video {
+    margin: var(--s4) 0;
+  }
+  .work-page__video-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: var(--s2);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--ink);
+  }
+  .work-page__video-header h3 {
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .work-page__video video {
+    width: 100%;
+    background: var(--ink);
+    display: block;
   }
 
   @media (max-width: 768px) {

@@ -1,0 +1,177 @@
+---
+import Layout from '../../../components/layout/Layout.astro';
+
+const lang = 'es' as const;
+const title = 'Extracciones en el Hospital Universitario';
+---
+
+<Layout
+  lang={lang}
+  title="Extracciones en el Hospital Universitario — Obra"
+  description="Extracciones en el Hospital Universitario (2012). Instalación, impresión digital giclée sobre papel de algodón. María Elvira Escallón."
+>
+
+  <article class="work-page">
+    <div class="container">
+
+      <!-- Header -->
+      <header class="work-page__header">
+        <p class="label">Obra / 012</p>
+        <h1>{title}</h1>
+        <p class="work-page__meta">2012 &nbsp;/&nbsp; Instalación, impresión digital giclée sobre papel de algodón &nbsp;/&nbsp; 36 × 60 cm c/u</p>
+      </header>
+
+      <!-- Galería principal -->
+      <div class="work-page__gallery">
+        <div class="placeholder-img" style="aspect-ratio: 4/3;">[ Extracciones en el Hospital Universitario ]</div>
+      </div>
+
+      <!-- Video -->
+      <div class="work-page__video">
+        <div class="work-page__video-header">
+          <h3>VIDEO</h3>
+          <span class="label">Extracciones en el Hospital Universitario</span>
+        </div>
+        <video controls preload="metadata" poster="">
+          <source src="/maria-elvira-escallon/video/extracciones-obra.mp4" type="video/mp4">
+          Tu navegador no soporta video HTML5.
+        </video>
+      </div>
+
+      <!-- Texto + Ficha -->
+      <div class="work-page__body">
+        <div class="work-page__text">
+
+          <p class="curatorial">
+            Se realizó la acción de remover el revestimiento arquitectónico de las habitaciones del Hospital conocidas como el Triage, situadas en el área de urgencias donde se atienden y diagnostican el paciente en emergencia médica. Dicho revestimiento se removió manualmente con cincel y mazo, reversando así el proceso constructivo hasta llevarlas dichas habitaciones a un estado de obra gris. El proceso se ha concebido como el aceleramiento de una ruina.
+          </p>
+
+        </div>
+
+        <aside class="work-page__ficha">
+          <h4>FICHA TÉCNICA</h4>
+          <div class="ficha">
+            <strong>Extracciones en el Hospital Universitario</strong><br>
+            2012<br><br>
+            Instalación, impresión digital giclée sobre papel de algodón.<br><br>
+            36 × 60 cm c/u<br>
+            Hospital Santa Rosa, Universidad Nacional de Colombia
+          </div>
+
+          <h4 style="margin-top: var(--s3);">CÓMO CITAR</h4>
+          <div class="ficha" style="font-size: 0.65rem;">
+            Escallón, M.E. (2012). <em>Extracciones en el Hospital Universitario</em>.
+            Instalación, impresión digital giclée sobre papel de algodón. Disponible en:
+            mariaelviraescallon.com/es/obra/extracciones-hospital/
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </article>
+
+</Layout>
+
+<style>
+  .work-page {
+    padding-top: calc(var(--s5) + 40px);
+  }
+
+  .work-page__header {
+    margin-bottom: var(--s4);
+  }
+
+  .work-page__header h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin: var(--s1) 0;
+  }
+
+  .work-page__meta {
+    font-size: 0.75rem;
+    color: var(--ash);
+    letter-spacing: 0.03em;
+  }
+
+  .work-page__gallery {
+    display: grid;
+    gap: var(--s2);
+    margin-bottom: var(--s4);
+  }
+
+  .work-page__gallery img {
+    width: 100%;
+    display: block;
+  }
+
+  .work-page__body {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--s5);
+    margin-bottom: var(--s5);
+  }
+
+  .work-page__text h3 {
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    color: var(--ash);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .work-page__ficha h4 {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--ash);
+    margin-bottom: var(--s1);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--paper-dark);
+  }
+
+  .placeholder-img {
+    width: 100%;
+    background-color: var(--paper-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ash-light);
+    font-family: var(--mono);
+    font-size: 0.55rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .work-page__video {
+    margin: var(--s4) 0;
+  }
+  .work-page__video-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: var(--s2);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--ink);
+  }
+  .work-page__video-header h3 {
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .work-page__video video {
+    width: 100%;
+    background: var(--ink);
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    .work-page__body {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

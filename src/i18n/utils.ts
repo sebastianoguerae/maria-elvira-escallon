@@ -38,6 +38,14 @@ export function getExhibitionsPrefix(lang: Lang): string {
   return prefixes[lang];
 }
 
+// Languages that have individual detail pages per section
+const detailPageLanguages: Record<string, Lang[]> = {
+  '/obra/': ['es', 'en'],
+  '/exposiciones/': ['es'],
+  '/textos/': ['es'],
+  '/publicaciones/': ['es'],
+};
+
 /** Map of equivalent routes across languages */
 const routeMap: Record<string, Record<Lang, string>> = {
   '/': { es: '/', en: '/', fr: '/', zh: '/' },
@@ -77,10 +85,18 @@ export function switchLanguage(currentPathname: string, targetLang: Lang): strin
   for (const [baseRoute, langMap] of Object.entries(routeMap)) {
     if (currentPath === langMap[currentLang] || currentPath.startsWith(langMap[currentLang])) {
       const remainder = currentPath.slice(langMap[currentLang].length);
+      // If there's a sub-path (detail page), check if target language has detail pages
+      if (remainder && remainder !== '/') {
+        const detailLangs = detailPageLanguages[baseRoute];
+        if (detailLangs && !detailLangs.includes(targetLang)) {
+          // Target language doesn't have detail pages - go to section index
+          return `${base}/${targetLang}${langMap[targetLang]}`;
+        }
+      }
       return `${base}/${targetLang}${langMap[targetLang]}${remainder}`;
     }
   }
 
-  // Fallback: just swap the language prefix
-  return `${base}/${targetLang}${currentPath}`;
+  // Fallback: go to target language home page (avoids 404 for ES-only pages)
+  return `${base}/${targetLang}/`;
 }

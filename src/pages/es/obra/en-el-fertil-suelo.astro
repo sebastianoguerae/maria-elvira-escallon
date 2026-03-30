@@ -4,6 +4,15 @@ import QuoteBlock from '../../../components/content/QuoteBlock.astro';
 
 const lang = 'es' as const;
 const title = 'En el fértil suelo — La travesía';
+
+const img1 = (await import('../../../assets/images/obras/fertil-suelo/port-162.jpg')).default;
+const img2 = (await import('../../../assets/images/obras/fertil-suelo/port-164.jpg')).default;
+const img3 = (await import('../../../assets/images/obras/fertil-suelo/port-165.jpg')).default;
+const img4 = (await import('../../../assets/images/obras/fertil-suelo/port-167.jpg')).default;
+const img5 = (await import('../../../assets/images/obras/fertil-suelo/port-169.jpg')).default;
+const img6 = (await import('../../../assets/images/obras/fertil-suelo/port-170.jpg')).default;
+const img7 = (await import('../../../assets/images/obras/fertil-suelo/port-172.jpg')).default;
+const img8 = (await import('../../../assets/images/obras/fertil-suelo/port-173.jpg')).default;
 ---
 
 <Layout
@@ -24,10 +33,14 @@ const title = 'En el fértil suelo — La travesía';
 
       <!-- Galería principal -->
       <div class="work-page__gallery">
-        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pendiente: En el fértil suelo — Vista de la instalación, Galería Santa Fe ]</div>
-        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pendiente: En el fértil suelo — Detalle escultórico ]</div>
-        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pendiente: En el fértil suelo — Instalación lumínica y sonora ]</div>
-        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pendiente: En el fértil suelo — Montaje MAMBO 2019 ]</div>
+        <img src={img1.src} alt="En el fértil suelo — Vista general de la instalación escultórica" loading="eager">
+        <img src={img2.src} alt="En el fértil suelo — Detalle de las figuras escultóricas" loading="lazy">
+        <img src={img3.src} alt="En el fértil suelo — Personajes avanzando juntos tras la guerra" loading="lazy">
+        <img src={img4.src} alt="En el fértil suelo — Instalación lumínica en la Galería Santa Fe" loading="lazy">
+        <img src={img5.src} alt="En el fértil suelo — Detalle de las sombras proyectadas" loading="lazy">
+        <img src={img6.src} alt="En el fértil suelo — Vista lateral de la escultura" loading="lazy">
+        <img src={img7.src} alt="En el fértil suelo — Instalación sonora, detalle" loading="lazy">
+        <img src={img8.src} alt="En el fértil suelo — Vista de la obra en contexto expositivo" loading="lazy">
       </div>
 
       <!-- Texto + Ficha -->

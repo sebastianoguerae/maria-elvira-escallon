@@ -26,7 +26,7 @@ export const ui = {
     'work.viewAll': 'Ver todas las obras',
     'section.selectedWorks': 'Obra seleccionada',
     'section.catalog': 'Catálogo',
-    'footer.rights': '© 2024 María Elvira Escallón',
+    'footer.rights': '© 2026 María Elvira Escallón',
     'footer.city': 'Bogotá, Colombia',
   },
   en: {
@@ -56,7 +56,7 @@ export const ui = {
     'work.viewAll': 'View all works',
     'section.selectedWorks': 'Selected works',
     'section.catalog': 'Catalog',
-    'footer.rights': '© 2024 María Elvira Escallón',
+    'footer.rights': '© 2026 María Elvira Escallón',
     'footer.city': 'Bogotá, Colombia',
   },
   fr: {
@@ -86,7 +86,7 @@ export const ui = {
     'work.viewAll': 'Voir toutes les œuvres',
     'section.selectedWorks': 'Œuvres sélectionnées',
     'section.catalog': 'Catalogue',
-    'footer.rights': '© 2024 María Elvira Escallón',
+    'footer.rights': '© 2026 María Elvira Escallón',
     'footer.city': 'Bogotá, Colombie',
   },
   zh: {
@@ -116,7 +116,7 @@ export const ui = {
     'work.viewAll': '查看所有作品',
     'section.selectedWorks': '精选作品',
     'section.catalog': '目录',
-    'footer.rights': '© 2024 玛丽亚·埃尔维拉·埃斯卡隆',
+    'footer.rights': '© 2026 玛丽亚·埃尔维拉·埃斯卡隆',
     'footer.city': '波哥大，哥伦比亚',
   },
 } as const;

@@ -4,6 +4,12 @@ import QuoteBlock from '../../../components/content/QuoteBlock.astro';
 
 const lang = 'en' as const;
 const title = 'En estado de coma';
+
+const img1 = (await import('../../../assets/images/obras/en-estado-de-coma/coma-hospital-01.jpg')).default;
+const img2 = (await import('../../../assets/images/obras/en-estado-de-coma/coma-hospital-02.jpg')).default;
+const img3 = (await import('../../../assets/images/obras/en-estado-de-coma/coma-hospital-03.jpg')).default;
+const img4 = (await import('../../../assets/images/obras/en-estado-de-coma/coma-pared-detalle.jpg')).default;
+const img5 = (await import('../../../assets/images/obras/en-estado-de-coma/coma-cultivos-cama.jpg')).default;
 ---
 
 <Layout
@@ -24,10 +30,23 @@ const title = 'En estado de coma';
 
       <!-- Main gallery -->
       <div class="work-page__gallery">
-        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pending: En estado de coma — General view of Hospital San Juan de Dios ]</div>
-        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pending: En estado de coma — Postcards series ]</div>
-        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pending: En estado de coma — Nocturnal Walks series ]</div>
-        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pending: En estado de coma — Cultures series ]</div>
+        <img src={img1.src} alt="En estado de coma — Hospital San Juan de Dios, general view of deterioration" loading="eager">
+        <img src={img2.src} alt="En estado de coma — Hospital San Juan de Dios, abandoned corridors" loading="lazy">
+        <img src={img3.src} alt="En estado de coma — Hospital San Juan de Dios, vegetation reclaiming spaces" loading="lazy">
+        <img src={img4.src} alt="En estado de coma — Deteriorated wall detail, exposed layers" loading="lazy">
+        <img src={img5.src} alt="Cultures — Hospital bed with grass growing, En estado de coma series" loading="lazy">
+      </div>
+
+      <!-- Video -->
+      <div class="work-page__video">
+        <div class="work-page__video-header">
+          <h3>VIDEO</h3>
+          <span class="label">Extracciones · Full video · 1:26 min</span>
+        </div>
+        <video controls preload="metadata" poster="">
+          <source src="/maria-elvira-escallon/video/extracciones-obra.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
       </div>
 
       <!-- Text + Technical sheet -->
@@ -220,6 +239,30 @@ const title = 'En estado de coma';
     font-size: 0.55rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
+  }
+
+  .work-page__video {
+    margin: var(--s4) 0;
+  }
+  .work-page__video-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: var(--s2);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--ink);
+  }
+  .work-page__video-header h3 {
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .work-page__video video {
+    width: 100%;
+    background: var(--ink);
+    display: block;
   }
 
   @media (max-width: 768px) {

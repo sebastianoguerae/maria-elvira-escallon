@@ -4,6 +4,15 @@ import QuoteBlock from '../../../components/content/QuoteBlock.astro';
 
 const lang = 'es' as const;
 const title = 'Precipitación de arenas';
+
+const img1 = (await import('../../../assets/images/obras/precipitacion/precipitacion-mamu-2024.jpg')).default;
+const img2 = (await import('../../../assets/images/obras/precipitacion/port-126.jpg')).default;
+const img3 = (await import('../../../assets/images/obras/precipitacion/port-127.jpg')).default;
+const img4 = (await import('../../../assets/images/obras/precipitacion/port-129.jpg')).default;
+const img5 = (await import('../../../assets/images/obras/precipitacion/port-131.jpg')).default;
+const img6 = (await import('../../../assets/images/obras/precipitacion/port-134.jpg')).default;
+const img7 = (await import('../../../assets/images/obras/precipitacion/port-138.jpg')).default;
+const img8 = (await import('../../../assets/images/obras/precipitacion/port-140.jpg')).default;
 ---
 
 <Layout
@@ -24,10 +33,26 @@ const title = 'Precipitación de arenas';
 
       <!-- Galería principal -->
       <div class="work-page__gallery">
-        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pendiente: Precipitación de arenas — vista general de la instalación ]</div>
-        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pendiente: Precipitación de arenas — muebles sepultados bajo arena ]</div>
-        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pendiente: Precipitación de arenas — versión MAMU 2024 ]</div>
-        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pendiente: Precipitación de arenas — detalle caída de arena ]</div>
+        <img src={img1.src} alt="Precipitaciones 2024 — Arena cayendo sobre mesas, MAMU" loading="eager">
+        <img src={img2.src} alt="Precipitación de arenas — Muebles siendo sepultados por arena dorada" loading="lazy">
+        <img src={img3.src} alt="Precipitación de arenas — Detalle de la arena acumulándose sobre superficies" loading="lazy">
+        <img src={img4.src} alt="Precipitación de arenas — Vista a través del vidrio de seguridad" loading="lazy">
+        <img src={img5.src} alt="Precipitación de arenas — Objetos domésticos cubiertos de arena" loading="lazy">
+        <img src={img6.src} alt="Precipitación de arenas — Arena cayendo desde el techo" loading="lazy">
+        <img src={img7.src} alt="Precipitación de arenas — Estado avanzado de la instalación" loading="lazy">
+        <img src={img8.src} alt="Precipitación de arenas — Vista general de la sala en el MAMU" loading="lazy">
+      </div>
+
+      <!-- Video -->
+      <div class="work-page__video">
+        <div class="work-page__video-header">
+          <h3>VIDEO</h3>
+          <span class="label">Polvo eres — Video relacionado · 2:00 min</span>
+        </div>
+        <video controls preload="metadata" poster="">
+          <source src="/maria-elvira-escallon/video/polvo-eres-obra.mp4" type="video/mp4">
+          Tu navegador no soporta video HTML5.
+        </video>
       </div>
 
       <!-- Texto + Ficha -->
@@ -174,6 +199,30 @@ const title = 'Precipitación de arenas';
     font-size: 0.55rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
+  }
+
+  .work-page__video {
+    margin: var(--s4) 0;
+  }
+  .work-page__video-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: var(--s2);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--ink);
+  }
+  .work-page__video-header h3 {
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .work-page__video video {
+    width: 100%;
+    background: var(--ink);
+    display: block;
   }
 
   @media (max-width: 768px) {

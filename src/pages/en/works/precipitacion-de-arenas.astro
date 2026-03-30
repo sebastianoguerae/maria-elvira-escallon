@@ -4,6 +4,8 @@ import QuoteBlock from '../../../components/content/QuoteBlock.astro';
 
 const lang = 'en' as const;
 const title = 'Precipitacion de Arenas';
+
+const img1 = (await import('../../../assets/images/obras/precipitacion/precipitacion-mamu-2024.jpg')).default;
 ---
 
 <Layout
@@ -24,9 +26,21 @@ const title = 'Precipitacion de Arenas';
 
       <!-- Main gallery -->
       <div class="work-page__gallery">
-        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pending: Precipitacion de Arenas — Sand falling from ceiling onto domestic furniture ]</div>
+        <img src={img1.src} alt="Precipitaciones 2024 — Sand falling over tables, MAMU" loading="eager">
         <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pending: Precipitacion de Arenas — Detail of furniture partially buried in sand ]</div>
         <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pending: Precipitacion de Arenas — MAMU 2024 installation with 10 tons of sand ]</div>
+      </div>
+
+      <!-- Video -->
+      <div class="work-page__video">
+        <div class="work-page__video-header">
+          <h3>VIDEO</h3>
+          <span class="label">Polvo Eres — Related video · 2:00 min</span>
+        </div>
+        <video controls preload="metadata" poster="">
+          <source src="/maria-elvira-escallon/video/polvo-eres-obra.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
       </div>
 
       <!-- Text + Technical sheet -->
@@ -176,6 +190,30 @@ const title = 'Precipitacion de Arenas';
     font-size: 0.55rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
+  }
+
+  .work-page__video {
+    margin: var(--s4) 0;
+  }
+  .work-page__video-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: var(--s2);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--ink);
+  }
+  .work-page__video-header h3 {
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .work-page__video video {
+    width: 100%;
+    background: var(--ink);
+    display: block;
   }
 
   @media (max-width: 768px) {

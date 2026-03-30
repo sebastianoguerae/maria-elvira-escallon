@@ -7,6 +7,14 @@ const imgInVitro = (await import('../../../assets/images/obras/in-vitro/in-vitro
 const imgElReino = (await import('../../../assets/images/obras/el-reino/el-reino-01.jpg')).default;
 const imgDesdeAdentro = (await import('../../../assets/images/obras/desde-adentro/desde-adentro-01.jpg')).default;
 const imgNuevasFloras = (await import('../../../assets/images/obras/nuevas-floras/nuevas-floras-01.jpg')).default;
+const imgComa = (await import('../../../assets/images/obras/en-estado-de-coma/coma-hospital-01.jpg')).default;
+const imgAerolito = (await import('../../../assets/images/obras/aerolito/aerolito-ilustracion.jpg')).default;
+const imgInMemoriam = (await import('../../../assets/images/obras/in-memoriam/in-memoriam-01.jpg')).default;
+const imgPrecipitacion = (await import('../../../assets/images/obras/precipitacion/precipitacion-mamu-2024.jpg')).default;
+const imgEncuentros = (await import('../../../assets/images/obras/encuentros-seres/encuentros-01.jpg')).default;
+const imgPolvo = (await import('../../../assets/images/obras/polvo-eres/polvo-eres-01.jpg')).default;
+const imgCaminantes = (await import('../../../assets/images/obras/las-caminantes/caminantes-mamu-01.jpg')).default;
+const imgRecelaron = (await import('../../../assets/images/obras/recelaron-del-cielo/port-106.jpg')).default;
 
 const works = [
   {
@@ -33,8 +41,8 @@ const works = [
     title: 'In Memoriam',
     year: '2001',
     description: 'Escultura efímera, hielo — Alianza Colombo Francesa',
-    hasImage: false,
-    image: null,
+    hasImage: true,
+    image: imgInMemoriam,
   },
   {
     num: '004',
@@ -56,24 +64,51 @@ const works = [
   },
   {
     num: '006',
-    slug: 'en-estado-de-coma',
-    title: 'En estado de coma',
-    year: '2005–2007',
-    description: 'Fotografía, video, instalación — Hospital San Juan de Dios',
+    slug: 'paisaje-domestico',
+    title: 'Paisaje doméstico',
+    year: '2005',
+    description: 'Impresión digital giclée sobre papel de algodón',
     hasImage: false,
     image: null,
   },
   {
     num: '007',
-    slug: 'aerolito',
-    title: 'Pequeño Museo del Aerolito',
-    year: '2014–2015',
-    description: 'Investigación, instalación — Museo Nacional',
+    slug: 'en-estado-de-coma',
+    title: 'En estado de coma',
+    year: '2005–2007',
+    description: 'Fotografía, video, instalación — Hospital San Juan de Dios',
+    hasImage: true,
+    image: imgComa,
+  },
+  {
+    num: '008',
+    slug: 'recelaron-del-cielo',
+    title: 'Recelaron del cielo',
+    year: '2008',
+    description: 'Fotografía Backlight en caja de luz, instalación — Hospital Santa Rosa',
+    hasImage: true,
+    image: imgRecelaron,
+  },
+  {
+    num: '009',
+    slug: 'extracciones-hospital',
+    title: 'Extracciones en el Hospital Universitario',
+    year: '2012',
+    description: 'Instalación, impresión digital giclée — Hospital Santa Rosa',
     hasImage: false,
     image: null,
   },
   {
-    num: '008',
+    num: '010',
+    slug: 'aerolito',
+    title: 'Pequeño Museo del Aerolito',
+    year: '2014–2015',
+    description: 'Investigación, instalación — Museo Nacional',
+    hasImage: true,
+    image: imgAerolito,
+  },
+  {
+    num: '011',
     slug: 'en-el-fertil-suelo',
     title: 'En el fértil suelo',
     year: '2017–2018',
@@ -82,7 +117,16 @@ const works = [
     image: null,
   },
   {
-    num: '009',
+    num: '012',
+    slug: 'extraccion',
+    title: 'Extracción',
+    year: '2018',
+    description: 'Video monocanal',
+    hasImage: false,
+    image: null,
+  },
+  {
+    num: '013',
     slug: 'dispositivos-para-ver-pasar-el-tiempo',
     title: 'Dispositivos para ver pasar el tiempo',
     year: '2020',
@@ -91,43 +135,52 @@ const works = [
     image: null,
   },
   {
-    num: '010',
+    num: '014',
     slug: 'precipitacion-de-arenas',
     title: 'Precipitación de arenas',
     year: '2022–2024',
     description: 'Instalación — MAMU',
-    hasImage: false,
-    image: null,
+    hasImage: true,
+    image: imgPrecipitacion,
   },
   {
-    num: '011',
+    num: '015',
     slug: 'encuentros-con-seres-notables',
     title: 'Encuentros con seres notables',
     year: '2022',
     description: 'Escultura, ramas talladas — Galería Espacio Continuo',
-    hasImage: false,
-    image: null,
+    hasImage: true,
+    image: imgEncuentros,
   },
   {
-    num: '012',
+    num: '016',
     slug: 'polvo-eres',
     title: 'Polvo eres',
     year: '2024',
     description: 'Talla sobre pared — MAMU, Bogotá',
-    hasImage: false,
-    image: null,
+    hasImage: true,
+    image: imgPolvo,
   },
   {
-    num: '013',
+    num: '017',
     slug: 'las-caminantes',
     title: 'Las caminantes',
     year: '2024',
     description: 'Instalación viva, código morse — MAMU, Bogotá',
+    hasImage: true,
+    image: imgCaminantes,
+  },
+  {
+    num: '018',
+    slug: 'sabian-no-recordaban',
+    title: 'Sabían, pero no recordaban',
+    year: '2024',
+    description: 'Video instalación monocanal — MAMU, Bogotá',
     hasImage: false,
     image: null,
   },
   {
-    num: '014',
+    num: '019',
     slug: 'ensayo-autorretrato',
     title: 'Ensayo autorretrato',
     year: '2022',
@@ -136,7 +189,7 @@ const works = [
     image: null,
   },
   {
-    num: '015',
+    num: '020',
     slug: 'divino-fragmento',
     title: 'Divino Fragmento',
     year: '2003',
@@ -145,7 +198,7 @@ const works = [
     image: null,
   },
   {
-    num: '016',
+    num: '021',
     slug: 'ejercicios-cultivo-maiz',
     title: 'Ejercicios para un cultivo de maíz en Samacá',
     year: 'Fecha por confirmar',
@@ -154,7 +207,7 @@ const works = [
     image: null,
   },
   {
-    num: '017',
+    num: '022',
     slug: 'un-mensaje',
     title: 'Un mensaje',
     year: 'Fecha por confirmar',

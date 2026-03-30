@@ -4,6 +4,17 @@ import QuoteBlock from '../../../components/content/QuoteBlock.astro';
 
 const lang = 'es' as const;
 const title = 'Pequeño Museo del Aerolito de Santa Rosa de Viterbo';
+
+const img1 = (await import('../../../assets/images/obras/aerolito/aerolito-ilustracion.jpg')).default;
+const img2 = (await import('../../../assets/images/obras/aerolito/aerolito-02.jpg')).default;
+const img3 = (await import('../../../assets/images/obras/aerolito/aerolito-foto-historica.jpg')).default;
+const img4 = (await import('../../../assets/images/obras/aerolito/aerolito-03.jpg')).default;
+const img5 = (await import('../../../assets/images/obras/aerolito/aerolito-04.jpg')).default;
+const img6 = (await import('../../../assets/images/obras/aerolito/port-141.jpg')).default;
+const img7 = (await import('../../../assets/images/obras/aerolito/port-145.jpg')).default;
+const img8 = (await import('../../../assets/images/obras/aerolito/port-150.jpg')).default;
+const img9 = (await import('../../../assets/images/obras/aerolito/port-155.jpg')).default;
+const img10 = (await import('../../../assets/images/obras/aerolito/port-160.jpg')).default;
 ---
 
 <Layout
@@ -24,10 +35,28 @@ const title = 'Pequeño Museo del Aerolito de Santa Rosa de Viterbo';
 
       <!-- Galería principal -->
       <div class="work-page__gallery">
-        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pendiente: Aerolito — Vista general de la instalación, Museo Nacional ]</div>
-        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pendiente: Aerolito — Réplica en hierro ]</div>
-        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pendiente: Aerolito — Montaje en El Parqueadero, MAMU 2024 ]</div>
-        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pendiente: Aerolito — Archivos históricos y fotográficos ]</div>
+        <img src={img1.src} alt="Aerolito — Ilustración histórica del meteorito de Santa Rosa de Viterbo" loading="eager">
+        <img src={img2.src} alt="Aerolito — Vista de la instalación" loading="lazy">
+        <img src={img3.src} alt="Aerolito — Foto histórica del meteorito de Santa Rosa de Viterbo" loading="lazy">
+        <img src={img4.src} alt="Aerolito — Vista del Pequeño Museo del Aerolito" loading="lazy">
+        <img src={img5.src} alt="Aerolito — Detalle de la instalación del Pequeño Museo" loading="lazy">
+        <img src={img6.src} alt="Aerolito — Departamento del museo, archivos y documentos" loading="lazy">
+        <img src={img7.src} alt="Aerolito — Réplica en hierro del meteorito" loading="lazy">
+        <img src={img8.src} alt="Aerolito — Vitrinas con material de investigación" loading="lazy">
+        <img src={img9.src} alt="Aerolito — Detalle de archivo fotográfico histórico" loading="lazy">
+        <img src={img10.src} alt="Aerolito — Vista de la instalación completa en el MAMU" loading="lazy">
+      </div>
+
+      <!-- Video -->
+      <div class="work-page__video">
+        <div class="work-page__video-header">
+          <h3>VIDEO</h3>
+          <span class="label">Meteorito — Pequeño Museo del Aerolito · Video documental · 2:00 min</span>
+        </div>
+        <video controls preload="metadata" poster="">
+          <source src="/maria-elvira-escallon/video/meteorito-obra.mp4" type="video/mp4">
+          Tu navegador no soporta video HTML5.
+        </video>
       </div>
 
       <!-- Texto + Ficha -->
@@ -183,6 +212,30 @@ const title = 'Pequeño Museo del Aerolito de Santa Rosa de Viterbo';
     font-size: 0.55rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
+  }
+
+  .work-page__video {
+    margin: var(--s4) 0;
+  }
+  .work-page__video-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: var(--s2);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--ink);
+  }
+  .work-page__video-header h3 {
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .work-page__video video {
+    width: 100%;
+    background: var(--ink);
+    display: block;
   }
 
   @media (max-width: 768px) {

@@ -4,6 +4,8 @@ import QuoteBlock from '../../../components/content/QuoteBlock.astro';
 
 const lang = 'es' as const;
 const title = 'Encuentros con seres notables';
+
+const img1 = (await import('../../../assets/images/obras/encuentros-seres/encuentros-01.jpg')).default;
 ---
 
 <Layout
@@ -24,10 +26,19 @@ const title = 'Encuentros con seres notables';
 
       <!-- Galería principal -->
       <div class="work-page__gallery">
-        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pendiente: Encuentros con seres notables — vista general exposición ]</div>
-        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pendiente: Encuentros con seres notables — ramas talladas semejando huesos ]</div>
-        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pendiente: Brazo — arcilla fresca, manos modelando conexión con frailejón ]</div>
-        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pendiente: Desclavada — escultura ]</div>
+        <img src={img1.src} alt="Encuentros con seres notables — Manos extrayendo rostro de la pared" loading="eager">
+      </div>
+
+      <!-- Video -->
+      <div class="work-page__video">
+        <div class="work-page__video-header">
+          <h3>VIDEO</h3>
+          <span class="label">Encuentros con seres notables · Video completo · 2:00 min</span>
+        </div>
+        <video controls preload="metadata" poster="">
+          <source src="/maria-elvira-escallon/video/encuentros-obra.mp4" type="video/mp4">
+          Tu navegador no soporta video HTML5.
+        </video>
       </div>
 
       <!-- Texto + Ficha -->
@@ -183,6 +194,30 @@ const title = 'Encuentros con seres notables';
     font-size: 0.55rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
+  }
+
+  .work-page__video {
+    margin: var(--s4) 0;
+  }
+  .work-page__video-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: var(--s2);
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--ink);
+  }
+  .work-page__video-header h3 {
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .work-page__video video {
+    width: 100%;
+    background: var(--ink);
+    display: block;
   }
 
   @media (max-width: 768px) {
