@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../components/layout/Layout.astro';
+import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
 
 const lang = 'es' as const;
 const title = 'Ensayo autorretrato';
@@ -18,6 +19,15 @@ const img7 = (await import('../../../assets/images/obras/ensayo-autorretrato/por
   title="Ensayo autorretrato — Obra"
   description="Ensayo autorretrato (2022). Video. María Elvira Escallón."
 >
+
+  
+  <ArtworkSchema
+    title="Ensayo autorretrato"
+    year="2022"
+    medium="Video"
+    description="Video-ensayo autobiográfico presentado en Galería Espacio Continuo."
+    url="https://mariaelviraescallon.com/es/obra/ensayo-autorretrato/"
+  />
 
   <article class="work-page">
     <div class="container">

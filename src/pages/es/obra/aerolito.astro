@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../components/layout/Layout.astro';
+import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
 
 const lang = 'es' as const;
 const title = 'Pequeño Museo del Aerolito de Santa Rosa de Viterbo';
@@ -21,6 +22,15 @@ const img10 = (await import('../../../assets/images/obras/aerolito/port-160.jpg'
   title="Pequeño Museo del Aerolito — Obra"
   description="Pequeño Museo del Aerolito de Santa Rosa de Viterbo (2014–2015). Investigación, instalación, archivos históricos y fotográficos, réplica en hierro. María Elvira Escallón."
 >
+
+  
+  <ArtworkSchema
+    title="Pequeño Museo del Aerolito de Santa Rosa de Viterbo"
+    year="2014–2015"
+    medium="Investigación, instalación"
+    description="Investigación artística sobre el meteorito de Santa Rosa de Viterbo y su historia de expolio colonial."
+    url="https://mariaelviraescallon.com/es/obra/aerolito/"
+  />
 
   <article class="work-page">
     <div class="container">

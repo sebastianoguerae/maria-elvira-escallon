@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../components/layout/Layout.astro';
+import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
 
 const lang = 'es' as const;
 const title = 'El reino de este mundo';
@@ -19,6 +20,15 @@ const img8 = (await import('../../../assets/images/obras/el-reino/port-009.jpg')
   title="El reino de este mundo — Obra"
   description="El reino de este mundo (2000). Instalación — bloques de concreto, escombros. Museo de Arte Moderno de Bogotá (MAMBO). María Elvira Escallón."
 >
+
+  
+  <ArtworkSchema
+    title="El reino de este mundo"
+    year="2000"
+    medium="Instalación, concreto"
+    description="Bloques de concreto fabricados con escombros de una casa demolida. MAMBO, Bogotá."
+    url="https://mariaelviraescallon.com/es/obra/el-reino-de-este-mundo/"
+  />
 
   <article class="work-page">
     <div class="container">

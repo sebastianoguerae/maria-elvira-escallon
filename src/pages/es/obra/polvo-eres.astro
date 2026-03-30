@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../components/layout/Layout.astro';
+import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
 
 const lang = 'es' as const;
 const title = 'Polvo eres';
@@ -20,6 +21,15 @@ const img9 = (await import('../../../assets/images/obras/polvo-eres/port-123.jpg
   title="Polvo eres — Obra"
   description="Polvo eres (2024). Talla sobre pared, muro de ladrillo, residuos de la talla, yeso, pintura. María Elvira Escallón."
 >
+
+  
+  <ArtworkSchema
+    title="Polvo eres"
+    year="2024"
+    medium="Talla sobre pared"
+    description="Inscripción tallada directamente sobre el muro del MAMU, Bogotá. Referencia bíblica al polvo y la mortalidad."
+    url="https://mariaelviraescallon.com/es/obra/polvo-eres/"
+  />
 
   <article class="work-page">
     <div class="container">

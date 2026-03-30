@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../components/layout/Layout.astro';
+import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
 import AudioPlayer from '../../../components/interactive/AudioPlayer';
 
 const lang = 'es' as const;
@@ -22,6 +23,15 @@ const img10 = (await import('../../../assets/images/obras/en-estado-de-coma/port
   title="En estado de coma — Obra"
   description="En estado de coma (2005–2007). 5 series fotográficas, video, instalación escultórica. Hospital San Juan de Dios, Bogotá. María Elvira Escallón."
 >
+
+  
+  <ArtworkSchema
+    title="En estado de coma"
+    year="2005–2007"
+    medium="Fotografía, video, instalación"
+    description="Documentación del Hospital San Juan de Dios abandonado, Bogotá. Fotografías, videos y extracciones del edificio."
+    url="https://mariaelviraescallon.com/es/obra/en-estado-de-coma/"
+  />
 
   <article class="work-page">
     <div class="container">
