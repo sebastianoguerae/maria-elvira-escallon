@@ -16,182 +16,54 @@ const imgPolvo = (await import('../../../assets/images/obras/polvo-eres/polvo-er
 const imgCaminantes = (await import('../../../assets/images/obras/las-caminantes/caminantes-mamu-01.jpg')).default;
 const imgDispositivos = (await import('../../../assets/images/obras/dispositivos/dispositivos-01.jpg')).default;
 const imgFertilSuelo = (await import('../../../assets/images/obras/fertil-suelo/fertil-suelo-01.jpg')).default;
+const imgVersalles = (await import('../../../assets/images/obras/nuevas-floras-versalles/versalles-01.jpg')).default;
 
 const works = [
-  {
-    num: '001',
-    slug: 'in-vitro',
-    title: 'In Vitro',
-    year: '1997',
-    description: 'Installation, mirror — Estacion de La Sabana',
-    hasImage: true,
-    image: imgInVitro,
-  },
-  {
-    num: '002',
-    slug: 'el-reino-de-este-mundo',
-    title: 'El reino de este mundo',
-    year: '2000',
-    description: 'Installation, concrete — MAMBO',
-    hasImage: true,
-    image: imgElReino,
-  },
-  {
-    num: '003',
-    slug: 'in-memoriam',
-    title: 'In Memoriam',
-    year: '2001',
-    description: 'Ephemeral sculpture, ice — Alianza Colombo Francesa',
-    hasImage: true,
-    image: imgInMemoriam,
-  },
-  {
-    num: '004',
-    slug: 'desde-adentro',
-    title: 'Desde Adentro',
-    year: '2003',
-    description: '12 photographs, video — Club El Nogal',
-    hasImage: true,
-    image: imgDesdeAdentro,
-  },
-  {
-    num: '005',
-    slug: 'nuevas-floras',
-    title: 'Nuevas Floras',
-    year: '2003',
-    description: 'Sculptural intervention on native trees — III Premio Luis Caballero',
-    hasImage: true,
-    image: imgNuevasFloras,
-  },
-  {
-    num: '005b',
-    slug: 'nuevas-floras-versalles',
-    title: 'Nuevas Floras Versalles',
-    year: '2017',
-    description: 'Sculptural intervention — Arboretum de Chevreloup / FIAC, France',
-    hasImage: false,
-    image: null,
-  },
-  {
-    num: '006',
-    slug: 'en-estado-de-coma',
-    title: 'En estado de coma',
-    year: '2005–2007',
-    description: 'Photography, video, installation — Hospital San Juan de Dios',
-    hasImage: true,
-    image: imgComa,
-  },
-  {
-    num: '007',
-    slug: 'aerolito',
-    title: 'Pequeno Museo del Aerolito',
-    year: '2014–2015',
-    description: 'Research, installation — Museo Nacional',
-    hasImage: true,
-    image: imgAerolito,
-  },
-  {
-    num: '008',
-    slug: 'en-el-fertil-suelo',
-    title: 'En el fertil suelo',
-    year: '2017–2018',
-    description: 'Video, sculpture — X Premio Luis Caballero',
-    hasImage: true,
-    image: imgFertilSuelo,
-  },
-  {
-    num: '009',
-    slug: 'dispositivos-para-ver-pasar-el-tiempo',
-    title: 'Dispositivos para ver pasar el tiempo',
-    year: '2020',
-    description: 'Installation',
-    hasImage: true,
-    image: imgDispositivos,
-  },
-  {
-    num: '010',
-    slug: 'precipitacion-de-arenas',
-    title: 'Precipitacion de arenas',
-    year: '2024',
-    description: 'Installation — MAMU',
-    hasImage: true,
-    image: imgPrecipitacion,
-  },
-  {
-    num: '011',
-    slug: 'encuentros-con-seres-notables',
-    title: 'Encuentros con seres notables',
-    year: '2022',
-    description: 'Sculpture, carved branches — Galeria Espacio Continuo',
-    hasImage: true,
-    image: imgEncuentros,
-  },
-  {
-    num: '012',
-    slug: 'polvo-eres',
-    title: 'Polvo eres',
-    year: '2024',
-    description: 'Wall carving — MAMU, Bogota',
-    hasImage: true,
-    image: imgPolvo,
-  },
-  {
-    num: '013',
-    slug: 'las-caminantes',
-    title: 'Las caminantes',
-    year: '2024',
-    description: 'Living installation, Morse code — MAMU, Bogota',
-    hasImage: true,
-    image: imgCaminantes,
-  },
-  {
-    num: '014',
-    slug: 'ensayo-autorretrato',
-    title: 'Ensayo autorretrato',
-    year: '2022',
-    description: 'Video — Galeria Espacio Continuo',
-    hasImage: false,
-    image: null,
-  },
+  { slug: 'in-vitro', title: 'In Vitro', year: '1997', image: imgInVitro },
+  { slug: 'el-reino-de-este-mundo', title: 'El reino de este mundo', year: '2000', image: imgElReino },
+  { slug: 'in-memoriam', title: 'In Memoriam', year: '2001', image: imgInMemoriam },
+  { slug: 'desde-adentro', title: 'Desde Adentro', year: '2003', image: imgDesdeAdentro },
+  { slug: 'nuevas-floras', title: 'Nuevas Floras', year: '2003', image: imgNuevasFloras },
+  { slug: 'en-estado-de-coma', title: 'En estado de coma', year: '2005–2007', image: imgComa },
+  { slug: 'aerolito', title: 'Pequeño Museo del Aerolito', year: '2014–2015', image: imgAerolito },
+  { slug: 'nuevas-floras-versalles', title: 'Nuevas Floras Versalles', year: '2017', image: imgVersalles },
+  { slug: 'en-el-fertil-suelo', title: 'En el fértil suelo', year: '2017–2018', image: imgFertilSuelo },
+  { slug: 'dispositivos-para-ver-pasar-el-tiempo', title: 'Dispositivos para ver pasar el tiempo', year: '2020', image: imgDispositivos },
+  { slug: 'encuentros-con-seres-notables', title: 'Encuentros con seres notables', year: '2022', image: imgEncuentros },
+  { slug: 'ensayo-autorretrato', title: 'Ensayo autorretrato', year: '2022', image: null },
+  { slug: 'precipitacion-de-arenas', title: 'Precipitación de arenas', year: '2022–2024', image: imgPrecipitacion },
+  { slug: 'polvo-eres', title: 'Polvo eres', year: '2024', image: imgPolvo },
+  { slug: 'las-caminantes', title: 'Las caminantes', year: '2024', image: imgCaminantes },
 ];
 ---
 
-<Layout lang={lang} title="Works" description="Complete works by Maria Elvira Escallon. Project catalogue 1997–2024. Sculpture, installation, photography and video.">
+<Layout lang={lang} title="Works" description="Complete works by María Elvira Escallón. Project catalogue 1997–2024. Sculpture, installation, photography and video.">
 
   <div class="obra-index">
     <div class="container">
 
-      <!-- Header -->
-      <header class="section__header">
-        <h1>Complete Works</h1>
-        <span class="label">1997–2024</span>
+      <header class="obra-index__header">
+        <h1>Works</h1>
+        <span class="label">{works.length} projects &nbsp;/&nbsp; 1997–2024</span>
       </header>
 
-      <!-- Works list -->
-      <div class="works-catalog">
+      <div class="obra-grid">
         {works.map((work) => (
-          <a href={`/maria-elvira-escallon/en/works/${work.slug}/`} class="work-entry-link" style="text-decoration:none; color:inherit;">
-            <div class="work-entry">
-              <div class="work-entry__num">{work.num}</div>
-              <div class="work-entry__info">
-                <h3>{work.title}</h3>
-                <div class="ficha">
-                  {work.year} &nbsp;/&nbsp; {work.description}
-                </div>
-              </div>
-              <div class="work-entry__image">
-                {work.hasImage && work.image ? (
-                  <img
-                    src={work.image.src}
-                    alt={`${work.title} — Maria Elvira Escallon`}
-                    loading="lazy"
-                  />
-                ) : (
-                  <div class="placeholder-img" style="height:100%;display:flex;align-items:center;justify-content:center;color:var(--ash-light);font-family:var(--mono);font-size:0.55rem;letter-spacing:0.08em;text-transform:uppercase;">
-                    [ {work.title} ]
-                  </div>
-                )}
-              </div>
+          <a href={`/maria-elvira-escallon/en/works/${work.slug}/`} class="obra-card">
+            <div class="obra-card__img">
+              {work.image ? (
+                <img
+                  src={work.image.src}
+                  alt={`${work.title} — María Elvira Escallón`}
+                  loading="lazy"
+                />
+              ) : (
+                <span class="obra-card__placeholder">{work.title}</span>
+              )}
+            </div>
+            <div class="obra-card__info">
+              <span class="obra-card__title">{work.title}</span>
+              {work.year && <span class="obra-card__year">{work.year}</span>}
             </div>
           </a>
         ))}
@@ -208,11 +80,125 @@ const works = [
     padding-bottom: var(--s5);
   }
 
-  .works-catalog {
-    margin-top: var(--s3);
+  .obra-index__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-bottom: var(--s2);
+    border-bottom: 1px solid var(--ink);
+    margin-bottom: var(--s4);
   }
 
-  .work-entry-link:last-child .work-entry {
-    border-bottom: 1px solid var(--ink);
+  .obra-index__header h1 {
+    font-family: var(--mono);
+    font-weight: 700;
+    font-size: clamp(1.6rem, 4vw, 2.8rem);
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+  }
+
+  /* ── Dense grid ── */
+  .obra-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+  }
+
+  /* ── Card ── */
+  .obra-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .obra-card__img {
+    aspect-ratio: 4 / 3;
+    background-color: var(--paper-dark);
+    overflow: hidden;
+    position: relative;
+  }
+
+  .obra-card__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.4s ease, transform 0.6s ease;
+  }
+
+  .obra-card:hover .obra-card__img img {
+    opacity: 0.85;
+    transform: scale(1.03);
+  }
+
+  .obra-card__placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-family: var(--mono);
+    font-size: 0.5rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ash-light);
+    text-align: center;
+    padding: var(--s2);
+    line-height: 1.6;
+  }
+
+  .obra-card__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: var(--s1);
+    padding: 0.6rem 0 1rem;
+  }
+
+  .obra-card__title {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--ink);
+    line-height: 1.4;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .obra-card__year {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    color: var(--ash-light);
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 1024px) {
+    .obra-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .obra-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+    }
+
+    .obra-card__info {
+      flex-direction: column;
+      gap: 2px;
+      padding: 0.5rem 0 0.8rem;
+    }
+
+    .obra-card__title {
+      font-size: 0.58rem;
+    }
   }
 </style>
