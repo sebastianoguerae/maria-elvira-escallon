@@ -10,7 +10,6 @@ const { annotation, quote, cite } = Astro.props;
 
 <section class="quote-block">
   {annotation && <p class="annotation">{annotation}</p>}
-  <blockquote set:html={quote}>
-    <cite>{cite}</cite>
-  </blockquote>
+  <blockquote set:html={quote} />
+  <cite>{cite}</cite>
 </section>

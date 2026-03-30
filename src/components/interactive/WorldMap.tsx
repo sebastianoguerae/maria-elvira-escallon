@@ -23,6 +23,32 @@ interface Location {
   events: MapEvent[];
 }
 
+/* ------------------------------------------------
+   i18n labels
+   ------------------------------------------------ */
+const mapI18n: Record<string, Record<string, string>> = {
+  es: {
+    solo: 'INDIVIDUAL', group: 'COLECTIVA', collection: 'COLECCIÓN',
+    biennial: 'BIENAL', fair: 'FERIA', site: 'SITIO',
+    watermark: 'MAP-001 / PROYECCIÓN EQUIRECTANGULAR',
+  },
+  en: {
+    solo: 'SOLO', group: 'GROUP', collection: 'COLLECTION',
+    biennial: 'BIENNIAL', fair: 'FAIR', site: 'SITE',
+    watermark: 'MAP-001 / EQUIRECTANGULAR PROJECTION',
+  },
+  fr: {
+    solo: 'INDIVIDUELLE', group: 'COLLECTIVE', collection: 'COLLECTION',
+    biennial: 'BIENNALE', fair: 'FOIRE', site: 'SITE',
+    watermark: 'MAP-001 / PROJECTION ÉQUIRECTANGULAIRE',
+  },
+  zh: {
+    solo: '个展', group: '群展', collection: '收藏',
+    biennial: '双年展', fair: '博览会', site: '现场',
+    watermark: 'MAP-001 / 等距圆柱投影',
+  },
+};
+
 // Equirectangular projection: lat/lng to percentage
 function toX(lng: number): number {
   return ((lng + 180) / 360) * 100;
@@ -65,23 +91,9 @@ function eventColor(type: string): string {
   }
 }
 
-function eventLabel(type: string): string {
-  switch (type) {
-    case 'solo':
-      return 'INDIVIDUAL';
-    case 'group':
-      return 'COLECTIVA';
-    case 'collection':
-      return 'COLECCION';
-    case 'biennial':
-      return 'BIENAL';
-    case 'fair':
-      return 'FERIA';
-    case 'site':
-      return 'SITIO';
-    default:
-      return type.toUpperCase();
-  }
+function eventLabel(type: string, lang: string): string {
+  const labels = mapI18n[lang] || mapI18n.es;
+  return labels[type] || type.toUpperCase();
 }
 
 // Continent outlines projected with equirectangular formula:
@@ -117,7 +129,8 @@ const CONTINENT_PATHS = [
   'M 856,292 L 864,283 925,328 919,344 903,356 883,347 822,339 856,292 Z',
 ];
 
-export default function WorldMap() {
+export default function WorldMap({ lang = 'es' }: { lang?: string }) {
+  const mapLabels = mapI18n[lang] || mapI18n.es;
   const [activeLocation, setActiveLocation] = useState<Location | null>(null);
   const [tooltipPos, setTooltipPos] = useState({ x: 0, y: 0 });
   const [mounted, setMounted] = useState(false);
@@ -527,7 +540,7 @@ export default function WorldMap() {
                     textTransform: 'uppercase' as const,
                   }}
                 >
-                  {eventLabel(evt.type)}
+                  {eventLabel(evt.type, lang)}
                 </span>
                 <span
                   style={{
@@ -576,7 +589,7 @@ export default function WorldMap() {
           pointerEvents: 'none',
         }}
       >
-        MAP-001 / PROYECCION EQUIRECTANGULAR
+        {mapLabels.watermark}
       </div>
     </div>
   );

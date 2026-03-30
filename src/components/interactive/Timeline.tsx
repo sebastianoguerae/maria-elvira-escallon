@@ -20,6 +20,44 @@ interface ContextEvent {
 }
 
 /* ------------------------------------------------
+   i18n labels
+   ------------------------------------------------ */
+const i18n: Record<string, Record<string, string>> = {
+  es: {
+    works: 'Obras', context: 'Contexto',
+    work: 'OBRA', award: 'PREMIO', exhibition: 'EXPOSICIÓN',
+    clickToView: 'Click para ver obra →',
+    legendWork: 'Obra', legendAward: 'Premio', legendExhibition: 'Exposición',
+    legendContext: 'Contexto histórico',
+  },
+  en: {
+    works: 'Works', context: 'Context',
+    work: 'WORK', award: 'AWARD', exhibition: 'EXHIBITION',
+    clickToView: 'Click to view work →',
+    legendWork: 'Work', legendAward: 'Award', legendExhibition: 'Exhibition',
+    legendContext: 'Historical context',
+  },
+  fr: {
+    works: 'Œuvres', context: 'Contexte',
+    work: 'ŒUVRE', award: 'PRIX', exhibition: 'EXPOSITION',
+    clickToView: 'Cliquer pour voir l\'œuvre →',
+    legendWork: 'Œuvre', legendAward: 'Prix', legendExhibition: 'Exposition',
+    legendContext: 'Contexte historique',
+  },
+  zh: {
+    works: '作品', context: '背景',
+    work: '作品', award: '奖项', exhibition: '展览',
+    clickToView: '点击查看作品 →',
+    legendWork: '作品', legendAward: '奖项', legendExhibition: '展览',
+    legendContext: '历史背景',
+  },
+};
+
+const worksPrefix: Record<string, string> = {
+  es: 'obra', en: 'works', fr: 'oeuvres', zh: 'zuopin',
+};
+
+/* ------------------------------------------------
    Constants — design tokens matching global.css
    ------------------------------------------------ */
 const INK = '#111111';
@@ -58,13 +96,9 @@ function getTypeColor(type: string): string {
   }
 }
 
-function getTypeLabel(type: string): string {
-  switch (type) {
-    case 'work': return 'OBRA';
-    case 'award': return 'PREMIO';
-    case 'exhibition': return 'EXPOSICION';
-    default: return '';
-  }
+function getTypeLabel(type: string, lang: string): string {
+  const labels = i18n[lang] || i18n.es;
+  return labels[type] || '';
 }
 
 /* ------------------------------------------------
@@ -135,7 +169,7 @@ interface TooltipData {
   slug?: string | null;
 }
 
-function Tooltip({ data, scrollLeft }: { data: TooltipData | null; scrollLeft: number }) {
+function Tooltip({ data, scrollLeft, lang }: { data: TooltipData | null; scrollLeft: number; lang: string }) {
   if (!data) return null;
 
   const tooltipX = data.x - scrollLeft;
@@ -169,7 +203,7 @@ function Tooltip({ data, scrollLeft }: { data: TooltipData | null; scrollLeft: n
           color: getTypeColor(data.type),
           marginBottom: 4,
         }}>
-          {getTypeLabel(data.type)}
+          {getTypeLabel(data.type, lang)}
         </div>
       )}
       <div style={{ fontWeight: 700, color: INK, marginBottom: data.desc ? 6 : 0 }}>
@@ -186,7 +220,7 @@ function Tooltip({ data, scrollLeft }: { data: TooltipData | null; scrollLeft: n
           textTransform: 'uppercase' as const,
           color: ASH_LIGHT,
         }}>
-          Click para ver obra →
+          {(i18n[lang] || i18n.es).clickToView}
         </div>
       )}
     </div>
@@ -197,6 +231,10 @@ function Tooltip({ data, scrollLeft }: { data: TooltipData | null; scrollLeft: n
    Main Timeline component
    ------------------------------------------------ */
 export default function Timeline({ lang = 'es' }: { lang?: string }) {
+  const labels = i18n[lang] || i18n.es;
+  const base = '/maria-elvira-escallon';
+  const prefix = worksPrefix[lang] || 'obra';
+
   const scrollRef = useRef<HTMLDivElement>(null);
   const nodesRef = useRef<(HTMLDivElement | null)[]>([]);
   const [visibleSet, setVisibleSet] = useState<Set<number>>(new Set());
@@ -286,7 +324,7 @@ export default function Timeline({ lang = 'es' }: { lang?: string }) {
   return (
     <div style={{ position: 'relative' }}>
       {/* Tooltip rendered outside the scroll container */}
-      <Tooltip data={tooltip} scrollLeft={scrollLeft} />
+      <Tooltip data={tooltip} scrollLeft={scrollLeft} lang={lang} />
 
       <div
         ref={scrollRef}
@@ -329,7 +367,7 @@ export default function Timeline({ lang = 'es' }: { lang?: string }) {
             writingMode: 'vertical-rl' as const,
             transform: 'rotate(180deg)',
           }}>
-            Obras
+            {labels.works}
           </div>
 
           <div style={{
@@ -344,7 +382,7 @@ export default function Timeline({ lang = 'es' }: { lang?: string }) {
             writingMode: 'vertical-rl' as const,
             transform: 'rotate(180deg)',
           }}>
-            Contexto
+            {labels.context}
           </div>
 
           {/* ===== Horizontal axis ===== */}
@@ -458,7 +496,7 @@ export default function Timeline({ lang = 'es' }: { lang?: string }) {
                 onClick={(e) => {
                   if (isClickable && !isDragging) {
                     e.preventDefault();
-                    window.location.href = `/${lang}/obra/${work.slug}/`;
+                    window.location.href = `${base}/${lang}/${prefix}/${work.slug}/`;
                   }
                 }}
               >
@@ -620,19 +658,19 @@ export default function Timeline({ lang = 'es' }: { lang?: string }) {
       }}>
         <span style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
           <span style={{ width: 8, height: 8, borderRadius: '50%', background: INK, display: 'inline-block' }} />
-          Obra
+          {labels.legendWork}
         </span>
         <span style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
           <span style={{ width: 6, height: 6, borderRadius: '50%', background: MOSS, display: 'inline-block' }} />
-          Premio
+          {labels.legendAward}
         </span>
         <span style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
           <span style={{ width: 6, height: 6, borderRadius: '50%', background: ASH, display: 'inline-block' }} />
-          Exposicion
+          {labels.legendExhibition}
         </span>
         <span style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
           <span style={{ width: 6, height: 6, background: ASH_LIGHT, display: 'inline-block', transform: 'rotate(45deg)' }} />
-          Contexto historico
+          {labels.legendContext}
         </span>
       </div>
     </div>
