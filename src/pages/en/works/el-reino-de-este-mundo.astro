@@ -1,20 +1,34 @@
 ---
 import Layout from '../../../components/layout/Layout.astro';
+import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
 
 const lang = 'en' as const;
-const title = 'El Reino de Este Mundo';
+const title = 'El reino de este mundo';
 
 const img1 = (await import('../../../assets/images/obras/el-reino/el-reino-01.jpg')).default;
 const img2 = (await import('../../../assets/images/obras/el-reino/el-reino-02.jpg')).default;
 const img3 = (await import('../../../assets/images/obras/el-reino/el-reino-03.jpg')).default;
 const img4 = (await import('../../../assets/images/obras/el-reino/el-reino-04.jpg')).default;
+const img5 = (await import('../../../assets/images/obras/el-reino/port-006.jpg')).default;
+const img6 = (await import('../../../assets/images/obras/el-reino/port-007.jpg')).default;
+const img7 = (await import('../../../assets/images/obras/el-reino/port-008.jpg')).default;
+const img8 = (await import('../../../assets/images/obras/el-reino/port-009.jpg')).default;
 ---
 
 <Layout
   lang={lang}
-  title="El Reino de Este Mundo — Work"
-  description="El Reino de Este Mundo (2000). Installation — concrete blocks, debris, MAMBO. Maria Elvira Escallon."
+  title="El reino de este mundo — Work"
+  description="El reino de este mundo (2000). Installation — concrete blocks, debris. Museo de Arte Moderno de Bogota (MAMBO). Maria Elvira Escallon."
 >
+
+
+  <ArtworkSchema
+    title="El reino de este mundo"
+    year="2000"
+    medium="Installation, concrete"
+    description="Concrete blocks made from the debris of a demolished house. MAMBO, Bogota."
+    url="https://mariaelviraescallon.com/en/works/el-reino-de-este-mundo/"
+  />
 
   <article class="work-page">
     <div class="container">
@@ -23,15 +37,19 @@ const img4 = (await import('../../../assets/images/obras/el-reino/el-reino-04.jp
       <header class="work-page__header">
         <p class="label">Work / 002</p>
         <h1>{title}</h1>
-        <p class="work-page__meta">2000 &nbsp;/&nbsp; Installation — concrete blocks, debris &nbsp;/&nbsp; Variable dimensions</p>
+        <p class="work-page__meta">2000 &nbsp;/&nbsp; Installation — concrete blocks, debris &nbsp;/&nbsp; Museo de Arte Moderno de Bogota (MAMBO)</p>
       </header>
 
       <!-- Main gallery -->
       <div class="work-page__gallery">
-        <img src={img1.src} alt="El Reino de Este Mundo — Front view of the concrete wall with debris" loading="eager">
-        <img src={img2.src} alt="El Reino de Este Mundo — Shadow of debris on the museum floor" loading="lazy">
-        <img src={img3.src} alt="El Reino de Este Mundo — Detail of agglomerated debris in blocks" loading="lazy">
-        <img src={img4.src} alt="El Reino de Este Mundo — Installation view, MAMBO" loading="lazy">
+        <img src={img1.src} alt="El reino de este mundo — Front view of the concrete wall with debris" loading="eager">
+        <img src={img2.src} alt="El reino de este mundo — Shadow of debris on the museum floor" loading="lazy">
+        <img src={img3.src} alt="El reino de este mundo — Detail of debris agglomerated in blocks" loading="lazy">
+        <img src={img4.src} alt="El reino de este mundo — General view of the installation, MAMBO" loading="lazy">
+        <img src={img5.src} alt="El reino de este mundo — Detail of debris embedded in concrete blocks" loading="lazy">
+        <img src={img6.src} alt="El reino de este mundo — Texture of the wall with domestic fragments" loading="lazy">
+        <img src={img7.src} alt="El reino de este mundo — Shadow of debris projected on the floor" loading="lazy">
+        <img src={img8.src} alt="El reino de este mundo — Side view of the wall and scattered remains" loading="lazy">
       </div>
 
       <!-- Text + Technical sheet -->
@@ -39,57 +57,79 @@ const img4 = (await import('../../../assets/images/obras/el-reino/el-reino-04.jp
         <div class="work-page__text">
 
           <p class="curatorial">
-            A wall built with concrete blocks agglomerating debris from a demolished family
-            house. The wall projects a 'shadow' formed with scattered debris on the museum
-            floor. The installation transforms domestic destruction into monumental presence,
-            converting the remnants of private life into a public architectural gesture.
+            A wall built with concrete blocks that agglomerate debris from a demolished
+            family house. The wall projects a "shadow" formed with debris scattered
+            on the museum floor. Escallon focuses on reconstruction and reuse,
+            weaving a narrative that highlights resilience.
           </p>
 
           <p class="curatorial" style="margin-top: var(--s2);">
-            The title references Alejo Carpentier's novel <em>The Kingdom of This World</em>
-            (1949), establishing a dialogue between the literary notion of the marvelous real
-            and the material reality of destruction. The debris — fragments of tiles, plaster,
-            domestic materials — carry the memory of the house they once formed, now reorganized
-            into a new structure that simultaneously commemorates and displaces the original.
+            A woman named Fanny salvaged bricks from demolished buildings — human
+            history is embedded in the material. The debris is not waste
+            but matter charged with domestic history: fragments of walls that once
+            delimited rooms, floors that sustained everyday lives, structures
+            that gave shape to a home.
           </p>
 
           <p class="curatorial" style="margin-top: var(--s2);">
-            The 'shadow' cast by the wall onto the floor operates as a metaphor for absence:
-            the debris that does not make it into the consolidated structure spreads across the
-            ground, suggesting the impossibility of fully containing the remains of what has
-            been lost. The work oscillates between construction and ruin, between monument
-            and residue.
+            The "shadow" of debris on the museum floor establishes a relationship between the
+            vertical wall and its horizontal projection — between construction and destruction,
+            between what remains standing and what falls. The wall is simultaneously monument
+            and ruin, new construction made from old destruction, the physical presence of
+            domestic absence.
           </p>
 
           <h3 style="margin-top: var(--s4);">CONTEXT</h3>
           <p style="margin-top: var(--s2);">
-            Presented at the Museo de Arte Moderno de Bogota (MAMBO), <em>El Reino de Este
-            Mundo</em> marks an early instance of Escallon's engagement with architecture,
-            demolition, and the material traces of lived experience. The work anticipates
-            themes that would recur throughout her practice — the transformation of domestic
-            space, the tension between presence and absence, and the use of debris as both
-            material and meaning.
+            The title references Alejo Carpentier's novel about Latin American magical realism
+            and revolution. The work transforms domestic destruction into
+            monumental presence. Carpentier coined the concept of "lo real maravilloso"
+            (the marvelous real) to describe a Latin American reality that surpasses fiction —
+            Escallon translates it into the language of materials: the debris of a house
+            becomes the blocks of a new wall.
+          </p>
+          <p style="margin-top: var(--s2);">
+            The work is situated at a moment of intense urban transformation in Bogota, where
+            the demolition of houses and entire neighborhoods to make way for renovation
+            projects produced enormous quantities of debris. The figure of Fanny — a woman
+            who survived by salvaging construction materials from demolished buildings —
+            embodies the informal economy of survival and the silent resistance
+            against the destruction of the urban fabric.
+          </p>
+          <p style="margin-top: var(--s2);">
+            <em>El reino de este mundo</em> establishes themes that Escallon would continue
+            to explore: the relationship between destruction and memory, material heritage
+            as a repository of invisibilized histories, and the capacity of materials
+            to tell the stories that official narratives omit.
           </p>
         </div>
 
         <aside class="work-page__ficha">
           <h4>TECHNICAL SHEET</h4>
           <div class="ficha">
-            <strong>El Reino de Este Mundo</strong><br>
+            <strong>El reino de este mundo</strong><br>
             2000<br><br>
             Installation.<br>
-            Concrete blocks, debris from demolished house.<br><br>
-            Variable dimensions
+            Concrete blocks, debris.<br><br>
+            Museo de Arte Moderno de Bogota (MAMBO).<br>
+            Variable dimensions.
           </div>
 
           <h4 style="margin-top: var(--s3);">EXHIBITIONS</h4>
           <div class="ficha">
-            MAMBO — Museo de Arte Moderno de Bogota, 2000
+            Museo de Arte Moderno de Bogota (MAMBO), 2000
+          </div>
+
+          <h4 style="margin-top: var(--s3);">TEXTS</h4>
+          <div class="ficha">
+            <a href="/maria-elvira-escallon/en/texts/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">
+              Related texts
+            </a>
           </div>
 
           <h4 style="margin-top: var(--s3);">HOW TO CITE</h4>
           <div class="ficha" style="font-size: 0.65rem;">
-            Escallon, M.E. (2000). <em>El Reino de Este Mundo</em>.
+            Escallon, M.E. (2000). <em>El reino de este mundo</em>.
             Installation. Available at:
             mariaelviraescallon.com/en/works/el-reino-de-este-mundo/
           </div>

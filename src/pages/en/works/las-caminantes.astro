@@ -1,17 +1,27 @@
 ---
 import Layout from '../../../components/layout/Layout.astro';
+import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
 
 const lang = 'en' as const;
-const title = 'Las Caminantes';
+const title = 'Las caminantes';
 
 const img1 = (await import('../../../assets/images/obras/las-caminantes/caminantes-mamu-01.jpg')).default;
 ---
 
 <Layout
   lang={lang}
-  title="Las Caminantes — Work"
-  description="Las Caminantes (2024). Living installation — weeds, plants, Morse code, speaker, MAMU. Maria Elvira Escallon."
+  title="Las caminantes — Work"
+  description="Las caminantes (2024). Living installation — weeds, plants, Morse code, speaker. Maria Elvira Escallon."
 >
+
+
+  <ArtworkSchema
+    title="Las caminantes"
+    year="2024"
+    medium="Living installation, Morse code"
+    description="Living plants that transmit Morse code. MAMU, Bogota."
+    url="https://mariaelviraescallon.com/en/works/las-caminantes/"
+  />
 
   <article class="work-page">
     <div class="container">
@@ -25,9 +35,7 @@ const img1 = (await import('../../../assets/images/obras/las-caminantes/caminant
 
       <!-- Main gallery -->
       <div class="work-page__gallery">
-        <img src={img1.src} alt="Las Caminantes — Weed garden growing inside MAMU gallery" loading="eager">
-        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pending: Las Caminantes — Detail of plants and speaker emitting Morse code ]</div>
-        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pending: Las Caminantes — Installation view at MAMU ]</div>
+        <img src={img1.src} alt="Las caminantes — Weed garden in the MAMU gallery" loading="eager">
       </div>
 
       <!-- Text + Technical sheet -->
@@ -35,60 +43,47 @@ const img1 = (await import('../../../assets/images/obras/las-caminantes/caminant
         <div class="work-page__text">
 
           <p class="curatorial">
-            A garden of weeds growing inside the exhibition hall. The plants emit via Morse
-            code a message: "In each inhalation we meet." The work transforms the museum
-            space into a living ecosystem where the boundary between the cultivated and the
-            wild, the institutional and the organic, is deliberately dissolved.
+            A weed garden that grows inside the exhibition hall, demonstrating the artist's
+            intention regarding living works that are constantly transforming. The plants emit
+            via Morse code a message that reads "En cada inhalacion nos encontramos."
           </p>
 
           <p class="curatorial" style="margin-top: var(--s2);">
-            The title — <em>Las Caminantes</em> (The Walkers) — refers to the plants
-            themselves, beings that move and migrate despite our perception of them as
-            stationary. Weeds are plants that appear uninvited, that cross boundaries,
-            that resist eradication — qualities that make them both resilient and marginal.
-            By giving them a place inside the museum, Escallon elevates these overlooked
-            organisms to the status of protagonists.
-          </p>
-
-          <p class="curatorial" style="margin-top: var(--s2);">
-            The Morse code message — "In each inhalation we meet" — refers to the
-            fundamental biological exchange between humans and plants: we breathe what
-            they exhale, and they absorb what we release. This invisible reciprocity,
-            occurring with every breath, is the most intimate and constant encounter
-            between species. The coded transmission makes this invisible exchange audible,
-            translating a biological fact into a poetic declaration.
+            This subtle yet powerful gesture invites reflection on how plant life and human
+            life are part of one and the same whole, sharing times and spaces that, though
+            generally imperceptible, connect us closely. The work challenges traditional
+            perceptions of plant species and their relationship with us.
           </p>
 
           <h3 style="margin-top: var(--s4);">CONTEXT</h3>
           <p style="margin-top: var(--s2);">
-            Presented at MAMU in 2024, <em>Las Caminantes</em> continues Escallon's
-            exploration of the vegetal world begun in <em>Nuevas Floras</em> (2003) and
-            developed in <em>Encuentros con Seres Notables</em> (2022). While those
-            earlier works focused on the morphological and material kinship between humans
-            and trees, here the relationship becomes atmospheric and respiratory — a
-            shared chemistry that sustains both forms of life.
+            <em>Las caminantes</em> is part of the "Exploring Kinships" axis of the anthological
+            exhibition at MAMU (2024). The work embodies Escallon's ongoing exploration of the
+            kinship between human life and plant life — a theme that runs through her entire
+            artistic trajectory. The Morse code message — "En cada inhalacion nos encontramos" —
+            synthesizes this fundamental connection: the oxygen that plants produce and we
+            breathe as an invisible and constant bond.
           </p>
         </div>
 
         <aside class="work-page__ficha">
           <h4>TECHNICAL SHEET</h4>
           <div class="ficha">
-            <strong>Las Caminantes</strong><br>
+            <strong>Las caminantes</strong><br>
             2024<br><br>
-            Living installation.<br>
-            Weeds, plants, Morse code transmitter, speaker.<br><br>
+            Living installation — weeds, plants, Morse code, speaker.<br><br>
             Variable dimensions<br>
-            Site-specific, MAMU
+            MAMU, Bogota
           </div>
 
           <h4 style="margin-top: var(--s3);">EXHIBITIONS</h4>
           <div class="ficha">
-            Encounters in the Dust Factory — MAMU, 2024
+            Encuentros en la fabrica de polvo — MAMU, 2024
           </div>
 
           <h4 style="margin-top: var(--s3);">HOW TO CITE</h4>
           <div class="ficha" style="font-size: 0.65rem;">
-            Escallon, M.E. (2024). <em>Las Caminantes</em>.
+            Escallon, M.E. (2024). <em>Las caminantes</em>.
             Living installation. Available at:
             mariaelviraescallon.com/en/works/las-caminantes/
           </div>

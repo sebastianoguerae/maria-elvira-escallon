@@ -1,5 +1,7 @@
 ---
 import Layout from '../../../components/layout/Layout.astro';
+import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
+import AudioPlayer from '../../../components/interactive/AudioPlayer';
 
 const lang = 'en' as const;
 const title = 'En estado de coma';
@@ -9,6 +11,11 @@ const img2 = (await import('../../../assets/images/obras/en-estado-de-coma/coma-
 const img3 = (await import('../../../assets/images/obras/en-estado-de-coma/coma-hospital-03.jpg')).default;
 const img4 = (await import('../../../assets/images/obras/en-estado-de-coma/coma-pared-detalle.jpg')).default;
 const img5 = (await import('../../../assets/images/obras/en-estado-de-coma/coma-cultivos-cama.jpg')).default;
+const img6 = (await import('../../../assets/images/obras/en-estado-de-coma/coma-bolsa-medicos.jpg')).default;
+const img7 = (await import('../../../assets/images/obras/en-estado-de-coma/port-081.jpg')).default;
+const img8 = (await import('../../../assets/images/obras/en-estado-de-coma/port-086.jpg')).default;
+const img9 = (await import('../../../assets/images/obras/en-estado-de-coma/port-094.jpg')).default;
+const img10 = (await import('../../../assets/images/obras/en-estado-de-coma/port-100.jpg')).default;
 ---
 
 <Layout
@@ -16,6 +23,15 @@ const img5 = (await import('../../../assets/images/obras/en-estado-de-coma/coma-
   title="En estado de coma — Work"
   description="En estado de coma (2005–2007). 5 photographic series, video, sculptural installation. Hospital San Juan de Dios, Bogota. Maria Elvira Escallon."
 >
+
+
+  <ArtworkSchema
+    title="En estado de coma"
+    year="2005–2007"
+    medium="Photography, video, installation"
+    description="Documentation of the abandoned Hospital San Juan de Dios, Bogota. Photographs, videos, and extractions from the building."
+    url="https://mariaelviraescallon.com/en/works/en-estado-de-coma/"
+  />
 
   <article class="work-page">
     <div class="container">
@@ -34,6 +50,11 @@ const img5 = (await import('../../../assets/images/obras/en-estado-de-coma/coma-
         <img src={img3.src} alt="En estado de coma — Hospital San Juan de Dios, vegetation reclaiming spaces" loading="lazy">
         <img src={img4.src} alt="En estado de coma — Deteriorated wall detail, exposed layers" loading="lazy">
         <img src={img5.src} alt="Cultures — Hospital bed with grass growing, En estado de coma series" loading="lazy">
+        <img src={img6.src} alt="En estado de coma — Abandoned medical bag in the hospital" loading="lazy">
+        <img src={img7.src} alt="En estado de coma — Corridor of Hospital San Juan de Dios in deterioration" loading="lazy">
+        <img src={img8.src} alt="En estado de coma — Vegetation invading hospital ward" loading="lazy">
+        <img src={img9.src} alt="En estado de coma — Nocturnal walk, sheets on empty beds" loading="lazy">
+        <img src={img10.src} alt="En estado de coma — Extractions, isolated architectural element" loading="lazy">
       </div>
 
       <!-- Video -->
@@ -48,38 +69,44 @@ const img5 = (await import('../../../assets/images/obras/en-estado-de-coma/coma-
         </video>
       </div>
 
+      <!-- Audio -->
+      <div style="margin: var(--s3) 0;">
+        <AudioPlayer client:visible title="Maria Elvira on En estado de coma" />
+      </div>
+
       <!-- Text + Technical sheet -->
       <div class="work-page__body">
         <div class="work-page__text">
 
           <p class="curatorial">
-            The project began in 2005 as a documentary seeking to make visible the conditions
-            of Hospital San Juan de Dios — founded in 1564, outstanding for its level of
-            specialization — after falling into abandonment. It includes five photographic
-            series: <em>Postcards</em>, <em>Nocturnal Walks</em>, <em>Soft Tissue</em>,
-            <em>Extractions</em>, and <em>Cultures</em>.
+            The project began in 2005 as a documentary that sought to make visible the
+            conditions of Hospital San Juan de Dios -- founded in 1564, distinguished by its
+            level of specialization -- after falling into abandonment. It includes five
+            photographic series: <em>Postcards</em>, <em>Nocturnal Walks</em>, <em>Soft
+            Tissue</em>, <em>Extractions</em>, and <em>Cultures</em>.
           </p>
 
           <p class="curatorial" style="margin-top: var(--s2);">
             The hospital was closed in 2001 as a consequence of mismanagement and the
             privatization of the healthcare system. A small group of employees continued
-            giving 'oxygen to the terminal patient.' The title of the work refers to
-            'an entity that is not dead and about which there is hope.'
+            giving "oxygen to the terminal patient" [Spanish: "oxigeno al paciente terminal"].
+            The title of the work refers to "an entity that is not dead and about which there
+            is hope" [Spanish: "una entidad que no esta muerta y sobre la cual hay esperanza"].
           </p>
 
           <p class="curatorial" style="margin-top: var(--s2);">
             Escallon did not document the hospital as a picturesque ruin but as an organism
-            in a state of suspension. The five series address different facets of this
+            in a state of suspension. The five series address different facets of that
             liminal condition: the inverted tourist postcards, the nocturnal walks that
-            reveal what daylight conceals, the soft tissue of sheets still covering empty
-            beds, the extractions of architectural elements as if they were clinical samples,
-            and the cultures of vegetation reclaiming the abandoned spaces.
+            reveal what daylight conceals, the soft tissue of the sheets that still cover
+            empty beds, the extractions of architectural elements as if they were clinical
+            samples, and the cultures of vegetation that reclaim the abandoned spaces.
           </p>
 
           <h3 style="margin-top: var(--s4);">SERIES</h3>
           <ul style="margin-top: var(--s2); list-style: none;">
             <li style="padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark);">
-              <strong>Postcards</strong> — Photographs of the hospital treated as tourist postcards, inverting the promotional logic to reveal deterioration.
+              <strong>Postcards</strong> — Photographs of the hospital treated as tourist postcards, inverting the promotional logic to reveal the deterioration.
             </li>
             <li style="padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark);">
               <strong>Nocturnal Walks</strong> — Photographic record of the hospital corridors and wards at night, when absence becomes more palpable.
@@ -130,7 +157,7 @@ const img5 = (await import('../../../assets/images/obras/en-estado-de-coma/coma-
 
           <h4 style="margin-top: var(--s3);">AWARDS</h4>
           <div class="ficha">
-            First Prize Heritage Category — IDCT, 2006<br><br>
+            First Prize, Heritage Category — IDCT, 2006<br><br>
             National Individual Creation Grant — MinCultura, 2005
           </div>
 
@@ -148,8 +175,8 @@ const img5 = (await import('../../../assets/images/obras/en-estado-de-coma/coma-
 
           <h4 style="margin-top: var(--s3);">TEXTS</h4>
           <div class="ficha">
-            <a href="/maria-elvira-escallon/es/textos/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">
-              Related texts (ES)
+            <a href="/maria-elvira-escallon/en/texts/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">
+              Related texts
             </a>
           </div>
 

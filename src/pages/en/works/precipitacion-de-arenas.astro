@@ -1,17 +1,34 @@
 ---
 import Layout from '../../../components/layout/Layout.astro';
+import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
 
 const lang = 'en' as const;
-const title = 'Precipitacion de Arenas';
+const title = 'Precipitacion de arenas';
 
 const img1 = (await import('../../../assets/images/obras/precipitacion/precipitacion-mamu-2024.jpg')).default;
+const img2 = (await import('../../../assets/images/obras/precipitacion/port-126.jpg')).default;
+const img3 = (await import('../../../assets/images/obras/precipitacion/port-127.jpg')).default;
+const img4 = (await import('../../../assets/images/obras/precipitacion/port-129.jpg')).default;
+const img5 = (await import('../../../assets/images/obras/precipitacion/port-131.jpg')).default;
+const img6 = (await import('../../../assets/images/obras/precipitacion/port-134.jpg')).default;
+const img7 = (await import('../../../assets/images/obras/precipitacion/port-138.jpg')).default;
+const img8 = (await import('../../../assets/images/obras/precipitacion/port-140.jpg')).default;
 ---
 
 <Layout
   lang={lang}
-  title="Precipitacion de Arenas — Work"
-  description="Precipitacion de Arenas (2022–2024). Installation — sand, furniture, security glass, speaker. Maria Elvira Escallon."
+  title="Precipitacion de arenas — Work"
+  description="Precipitacion de arenas (2022-2024). Installation — sand, furniture, security glass, speaker. Maria Elvira Escallon."
 >
+
+
+  <ArtworkSchema
+    title="Precipitacion de arenas"
+    year="2022-2024"
+    medium="Installation"
+    description="Sand slowly precipitating over domestic objects inside a sealed display case. MAMU, Bogota."
+    url="https://mariaelviraescallon.com/en/works/precipitacion-de-arenas/"
+  />
 
   <article class="work-page">
     <div class="container">
@@ -20,21 +37,26 @@ const img1 = (await import('../../../assets/images/obras/precipitacion/precipita
       <header class="work-page__header">
         <p class="label">Work / 010</p>
         <h1>{title}</h1>
-        <p class="work-page__meta">2022–2024 &nbsp;/&nbsp; Installation — sand, furniture, security glass, speaker &nbsp;/&nbsp; Variable dimensions</p>
+        <p class="work-page__meta">2022-2024 (various versions) &nbsp;/&nbsp; Installation — sand, furniture, security glass, speaker &nbsp;/&nbsp; Variable dimensions</p>
       </header>
 
       <!-- Main gallery -->
       <div class="work-page__gallery">
         <img src={img1.src} alt="Precipitaciones 2024 — Sand falling over tables, MAMU" loading="eager">
-        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pending: Precipitacion de Arenas — Detail of furniture partially buried in sand ]</div>
-        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pending: Precipitacion de Arenas — MAMU 2024 installation with 10 tons of sand ]</div>
+        <img src={img2.src} alt="Precipitacion de arenas — Furniture being buried by golden sand" loading="lazy">
+        <img src={img3.src} alt="Precipitacion de arenas — Detail of sand accumulating on surfaces" loading="lazy">
+        <img src={img4.src} alt="Precipitacion de arenas — View through the security glass" loading="lazy">
+        <img src={img5.src} alt="Precipitacion de arenas — Domestic objects covered in sand" loading="lazy">
+        <img src={img6.src} alt="Precipitacion de arenas — Sand falling from the ceiling" loading="lazy">
+        <img src={img7.src} alt="Precipitacion de arenas — Advanced state of the installation" loading="lazy">
+        <img src={img8.src} alt="Precipitacion de arenas — General view of the gallery at MAMU" loading="lazy">
       </div>
 
       <!-- Video -->
       <div class="work-page__video">
         <div class="work-page__video-header">
           <h3>VIDEO</h3>
-          <span class="label">Polvo Eres — Related video · 2:00 min</span>
+          <span class="label">Polvo eres — Related video · 2:00 min</span>
         </div>
         <video controls preload="metadata" poster="">
           <source src="/maria-elvira-escallon/video/polvo-eres-obra.mp4" type="video/mp4">
@@ -47,66 +69,65 @@ const img1 = (await import('../../../assets/images/obras/precipitacion/precipita
         <div class="work-page__text">
 
           <p class="curatorial">
-            Golden sand from the Guamo river falls from the ceiling at different intervals,
-            covering surfaces and constantly transforming the state of the room. Domestic
-            furniture is gradually buried under tons of sand. The installation creates a
-            landscape of slow catastrophe — a domestic interior undergoing geological
-            transformation in real time.
+            The work seeks to transform a non-physical phenomenon — the passage of time — into
+            something material and tangible. Escallon defines these pieces as "dispositivos para
+            ver pasar el tiempo" [devices for watching time pass]. Golden sand from the Guamo
+            river falls from the ceiling at different intervals, covering surfaces and constantly
+            transforming the state of the room.
           </p>
 
           <p class="curatorial" style="margin-top: var(--s2);">
-            The sand's precipitation is both relentless and gentle. It does not crash or
-            explode; it accumulates grain by grain, yet the cumulative effect is devastating.
-            Tables, chairs, and other recognizable objects of domestic life slowly disappear
-            under dunes that form and shift throughout the exhibition. The security glass
-            allows viewers to observe this process from a position of proximity but
-            separation — witnessing a burial they cannot halt.
+            Compressed domestic furniture is gradually buried under tons of sand. The space is
+            separated from the viewer by security glass, and a speaker allows one to hear the
+            sound of the falling sand. Personal objects become archaeological remains. In the
+            MAMU version, 10 tons of sand were precipitated for the first time, amplifying
+            the scale and impact of the installation.
           </p>
 
           <p class="curatorial" style="margin-top: var(--s2);">
-            A speaker embedded in the installation introduces sound as an additional
-            temporal marker, punctuating the visual rhythm of the falling sand. The work
-            engages with themes of displacement, the erasure of domestic space, and the
-            overwhelming force of natural processes acting upon human constructions.
+            The work developed from the earlier concept "Precipitaciones del rio Cauca"
+            [Precipitations of the Cauca River].
           </p>
 
           <h3 style="margin-top: var(--s4);">CONTEXT</h3>
           <p style="margin-top: var(--s2);">
-            The MAMU 2024 version of <em>Precipitacion de Arenas</em> used 10 tons of sand
-            for the first time, representing the most ambitious iteration of the work to
-            date. This scale allowed the installation to achieve a fully immersive quality,
-            transforming the exhibition room into a site where the distinction between
-            interior and landscape collapses entirely.
+            <em>Precipitacion de arenas</em> has had multiple versions, each adapted to the
+            specific exhibition space. The version presented at MAMU in 2024 was the most
+            ambitious, with 10 tons of sand precipitating over the compressed furniture. The
+            piece transforms the exhibition room into a poetic device where time becomes visible
+            through material accumulation.
           </p>
-          <p style="margin-top: var(--s2);">
-            The work connects to Escallon's sustained investigation of time as material
-            force — joining <em>In Memoriam</em> (ice), <em>Dispositivos para Ver Pasar
-            el Tiempo</em>, and <em>Polvo Eres</em> in a body of work concerned with
-            making visible the processes of transformation and entropy that shape both
-            objects and lives.
-          </p>
+
+          <h3 style="margin-top: var(--s4);">EXHIBITIONS</h3>
+          <ul style="margin-top: var(--s2); list-style: none;">
+            <li style="padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark);">
+              <strong>Encuentros en la fabrica de polvo</strong> — MAMU, Bogota, 2024. Most ambitious version (10 tons of sand).
+            </li>
+            <li style="padding: var(--s1) 0;">
+              <strong>Galeria Espacio Continuo</strong> — Bogota, 2022.
+            </li>
+          </ul>
         </div>
 
         <aside class="work-page__ficha">
           <h4>TECHNICAL SHEET</h4>
           <div class="ficha">
-            <strong>Precipitacion de Arenas</strong><br>
-            2022–2024<br><br>
-            Installation.<br>
-            Sand (Guamo river), domestic furniture,<br>
-            security glass, speaker.<br><br>
+            <strong>Precipitacion de arenas</strong><br>
+            2022-2024 (various versions)<br><br>
+            Installation — sand, furniture, security glass, speaker.<br><br>
             Variable dimensions<br>
-            MAMU 2024: 10 tons of sand
+            Multiple venues / MAMU, Bogota (2024, most ambitious version)
           </div>
 
           <h4 style="margin-top: var(--s3);">EXHIBITIONS</h4>
           <div class="ficha">
-            Encounters in the Dust Factory — MAMU, 2024
+            Encuentros en la fabrica de polvo — MAMU, 2024<br>
+            Galeria Espacio Continuo, 2022
           </div>
 
           <h4 style="margin-top: var(--s3);">HOW TO CITE</h4>
           <div class="ficha" style="font-size: 0.65rem;">
-            Escallon, M.E. (2022–2024). <em>Precipitacion de Arenas</em>.
+            Escallon, M.E. (2022-2024). <em>Precipitacion de arenas</em>.
             Installation. Available at:
             mariaelviraescallon.com/en/works/precipitacion-de-arenas/
           </div>
