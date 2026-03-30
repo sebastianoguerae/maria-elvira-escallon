@@ -8,9 +8,8 @@ const title = 'Nuevas Floras';
 
 const img1 = (await import('../../../assets/images/obras/nuevas-floras/nuevas-floras-01.jpg')).default;
 const img2 = (await import('../../../assets/images/obras/nuevas-floras/nuevas-floras-02.jpg')).default;
-const img3 = (await import('../../../assets/images/obras/nuevas-floras/nuevas-floras-versalles.jpg')).default;
-const img4 = (await import('../../../assets/images/obras/nuevas-floras/nuevas-floras-brasil-detalle.jpg')).default;
 const img5 = (await import('../../../assets/images/obras/nuevas-floras/nuevas-floras-tocones.jpg')).default;
+const img10 = (await import('../../../assets/images/obras/nuevas-floras/port-019.jpg')).default;
 ---
 
 <Layout
@@ -26,15 +25,14 @@ const img5 = (await import('../../../assets/images/obras/nuevas-floras/nuevas-fl
       <header class="work-page__header">
         <p class="label">Work / 005</p>
         <h1>{title}</h1>
-        <p class="work-page__meta">2003–2007 &nbsp;/&nbsp; Sculptural intervention on native trees &nbsp;/&nbsp; Variable dimensions</p>
+        <p class="work-page__meta">2003 &nbsp;/&nbsp; Sculptural intervention on native trees &nbsp;/&nbsp; Variable dimensions</p>
       </header>
 
       <!-- Main gallery -->
       <div class="work-page__gallery">
         <img src={img1.src} alt="Nuevas Floras — Tree intervened with baroque carving, photographic series" loading="eager">
+        <img src={img10.src} alt="Nuevas Floras — Detail of scale pattern carving on live bark" loading="lazy">
         <img src={img2.src} alt="Nuevas Floras — Detail of bark reclaiming the carving over the years" loading="lazy">
-        <img src={img3.src} alt="Nuevas Floras Versailles — Intervention at the Arboretum de Chevreloup, France, 2017" loading="lazy">
-        <img src={img4.src} alt="Nuevas Floras do Sul — Detail of intervention in Brazil" loading="lazy">
         <img src={img5.src} alt="Nuevas Floras — Tree stumps intervened with baroque carving" loading="lazy">
       </div>
 
@@ -98,19 +96,10 @@ const img5 = (await import('../../../assets/images/obras/nuevas-floras/nuevas-fl
             them, or makes them disappear.
           </p>
 
-          <h3 style="margin-top: var(--s4);">VERSIONS</h3>
+          <h3 style="margin-top: var(--s4);">RELATED WORKS</h3>
           <ul style="margin-top: var(--s2); list-style: none;">
             <li style="padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark);">
-              <strong>Nuevas Floras Colombia</strong> — 2003. Native trees, Central Cordillera. Original version.
-            </li>
-            <li style="padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark);">
-              <strong>Nuevas Floras do Sul</strong> — 2011. Brazil.
-            </li>
-            <li style="padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark);">
-              <strong>Nuevas Floras Bristol</strong> — United Kingdom.
-            </li>
-            <li style="padding: var(--s1) 0;">
-              <strong>Nuevas Floras Versailles</strong> — 2017. Tuileries Garden (FIAC), Arboretum de Chevreloup, France.
+              <a href="/maria-elvira-escallon/en/works/nuevas-floras-versalles/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">Nuevas Floras Versalles (2017)</a>
             </li>
           </ul>
         </div>

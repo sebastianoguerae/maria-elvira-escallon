@@ -1,0 +1,105 @@
+---
+import Layout from '../../../components/layout/Layout.astro';
+import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
+
+const lang = 'es' as const;
+const title = 'Nuevas Floras Versalles';
+
+const img1 = (await import('../../../assets/images/obras/nuevas-floras-versalles/versalles-01.jpg')).default;
+const img2 = (await import('../../../assets/images/obras/nuevas-floras-versalles/versalles-02.jpg')).default;
+---
+
+<Layout
+  lang={lang}
+  title="Nuevas Floras Versalles — Obra"
+  description="Nuevas Floras Versalles (2017). Intervención escultórica sobre árboles en el Arboretum de Chevreloup y Jardín de Tullerías (FIAC), Francia. María Elvira Escallón."
+>
+
+  <ArtworkSchema
+    title="Nuevas Floras Versalles"
+    year="2017"
+    medium="Intervención escultórica sobre árboles, fotografía"
+    description="Intervención sobre árboles en el Arboretum de Chevreloup y el Jardín de Tullerías durante la FIAC, Versalles/París, Francia."
+    url="https://mariaelviraescallon.com/es/obra/nuevas-floras-versalles/"
+  />
+
+  <article class="work-page">
+    <div class="container">
+
+      <!-- Header -->
+      <header class="work-page__header">
+        <p class="label">Obra / 005b</p>
+        <h1>{title}</h1>
+        <p class="work-page__meta">2017 &nbsp;/&nbsp; Intervención escultórica sobre árboles &nbsp;/&nbsp; Arboretum de Chevreloup &amp; Jardín de Tullerías, Francia</p>
+      </header>
+
+      <!-- Galería -->
+      <div class="work-page__gallery">
+        <img src={img1.src} alt="Nuevas Floras Versalles — Intervención en el Jardín de Tullerías, FIAC 2017" loading="eager">
+        <img src={img2.src} alt="Nuevas Floras Versalles — Talla barroca en el Arboretum de Chevreloup" loading="lazy">
+      </div>
+
+      <!-- Texto + Ficha -->
+      <div class="work-page__body">
+        <div class="work-page__text">
+
+          <p class="curatorial">
+            En 2017, María Elvira Escallón lleva <em>Nuevas Floras</em> a Francia, interviniendo
+            árboles en el Arboretum de Chevreloup y presentando la obra en el Jardín de Tullerías
+            durante la FIAC (Foire Internationale d'Art Contemporain) de París.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            Esta versión responde a las especificidades del paisaje y la historia franceses —
+            un diálogo entre las formas barrocas talladas y los jardines formales de la tradición
+            paisajística europea. El Arboretum de Chevreloup, con su colección de más de 2.500
+            especies de árboles, ofrece un contexto donde la intervención de Escallón entra en
+            conversación directa con siglos de manipulación humana de la naturaleza.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            A diferencia de la versión colombiana, donde las tallas dialogan con el barroco
+            colonial, en Versalles la obra se sitúa en el corazón de la tradición que originó
+            ese mismo repertorio ornamental — cerrando un ciclo entre la fuente europea y su
+            reinterpretación en el contexto latinoamericano.
+          </p>
+
+          <h3 style="margin-top: var(--s4);">OBRA ORIGINAL</h3>
+          <ul style="margin-top: var(--s2); list-style: none;">
+            <li style="padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark);">
+              <a href="/maria-elvira-escallon/es/obra/nuevas-floras/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">Nuevas Floras (2003) — Colombia</a>
+            </li>
+          </ul>
+        </div>
+
+        <aside class="work-page__ficha">
+          <h4>FICHA TÉCNICA</h4>
+          <div class="ficha">
+            <strong>Nuevas Floras Versalles</strong><br>
+            2017<br><br>
+            Intervención escultórica sobre árboles.<br>
+            Talla en madera.<br>
+            Documentación: fotografía.<br><br>
+            Dimensiones variables
+          </div>
+
+          <h4 style="margin-top: var(--s3);">LUGAR</h4>
+          <div class="ficha">
+            Arboretum de Chevreloup, Versalles<br>
+            Jardín de Tullerías, FIAC, París<br>
+            Francia, 2017
+          </div>
+
+          <h4 style="margin-top: var(--s3);">EXPOSICIÓN</h4>
+          <div class="ficha">
+            <a href="/maria-elvira-escallon/es/exposiciones/nuevas-floras-versalles-2017/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">
+              Nuevas Floras Versalles (2017)
+            </a>
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </article>
+
+</Layout>
