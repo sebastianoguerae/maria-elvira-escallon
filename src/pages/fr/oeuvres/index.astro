@@ -13,7 +13,7 @@ const works = [
     slug: 'in-vitro',
     title: 'In Vitro',
     year: '1997',
-    description: 'Installation, miroir — Estacion de La Sabana',
+    description: 'Installation, miroir — Estación de La Sabana',
     hasImage: true,
     image: imgInVitro,
   },
@@ -22,7 +22,7 @@ const works = [
     slug: 'el-reino-de-este-mundo',
     title: 'El reino de este mundo',
     year: '2000',
-    description: 'Installation, beton — MAMBO',
+    description: 'Installation, béton — MAMBO',
     hasImage: false,
     image: null,
   },
@@ -31,7 +31,7 @@ const works = [
     slug: 'in-memoriam',
     title: 'In Memoriam',
     year: '2001',
-    description: 'Sculpture ephemere, glace — Alianza Colombo Francesa',
+    description: 'Sculpture éphémère, glace — Alianza Colombo Francesa',
     hasImage: false,
     image: null,
   },
@@ -40,7 +40,7 @@ const works = [
     slug: 'desde-adentro',
     title: 'Desde Adentro',
     year: '2003',
-    description: '12 photographies, video — Club El Nogal',
+    description: '12 photographies, vidéo — Club El Nogal',
     hasImage: true,
     image: imgDesdeAdentro,
   },
@@ -58,14 +58,14 @@ const works = [
     slug: 'en-estado-de-coma',
     title: 'En estado de coma',
     year: '2005–2007',
-    description: 'Photographie, video, installation — Hospital San Juan de Dios',
+    description: 'Photographie, vidéo, installation — Hospital San Juan de Dios',
     hasImage: false,
     image: null,
   },
   {
     num: '007',
     slug: 'aerolito',
-    title: 'Pequeno Museo del Aerolito',
+    title: 'Pequeño Museo del Aerolito',
     year: '2014–2015',
     description: 'Recherche, installation — Museo Nacional',
     hasImage: false,
@@ -74,7 +74,7 @@ const works = [
   {
     num: '008',
     slug: 'en-el-fertil-suelo',
-    title: 'En el fertil suelo',
+    title: 'En el fértil suelo',
     year: '2017–2018',
     description: 'Video, sculpture — X Premio Luis Caballero',
     hasImage: false,
@@ -92,7 +92,7 @@ const works = [
   {
     num: '010',
     slug: 'precipitacion-de-arenas',
-    title: 'Precipitacion de arenas',
+    title: 'Precipitación de arenas',
     year: '2024',
     description: 'Installation — MAMU',
     hasImage: false,
@@ -103,7 +103,7 @@ const works = [
     slug: 'encuentros-con-seres-notables',
     title: 'Encuentros con seres notables',
     year: '2022',
-    description: 'Sculpture, branches sculptees — Galeria Espacio Continuo',
+    description: 'Sculpture, branches sculptées — Galería Espacio Continuo',
     hasImage: false,
     image: null,
   },
@@ -112,7 +112,7 @@ const works = [
     slug: 'polvo-eres',
     title: 'Polvo eres',
     year: '2024',
-    description: 'Sculpture murale — MAMU, Bogota',
+    description: 'Sculpture murale — MAMU, Bogotá',
     hasImage: false,
     image: null,
   },
@@ -121,7 +121,7 @@ const works = [
     slug: 'las-caminantes',
     title: 'Las caminantes',
     year: '2024',
-    description: 'Installation vivante, code Morse — MAMU, Bogota',
+    description: 'Installation vivante, code Morse — MAMU, Bogotá',
     hasImage: false,
     image: null,
   },
@@ -130,21 +130,21 @@ const works = [
     slug: 'ensayo-autorretrato',
     title: 'Ensayo autorretrato',
     year: '2022',
-    description: 'Video — Galeria Espacio Continuo',
+    description: 'Video — Galería Espacio Continuo',
     hasImage: false,
     image: null,
   },
 ];
 ---
 
-<Layout lang={lang} title="Oeuvres" description="Oeuvres completes de Maria Elvira Escallon. Catalogue de projets 1997–2024. Sculpture, installation, photographie et video.">
+<Layout lang={lang} title="Œuvres" description="Œuvres complètes de María Elvira Escallón. Catalogue de projets 1997–2024. Sculpture, installation, photographie et vidéo.">
 
   <div class="obra-index">
     <div class="container">
 
       <!-- En-tete -->
       <header class="section__header">
-        <h1>Oeuvres completes</h1>
+        <h1>Œuvres complètes</h1>
         <span class="label">1997–2024</span>
       </header>
 
@@ -164,7 +164,7 @@ const works = [
                 {work.hasImage && work.image ? (
                   <img
                     src={work.image.src}
-                    alt={`${work.title} — Maria Elvira Escallon`}
+                    alt={`${work.title} — María Elvira Escallón`}
                     loading="lazy"
                   />
                 ) : (
