@@ -1,0 +1,119 @@
+---
+import Layout from '../../../components/layout/Layout.astro';
+import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
+
+const lang = 'es' as const;
+const title = 'La travesía';
+
+const img1 = (await import('../../../assets/images/obras/la-travesia/travesia-01.jpg')).default;
+const img2 = (await import('../../../assets/images/obras/la-travesia/travesia-02.jpg')).default;
+---
+
+<Layout
+  lang={lang}
+  title="La travesía — Obra"
+  description="La travesía (2017–2024). Instalación — puertas de madera de casas de familia usadas y descartadas y espejo. MAMU, Bogotá. María Elvira Escallón."
+>
+
+  <ArtworkSchema
+    title="La travesía"
+    year="2017–2024"
+    medium="Instalación. Puertas de madera de casas de familia usadas y descartadas y espejo"
+    dimensions="2,40 x 15 x 1,80 m"
+    description="Puertas de casas demolidas dispuestas como corredor. Un espejo al final crea un reflejo infinito de estos umbrales. MAMU, Bogotá, 2024."
+    url="https://mariaelviraescallon.com/es/obra/la-travesia/"
+  />
+
+  <article class="work-page">
+    <div class="container">
+
+      <!-- Header -->
+      <header class="work-page__header">
+        <p class="label">Obra / 022</p>
+        <h1>{title}</h1>
+        <p class="work-page__meta">2017–2024 &nbsp;/&nbsp; Instalación — puertas de madera usadas y descartadas, espejo &nbsp;/&nbsp; 2,40 × 15 × 1,80 m</p>
+      </header>
+
+      <!-- Galería principal -->
+      <div class="work-page__gallery">
+        <img src={img1.src} alt="La travesía — Corredor de puertas de casas demolidas, vista frontal" loading="eager">
+        <img src={img2.src} alt="La travesía — Reflejo infinito en el espejo al final del corredor de puertas" loading="lazy">
+      </div>
+
+      <!-- Texto + Ficha -->
+      <div class="work-page__body">
+        <div class="work-page__text">
+
+          <p class="curatorial">
+            <em>La travesía</em> es un corredor construido con puertas de madera recuperadas de
+            casas de familia demolidas. Las puertas, usadas y descartadas, conservan las marcas
+            del tiempo y del uso doméstico — huellas de manos, cerraduras cambiadas, capas de
+            pintura. Dispuestas una tras otra, conforman un pasaje que el espectador puede
+            recorrer físicamente.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            Al final del corredor, un espejo produce un reflejo infinito de estos umbrales,
+            multiplicando la sucesión de puertas hasta la desaparición visual. El efecto
+            transforma el recorrido finito en una travesía sin fin — una metáfora de los
+            tránsitos, las mudanzas y los desplazamientos que esas puertas alguna vez
+            mediaron entre lo público y lo privado, entre el adentro y el afuera.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            La puerta, como umbral, condensa la historia de quienes la atravesaron. Cada
+            una de estas puertas fue la frontera de un hogar que ya no existe. Reunidas,
+            constituyen un archivo material de vidas domésticas borradas por la demolición
+            y el desarrollo urbano. El espejo, al multiplicarlas, sugiere que esa pérdida
+            es inconmensurable.
+          </p>
+
+          <h3 style="margin-top: var(--s4);">CONTEXTO</h3>
+          <p style="margin-top: var(--s2);">
+            La obra fue exhibida en el MAMU (Museo de Arte Miguel Urrutia) en 2024,
+            dentro de la sección «Ante el tiempo» de la exposición <em>Encuentros en la
+            fábrica de polvo</em>. En este contexto, <em>La travesía</em> dialoga con
+            otras obras de Escallón que abordan el patrimonio, la memoria material y la
+            tensión entre permanencia y desaparición.
+          </p>
+
+          <h3 style="margin-top: var(--s4);">OBRAS RELACIONADAS</h3>
+          <ul style="margin-top: var(--s2); list-style: none;">
+            <li style="padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark);">
+              <a href="/maria-elvira-escallon/es/obra/precipitacion-de-arenas/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">Precipitación de arenas (2022–2024)</a>
+            </li>
+            <li style="padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark);">
+              <a href="/maria-elvira-escallon/es/obra/in-vitro/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">In Vitro (1997)</a>
+            </li>
+          </ul>
+        </div>
+
+        <aside class="work-page__ficha">
+          <h4>FICHA TÉCNICA</h4>
+          <div class="ficha">
+            <strong>La travesía</strong><br>
+            2017–2024<br><br>
+            Instalación.<br>
+            Puertas de madera de casas de familia usadas y descartadas y espejo.<br><br>
+            2,40 × 15 × 1,80 m
+          </div>
+
+          <h4 style="margin-top: var(--s3);">EXPOSICIONES</h4>
+          <div class="ficha">
+            Encuentros en la fábrica de polvo — MAMU, Bogotá, 2024<br>
+            Sección «Ante el tiempo»
+          </div>
+
+          <h4 style="margin-top: var(--s3);">CÓMO CITAR</h4>
+          <div class="ficha" style="font-size: 0.65rem;">
+            Escallón, M.E. (2017–2024). <em>La travesía</em>.
+            Instalación. Disponible en:
+            mariaelviraescallon.com/es/obra/la-travesia/
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </article>
+
+</Layout>

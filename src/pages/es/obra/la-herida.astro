@@ -1,0 +1,116 @@
+---
+import Layout from '../../../components/layout/Layout.astro';
+import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
+
+const lang = 'es' as const;
+const title = 'La herida';
+---
+
+<Layout
+  lang={lang}
+  title="La herida — Obra"
+  description="La herida (2006). Intervención site-specific. Fachada de la Estación de La Sabana, Bogotá. María Elvira Escallón."
+>
+
+  <ArtworkSchema
+    title="La herida"
+    year="2006"
+    medium="Intervención site-specific"
+    description="Intervención sobre la fachada de la Estación de La Sabana, Bogotá. La 'herida' revela la estructura interna del edificio, su historia y su abandono."
+    url="https://mariaelviraescallon.com/es/obra/la-herida/"
+  />
+
+  <article class="work-page">
+    <div class="container">
+
+      <!-- Header -->
+      <header class="work-page__header">
+        <p class="label">Obra / 024</p>
+        <h1>{title}</h1>
+        <p class="work-page__meta">2006 &nbsp;/&nbsp; Intervención site-specific &nbsp;/&nbsp; Fachada de la Estación de La Sabana, Bogotá</p>
+      </header>
+
+      <!-- Galería principal -->
+      <div class="work-page__gallery">
+        <div class="placeholder-img" style="aspect-ratio: 4/3;">[ La herida — Imágenes próximamente ]</div>
+      </div>
+
+      <!-- Texto + Ficha -->
+      <div class="work-page__body">
+        <div class="work-page__text">
+
+          <p class="curatorial">
+            <em>La herida</em> es una intervención sobre la fachada de la Estación de
+            La Sabana en Bogotá. La obra opera como una incisión en el cuerpo del
+            edificio — una apertura que revela la estructura interna, las capas
+            constructivas y el estado de deterioro que la superficie exterior oculta.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            La «herida» hace visible lo que la fachada pretende mantener oculto: la
+            historia material del edificio, sus transformaciones sucesivas, su abandono
+            progresivo. Como en una herida sobre un cuerpo, la intervención expone las
+            capas internas — los materiales, las reparaciones, los parches — que
+            constituyen la verdadera biografía del edificio patrimonial.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            La obra forma parte de la investigación de larga duración que Escallón ha
+            desarrollado en torno a la Estación de La Sabana, iniciada con <em>In Vitro</em>
+            en 1997. Si en aquella primera intervención un espejo ocultaba la ruina
+            duplicando la sección renovada, en <em>La herida</em> el gesto es inverso:
+            se abre la superficie para revelar lo que el Estado no quiere mostrar. Ambas
+            obras interrogan la relación entre apariencia y realidad en la gestión del
+            patrimonio arquitectónico colombiano.
+          </p>
+
+          <h3 style="margin-top: var(--s4);">CONTEXTO</h3>
+          <p style="margin-top: var(--s2);">
+            La Estación de La Sabana, diseñada por el arquitecto Mariano Santamaría e
+            inaugurada en 1917, fue declarada monumento nacional. Sin embargo, ha sufrido
+            décadas de abandono parcial y renovaciones cosméticas. Escallón ha regresado
+            al edificio en distintos momentos de su carrera, convirtiendo la Estación en
+            un caso de estudio recurrente sobre la relación del Estado colombiano con su
+            patrimonio arquitectónico.
+          </p>
+
+          <h3 style="margin-top: var(--s4);">OBRAS RELACIONADAS</h3>
+          <ul style="margin-top: var(--s2); list-style: none;">
+            <li style="padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark);">
+              <a href="/maria-elvira-escallon/es/obra/in-vitro/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">In Vitro (1997) — Estación de La Sabana</a>
+            </li>
+            <li style="padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark);">
+              <a href="/maria-elvira-escallon/es/obra/en-estado-de-coma/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">En estado de coma (2005–2007)</a>
+            </li>
+          </ul>
+        </div>
+
+        <aside class="work-page__ficha">
+          <h4>FICHA TÉCNICA</h4>
+          <div class="ficha">
+            <strong>La herida</strong><br>
+            2006<br><br>
+            Intervención site-specific.<br>
+            Fachada de la Estación de La Sabana, Bogotá.<br><br>
+            Dimensiones variables.
+          </div>
+
+          <h4 style="margin-top: var(--s3);">LUGAR</h4>
+          <div class="ficha">
+            Estación de La Sabana<br>
+            Bogotá, Colombia
+          </div>
+
+          <h4 style="margin-top: var(--s3);">CÓMO CITAR</h4>
+          <div class="ficha" style="font-size: 0.65rem;">
+            Escallón, M.E. (2006). <em>La herida</em>.
+            Intervención site-specific. Disponible en:
+            mariaelviraescallon.com/es/obra/la-herida/
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </article>
+
+</Layout>
