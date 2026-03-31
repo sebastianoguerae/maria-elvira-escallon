@@ -1,0 +1,108 @@
+---
+import Layout from '../../../components/layout/Layout.astro';
+import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
+
+const lang = 'es' as const;
+const title = 'Urgencias';
+---
+
+<Layout
+  lang={lang}
+  title="Urgencias — Obra"
+  description="Urgencias (2012). Instalación. Museo de Arte Universidad Nacional, Bogotá. María Elvira Escallón."
+>
+
+  <ArtworkSchema
+    title="Urgencias"
+    year="2012"
+    medium="Instalación"
+    description="Instalación en el Museo de Arte Universidad Nacional, Bogotá. Relacionada con las investigaciones hospitalarias de En estado de coma y Extracciones."
+    url="https://mariaelviraescallon.com/es/obra/urgencias/"
+  />
+
+  <article class="work-page">
+    <div class="container">
+
+      <!-- Header -->
+      <header class="work-page__header">
+        <p class="label">Obra / 026</p>
+        <h1>{title}</h1>
+        <p class="work-page__meta">2012 &nbsp;/&nbsp; Instalación &nbsp;/&nbsp; Museo de Arte Universidad Nacional, Bogotá</p>
+      </header>
+
+      <!-- Galería principal -->
+      <div class="work-page__gallery">
+        <div class="placeholder-img" style="aspect-ratio: 4/3;">[ Urgencias — Imágenes próximamente ]</div>
+      </div>
+
+      <!-- Texto + Ficha -->
+      <div class="work-page__body">
+        <div class="work-page__text">
+
+          <p class="curatorial">
+            <em>Urgencias</em> se inscribe en la línea de investigación hospitalaria que
+            Escallón ha desarrollado a lo largo de su carrera. El hospital — como
+            institución, como edificio, como metáfora del cuerpo social — ha sido un
+            territorio recurrente en su obra desde <em>En estado de coma</em> (2005–2007)
+            y las series de <em>Extracciones</em>.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            La urgencia, como concepto, opera en múltiples registros: la urgencia médica
+            que exige intervención inmediata, la urgencia social de los hospitales públicos
+            en crisis, la urgencia del patrimonio arquitectónico que se deteriora sin que
+            nadie actúe. En la sala de urgencias convergen la emergencia individual y la
+            emergencia colectiva — el cuerpo del paciente y el cuerpo del edificio, ambos
+            en estado crítico.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            La obra fue presentada en el Museo de Arte de la Universidad Nacional en
+            Bogotá, un espacio que por su cercanía al Hospital San Juan de Dios — donde
+            Escallón realizó gran parte de su investigación hospitalaria — establece una
+            relación geográfica y simbólica con el lugar de origen de este cuerpo de
+            trabajo.
+          </p>
+
+          <h3 style="margin-top: var(--s4);">OBRAS RELACIONADAS</h3>
+          <ul style="margin-top: var(--s2); list-style: none;">
+            <li style="padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark);">
+              <a href="/maria-elvira-escallon/es/obra/en-estado-de-coma/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">En estado de coma (2005–2007)</a>
+            </li>
+            <li style="padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark);">
+              <a href="/maria-elvira-escallon/es/obra/extracciones-hospital/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">Extracciones en el Hospital Universitario (2012)</a>
+            </li>
+            <li style="padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark);">
+              <a href="/maria-elvira-escallon/es/obra/extraccion/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">Extracción (2016)</a>
+            </li>
+          </ul>
+        </div>
+
+        <aside class="work-page__ficha">
+          <h4>FICHA TÉCNICA</h4>
+          <div class="ficha">
+            <strong>Urgencias</strong><br>
+            2012<br><br>
+            Instalación.<br><br>
+            Museo de Arte Universidad Nacional, Bogotá.<br>
+            Dimensiones variables.
+          </div>
+
+          <h4 style="margin-top: var(--s3);">EXPOSICIONES</h4>
+          <div class="ficha">
+            Museo de Arte Universidad Nacional — Bogotá, 2012
+          </div>
+
+          <h4 style="margin-top: var(--s3);">CÓMO CITAR</h4>
+          <div class="ficha" style="font-size: 0.65rem;">
+            Escallón, M.E. (2012). <em>Urgencias</em>.
+            Instalación. Disponible en:
+            mariaelviraescallon.com/es/obra/urgencias/
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </article>
+
+</Layout>
