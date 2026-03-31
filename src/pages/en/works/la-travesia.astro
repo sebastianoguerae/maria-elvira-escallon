@@ -1,0 +1,117 @@
+---
+import Layout from '../../../components/layout/Layout.astro';
+import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
+
+const lang = 'en' as const;
+const title = 'La travesia';
+
+const img1 = (await import('../../../assets/images/obras/la-travesia/travesia-01.jpg')).default;
+const img2 = (await import('../../../assets/images/obras/la-travesia/travesia-02.jpg')).default;
+---
+
+<Layout
+  lang={lang}
+  title="La travesia — Work"
+  description="La travesia (2017–2024). Installation — used and discarded wooden doors from family homes and mirror. MAMU, Bogota. Maria Elvira Escallon."
+>
+
+  <ArtworkSchema
+    title="La travesia"
+    year="2017–2024"
+    medium="Installation. Used and discarded wooden doors from family homes and mirror"
+    dimensions="2.40 x 15 x 1.80 m"
+    description="Doors from demolished homes arranged as a corridor. A mirror at the end creates an infinite reflection of these thresholds. MAMU, Bogota, 2024."
+    url="https://mariaelviraescallon.com/en/works/la-travesia/"
+  />
+
+  <article class="work-page">
+    <div class="container">
+
+      <!-- Header -->
+      <header class="work-page__header">
+        <p class="label">Work / 022</p>
+        <h1>{title}</h1>
+        <p class="work-page__meta">2017–2024 &nbsp;/&nbsp; Installation — used and discarded wooden doors, mirror &nbsp;/&nbsp; 2.40 x 15 x 1.80 m</p>
+      </header>
+
+      <!-- Main gallery -->
+      <div class="work-page__gallery">
+        <img src={img1.src} alt="La travesia — Corridor of doors from demolished homes, frontal view" loading="eager">
+        <img src={img2.src} alt="La travesia — Infinite reflection in the mirror at the end of the door corridor" loading="lazy">
+      </div>
+
+      <!-- Text + Technical sheet -->
+      <div class="work-page__body">
+        <div class="work-page__text">
+
+          <p class="curatorial">
+            <em>La travesia</em> [The Crossing] is a corridor built with wooden doors salvaged from
+            demolished family homes. The used and discarded doors preserve the marks of time and
+            domestic use — handprints, replaced locks, layers of paint. Arranged one after another,
+            they form a passage that the viewer can physically walk through.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            At the end of the corridor, a mirror produces an infinite reflection of these thresholds,
+            multiplying the succession of doors until they vanish from sight. The effect transforms
+            the finite walk into an endless crossing — a metaphor for the transits, relocations, and
+            displacements that these doors once mediated between the public and the private, between
+            the inside and the outside.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            The door, as a threshold, condenses the history of those who passed through it. Each
+            of these doors was the boundary of a home that no longer exists. Gathered together,
+            they constitute a material archive of domestic lives erased by demolition and urban
+            development. The mirror, by multiplying them, suggests that this loss is immeasurable.
+          </p>
+
+          <h3 style="margin-top: var(--s4);">CONTEXT</h3>
+          <p style="margin-top: var(--s2);">
+            The work was exhibited at MAMU (Museo de Arte Miguel Urrutia) in 2024, within the
+            "Ante el tiempo" [Before Time] section of the exhibition <em>Encuentros en la
+            fabrica de polvo</em> [Encounters in the Dust Factory]. In this context,
+            <em>La travesia</em> dialogues with other works by Escallon that address heritage,
+            material memory, and the tension between permanence and disappearance.
+          </p>
+
+          <h3 style="margin-top: var(--s4);">RELATED WORKS</h3>
+          <ul style="margin-top: var(--s2); list-style: none;">
+            <li style="padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark);">
+              <a href="/maria-elvira-escallon/en/works/precipitacion-de-arenas/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">Precipitacion de arenas (2022–2024)</a>
+            </li>
+            <li style="padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark);">
+              <a href="/maria-elvira-escallon/en/works/in-vitro/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">In Vitro (1997)</a>
+            </li>
+          </ul>
+        </div>
+
+        <aside class="work-page__ficha">
+          <h4>TECHNICAL SHEET</h4>
+          <div class="ficha">
+            <strong>La travesia</strong><br>
+            2017–2024<br><br>
+            Installation.<br>
+            Used and discarded wooden doors from family homes and mirror.<br><br>
+            2.40 x 15 x 1.80 m
+          </div>
+
+          <h4 style="margin-top: var(--s3);">EXHIBITIONS</h4>
+          <div class="ficha">
+            Encuentros en la fabrica de polvo — MAMU, Bogota, 2024<br>
+            Section "Ante el tiempo" [Before Time]
+          </div>
+
+          <h4 style="margin-top: var(--s3);">HOW TO CITE</h4>
+          <div class="ficha" style="font-size: 0.65rem;">
+            Escallon, M.E. (2017–2024). <em>La travesia</em>.
+            Installation. Available at:
+            mariaelviraescallon.com/en/works/la-travesia/
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </article>
+
+</Layout>

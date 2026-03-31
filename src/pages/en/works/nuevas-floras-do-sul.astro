@@ -1,0 +1,113 @@
+---
+import Layout from '../../../components/layout/Layout.astro';
+import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
+
+const lang = 'en' as const;
+const title = 'Nuevas Floras do Sul';
+
+const img1 = (await import('../../../assets/images/obras/nuevas-floras-do-sul/do-sul-01.jpg')).default;
+const img2 = (await import('../../../assets/images/obras/nuevas-floras-do-sul/do-sul-02.jpg')).default;
+---
+
+<Layout
+  lang={lang}
+  title="Nuevas Floras do Sul — Work"
+  description="Nuevas Floras do Sul (2011). Sculptural intervention on trees. Jesuit ruins, southern Brazil. Maria Elvira Escallon."
+>
+
+  <ArtworkSchema
+    title="Nuevas Floras do Sul"
+    year="2011"
+    medium="Sculptural intervention on trees"
+    description="Version of Nuevas Floras made in southern Brazil, near the Jesuit ruins. Baroque carvings on trees dialogue with the historical Baroque of the Jesuit missions."
+    url="https://mariaelviraescallon.com/en/works/nuevas-floras-do-sul/"
+  />
+
+  <article class="work-page">
+    <div class="container">
+
+      <!-- Header -->
+      <header class="work-page__header">
+        <p class="label">Work / 005c</p>
+        <h1>{title}</h1>
+        <p class="work-page__meta">2011 &nbsp;/&nbsp; Sculptural intervention on trees &nbsp;/&nbsp; Jesuit ruins, southern Brazil</p>
+      </header>
+
+      <!-- Main gallery -->
+      <div class="work-page__gallery">
+        <img src={img1.src} alt="Nuevas Floras do Sul — Sculptural intervention on a tree near the Jesuit ruins" loading="eager">
+        <img src={img2.src} alt="Nuevas Floras do Sul — Detail of Baroque carving in dialogue with the mission ruins" loading="lazy">
+      </div>
+
+      <!-- Text + Technical sheet -->
+      <div class="work-page__body">
+        <div class="work-page__text">
+
+          <p class="curatorial">
+            <em>Nuevas Floras do Sul</em> is the version of <em>Nuevas Floras</em> realized
+            in southern Brazil, in the vicinity of the Jesuit mission ruins. Escallon
+            intervenes living trees with Baroque-form carvings — the same procedure originally
+            developed in Colombia in 2003 — but here the geographic and historical context
+            adds a particular dimension.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            The Baroque carvings on the trees enter into direct dialogue with the historical
+            Baroque of the ruined Jesuit missions. The Jesuit reductions of southern Brazil,
+            founded in the seventeenth and eighteenth centuries, were centers of artistic
+            production where European Baroque ornamentation merged with indigenous Guarani
+            traditions. The ruins of those missions preserve fragments of that cultural
+            hybridization.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            By carving Baroque forms onto living trees alongside those ruins, Escallon
+            produces a temporal echo: the Baroque is once again inscribed upon nature, but
+            this time in an artistic gesture conscious of the history that precedes it. The
+            trees, as in all versions of <em>Nuevas Floras</em>, will over time respond by
+            absorbing and transforming the intervention — making visible the relationship
+            between culture and nature that the Jesuit missions also embodied in their
+            own way.
+          </p>
+
+          <h3 style="margin-top: var(--s4);">RELATED WORKS</h3>
+          <ul style="margin-top: var(--s2); list-style: none;">
+            <li style="padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark);">
+              <a href="/maria-elvira-escallon/en/works/nuevas-floras/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">Nuevas Floras (2003) — Colombia</a>
+            </li>
+            <li style="padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark);">
+              <a href="/maria-elvira-escallon/en/works/nuevas-floras-versalles/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">Nuevas Floras Versalles (2017) — France</a>
+            </li>
+          </ul>
+        </div>
+
+        <aside class="work-page__ficha">
+          <h4>TECHNICAL SHEET</h4>
+          <div class="ficha">
+            <strong>Nuevas Floras do Sul</strong><br>
+            2011<br><br>
+            Sculptural intervention on trees.<br>
+            Wood carving.<br><br>
+            Variable dimensions.<br>
+            Jesuit ruins, southern Brazil.
+          </div>
+
+          <h4 style="margin-top: var(--s3);">LOCATION</h4>
+          <div class="ficha">
+            Southern Brazil<br>
+            Vicinity of the Jesuit mission ruins
+          </div>
+
+          <h4 style="margin-top: var(--s3);">HOW TO CITE</h4>
+          <div class="ficha" style="font-size: 0.65rem;">
+            Escallon, M.E. (2011). <em>Nuevas Floras do Sul</em>.
+            Sculptural intervention on trees. Available at:
+            mariaelviraescallon.com/en/works/nuevas-floras-do-sul/
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </article>
+
+</Layout>
