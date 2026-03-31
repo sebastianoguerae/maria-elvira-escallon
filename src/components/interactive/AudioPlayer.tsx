@@ -4,9 +4,18 @@ interface AudioPlayerProps {
   src?: string;
   title: string;
   duration?: string;
+  lang?: string;
 }
 
-export default function AudioPlayer({ src, title, duration: durationHint }: AudioPlayerProps) {
+const audioI18n: Record<string, Record<string, string>> = {
+  es: { coming: 'AUDIO PRÓXIMAMENTE', voice: 'Voz de la artista sobre esta obra', pause: 'Pausar', play: 'Reproducir', progress: 'Progreso del audio', player: 'Reproductor de audio' },
+  en: { coming: 'AUDIO COMING SOON', voice: 'The artist\'s voice on this work', pause: 'Pause', play: 'Play', progress: 'Audio progress', player: 'Audio player' },
+  fr: { coming: 'AUDIO À VENIR', voice: 'La voix de l\'artiste sur cette œuvre', pause: 'Pause', play: 'Lecture', progress: 'Progression audio', player: 'Lecteur audio' },
+  zh: { coming: '音频即将上线', voice: '艺术家谈这件作品', pause: '暂停', play: '播放', progress: '音频进度', player: '音频播放器' },
+};
+
+export default function AudioPlayer({ src, title, duration: durationHint, lang = 'es' }: AudioPlayerProps) {
+  const labels = audioI18n[lang] || audioI18n.es;
   const audioRef = useRef<HTMLAudioElement>(null);
   const progressRef = useRef<HTMLDivElement>(null);
 
@@ -83,9 +92,9 @@ export default function AudioPlayer({ src, title, duration: durationHint }: Audi
     return (
       <div style={styles.placeholder} role="region" aria-label={title}>
         <span style={styles.placeholderBracket}>[ &mdash; ]</span>
-        <span style={styles.placeholderText}>AUDIO PR&Oacute;XIMAMENTE</span>
+        <span style={styles.placeholderText}>{labels.coming}</span>
         <span style={styles.placeholderDot}>&middot;</span>
-        <span style={styles.placeholderCaption}>Voz de la artista sobre esta obra</span>
+        <span style={styles.placeholderCaption}>{labels.voice}</span>
       </div>
     );
   }
@@ -95,7 +104,7 @@ export default function AudioPlayer({ src, title, duration: durationHint }: Audi
     <div
       style={styles.container}
       role="region"
-      aria-label={`Reproductor de audio: ${title}`}
+      aria-label={`${labels.player}: ${title}`}
     >
       {src && (
         <audio
@@ -114,7 +123,7 @@ export default function AudioPlayer({ src, title, duration: durationHint }: Audi
         onClick={togglePlay}
         onKeyDown={handleKeyDown}
         style={styles.button}
-        aria-label={isPlaying ? 'Pausar' : 'Reproducir'}
+        aria-label={isPlaying ? labels.pause : labels.play}
         type="button"
       >
         {isPlaying ? '[ PAUSE ]' : '[ PLAY ]'}
@@ -129,7 +138,7 @@ export default function AudioPlayer({ src, title, duration: durationHint }: Audi
         onClick={handleSeek}
         style={styles.progressContainer}
         role="slider"
-        aria-label="Progreso del audio"
+        aria-label={labels.progress}
         aria-valuemin={0}
         aria-valuemax={100}
         aria-valuenow={Math.round(progressPercent)}
