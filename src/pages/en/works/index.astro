@@ -17,16 +17,25 @@ const imgCaminantes = (await import('../../../assets/images/obras/las-caminantes
 const imgDispositivos = (await import('../../../assets/images/obras/dispositivos/dispositivos-01.jpg')).default;
 const imgFertilSuelo = (await import('../../../assets/images/obras/fertil-suelo/fertil-suelo-01.jpg')).default;
 const imgVersalles = (await import('../../../assets/images/obras/nuevas-floras-versalles/versalles-01.jpg')).default;
+const imgDoSul = (await import('../../../assets/images/obras/nuevas-floras-do-sul/do-sul-01.jpg')).default;
+const imgTravesia = (await import('../../../assets/images/obras/la-travesia/travesia-01.jpg')).default;
+const imgCauca = (await import('../../../assets/images/obras/precipitaciones-cauca/cauca-01.jpg')).default;
 
 const works = [
   { slug: 'in-vitro', title: 'In Vitro', year: '1997', image: imgInVitro },
+  { slug: 'escenas-de-caza', title: 'Escenas de caza', year: '2000', image: null },
   { slug: 'el-reino-de-este-mundo', title: 'El reino de este mundo', year: '2000', image: imgElReino },
   { slug: 'in-memoriam', title: 'In Memoriam', year: '2001', image: imgInMemoriam },
   { slug: 'desde-adentro', title: 'Desde Adentro', year: '2003', image: imgDesdeAdentro },
   { slug: 'nuevas-floras', title: 'Nuevas Floras', year: '2003', image: imgNuevasFloras },
+  { slug: 'nuevas-floras-do-sul', title: 'Nuevas Floras do Sul', year: '2011', image: imgDoSul },
+  { slug: 'la-herida', title: 'La herida', year: '2006', image: null },
   { slug: 'en-estado-de-coma', title: 'En estado de coma', year: '2005–2007', image: imgComa },
+  { slug: 'precipitaciones-cauca', title: 'Precipitaciones del río Cauca', year: '2008–2009', image: imgCauca },
+  { slug: 'urgencias', title: 'Urgencias', year: '2012', image: null },
   { slug: 'aerolito', title: 'Pequeño Museo del Aerolito', year: '2014–2015', image: imgAerolito },
   { slug: 'nuevas-floras-versalles', title: 'Nuevas Floras Versalles', year: '2017', image: imgVersalles },
+  { slug: 'la-travesia', title: 'La travesía', year: '2017–2024', image: imgTravesia },
   { slug: 'en-el-fertil-suelo', title: 'En el fértil suelo', year: '2017–2018', image: imgFertilSuelo },
   { slug: 'dispositivos-para-ver-pasar-el-tiempo', title: 'Dispositivos para ver pasar el tiempo', year: '2020', image: imgDispositivos },
   { slug: 'encuentros-con-seres-notables', title: 'Encuentros con seres notables', year: '2022', image: imgEncuentros },
