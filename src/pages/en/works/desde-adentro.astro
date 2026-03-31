@@ -1,5 +1,7 @@
 ---
 import Layout from '../../../components/layout/Layout.astro';
+import AudioPlayer from '../../../components/interactive/AudioPlayer';
+import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
 
 const lang = 'en' as const;
 const title = 'Desde Adentro';
@@ -7,6 +9,12 @@ const title = 'Desde Adentro';
 const img1 = (await import('../../../assets/images/obras/desde-adentro/desde-adentro-01.jpg')).default;
 const img2 = (await import('../../../assets/images/obras/desde-adentro/desde-adentro-02.jpg')).default;
 const img3 = (await import('../../../assets/images/obras/desde-adentro/desde-adentro-03.jpg')).default;
+const img4 = (await import('../../../assets/images/obras/desde-adentro/port-067.jpg')).default;
+const img5 = (await import('../../../assets/images/obras/desde-adentro/port-069.jpg')).default;
+const img6 = (await import('../../../assets/images/obras/desde-adentro/port-073.jpg')).default;
+const img7 = (await import('../../../assets/images/obras/desde-adentro/port-076.jpg')).default;
+const img8 = (await import('../../../assets/images/obras/desde-adentro/port-079.jpg')).default;
+const img9 = (await import('../../../assets/images/obras/desde-adentro/port-080.jpg')).default;
 ---
 
 <Layout
@@ -14,6 +22,16 @@ const img3 = (await import('../../../assets/images/obras/desde-adentro/desde-ade
   title="Desde Adentro — Work"
   description="Desde Adentro (2003). 12 C-type photographs, 12-hour video installation. Documentation of the Club El Nogal attack. Maria Elvira Escallon."
 >
+
+  <ArtworkSchema
+    title="Desde Adentro"
+    year="2003"
+    medium="12 C-type photographs, 12-hour video installation"
+    dimensions="89 x 123 cm (photographs), edition of 5"
+    description="Photographic and video documentation of the aftermath of the attack on Club El Nogal, Bogota. The traces of absent people and missing objects transport the viewer to lived moments."
+    url="https://mariaelviraescallon.com/en/works/desde-adentro/"
+    collections={["Art Gallery of New South Wales, Sydney", "Banco de la Republica, Bogota"]}
+  />
 
   <article class="work-page">
     <div class="container">
@@ -30,6 +48,17 @@ const img3 = (await import('../../../assets/images/obras/desde-adentro/desde-ade
         <img src={img1.src} alt="Desde Adentro — Photographic documentation of the interior of Club El Nogal after the attack" loading="eager">
         <img src={img2.src} alt="Desde Adentro — Traces and marks on ash-covered surfaces" loading="lazy">
         <img src={img3.src} alt="Desde Adentro — Detail of everyday objects after the explosion" loading="lazy">
+        <img src={img4.src} alt="Desde Adentro — Impressions on ash-covered surfaces" loading="lazy">
+        <img src={img5.src} alt="Desde Adentro — Traces and silhouettes of missing objects" loading="lazy">
+        <img src={img6.src} alt="Desde Adentro — Handprints on soot-covered walls" loading="lazy">
+        <img src={img7.src} alt="Desde Adentro — Stairs and hallways after the attack" loading="lazy">
+        <img src={img8.src} alt="Desde Adentro — Outlines of removed paintings on the wall" loading="lazy">
+        <img src={img9.src} alt="Desde Adentro — Photographic record of the interior destruction" loading="lazy">
+      </div>
+
+      <!-- Audio -->
+      <div style="margin: var(--s3) 0;">
+        <AudioPlayer client:visible title="Maria Elvira on Desde Adentro" />
       </div>
 
       <!-- Text + Technical sheet -->
@@ -41,7 +70,7 @@ const img3 = (await import('../../../assets/images/obras/desde-adentro/desde-ade
             Escallon — who served as the club's Cultural Director — documented the
             aftermath in 12 photographs and a 12-hour video. The traces of absent people
             and missing objects transport the viewer to lived moments, despite arriving
-            'late to the scene of facts.'
+            "tarde a la escena de los hechos" [late to the scene of the events].
           </p>
 
           <p class="curatorial" style="margin-top: var(--s2);">
@@ -77,10 +106,10 @@ const img3 = (await import('../../../assets/images/obras/desde-adentro/desde-ade
           </p>
           <p style="margin-top: var(--s2);">
             <em>Desde Adentro</em> consolidated Escallon's practice around the arrival
-            'late to the scene of facts' — a position that would recur in later works
-            such as <em>En estado de coma</em> — where the artist does not document the
-            event itself but its consequences, the traces that remain when everything
-            else has disappeared.
+            "tarde a la escena de los hechos" [late to the scene of the events] — a position
+            that would recur in later works such as <em>En estado de coma</em> — where the
+            artist does not document the event itself but its consequences, the traces that
+            remain when everything else has disappeared.
           </p>
         </div>
 
@@ -110,8 +139,8 @@ const img3 = (await import('../../../assets/images/obras/desde-adentro/desde-ade
 
           <h4 style="margin-top: var(--s3);">TEXTS</h4>
           <div class="ficha">
-            <a href="/maria-elvira-escallon/es/textos/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">
-              Related texts (ES)
+            <a href="/maria-elvira-escallon/en/texts/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">
+              Related texts
             </a>
           </div>
 

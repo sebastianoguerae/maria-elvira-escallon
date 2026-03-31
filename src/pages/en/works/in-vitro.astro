@@ -1,11 +1,17 @@
 ---
 import Layout from '../../../components/layout/Layout.astro';
+import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
 import QuoteBlock from '../../../components/content/QuoteBlock.astro';
+import AudioPlayer from '../../../components/interactive/AudioPlayer';
 
 const lang = 'en' as const;
 const title = 'In Vitro';
 
 const img1 = (await import('../../../assets/images/obras/in-vitro/in-vitro-01.jpg')).default;
+const img2 = (await import('../../../assets/images/obras/in-vitro/in-vitro-piso.jpg')).default;
+const img3 = (await import('../../../assets/images/obras/in-vitro/port-000.jpg')).default;
+const img4 = (await import('../../../assets/images/obras/in-vitro/port-001.jpg')).default;
+const img5 = (await import('../../../assets/images/obras/in-vitro/port-002.jpg')).default;
 ---
 
 <Layout
@@ -13,6 +19,15 @@ const img1 = (await import('../../../assets/images/obras/in-vitro/in-vitro-01.jp
   title="In Vitro — Work"
   description="In Vitro (1997). Installation — mirror, glass. La Sabana Station, Bogota. 1st Prize, VIII Regional Artists' Salon. Maria Elvira Escallon."
 >
+
+
+  <ArtworkSchema
+    title="In Vitro"
+    year="1997"
+    medium="Installation, mirror"
+    description="Site-specific intervention at La Sabana Station, Bogota. A 30-meter mirror that reflected the deterioration of the historic building."
+    url="https://mariaelviraescallon.com/en/works/in-vitro/"
+  />
 
   <article class="work-page">
     <div class="container">
@@ -27,8 +42,15 @@ const img1 = (await import('../../../assets/images/obras/in-vitro/in-vitro-01.jp
       <!-- Main gallery -->
       <div class="work-page__gallery">
         <img src={img1.src} alt="In Vitro — Mirror installation at La Sabana Station, Bogota" loading="eager">
-        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pending: In Vitro — View of mirror duplicating the renovated space ]</div>
-        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pending: In Vitro — Detail of the boundary between renovated and ruined areas ]</div>
+        <img src={img2.src} alt="In Vitro — Detail of the floor and reflection in the mirror" loading="lazy">
+        <img src={img3.src} alt="In Vitro — View of the renovated corridor duplicated by the mirror" loading="lazy">
+        <img src={img4.src} alt="In Vitro — Boundary between the renovated section and the hidden deterioration" loading="lazy">
+        <img src={img5.src} alt="In Vitro — The illusion of spatial continuity created by the mirror" loading="lazy">
+      </div>
+
+      <!-- Audio -->
+      <div style="margin: var(--s3) 0;">
+        <AudioPlayer client:visible title="Maria Elvira on In Vitro" />
       </div>
 
       <!-- Text + Technical sheet -->
@@ -38,14 +60,15 @@ const img1 = (await import('../../../assets/images/obras/in-vitro/in-vitro-01.jp
           <p class="curatorial">
             In the corridors of La Sabana Station, Escallon installed a mirror at the
             boundary between the renovated building and the deteriorated area, blocking
-            the vision of decay and duplicating the renovated section. The mirror established
-            a limit that conceals the evidence of state neglect toward a heritage building
-            in ruins. The illusion created suggests a spatial continuity where none exists.
+            the view of the decay and duplicating the renovated section. The mirror
+            established a limit that conceals the evidence of state neglect toward a
+            heritage building in ruins. The illusion created suggests a spatial continuity
+            where none exists.
           </p>
 
           <QuoteBlock
             annotation="Curatorial text — Jose Roca"
-            quote="'In Vitro' highlighted by contrast the deterioration that neglect and oblivion had meant for the site, but in doing so also revealed the artificiality of the cosmetic adequation of the space."
+            quote="'In Vitro' resaltaba por contraste el deterioro que la desidia y el olvido habían significado para el sitio, pero al hacerlo también evidenciaba la artificialidad de la adecuación cosmética del espacio. (Translation: 'In Vitro' highlighted by contrast the deterioration that neglect and oblivion had meant for the site, but in doing so it also revealed the artificiality of the cosmetic adaptation of the space.)"
             cite="Jose Roca — Columna de Arena 28, July 2000"
           />
 

@@ -1,15 +1,34 @@
 ---
 import Layout from '../../../components/layout/Layout.astro';
+import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
 
 const lang = 'en' as const;
-const title = 'En el Fertil Suelo';
+const title = 'En el fertil suelo — La travesia';
+
+const img1 = (await import('../../../assets/images/obras/fertil-suelo/port-162.jpg')).default;
+const img2 = (await import('../../../assets/images/obras/fertil-suelo/port-164.jpg')).default;
+const img3 = (await import('../../../assets/images/obras/fertil-suelo/port-165.jpg')).default;
+const img4 = (await import('../../../assets/images/obras/fertil-suelo/port-167.jpg')).default;
+const img5 = (await import('../../../assets/images/obras/fertil-suelo/port-169.jpg')).default;
+const img6 = (await import('../../../assets/images/obras/fertil-suelo/port-170.jpg')).default;
+const img7 = (await import('../../../assets/images/obras/fertil-suelo/port-172.jpg')).default;
+const img8 = (await import('../../../assets/images/obras/fertil-suelo/port-173.jpg')).default;
 ---
 
 <Layout
   lang={lang}
-  title="En el Fertil Suelo — Work"
-  description="En el Fertil Suelo (2017–2018). Video, sculpture. X Premio Luis Caballero. Inspired by Homer's Iliad. Maria Elvira Escallon."
+  title="En el fertil suelo — Work"
+  description="En el fertil suelo — La travesia (2017–2018). Video, sculpture. X Premio Luis Caballero nomination. Maria Elvira Escallon."
 >
+
+
+  <ArtworkSchema
+    title="En el fertil suelo"
+    year="2017–2018"
+    medium="Video, sculpture"
+    description="Installation for the X Premio Luis Caballero. Sand accumulating in a domestic space."
+    url="https://mariaelviraescallon.com/en/works/en-el-fertil-suelo/"
+  />
 
   <article class="work-page">
     <div class="container">
@@ -18,14 +37,19 @@ const title = 'En el Fertil Suelo';
       <header class="work-page__header">
         <p class="label">Work / 008</p>
         <h1>{title}</h1>
-        <p class="work-page__meta">2017–2018 &nbsp;/&nbsp; Video, sculpture &nbsp;/&nbsp; X Premio Luis Caballero</p>
+        <p class="work-page__meta">2017–2018 &nbsp;/&nbsp; Video, sculpture &nbsp;/&nbsp; Variable dimensions</p>
       </header>
 
       <!-- Main gallery -->
       <div class="work-page__gallery">
-        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pending: En el Fertil Suelo — Video still, two figures meeting ]</div>
-        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pending: En el Fertil Suelo — Sculptural element, installation view ]</div>
-        <div class="placeholder-img" style="aspect-ratio:16/10;">[ Pending: En el Fertil Suelo — Installation view at Galeria Santa Fe ]</div>
+        <img src={img1.src} alt="En el fertil suelo — General view of the sculptural installation" loading="eager">
+        <img src={img2.src} alt="En el fertil suelo — Detail of the sculptural figures" loading="lazy">
+        <img src={img3.src} alt="En el fertil suelo — Characters advancing together after the war" loading="lazy">
+        <img src={img4.src} alt="En el fertil suelo — Light installation at Galeria Santa Fe" loading="lazy">
+        <img src={img5.src} alt="En el fertil suelo — Detail of projected shadows" loading="lazy">
+        <img src={img6.src} alt="En el fertil suelo — Side view of the sculpture" loading="lazy">
+        <img src={img7.src} alt="En el fertil suelo — Sound installation, detail" loading="lazy">
+        <img src={img8.src} alt="En el fertil suelo — View of the work in exhibition context" loading="lazy">
       </div>
 
       <!-- Text + Technical sheet -->
@@ -33,69 +57,72 @@ const title = 'En el Fertil Suelo';
         <div class="work-page__text">
 
           <p class="curatorial">
-            Inspired by Homer's <em>Iliad</em> — the passage where Achaeans and Trojans,
-            after ten years of war, decide to lay down their arms — the work presents two
-            characters who have found each other to move forward. The piece draws a parallel
-            between the ancient epic and Colombia's contemporary moment, exploring the
-            possibility of encounter after prolonged conflict.
+            Inspired by Homer's <em>Iliad</em> — specifically the passage in which Achaeans
+            and Trojans, after ten years of war, decide to lay down their arms on the
+            battlefield — the work presents two characters who, despite enormous impediments,
+            have found each other in order to move forward.
           </p>
 
           <p class="curatorial" style="margin-top: var(--s2);">
-            The title, <em>En el Fertil Suelo</em> (In the Fertile Soil), evokes the
-            potential for renewal that lies in the aftermath of destruction — a ground
-            made fertile not despite but because of what has transpired upon it. Through
-            video and sculpture, Escallon constructs a space where reconciliation is not
-            a conclusion but a gesture, tentative and ongoing.
+            The artist perceives them as "antiguos adversarios que regresan de la guerra y
+            emprenden un viaje que con frecuencia se lleva a cabo en soledad y hacia la
+            incertidumbre." The work relates this historical moment of vulnerability between
+            former enemies to the contemporary sociopolitical context of Colombia and its
+            peace process.
           </p>
 
           <p class="curatorial" style="margin-top: var(--s2);">
-            The work was created during Colombia's post-peace accord period, following the
-            2016 agreement between the government and the FARC. This historical context
-            gives the Homeric reference a particular urgency — the question of whether
-            enemies can truly lay down their arms resonates beyond literary allusion into
-            the lived reality of a society attempting to imagine itself after war.
+            The project includes light and sound installations that explore "la enredada
+            administracion de justicia en la Colombia contemporanea," using sensory elements
+            — sounds, shadows, footsteps — rather than directly representing the protagonists.
           </p>
 
           <h3 style="margin-top: var(--s4);">CONTEXT</h3>
           <p style="margin-top: var(--s2);">
-            <em>En el Fertil Suelo</em> was presented as part of the X Premio Luis Caballero,
-            one of Colombia's most prestigious art prizes. The work continues Escallon's
-            long engagement with the consequences of violence and the material and symbolic
-            traces left by conflict — themes present in earlier works such as <em>Desde
-            Adentro</em> and <em>En Estado de Coma</em>.
+            Created during the period following Colombia's peace agreement (signed in 2016),
+            the work addresses the difficult transition from conflict to coexistence without
+            being literal. The Homeric reference allows Escallon to speak about the present
+            through antiquity, finding in the Greek epic a mirror for the Colombian moment.
           </p>
           <p style="margin-top: var(--s2);">
-            The peace accord signed in 2016 between the Colombian government and the FARC
-            guerrilla marked a turning point in over fifty years of armed conflict. Escallon's
-            response avoids direct political commentary, instead offering a poetic meditation
-            on the possibility — and difficulty — of encounter between those who have been
-            adversaries.
+            The title itself — <em>En el fertil suelo</em> — evokes both Colombian soil and the
+            battlefield where arms are laid down, establishing a tension between fertility and
+            destruction, between what grows and what has been devastated.
           </p>
+
         </div>
 
         <aside class="work-page__ficha">
           <h4>TECHNICAL SHEET</h4>
           <div class="ficha">
-            <strong>En el Fertil Suelo</strong><br>
+            <strong>En el fertil suelo — La travesia</strong><br>
             2017–2018<br><br>
-            Video, sculpture.<br><br>
+            Video, sculpture.<br>
+            Light and sound installations.<br>
             Variable dimensions
           </div>
 
           <h4 style="margin-top: var(--s3);">AWARDS</h4>
           <div class="ficha">
-            X Premio Luis Caballero<br>
-            Galeria Santa Fe, Bogota, 2017–2018
+            X Premio Luis Caballero nomination<br>
+            IDARTES, 2018
           </div>
 
           <h4 style="margin-top: var(--s3);">EXHIBITIONS</h4>
           <div class="ficha">
-            X Premio Luis Caballero — Galeria Santa Fe, 2017–2018
+            MAMBO, Bogota, 2019<br>
+            X Premio Luis Caballero — Galeria Santa Fe, Bogota, 2018
+          </div>
+
+          <h4 style="margin-top: var(--s3);">LOCATION</h4>
+          <div class="ficha">
+            Galeria Santa Fe, Bogota (X Premio Luis Caballero)<br>
+            MAMBO, Bogota, 2019
           </div>
 
           <h4 style="margin-top: var(--s3);">HOW TO CITE</h4>
           <div class="ficha" style="font-size: 0.65rem;">
-            Escallon, M.E. (2017–2018). <em>En el Fertil Suelo</em>.
+            Escallon, M.E. (2017–2018). <em>En el fertil suelo — La travesia</em>.
             Video, sculpture. Available at:
             mariaelviraescallon.com/en/works/en-el-fertil-suelo/
           </div>

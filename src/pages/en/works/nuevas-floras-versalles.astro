@@ -11,7 +11,7 @@ const img2 = (await import('../../../assets/images/obras/nuevas-floras-versalles
 
 <Layout
   lang={lang}
-  title="Nuevas Floras Versalles — Works"
+  title="Nuevas Floras Versalles — Work"
   description="Nuevas Floras Versalles (2017). Sculptural intervention on trees at the Arboretum de Chevreloup and Jardin des Tuileries (FIAC), France. Maria Elvira Escallon."
 >
 
@@ -26,17 +26,20 @@ const img2 = (await import('../../../assets/images/obras/nuevas-floras-versalles
   <article class="work-page">
     <div class="container">
 
+      <!-- Header -->
       <header class="work-page__header">
-        <p class="label">Works / 005b</p>
+        <p class="label">Work / 005b</p>
         <h1>{title}</h1>
         <p class="work-page__meta">2017 &nbsp;/&nbsp; Sculptural intervention on trees &nbsp;/&nbsp; Arboretum de Chevreloup &amp; Jardin des Tuileries, France</p>
       </header>
 
+      <!-- Gallery -->
       <div class="work-page__gallery">
         <img src={img1.src} alt="Nuevas Floras Versalles — Intervention at the Jardin des Tuileries, FIAC 2017" loading="eager">
         <img src={img2.src} alt="Nuevas Floras Versalles — Baroque carving at the Arboretum de Chevreloup" loading="lazy">
       </div>
 
+      <!-- Text + Technical sheet -->
       <div class="work-page__body">
         <div class="work-page__text">
 
@@ -48,11 +51,17 @@ const img2 = (await import('../../../assets/images/obras/nuevas-floras-versalles
 
           <p class="curatorial" style="margin-top: var(--s2);">
             This version responds to the specificities of the French landscape and history —
-            a dialogue between baroque carved forms and the formal gardens of the European
-            landscape tradition. Unlike the Colombian version, where the carvings dialogue
-            with colonial baroque, in Versailles the work is situated at the heart of the
-            tradition that originated that same ornamental repertoire — closing a cycle between
-            the European source and its Latin American reinterpretation.
+            a dialogue between the carved baroque forms and the formal gardens of the European
+            landscape tradition. The Arboretum de Chevreloup, with its collection of more than
+            2,500 tree species, offers a context in which Escallon's intervention enters into
+            direct conversation with centuries of human manipulation of nature.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            Unlike the Colombian version, where the carvings dialogue with colonial baroque,
+            in Versailles the work is situated at the heart of the tradition that originated
+            that same ornamental repertoire — closing a cycle between the European source and
+            its reinterpretation in the Latin American context.
           </p>
 
           <h3 style="margin-top: var(--s4);">ORIGINAL WORK</h3>
@@ -64,7 +73,7 @@ const img2 = (await import('../../../assets/images/obras/nuevas-floras-versalles
         </div>
 
         <aside class="work-page__ficha">
-          <h4>TECHNICAL DETAILS</h4>
+          <h4>TECHNICAL SHEET</h4>
           <div class="ficha">
             <strong>Nuevas Floras Versalles</strong><br>
             2017<br><br>
@@ -79,6 +88,13 @@ const img2 = (await import('../../../assets/images/obras/nuevas-floras-versalles
             Arboretum de Chevreloup, Versailles<br>
             Jardin des Tuileries, FIAC, Paris<br>
             France, 2017
+          </div>
+
+          <h4 style="margin-top: var(--s3);">EXHIBITION</h4>
+          <div class="ficha">
+            <a href="/maria-elvira-escallon/en/exhibitions/nuevas-floras-versalles-2017/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">
+              Nuevas Floras Versalles (2017)
+            </a>
           </div>
         </aside>
       </div>

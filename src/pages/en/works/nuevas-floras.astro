@@ -1,7 +1,7 @@
 ---
 import Layout from '../../../components/layout/Layout.astro';
 import QuoteBlock from '../../../components/content/QuoteBlock.astro';
-import BeforeAfterComparator from '../../../components/interactive/BeforeAfterComparator';
+import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
 
 const lang = 'en' as const;
 const title = 'Nuevas Floras';
@@ -9,14 +9,27 @@ const title = 'Nuevas Floras';
 const img1 = (await import('../../../assets/images/obras/nuevas-floras/nuevas-floras-01.jpg')).default;
 const img2 = (await import('../../../assets/images/obras/nuevas-floras/nuevas-floras-02.jpg')).default;
 const img5 = (await import('../../../assets/images/obras/nuevas-floras/nuevas-floras-tocones.jpg')).default;
+const img6 = (await import('../../../assets/images/obras/nuevas-floras/nuevas-floras-bosque.jpg')).default;
+const img8 = (await import('../../../assets/images/obras/nuevas-floras/port-013.jpg')).default;
+const img9 = (await import('../../../assets/images/obras/nuevas-floras/port-020.jpg')).default;
 const img10 = (await import('../../../assets/images/obras/nuevas-floras/port-019.jpg')).default;
 ---
 
 <Layout
   lang={lang}
   title="Nuevas Floras — Work"
-  description="Nuevas Floras (2003–2007). Sculptural intervention on native trees. III Luis Caballero Prize. Maria Elvira Escallon."
+  description="Nuevas Floras (2003). Sculptural intervention on living native trees. III Luis Caballero Prize. Maria Elvira Escallon."
 >
+
+  <ArtworkSchema
+    title="Nuevas Floras"
+    year="2003"
+    medium="Sculptural intervention on living native trees, chromogenic photograph"
+    dimensions="120 × 80 cm (photographs)"
+    description="Intervention on living native trees with baroque carvings. III Luis Caballero Prize, Galeria Santa Fe, Bogota."
+    url="https://mariaelviraescallon.com/en/works/nuevas-floras/"
+    collections={["Banco de la Republica, Bogota", "ESCALA, University of Essex, UK", "Seguros Bolivar Collection"]}
+  />
 
   <article class="work-page">
     <div class="container">
@@ -25,25 +38,18 @@ const img10 = (await import('../../../assets/images/obras/nuevas-floras/port-019
       <header class="work-page__header">
         <p class="label">Work / 005</p>
         <h1>{title}</h1>
-        <p class="work-page__meta">2003 &nbsp;/&nbsp; Sculptural intervention on native trees &nbsp;/&nbsp; Variable dimensions</p>
+        <p class="work-page__meta">2003 &nbsp;/&nbsp; Sculptural intervention on living native trees &nbsp;/&nbsp; Variable dimensions</p>
       </header>
 
       <!-- Main gallery -->
       <div class="work-page__gallery">
         <img src={img1.src} alt="Nuevas Floras — Tree intervened with baroque carving, photographic series" loading="eager">
         <img src={img10.src} alt="Nuevas Floras — Detail of scale pattern carving on live bark" loading="lazy">
-        <img src={img2.src} alt="Nuevas Floras — Detail of bark reclaiming the carving over the years" loading="lazy">
+        <img src={img2.src} alt="Nuevas Floras — The bark reclaiming the carving over the years" loading="lazy">
         <img src={img5.src} alt="Nuevas Floras — Tree stumps intervened with baroque carving" loading="lazy">
-      </div>
-
-      <!-- Temporal comparator -->
-      <hr class="rule--dashed" style="margin: var(--s4) 0;">
-      <div style="margin-bottom: var(--s4);">
-        <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: var(--s3); padding-bottom: var(--s1); border-bottom: 1px solid var(--ink);">
-          <h3 style="font-family: var(--mono); font-size: 0.85rem; font-weight: 400; text-transform: uppercase; letter-spacing: 0.05em;">TEMPORAL COMPARATOR</h3>
-          <span class="label">The tree responds to the intervention</span>
-        </div>
-        <BeforeAfterComparator client:visible beforeLabel="2003 — Intervention" afterLabel="2020 — The bark reclaims" title="Nuevas Floras — Temporal Transformation" />
+        <img src={img6.src} alt="Nuevas Floras — View of intervened trees in the forest" loading="lazy">
+        <img src={img8.src} alt="Nuevas Floras — Detail of baroque carving on live bark" loading="lazy">
+        <img src={img9.src} alt="Nuevas Floras — Temporal record: intervention and bark reclaiming" loading="lazy">
       </div>
 
       <!-- Text + Technical sheet -->
@@ -60,24 +66,28 @@ const img10 = (await import('../../../assets/images/obras/nuevas-floras/port-019
           <p class="curatorial" style="margin-top: var(--s2);">
             In a second moment, the arboreal beings respond to the action by interrupting the
             intervention, until making it almost imperceptible. Her practice creates a space where
-            the 'wild' and the managed converge in time, where nature and culture are inextricably
+            the "wild" and the managed converge in time, where nature and culture are inextricably
             bound. The artist continues photographing these trees as they grow, making them active
             participants in the work.
           </p>
 
           <p class="curatorial" style="margin-top: var(--s2);">
-            The series presents as large-format chromogenic photographs (120 x 80 cm) taken
-            immediately after completing the intervention. Since 2004, the project became a nomadic
-            proposal responding to the specificities of culture-nature relationships at each site,
-            with versions carried out in Colombia, the United Kingdom (Bristol), and France
-            (Versailles and Chevreloup).
+            <em>Nuevas Floras</em> is presented as a series of large-format chromogenic photographs
+            (120 x 80 cm) taken immediately after completing the intervention. The carvings made on
+            the trees evoke forms from the Colombian colonial ornamental repertoire — Solomonic
+            columns, volutes, elements of baroque altarpieces — creating a tension between the
+            imposed cultural history and the organic response of the living being that absorbs and
+            transforms it.
           </p>
 
           <QuoteBlock
-            annotation="Curatorial text — Jose Roca"
-            quote="Escallon's work aims to disturb the naturalness of that order. <em>Nuevas Floras</em> possesses two fundamental aspects: its nomadic character — because the idea from which it departs can be developed in other spaces — and the concept of temporality — because its duration is indefinite."
+            annotation="Curatorial text — Jose Roca (original in Spanish)"
+            quote="La obra de Escallon se encamina a perturbar la naturalidad de ese orden. <em>Nuevas Floras</em> posee dos aspectos fundamentales: su caracter nomada — porque la idea de la que parte puede desarrollarse en otros espacios — y el concepto de temporalidad — porque su duracion es indefinida."
             cite="Jose Roca — Columna de Arena 53, August 2003"
           />
+          <p style="margin-top: var(--s1); font-size: 0.75rem; color: var(--ink-light); font-style: italic;">
+            [Translation: Escallon's work aims to disturb the naturalness of that order. <em>Nuevas Floras</em> possesses two fundamental aspects: its nomadic character — because the idea from which it departs can be developed in other spaces — and the concept of temporality — because its duration is indefinite.]
+          </p>
 
           <h3 style="margin-top: var(--s4);">CONTEXT</h3>
           <p style="margin-top: var(--s2);">
@@ -86,14 +96,6 @@ const img10 = (await import('../../../assets/images/obras/nuevas-floras/port-019
             composed of curator Jose Roca among others, highlighted the way in which
             the work questions the boundaries between the natural and the cultural — a
             constant in the artist's trajectory.
-          </p>
-          <p style="margin-top: var(--s2);">
-            The carvings made on the trees evoke forms from the Colombian colonial
-            ornamental repertoire — Solomonic columns, volutes, elements of baroque
-            altarpieces — creating a tension between the imposed cultural history
-            and the organic response of the living being that absorbs and transforms it.
-            Over the years, the bark reclaims the carvings, deforms them, integrates
-            them, or makes them disappear.
           </p>
 
           <h3 style="margin-top: var(--s4);">RELATED WORKS</h3>
@@ -108,11 +110,11 @@ const img10 = (await import('../../../assets/images/obras/nuevas-floras/port-019
           <h4>TECHNICAL SHEET</h4>
           <div class="ficha">
             <strong>Nuevas Floras</strong><br>
-            2003–2007 (ongoing)<br><br>
+            2003<br><br>
             Sculptural intervention on living native trees.
             Wood carving, prostheses.<br>
             Documentation: chromogenic photograph.<br><br>
-            120 x 80 cm (photographs)<br>
+            120 × 80 cm (photographs)<br>
             Edition of 5<br>
             Variable dimensions (interventions)
           </div>
@@ -130,28 +132,11 @@ const img10 = (await import('../../../assets/images/obras/nuevas-floras/port-019
             Seguros Bolivar Collection
           </div>
 
-          <h4 style="margin-top: var(--s3);">EXHIBITIONS</h4>
-          <div class="ficha">
-            Encounters in the Dust Factory — MAMU, 2024<br>
-            Nuevas Floras Versailles — FIAC/Tuileries, 2017<br>
-            III Luis Caballero Prize — Galeria Santa Fe, 2003
-          </div>
-
           <h4 style="margin-top: var(--s3);">TEXTS</h4>
           <div class="ficha">
             <a href="/maria-elvira-escallon/es/textos/jose-roca-columna-arena-53/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">
-              Jose Roca, Columna de Arena 53 (2003) (ES)
-            </a><br>
-            <a href="/maria-elvira-escallon/es/publicaciones/coleccion-seguros-bolivar/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">
-              Seguros Bolivar Monograph (2018) (ES)
+              Jose Roca, Columna de Arena 53 (2003)
             </a>
-          </div>
-
-          <h4 style="margin-top: var(--s3);">HOW TO CITE</h4>
-          <div class="ficha" style="font-size: 0.65rem;">
-            Escallon, M.E. (2003–). <em>Nuevas Floras</em>.
-            Sculptural intervention. Available at:
-            mariaelviraescallon.com/en/works/nuevas-floras/
           </div>
         </aside>
       </div>
@@ -160,8 +145,3 @@ const img10 = (await import('../../../assets/images/obras/nuevas-floras/port-019
   </article>
 
 </Layout>
-
-<style>
-  @media (max-width: 768px) {
-    }
-</style>

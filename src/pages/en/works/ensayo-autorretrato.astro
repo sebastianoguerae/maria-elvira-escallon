@@ -1,15 +1,33 @@
 ---
 import Layout from '../../../components/layout/Layout.astro';
+import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
 
 const lang = 'en' as const;
-const title = 'Ensayo Autorretrato';
+const title = 'Ensayo autorretrato';
+
+const img1 = (await import('../../../assets/images/obras/ensayo-autorretrato/ensayo-01.jpg')).default;
+const img2 = (await import('../../../assets/images/obras/ensayo-autorretrato/port-061.jpg')).default;
+const img3 = (await import('../../../assets/images/obras/ensayo-autorretrato/port-062.jpg')).default;
+const img4 = (await import('../../../assets/images/obras/ensayo-autorretrato/port-063.jpg')).default;
+const img5 = (await import('../../../assets/images/obras/ensayo-autorretrato/port-064.jpg')).default;
+const img6 = (await import('../../../assets/images/obras/ensayo-autorretrato/port-065.jpg')).default;
+const img7 = (await import('../../../assets/images/obras/ensayo-autorretrato/port-066.jpg')).default;
 ---
 
 <Layout
   lang={lang}
-  title="Ensayo Autorretrato — Work"
-  description="Ensayo Autorretrato (2022). Video, Espacio Continuo. The artist's hands search, scratch, destroy, and model. Maria Elvira Escallon."
+  title="Ensayo autorretrato — Work"
+  description="Ensayo autorretrato (2022). Video. Maria Elvira Escallon."
 >
+
+
+  <ArtworkSchema
+    title="Ensayo autorretrato"
+    year="2022"
+    medium="Video"
+    description="Autobiographical video-essay presented at Galeria Espacio Continuo."
+    url="https://mariaelviraescallon.com/en/works/ensayo-autorretrato/"
+  />
 
   <article class="work-page">
     <div class="container">
@@ -18,14 +36,18 @@ const title = 'Ensayo Autorretrato';
       <header class="work-page__header">
         <p class="label">Work / 014</p>
         <h1>{title}</h1>
-        <p class="work-page__meta">2022 &nbsp;/&nbsp; Video &nbsp;/&nbsp; Espacio Continuo</p>
+        <p class="work-page__meta">2022 &nbsp;/&nbsp; Video &nbsp;/&nbsp; Galeria Espacio Continuo, Bogota</p>
       </header>
 
       <!-- Main gallery -->
       <div class="work-page__gallery">
-        <div class="placeholder-img" style="aspect-ratio:16/9;">[ Pending: Ensayo Autorretrato — Video still, hands searching a wall ]</div>
-        <div class="placeholder-img" style="aspect-ratio:16/9;">[ Pending: Ensayo Autorretrato — Video still, hands destroying Venus de Milo mask ]</div>
-        <div class="placeholder-img" style="aspect-ratio:16/9;">[ Pending: Ensayo Autorretrato — Video still, arm modeled connecting to frailejon ]</div>
+        <img src={img1.src} alt="Ensayo autorretrato — Video still, the artist's hands" loading="eager">
+        <img src={img2.src} alt="Ensayo autorretrato — Hands scratching the wall searching for a nail" loading="lazy">
+        <img src={img3.src} alt="Ensayo autorretrato — Destruction of a Venus de Milo mask" loading="lazy">
+        <img src={img4.src} alt="Ensayo autorretrato — Hands modeling an arm connected to a frailejon" loading="lazy">
+        <img src={img5.src} alt="Ensayo autorretrato — Face molds grated with a cheese grater" loading="lazy">
+        <img src={img6.src} alt="Ensayo autorretrato — Process of simultaneous destruction and creation" loading="lazy">
+        <img src={img7.src} alt="Ensayo autorretrato — Detail of the sculptural action of the hands" loading="lazy">
       </div>
 
       <!-- Text + Technical sheet -->
@@ -33,61 +55,46 @@ const title = 'Ensayo Autorretrato';
         <div class="work-page__text">
 
           <p class="curatorial">
-            In video, the artist's hands search a wall, scratch with their nails, find a
-            nail. In another sequence, her hands systematically destroy a Venus de Milo
-            mask, then model an arm connecting not to a shoulder but to a frailejon — a
-            plant of the Colombian paramos. The self-portrait is constructed not through
-            the face but through the hands — the instruments of the artist's practice.
+            In video, the artist's hands search for something on a wall, scratching with their
+            nails until they find a nail. In another sequence, her hands systematically destroy
+            a Venus de Milo mask with various mallets, and then model an arm that connects not
+            to a shoulder but to a frailejon — a plant of the Colombian paramos.
           </p>
 
           <p class="curatorial" style="margin-top: var(--s2);">
-            The title — <em>Ensayo Autorretrato</em> (Self-Portrait Essay) — signals both
-            an attempt and a literary form. This is not a definitive self-portrait but an
-            essay, a trial, an exploration. The video unfolds as a series of gestures that
-            reveal the artist's relationship to materials, surfaces, and the act of making
-            itself. To scratch, to find, to destroy, to model — these are the verbs of
-            Escallon's practice, distilled into their most elemental form.
-          </p>
-
-          <p class="curatorial" style="margin-top: var(--s2);">
-            The destruction of the Venus de Milo mask — an icon of classical Western beauty —
-            and the subsequent modeling of an arm that connects to a frailejon enact a
-            symbolic displacement: from European canonical beauty to Colombian highland
-            ecology, from the idealized human form to the hybrid human-vegetal body. The
-            frailejon, a plant endemic to the paramos of the Andes, becomes a surrogate for
-            the shoulder, suggesting that the artist's body extends into and is completed
-            by the landscape she inhabits.
+            The self-portrait is constructed not from the face but from the hands: hands that
+            extract, that destroy canons of beauty, that model the connection between the human
+            and the vegetal. The work uses molds that seek to recreate the artist's face, which
+            are grated with a cheese grater in a gesture that undoes conventional representation.
           </p>
 
           <h3 style="margin-top: var(--s4);">CONTEXT</h3>
           <p style="margin-top: var(--s2);">
-            Presented at Espacio Continuo in 2022, <em>Ensayo Autorretrato</em> is one of
-            Escallon's most explicitly personal works, yet it avoids conventional
-            self-portraiture entirely. The face never appears; identity is conveyed through
-            action rather than image. The work connects to <em>Encuentros con Seres
-            Notables</em> (also 2022) in its exploration of human-vegetal kinship, and
-            to the broader arc of Escallon's practice in its engagement with destruction
-            as a creative act.
+            <em>Ensayo autorretrato</em> is part of the exhibition "Encuentros con seres
+            notables" at Galeria Espacio Continuo (2022). The video works reveal Escallon's
+            process — the hands as sculptural agents, destroying and creating simultaneously.
+            The self-portrait is defined not by the representation of the face but by the action
+            of the hands: artistic identity as gesture, as process, as relationship with matter.
           </p>
         </div>
 
         <aside class="work-page__ficha">
           <h4>TECHNICAL SHEET</h4>
           <div class="ficha">
-            <strong>Ensayo Autorretrato</strong><br>
+            <strong>Ensayo autorretrato</strong><br>
             2022<br><br>
             Video.<br><br>
-            Espacio Continuo
+            Galeria Espacio Continuo, Bogota
           </div>
 
           <h4 style="margin-top: var(--s3);">EXHIBITIONS</h4>
           <div class="ficha">
-            Espacio Continuo, 2022
+            Encuentros con seres notables — Galeria Espacio Continuo, Bogota, 2022
           </div>
 
           <h4 style="margin-top: var(--s3);">HOW TO CITE</h4>
           <div class="ficha" style="font-size: 0.65rem;">
-            Escallon, M.E. (2022). <em>Ensayo Autorretrato</em>.
+            Escallon, M.E. (2022). <em>Ensayo autorretrato</em>.
             Video. Available at:
             mariaelviraescallon.com/en/works/ensayo-autorretrato/
           </div>
