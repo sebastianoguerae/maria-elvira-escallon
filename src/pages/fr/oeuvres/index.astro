@@ -4,136 +4,55 @@ import Layout from '../../../components/layout/Layout.astro';
 const lang = 'fr' as const;
 
 const imgInVitro = (await import('../../../assets/images/obras/in-vitro/in-vitro-01.jpg')).default;
+const imgElReino = (await import('../../../assets/images/obras/el-reino/el-reino-01.jpg')).default;
 const imgDesdeAdentro = (await import('../../../assets/images/obras/desde-adentro/desde-adentro-01.jpg')).default;
 const imgNuevasFloras = (await import('../../../assets/images/obras/nuevas-floras/nuevas-floras-01.jpg')).default;
+const imgComa = (await import('../../../assets/images/obras/en-estado-de-coma/coma-hospital-01.jpg')).default;
+const imgAerolito = (await import('../../../assets/images/obras/aerolito/aerolito-ilustracion.jpg')).default;
+const imgInMemoriam = (await import('../../../assets/images/obras/in-memoriam/in-memoriam-01.jpg')).default;
+const imgPrecipitacion = (await import('../../../assets/images/obras/precipitacion/precipitacion-mamu-2024.jpg')).default;
+const imgEncuentros = (await import('../../../assets/images/obras/encuentros-seres/encuentros-01.jpg')).default;
+const imgPolvo = (await import('../../../assets/images/obras/polvo-eres/polvo-eres-01.jpg')).default;
+const imgCaminantes = (await import('../../../assets/images/obras/las-caminantes/caminantes-mamu-01.jpg')).default;
+const imgRecelaron = (await import('../../../assets/images/obras/recelaron-del-cielo/port-106.jpg')).default;
+const imgPaisaje = (await import('../../../assets/images/obras/paisaje-domestico/paisaje-01.jpg')).default;
+const imgExtracciones = (await import('../../../assets/images/obras/extracciones-hospital/extracciones-01.jpg')).default;
+const imgDispositivos = (await import('../../../assets/images/obras/dispositivos/dispositivos-01.jpg')).default;
+const imgFertilSuelo = (await import('../../../assets/images/obras/fertil-suelo/fertil-suelo-01.jpg')).default;
+const imgDivino = (await import('../../../assets/images/obras/divino-fragmento/divino-fragmento-01.jpg')).default;
+const imgVersalles = (await import('../../../assets/images/obras/nuevas-floras-versalles/versalles-01.jpg')).default;
+const imgDoSul = (await import('../../../assets/images/obras/nuevas-floras-do-sul/do-sul-01.jpg')).default;
+const imgTravesia = (await import('../../../assets/images/obras/la-travesia/travesia-01.jpg')).default;
+const imgCauca = (await import('../../../assets/images/obras/precipitaciones-cauca/cauca-01.jpg')).default;
 
 const works = [
-  {
-    num: '001',
-    slug: 'in-vitro',
-    title: 'In Vitro',
-    year: '1997',
-    description: 'Installation, miroir — Estación de La Sabana',
-    hasImage: true,
-    image: imgInVitro,
-  },
-  {
-    num: '002',
-    slug: 'el-reino-de-este-mundo',
-    title: 'El reino de este mundo',
-    year: '2000',
-    description: 'Installation, béton — MAMBO',
-    hasImage: false,
-    image: null,
-  },
-  {
-    num: '003',
-    slug: 'in-memoriam',
-    title: 'In Memoriam',
-    year: '2001',
-    description: 'Sculpture éphémère, glace — Alianza Colombo Francesa',
-    hasImage: false,
-    image: null,
-  },
-  {
-    num: '004',
-    slug: 'desde-adentro',
-    title: 'Desde Adentro',
-    year: '2003',
-    description: '12 photographies, vidéo — Club El Nogal',
-    hasImage: true,
-    image: imgDesdeAdentro,
-  },
-  {
-    num: '005',
-    slug: 'nuevas-floras',
-    title: 'Nuevas Floras',
-    year: '2003–2007',
-    description: 'Intervention sculpturale — III Premio Luis Caballero',
-    hasImage: true,
-    image: imgNuevasFloras,
-  },
-  {
-    num: '006',
-    slug: 'en-estado-de-coma',
-    title: 'En estado de coma',
-    year: '2005–2007',
-    description: 'Photographie, vidéo, installation — Hospital San Juan de Dios',
-    hasImage: false,
-    image: null,
-  },
-  {
-    num: '007',
-    slug: 'aerolito',
-    title: 'Pequeño Museo del Aerolito',
-    year: '2014–2015',
-    description: 'Recherche, installation — Museo Nacional',
-    hasImage: false,
-    image: null,
-  },
-  {
-    num: '008',
-    slug: 'en-el-fertil-suelo',
-    title: 'En el fértil suelo',
-    year: '2017–2018',
-    description: 'Video, sculpture — X Premio Luis Caballero',
-    hasImage: false,
-    image: null,
-  },
-  {
-    num: '009',
-    slug: 'dispositivos-para-ver-pasar-el-tiempo',
-    title: 'Dispositivos para ver pasar el tiempo',
-    year: '2020',
-    description: 'Installation',
-    hasImage: false,
-    image: null,
-  },
-  {
-    num: '010',
-    slug: 'precipitacion-de-arenas',
-    title: 'Precipitación de arenas',
-    year: '2024',
-    description: 'Installation — MAMU',
-    hasImage: false,
-    image: null,
-  },
-  {
-    num: '011',
-    slug: 'encuentros-con-seres-notables',
-    title: 'Encuentros con seres notables',
-    year: '2022',
-    description: 'Sculpture, branches sculptées — Galería Espacio Continuo',
-    hasImage: false,
-    image: null,
-  },
-  {
-    num: '012',
-    slug: 'polvo-eres',
-    title: 'Polvo eres',
-    year: '2024',
-    description: 'Sculpture murale — MAMU, Bogotá',
-    hasImage: false,
-    image: null,
-  },
-  {
-    num: '013',
-    slug: 'las-caminantes',
-    title: 'Las caminantes',
-    year: '2024',
-    description: 'Installation vivante, code Morse — MAMU, Bogotá',
-    hasImage: false,
-    image: null,
-  },
-  {
-    num: '014',
-    slug: 'ensayo-autorretrato',
-    title: 'Ensayo autorretrato',
-    year: '2022',
-    description: 'Video — Galería Espacio Continuo',
-    hasImage: false,
-    image: null,
-  },
+  { slug: 'in-vitro', title: 'In Vitro', year: '1997', image: imgInVitro },
+  { slug: 'escenas-de-caza', title: 'Escenas de caza', year: '2000', image: null },
+  { slug: 'el-reino-de-este-mundo', title: 'El reino de este mundo', year: '2000', image: imgElReino },
+  { slug: 'in-memoriam', title: 'In Memoriam', year: '2001', image: imgInMemoriam },
+  { slug: 'desde-adentro', title: 'Desde Adentro', year: '2003', image: imgDesdeAdentro },
+  { slug: 'nuevas-floras', title: 'Nuevas Floras', year: '2003', image: imgNuevasFloras },
+  { slug: 'nuevas-floras-do-sul', title: 'Nuevas Floras do Sul', year: '2011', image: imgDoSul },
+  { slug: 'divino-fragmento', title: 'Divino Fragmento', year: '2003', image: imgDivino },
+  { slug: 'paisaje-domestico', title: 'Paisaje doméstico', year: '2005', image: imgPaisaje },
+  { slug: 'la-herida', title: 'La herida', year: '2006', image: null },
+  { slug: 'en-estado-de-coma', title: 'En estado de coma', year: '2005–2007', image: imgComa },
+  { slug: 'recelaron-del-cielo', title: 'Recelaron del cielo', year: '2008', image: imgRecelaron },
+  { slug: 'precipitaciones-cauca', title: 'Precipitaciones del río Cauca', year: '2008–2009', image: imgCauca },
+  { slug: 'urgencias', title: 'Urgencias', year: '2012', image: null },
+  { slug: 'extracciones-hospital', title: 'Extracciones en el Hospital', year: '2012', image: imgExtracciones },
+  { slug: 'aerolito', title: 'Pequeño Museo del Aerolito', year: '2014–2015', image: imgAerolito },
+  { slug: 'nuevas-floras-versalles', title: 'Nuevas Floras Versalles', year: '2017', image: imgVersalles },
+  { slug: 'la-travesia', title: 'La travesía', year: '2017–2024', image: imgTravesia },
+  { slug: 'en-el-fertil-suelo', title: 'En el fértil suelo', year: '2017–2018', image: imgFertilSuelo },
+  { slug: 'extraccion', title: 'Extracción', year: '2018', image: null },
+  { slug: 'dispositivos-para-ver-pasar-el-tiempo', title: 'Dispositivos para ver pasar el tiempo', year: '2020', image: imgDispositivos },
+  { slug: 'encuentros-con-seres-notables', title: 'Encuentros con seres notables', year: '2022', image: imgEncuentros },
+  { slug: 'ensayo-autorretrato', title: 'Ensayo autorretrato', year: '2022', image: null },
+  { slug: 'precipitacion-de-arenas', title: 'Precipitación de arenas', year: '2022–2024', image: imgPrecipitacion },
+  { slug: 'polvo-eres', title: 'Polvo eres', year: '2024', image: imgPolvo },
+  { slug: 'las-caminantes', title: 'Las caminantes', year: '2024', image: imgCaminantes },
+  { slug: 'sabian-no-recordaban', title: 'Sabían, pero no recordaban', year: '2024', image: null },
 ];
 ---
 
@@ -142,37 +61,28 @@ const works = [
   <div class="obra-index">
     <div class="container">
 
-      <!-- En-tete -->
-      <header class="section__header">
-        <h1>Œuvres complètes</h1>
-        <span class="label">1997–2024</span>
+      <header class="obra-index__header">
+        <h1>Œuvres</h1>
+        <span class="label">{works.length} projets &nbsp;/&nbsp; 1997–2024</span>
       </header>
 
-      <!-- Liste des oeuvres -->
-      <div class="works-catalog">
+      <div class="obra-grid">
         {works.map((work) => (
-          <a href={`/maria-elvira-escallon/en/works/${work.slug}/`} class="work-entry-link" style="text-decoration:none; color:inherit;">
-            <div class="work-entry">
-              <div class="work-entry__num">{work.num}</div>
-              <div class="work-entry__info">
-                <h3>{work.title}</h3>
-                <div class="ficha">
-                  {work.year} &nbsp;/&nbsp; {work.description}
-                </div>
-              </div>
-              <div class="work-entry__image">
-                {work.hasImage && work.image ? (
-                  <img
-                    src={work.image.src}
-                    alt={`${work.title} — María Elvira Escallón`}
-                    loading="lazy"
-                  />
-                ) : (
-                  <div class="placeholder-img" style="height:100%;display:flex;align-items:center;justify-content:center;color:var(--ash-light);font-family:var(--mono);font-size:0.55rem;letter-spacing:0.08em;text-transform:uppercase;">
-                    [ {work.title} ]
-                  </div>
-                )}
-              </div>
+          <a href={`/maria-elvira-escallon/en/works/${work.slug}/`} class="obra-card">
+            <div class="obra-card__img">
+              {work.image ? (
+                <img
+                  src={work.image.src}
+                  alt={`${work.title} — María Elvira Escallón`}
+                  loading="lazy"
+                />
+              ) : (
+                <span class="obra-card__placeholder">{work.title}</span>
+              )}
+            </div>
+            <div class="obra-card__info">
+              <span class="obra-card__title">{work.title}</span>
+              {work.year && <span class="obra-card__year">{work.year}</span>}
             </div>
           </a>
         ))}
@@ -189,11 +99,106 @@ const works = [
     padding-bottom: var(--s5);
   }
 
-  .works-catalog {
-    margin-top: var(--s3);
+  .obra-index__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-bottom: var(--s2);
+    border-bottom: 1px solid var(--ink);
+    margin-bottom: var(--s4);
   }
 
-  .work-entry-link:last-child .work-entry {
-    border-bottom: 1px solid var(--ink);
+  .obra-index__header h1 {
+    font-family: var(--mono);
+    font-weight: 700;
+    font-size: clamp(1.6rem, 4vw, 2.8rem);
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+  }
+
+  .obra-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+  }
+
+  .obra-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    overflow: hidden;
+  }
+
+  .obra-card__img {
+    aspect-ratio: 4 / 3;
+    background-color: var(--paper-dark);
+    overflow: hidden;
+  }
+
+  .obra-card__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.4s ease, transform 0.6s ease;
+  }
+
+  .obra-card:hover .obra-card__img img {
+    opacity: 0.85;
+    transform: scale(1.03);
+  }
+
+  .obra-card__placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-family: var(--mono);
+    font-size: 0.5rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ash-light);
+    text-align: center;
+    padding: var(--s2);
+    line-height: 1.6;
+  }
+
+  .obra-card__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: var(--s1);
+    padding: 0.6rem 0 1rem;
+  }
+
+  .obra-card__title {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--ink);
+    line-height: 1.4;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .obra-card__year {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    color: var(--ash-light);
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 1024px) {
+    .obra-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  @media (max-width: 640px) {
+    .obra-grid { grid-template-columns: repeat(2, 1fr); gap: 1px; }
+    .obra-card__info { flex-direction: column; gap: 2px; padding: 0.5rem 0 0.8rem; }
+    .obra-card__title { font-size: 0.58rem; }
   }
 </style>

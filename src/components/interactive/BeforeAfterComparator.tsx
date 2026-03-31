@@ -19,7 +19,15 @@ interface BeforeAfterComparatorProps {
   beforeLabel?: string;
   afterLabel?: string;
   title?: string;
+  lang?: string;
 }
+
+const comparatorI18n: Record<string, Record<string, string>> = {
+  es: { slide: 'Desliza para comparar', before: 'Intervención reciente', after: 'Años después — La corteza reclama' },
+  en: { slide: 'Slide to compare', before: 'Recent intervention', after: 'Years later — The bark reclaims' },
+  fr: { slide: 'Glissez pour comparer', before: 'Intervention récente', after: 'Années plus tard — L\'écorce reprend' },
+  zh: { slide: '滑动以比较', before: '近期干预', after: '数年后 — 树皮重新覆盖' },
+};
 
 /* ------------------------------------------------
    Component
@@ -30,7 +38,9 @@ export default function BeforeAfterComparator({
   beforeLabel = '2003',
   afterLabel = '2020',
   title = 'Comparador temporal',
+  lang = 'es',
 }: BeforeAfterComparatorProps) {
+  const labels = comparatorI18n[lang] || comparatorI18n.es;
   const containerRef = useRef<HTMLDivElement>(null);
   const [splitPosition, setSplitPosition] = useState(50);
   const [isDragging, setIsDragging] = useState(false);
@@ -147,7 +157,7 @@ export default function BeforeAfterComparator({
           textAlign: 'center',
         }}
       >
-        Desliza para comparar
+        {labels.slide}
       </div>
 
       {/* Image container */}
@@ -202,7 +212,7 @@ export default function BeforeAfterComparator({
               textAlign: 'center' as const,
             }}
           >
-            Intervenci&oacute;n reciente &mdash; 2003
+            {labels.before}
           </div>
         )}
 
@@ -254,7 +264,7 @@ export default function BeforeAfterComparator({
                 textAlign: 'center' as const,
               }}
             >
-              A&ntilde;os despu&eacute;s &mdash; La corteza reclama
+              {labels.after}
             </div>
           )}
         </div>
