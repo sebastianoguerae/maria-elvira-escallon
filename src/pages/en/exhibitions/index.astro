@@ -58,14 +58,30 @@ const group = [
 
 <Layout lang={lang} title="Exhibitions" description="Complete exhibition history of Maria Elvira Escallon: solo and international group exhibitions, 1997–2024. Bogota, Paris, London, Havana, New York.">
 
+  <!-- Hero with Polvo Eres video -->
+  <section class="expo-hero">
+    <div class="expo-hero__video-bg">
+      <video autoplay muted loop playsinline>
+        <source src="/maria-elvira-escallon/video/hero-polvo-v3.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="container" style="position: relative; z-index: 2;">
+      <div class="expo-hero__content">
+        <p class="hero__label">Archive / 1997–2024</p>
+        <h1 class="hero__name">Exhibitions</h1>
+        <p class="hero__sub">{solo.length} solo &nbsp;&middot;&nbsp; {group.length} international group</p>
+        <p class="hero__meta">
+          Bogot&aacute; &middot; Paris &middot; London &middot; Havana &middot; New York &middot; Sydney &middot; Arles &middot; Berlin
+        </p>
+      </div>
+    </div>
+    <div class="expo-hero__scroll" aria-hidden="true">
+      <span>&darr;</span>
+    </div>
+  </section>
+
   <div class="expo-index">
     <div class="container">
-
-      <!-- Page header -->
-      <header class="section__header">
-        <h1>Exhibitions</h1>
-        <span class="label">1997–2024</span>
-      </header>
 
       <!-- ── Solo Exhibitions ── -->
       <section class="expo-section">
@@ -130,9 +146,64 @@ const group = [
 </Layout>
 
 <style>
+  /* ── Hero with video ── */
+  .expo-hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    padding-top: calc(var(--s5) + 40px);
+    padding-bottom: var(--s4);
+    overflow: hidden;
+    border-bottom: 1px solid var(--ink);
+  }
+
+  .expo-hero__video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+  }
+
+  .expo-hero__video-bg video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.15;
+    filter: grayscale(40%) contrast(1.1);
+    mix-blend-mode: multiply;
+  }
+
+  .expo-hero__content {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 var(--s3);
+    width: 100%;
+  }
+
+  .expo-hero__scroll {
+    position: absolute;
+    bottom: var(--s3);
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--mono);
+    font-size: 1.4rem;
+    color: var(--ash-light);
+    z-index: 2;
+    animation: expo-bounce 2s ease infinite;
+  }
+
+  @keyframes expo-bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(8px); }
+  }
+
   /* ── Page wrapper ── */
   .expo-index {
-    padding-top: calc(var(--s5) + 40px);
+    padding-top: var(--s4);
     padding-bottom: var(--s5);
   }
 
