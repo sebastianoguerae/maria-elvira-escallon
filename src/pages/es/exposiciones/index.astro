@@ -203,6 +203,27 @@ const colectivas = [
     50% { transform: translateX(-50%) translateY(8px); }
   }
 
+  @media (max-width: 768px) {
+    .expo-hero {
+      min-height: 80vh;
+      background-color: var(--ink);
+    }
+    .expo-hero__video-bg {
+      display: none;
+    }
+    .expo-hero .hero__label,
+    .expo-hero .hero__sub,
+    .expo-hero .hero__meta {
+      color: var(--ash-light);
+    }
+    .expo-hero .hero__name {
+      color: var(--paper);
+    }
+    .expo-hero__scroll span {
+      color: var(--ash-light);
+    }
+  }
+
   /* ── Page wrapper ── */
   .expo-index {
     padding-top: var(--s4);
