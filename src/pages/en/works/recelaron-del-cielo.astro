@@ -1,0 +1,87 @@
+---
+import Layout from '../../../components/layout/Layout.astro';
+import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
+
+const lang = 'en' as const;
+const title = 'Recelaron del cielo';
+
+const img1 = (await import('../../../assets/images/obras/recelaron-del-cielo/recelaron-del-cielo-01.webp')).default;
+const img2 = (await import('../../../assets/images/obras/recelaron-del-cielo/recelaron-del-cielo-02.webp')).default;
+const img3 = (await import('../../../assets/images/obras/recelaron-del-cielo/recelaron-del-cielo-03.webp')).default;
+const img4 = (await import('../../../assets/images/obras/recelaron-del-cielo/recelaron-del-cielo-04.webp')).default;
+---
+
+<Layout
+  lang={lang}
+  title="Recelaron del cielo — Work"
+  description="Recelaron del cielo (2008). Backlight photography in lightbox, installation. Maria Elvira Escallon."
+>
+
+  <ArtworkSchema
+    title="Recelaron del cielo"
+    year="2008"
+    medium="Backlight photography in lightbox"
+    description="Backlit photographs of the Hospital Santa Rosa de Viterbo."
+    url="https://mariaelviraescallon.com/en/works/recelaron-del-cielo/"
+  />
+
+  <article class="work-page">
+    <div class="container">
+
+      <!-- Header -->
+      <header class="work-page__header">
+        <p class="label">Work / 011</p>
+        <h1>{title}</h1>
+        <p class="work-page__meta">2008 &nbsp;/&nbsp; Backlight photography in lightbox, installation &nbsp;/&nbsp; 180 x 120 cm each</p>
+      </header>
+
+      <!-- Main gallery -->
+      <div class="work-page__gallery">
+        <img src={img1.src} alt="Recelaron del cielo — Installation view, Hospital Santa Rosa" loading="eager">
+        <img src={img2.src} alt="Recelaron del cielo — Hospital corridor with fragments of La Voragine" loading="lazy">
+        <img src={img3.src} alt="Recelaron del cielo — Illuminated room seen through glass" loading="lazy">
+        <img src={img4.src} alt="Recelaron del cielo — Lightbox detail" loading="lazy">
+      </div>
+
+      <!-- Text + Technical sheet -->
+      <div class="work-page__body">
+        <div class="work-page__text">
+
+          <p class="curatorial">
+            The Hospital Santa Rosa, formerly a hospital of the Caja Nacional de Prevision, had been closed for over a decade due to embezzlement by the authorities who administered it. It was acquired by the Universidad Nacional, which for many years kept it inactive, using some spaces as administrative offices. The lower floors were striking in their impeccability, but the upper hospitalization floors were abandoned. The project proposed a journey through the Hospital, traversing these spaces, culminating on the fourth floor, which at the time of the exhibition was used as a storage area.
+          </p>
+
+          <h3 style="margin-top: var(--s4);">CONTEXT</h3>
+          <p style="margin-top: var(--s2);">
+            Upon reaching the fourth floor, the visitor found long corridors with multiple rooms, all of them locked except for three, whose doors had been replaced with glass, so that the public could approach and witness their interiors. No element was rearranged; they were only illuminated to make visible what these rooms contained. Along this journey, fragments of the novel <em>La Voragine</em> were placed on the walls in very small type.
+          </p>
+        </div>
+
+        <aside class="work-page__ficha">
+          <h4>TECHNICAL SHEET</h4>
+          <div class="ficha">
+            <strong>Recelaron del cielo</strong><br>
+            2008<br><br>
+            Backlight photography in lightbox, installation.<br><br>
+            180 x 120 cm each<br>
+            Hospital Santa Rosa, Universidad Nacional de Colombia
+          </div>
+
+          <h4 style="margin-top: var(--s3);">EXHIBITIONS</h4>
+          <div class="ficha">
+            Recelaron del cielo — Hospital Santa Rosa, Universidad Nacional, 2008
+          </div>
+
+          <h4 style="margin-top: var(--s3);">HOW TO CITE</h4>
+          <div class="ficha" style="font-size: 0.65rem;">
+            Escallon, M.E. (2008). <em>Recelaron del cielo</em>.
+            Backlight photography in lightbox, installation. Available at:
+            mariaelviraescallon.com/en/works/recelaron-del-cielo/
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </article>
+
+</Layout>

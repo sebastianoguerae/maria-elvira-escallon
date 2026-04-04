@@ -5,11 +5,16 @@ import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
 const lang = 'en' as const;
 const title = 'Polvo eres';
 
-const imgs = await Promise.all(
-  Array.from({ length: 10 }, (_, i) =>
-    import(`../../../assets/images/obras/polvo-eres/polvo-eres-${String(i + 1).padStart(2, '0')}.webp`)
-  )
-).then(m => m.map(x => x.default));
+const img01 = (await import('../../../assets/images/obras/polvo-eres/polvo-eres-01.webp')).default;
+const img02 = (await import('../../../assets/images/obras/polvo-eres/polvo-eres-02.webp')).default;
+const img03 = (await import('../../../assets/images/obras/polvo-eres/polvo-eres-03.webp')).default;
+const img04 = (await import('../../../assets/images/obras/polvo-eres/polvo-eres-04.webp')).default;
+const img05 = (await import('../../../assets/images/obras/polvo-eres/polvo-eres-05.webp')).default;
+const img06 = (await import('../../../assets/images/obras/polvo-eres/polvo-eres-06.webp')).default;
+const img07 = (await import('../../../assets/images/obras/polvo-eres/polvo-eres-07.webp')).default;
+const img08 = (await import('../../../assets/images/obras/polvo-eres/polvo-eres-08.webp')).default;
+const img09 = (await import('../../../assets/images/obras/polvo-eres/polvo-eres-09.webp')).default;
+const img10 = (await import('../../../assets/images/obras/polvo-eres/polvo-eres-10.webp')).default;
 ---
 
 <Layout
@@ -39,15 +44,29 @@ const imgs = await Promise.all(
 
       <!-- Main gallery -->
       <div class="work-page__gallery">
-        {imgs.map((img, i) => (
-          <img src={img.src} alt={`Polvo eres — Wall carving, MAMU ${i + 1}`} loading={i === 0 ? 'eager' : 'lazy'}>
-        ))}
+        <img src={img01.src} alt="Polvo eres — General view of the wall carving" loading="eager">
+        <img src={img02.src} alt="Polvo eres — Detail of carved inscription" loading="lazy">
+        <img src={img03.src} alt="Polvo eres — Carving debris on the floor" loading="lazy">
+        <img src={img04.src} alt="Polvo eres — Texture of exposed brick wall" loading="lazy">
+        <img src={img05.src} alt="Polvo eres — Detail of carved letters" loading="lazy">
+        <img src={img06.src} alt="Polvo eres — Side view of the intervention" loading="lazy">
+        <img src={img07.src} alt="Polvo eres — Dust accumulation at the base of the wall" loading="lazy">
+        <img src={img08.src} alt="Polvo eres — Detail of carving process" loading="lazy">
+        <img src={img09.src} alt="Polvo eres — Gallery view at MAMU" loading="lazy">
+        <img src={img10.src} alt="Polvo eres — Final view of the installed work" loading="lazy">
       </div>
+
+      <!-- Video -->
+      <div class="work-page__video">
+        <div class="work-page__video-header">
+          <h3>VIDEO</h3>
+          <span class="label">Polvo eres</span>
+        </div>
+        <video controls preload="metadata">
+          <source src="/maria-elvira-escallon/video/polvo-eres-web.mp4" type="video/mp4">
+        </video>
+      </div>
+
   </article>
 
 </Layout>
-
-<style>
-  @media (max-width: 768px) {
-    }
-</style>

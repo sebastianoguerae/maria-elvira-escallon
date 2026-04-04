@@ -1,0 +1,75 @@
+---
+import Layout from '../../../components/layout/Layout.astro';
+import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
+
+const lang = 'en' as const;
+const title = 'Paisaje domestico';
+
+const img1 = (await import('../../../assets/images/obras/paisaje-domestico/paisaje-domestico-01.webp')).default;
+---
+
+<Layout
+  lang={lang}
+  title="Paisaje domestico — Work"
+  description="Paisaje domestico (2005). Digital giclee print on cotton paper. Maria Elvira Escallon."
+>
+
+  <ArtworkSchema
+    title="Paisaje domestico"
+    year="2005"
+    medium="Digital giclee print on cotton paper"
+    description="Aerial views of agricultural landscapes evoking domestic geometric patterns."
+    url="https://mariaelviraescallon.com/en/works/paisaje-domestico/"
+  />
+
+  <article class="work-page">
+    <div class="container">
+
+      <!-- Header -->
+      <header class="work-page__header">
+        <p class="label">Work / 006</p>
+        <h1>{title}</h1>
+        <p class="work-page__meta">2005 &nbsp;/&nbsp; Digital giclee print on cotton paper &nbsp;/&nbsp; 183 x 324 cm (42 x 42 cm each)</p>
+      </header>
+
+      <!-- Main gallery -->
+      <div class="work-page__gallery">
+        <img src={img1.src} alt="Paisaje domestico — Photographic record of micro-fumigation in National Park" loading="eager">
+      </div>
+
+      <!-- Text + Technical sheet -->
+      <div class="work-page__body">
+        <div class="work-page__text">
+
+          <p class="curatorial">
+            In 2005, the Government decided to extend the program for eradicating illicit crops through Glyphosate fumigation to several of Colombia's National Parks. <em>Paisaje domestico</em> can be considered a micro-fumigation. It began on August 25, 2005 on a tiny 40 x 40 cm plot of land in a National Park near Bogota. The same chemical agents in the same proportions used in the illicit crop eradication programs were obtained and mixed, and applied a single time.
+          </p>
+
+          <h3 style="margin-top: var(--s4);">CONTEXT</h3>
+          <p style="margin-top: var(--s2);">
+            Day after day, over the course of 26 days, this place was visited and what occurred there was recorded. The project allows one to witness close up the effects of enormous, distant, and invisible actions.
+          </p>
+        </div>
+
+        <aside class="work-page__ficha">
+          <h4>TECHNICAL SHEET</h4>
+          <div class="ficha">
+            <strong>Paisaje domestico</strong><br>
+            2005<br><br>
+            Digital giclee print on cotton paper.<br><br>
+            183 x 324 cm (42 x 42 cm each)
+          </div>
+
+          <h4 style="margin-top: var(--s3);">HOW TO CITE</h4>
+          <div class="ficha" style="font-size: 0.65rem;">
+            Escallon, M.E. (2005). <em>Paisaje domestico</em>.
+            Digital giclee print on cotton paper. Available at:
+            mariaelviraescallon.com/en/works/paisaje-domestico/
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </article>
+
+</Layout>

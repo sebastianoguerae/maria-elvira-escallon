@@ -17,23 +17,37 @@ const imgDispositivos = (await import('../../../assets/images/obras/dispositivos
 const imgFertilSuelo = (await import('../../../assets/images/obras/fertil-suelo/fertil-suelo-01.webp')).default;
 const imgTravesia = (await import('../../../assets/images/obras/la-travesia/la-travesia-01.webp')).default;
 const imgEnsayo = (await import('../../../assets/images/obras/ensayo-autorretrato/ensayo-autorretrato-01.webp')).default;
+const imgRecelaron = (await import('../../../assets/images/obras/recelaron-del-cielo/recelaron-del-cielo-01.webp')).default;
+const imgPaisaje = (await import('../../../assets/images/obras/paisaje-domestico/paisaje-domestico-01.webp')).default;
+const imgExtracciones = (await import('../../../assets/images/obras/extracciones-hospital/extracciones-hospital-01.webp')).default;
+const imgDivino = (await import('../../../assets/images/obras/divino-fragmento/divino-fragmento-01.webp')).default;
+const imgSabian = (await import('../../../assets/images/obras/sabian-no-recordaban/sabian-no-recordaban-01.webp')).default;
+const imgExtraccion = (await import('../../../assets/images/obras/extraccion/extraccion-01.webp')).default;
+const imgUnMensaje = (await import('../../../assets/images/obras/un-mensaje/un-mensaje-01.webp')).default;
 
 const works = [
   { slug: 'polvo-eres', title: 'Polvo eres', year: '2024', image: imgPolvo },
+  { slug: 'sabian-no-recordaban', title: 'Sabian, pero no recordaban', year: '2024', image: imgSabian },
   { slug: 'precipitacion-de-arenas', title: 'Precipitacion de arenas', year: '2022-2024', image: imgPrecipitacion },
   { slug: 'la-travesia', title: 'La travesia', year: '2017-2024', image: imgTravesia },
   { slug: 'encuentros-con-seres-notables', title: 'Encuentros con seres notables', year: '2022', image: imgEncuentros },
   { slug: 'ensayo-autorretrato', title: 'Ensayo autorretrato', year: '2022', image: imgEnsayo },
   { slug: 'dispositivos-para-ver-pasar-el-tiempo', title: 'Dispositivos para ver pasar el tiempo', year: '2020', image: imgDispositivos },
+  { slug: 'extraccion', title: 'Extraccion', year: '2018', image: imgExtraccion },
   { slug: 'en-el-fertil-suelo', title: 'En el fertil suelo', year: '2017-2018', image: imgFertilSuelo },
   { slug: 'aerolito', title: 'Pequeno Museo del Aerolito', year: '2014-2015', image: imgAerolito },
+  { slug: 'extracciones-hospital', title: 'Extractions at the University Hospital', year: '2012', image: imgExtracciones },
+  { slug: 'recelaron-del-cielo', title: 'Recelaron del cielo', year: '2008', image: imgRecelaron },
   { slug: 'en-estado-de-coma', title: 'En estado de coma', year: '2005-2007', image: imgComa },
   { slug: 'la-herida', title: 'La herida', year: '2006', image: null },
+  { slug: 'paisaje-domestico', title: 'Paisaje domestico', year: '2005', image: imgPaisaje },
+  { slug: 'divino-fragmento', title: 'Divino Fragmento', year: '2003', image: imgDivino },
   { slug: 'nuevas-floras', title: 'Nuevas Floras', year: '2003', image: imgNuevasFloras },
   { slug: 'desde-adentro', title: 'Desde Adentro', year: '2003', image: imgDesdeAdentro },
   { slug: 'in-memoriam', title: 'In Memoriam', year: '2001', image: imgInMemoriam },
   { slug: 'el-reino-de-este-mundo', title: 'El reino de este mundo', year: '2000', image: imgElReino },
   { slug: 'in-vitro', title: 'In Vitro', year: '1997', image: imgInVitro },
+  { slug: 'un-mensaje', title: 'Un mensaje', year: '', image: imgUnMensaje },
 ];
 ---
 
@@ -44,7 +58,7 @@ const works = [
 
       <header class="obra-index__header">
         <h1>Works</h1>
-        <span class="label">{works.length} projects &nbsp;/&nbsp; 1997–2024</span>
+        <span class="label">{works.length} projects &nbsp;/&nbsp; 1997-2024</span>
       </header>
 
       <div class="obra-grid">
@@ -100,7 +114,7 @@ const works = [
   /* ── Dense grid ── */
   .obra-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2px;
   }
 
@@ -181,7 +195,7 @@ const works = [
   /* ── Responsive ── */
   @media (max-width: 1024px) {
     .obra-grid {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 

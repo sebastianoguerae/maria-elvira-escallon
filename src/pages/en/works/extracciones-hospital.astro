@@ -1,0 +1,50 @@
+---
+import Layout from '../../../components/layout/Layout.astro';
+import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
+
+const lang = 'en' as const;
+const title = 'Extractions at the University Hospital';
+
+const img1 = (await import('../../../assets/images/obras/extracciones-hospital/extracciones-hospital-01.webp')).default;
+const img2 = (await import('../../../assets/images/obras/extracciones-hospital/extracciones-hospital-02.webp')).default;
+const img3 = (await import('../../../assets/images/obras/extracciones-hospital/extracciones-hospital-03.webp')).default;
+const img4 = (await import('../../../assets/images/obras/extracciones-hospital/extracciones-hospital-04.webp')).default;
+const img5 = (await import('../../../assets/images/obras/extracciones-hospital/extracciones-hospital-05.webp')).default;
+---
+
+<Layout
+  lang={lang}
+  title="Extractions at the University Hospital — Work"
+  description="Extractions at the University Hospital (2012). Installation, digital giclee print on cotton paper. Maria Elvira Escallon."
+>
+
+  <ArtworkSchema
+    title="Extractions at the University Hospital"
+    year="2012"
+    medium="Installation, digital giclee print"
+    description="Intervention at the Hospital Santa Rosa. Material extractions from the deteriorating building."
+    url="https://mariaelviraescallon.com/en/works/extracciones-hospital/"
+  />
+
+  <article class="work-page">
+    <div class="container">
+
+      <!-- Header -->
+      <header class="work-page__header">
+        <p class="label">Work / 012</p>
+        <h1>{title}</h1>
+        <p class="work-page__meta">2012 &nbsp;/&nbsp; Installation, digital giclee print on cotton paper &nbsp;/&nbsp; 36 x 60 cm each</p>
+      </header>
+
+      <!-- Main gallery -->
+      <div class="work-page__gallery">
+        <img src={img1.src} alt="Extractions at the University Hospital — View of the intervention" loading="eager">
+        <img src={img2.src} alt="Extractions at the University Hospital — Cladding removal process" loading="lazy">
+        <img src={img3.src} alt="Extractions at the University Hospital — Room stripped to bare structure" loading="lazy">
+        <img src={img4.src} alt="Extractions at the University Hospital — Detail of the extraction" loading="lazy">
+        <img src={img5.src} alt="Extractions at the University Hospital — Record of the process" loading="lazy">
+      </div>
+
+  </article>
+
+</Layout>

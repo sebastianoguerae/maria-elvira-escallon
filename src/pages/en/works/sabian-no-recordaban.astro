@@ -1,0 +1,81 @@
+---
+import Layout from '../../../components/layout/Layout.astro';
+import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
+
+const lang = 'en' as const;
+const title = 'They knew, but did not remember';
+
+const img1 = (await import('../../../assets/images/obras/sabian-no-recordaban/sabian-no-recordaban-01.webp')).default;
+const img2 = (await import('../../../assets/images/obras/sabian-no-recordaban/sabian-no-recordaban-02.webp')).default;
+const img3 = (await import('../../../assets/images/obras/sabian-no-recordaban/sabian-no-recordaban-03.webp')).default;
+---
+
+<Layout
+  lang={lang}
+  title="Sabian, pero no recordaban — Work"
+  description="Sabian, pero no recordaban (2024). Single-channel video installation. Maria Elvira Escallon."
+>
+
+  <ArtworkSchema
+    title="Sabian, pero no recordaban"
+    year="2024"
+    medium="Single-channel video installation"
+    description="Video installation presented at MAMU, Bogota."
+    url="https://mariaelviraescallon.com/en/works/sabian-no-recordaban/"
+  />
+
+  <article class="work-page">
+    <div class="container">
+
+      <!-- Header -->
+      <header class="work-page__header">
+        <p class="label">Work / 021</p>
+        <h1>{title}</h1>
+        <p class="work-page__meta">2024 &nbsp;/&nbsp; Single-channel video installation &nbsp;/&nbsp; 4'30"</p>
+      </header>
+
+      <!-- Main gallery -->
+      <div class="work-page__gallery">
+        <img src={img1.src} alt="Sabian, pero no recordaban — Video installation, two women knitting and unraveling" loading="eager">
+        <img src={img2.src} alt="Sabian, pero no recordaban — Detail of the knitting" loading="lazy">
+        <img src={img3.src} alt="Sabian, pero no recordaban — Installation view, MAMU" loading="lazy">
+      </div>
+
+      <!-- Text + Technical sheet -->
+      <div class="work-page__body">
+        <div class="work-page__text">
+
+          <p class="curatorial">
+            In this video, two women seated back to back simultaneously knit and unravel the same garment. One knits while the other unravels, in a continuous cycle that evokes collective memory and forgetting. The piece alludes to ancestral knowledge transmitted between generations — knowledge that is possessed but has ceased to be practiced. The title suggests a dormant knowing, a bodily memory that persists in gestures even though consciousness has abandoned it.
+          </p>
+
+        </div>
+
+        <aside class="work-page__ficha">
+          <h4>TECHNICAL SHEET</h4>
+          <div class="ficha">
+            <strong>Sabian, pero no recordaban</strong><br>
+            2024<br><br>
+            Single-channel video installation.<br><br>
+            4'30"<br>
+            MAMU, Bogota
+          </div>
+
+          <h4 style="margin-top: var(--s3);">EXHIBITIONS</h4>
+          <div class="ficha">
+            Encuentros en la fabrica de polvo — MAMU, 2024
+          </div>
+
+          <h4 style="margin-top: var(--s3);">HOW TO CITE</h4>
+          <div class="ficha" style="font-size: 0.65rem;">
+            Escallon, M.E. (2024). <em>Sabian, pero no recordaban</em>.
+            Single-channel video installation. Available at:
+            mariaelviraescallon.com/en/works/sabian-no-recordaban/
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </article>
+
+</Layout>
