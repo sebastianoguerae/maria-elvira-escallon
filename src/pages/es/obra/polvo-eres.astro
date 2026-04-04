@@ -5,11 +5,16 @@ import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
 const lang = 'es' as const;
 const title = 'Polvo eres';
 
-const imgs = await Promise.all(
-  Array.from({ length: 10 }, (_, i) =>
-    import(`../../../assets/images/obras/polvo-eres/polvo-eres-${String(i + 1).padStart(2, '0')}.webp`)
-  )
-).then(m => m.map(x => x.default));
+const img01 = (await import('../../../assets/images/obras/polvo-eres/polvo-eres-01.webp')).default;
+const img02 = (await import('../../../assets/images/obras/polvo-eres/polvo-eres-02.webp')).default;
+const img03 = (await import('../../../assets/images/obras/polvo-eres/polvo-eres-03.webp')).default;
+const img04 = (await import('../../../assets/images/obras/polvo-eres/polvo-eres-04.webp')).default;
+const img05 = (await import('../../../assets/images/obras/polvo-eres/polvo-eres-05.webp')).default;
+const img06 = (await import('../../../assets/images/obras/polvo-eres/polvo-eres-06.webp')).default;
+const img07 = (await import('../../../assets/images/obras/polvo-eres/polvo-eres-07.webp')).default;
+const img08 = (await import('../../../assets/images/obras/polvo-eres/polvo-eres-08.webp')).default;
+const img09 = (await import('../../../assets/images/obras/polvo-eres/polvo-eres-09.webp')).default;
+const img10 = (await import('../../../assets/images/obras/polvo-eres/polvo-eres-10.webp')).default;
 ---
 
 <Layout
@@ -37,88 +42,19 @@ const imgs = await Promise.all(
         <p class="work-page__meta">2024 &nbsp;/&nbsp; Talla sobre pared, muro de ladrillo, residuos de la talla, yeso, pintura &nbsp;/&nbsp; Aprox. 60 × 400 cm</p>
       </header>
 
-      <!-- Galería principal -->
+      <!-- Galeria principal -->
       <div class="work-page__gallery">
-        {imgs.map((img, i) => (
-          <img src={img.src} alt={`Polvo eres — Talla sobre pared, MAMU ${i + 1}`} loading={i === 0 ? 'eager' : 'lazy'}>
-        ))}
+        <img src={img01.src} alt="Polvo eres — Vista general de la talla sobre pared" loading="eager">
+        <img src={img02.src} alt="Polvo eres — Detalle de inscripción tallada" loading="lazy">
+        <img src={img03.src} alt="Polvo eres — Residuos de la talla sobre el suelo" loading="lazy">
+        <img src={img04.src} alt="Polvo eres — Textura del muro de ladrillo expuesto" loading="lazy">
+        <img src={img05.src} alt="Polvo eres — Detalle de letras talladas" loading="lazy">
+        <img src={img06.src} alt="Polvo eres — Vista lateral de la intervención" loading="lazy">
+        <img src={img07.src} alt="Polvo eres — Acumulación de polvo al pie del muro" loading="lazy">
+        <img src={img08.src} alt="Polvo eres — Detalle del proceso de talla" loading="lazy">
+        <img src={img09.src} alt="Polvo eres — Vista de sala en el MAMU" loading="lazy">
+        <img src={img10.src} alt="Polvo eres — Vista final de la obra instalada" loading="lazy">
       </div>
-
-      <!-- Video -->
-      <div class="work-page__video">
-        <div class="work-page__video-header">
-          <h3>VIDEO</h3>
-          <span class="label">Polvo eres · 2:00 min</span>
-        </div>
-        <video controls preload="metadata" poster="">
-          <source src="/maria-elvira-escallon/video/polvo-eres-obra.mp4" type="video/mp4">
-          Tu navegador no soporta video HTML5.
-        </video>
-      </div>
-
-      <!-- Texto + Ficha -->
-      <div class="work-page__body">
-        <div class="work-page__text">
-
-          <p class="curatorial">
-            Las palabras están talladas directamente sobre una pared del museo, exponiendo sus
-            capas internas — bajo la pintura blanca se revela la capa de ladrillos — mientras los
-            escombros se acumulan a nivel del suelo. La inscripción nos confronta con la mortalidad
-            de los cuerpos, los objetos y las arquitecturas que habitamos.
-          </p>
-
-          <p class="curatorial" style="margin-top: var(--s2);">
-            La frase "Polvo eres y en polvo te convertirás" proviene del Génesis (3:19) y responde
-            al ritual católico del Miércoles de Ceniza. La artista explica que el polvo representa
-            múltiples significados: humildad (somos polvo de estrellas), la transitoriedad del
-            cuerpo y nuestra naturaleza de "conglomerados de partículas que vibran."
-          </p>
-
-          <p class="curatorial" style="margin-top: var(--s2);">
-            La obra no solo registra el deterioro, sino que lo transforma en una reflexión sensible
-            sobre el paso del tiempo y la transitoriedad inescapable de la vida.
-          </p>
-
-          <h3 style="margin-top: var(--s4);">CONTEXTO</h3>
-          <p style="margin-top: var(--s2);">
-            <em>Polvo eres</em> forma parte del eje "En la fábrica de polvo" de la exposición
-            antológica en el MAMU. El título hace referencia a la frase bíblica y conecta con
-            la metáfora central de toda la exposición antológica — la transformación material
-            como registro del paso del tiempo, el polvo como destino compartido de todo
-            lo que existe.
-          </p>
-        </div>
-
-        <aside class="work-page__ficha">
-          <h4>FICHA TÉCNICA</h4>
-          <div class="ficha">
-            <strong>Polvo eres</strong><br>
-            2024<br><br>
-            Talla sobre pared, muro de ladrillo, residuos de la talla, yeso, pintura.<br><br>
-            Aprox. 60 × 400 cm<br>
-            MAMU, Bogotá
-          </div>
-
-          <h4 style="margin-top: var(--s3);">EXPOSICIONES</h4>
-          <div class="ficha">
-            Encuentros en la fábrica de polvo — MAMU, 2024
-          </div>
-
-          <h4 style="margin-top: var(--s3);">CÓMO CITAR</h4>
-          <div class="ficha" style="font-size: 0.65rem;">
-            Escallón, M.E. (2024). <em>Polvo eres</em>.
-            Talla sobre pared. Disponible en:
-            mariaelviraescallon.com/es/obra/polvo-eres/
-          </div>
-        </aside>
-      </div>
-
-    </div>
   </article>
 
 </Layout>
-
-<style>
-  @media (max-width: 768px) {
-    }
-</style>

@@ -5,11 +5,28 @@ import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
 const lang = 'es' as const;
 const title = 'Pequeño Museo del Aerolito de Santa Rosa de Viterbo';
 
-const imgs = await Promise.all(
-  Array.from({ length: 22 }, (_, i) =>
-    import(`../../../assets/images/obras/aerolito/aerolito-${String(i + 1).padStart(2, '0')}.webp`)
-  )
-).then(m => m.map(x => x.default));
+const img01 = (await import('../../../assets/images/obras/aerolito/aerolito-01.webp')).default;
+const img02 = (await import('../../../assets/images/obras/aerolito/aerolito-02.webp')).default;
+const img03 = (await import('../../../assets/images/obras/aerolito/aerolito-03.webp')).default;
+const img04 = (await import('../../../assets/images/obras/aerolito/aerolito-04.webp')).default;
+const img05 = (await import('../../../assets/images/obras/aerolito/aerolito-05.webp')).default;
+const img06 = (await import('../../../assets/images/obras/aerolito/aerolito-06.webp')).default;
+const img07 = (await import('../../../assets/images/obras/aerolito/aerolito-07.webp')).default;
+const img08 = (await import('../../../assets/images/obras/aerolito/aerolito-08.webp')).default;
+const img09 = (await import('../../../assets/images/obras/aerolito/aerolito-09.webp')).default;
+const img10 = (await import('../../../assets/images/obras/aerolito/aerolito-10.webp')).default;
+const img11 = (await import('../../../assets/images/obras/aerolito/aerolito-11.webp')).default;
+const img12 = (await import('../../../assets/images/obras/aerolito/aerolito-12.webp')).default;
+const img13 = (await import('../../../assets/images/obras/aerolito/aerolito-13.webp')).default;
+const img14 = (await import('../../../assets/images/obras/aerolito/aerolito-14.webp')).default;
+const img15 = (await import('../../../assets/images/obras/aerolito/aerolito-15.webp')).default;
+const img16 = (await import('../../../assets/images/obras/aerolito/aerolito-16.webp')).default;
+const img17 = (await import('../../../assets/images/obras/aerolito/aerolito-17.webp')).default;
+const img18 = (await import('../../../assets/images/obras/aerolito/aerolito-18.webp')).default;
+const img19 = (await import('../../../assets/images/obras/aerolito/aerolito-19.webp')).default;
+const img20 = (await import('../../../assets/images/obras/aerolito/aerolito-20.webp')).default;
+const img21 = (await import('../../../assets/images/obras/aerolito/aerolito-21.webp')).default;
+const img22 = (await import('../../../assets/images/obras/aerolito/aerolito-22.webp')).default;
 ---
 
 <Layout
@@ -37,108 +54,31 @@ const imgs = await Promise.all(
         <p class="work-page__meta">2014–2015 &nbsp;/&nbsp; Investigación, instalación, archivos históricos y fotográficos, réplica en hierro &nbsp;/&nbsp; Dimensiones variables</p>
       </header>
 
-      <!-- Galería principal -->
+      <!-- Galeria principal -->
       <div class="work-page__gallery">
-        {imgs.map((img, i) => (
-          <img src={img.src} alt={`Pequeño Museo del Aerolito — Imagen ${i + 1}`} loading={i === 0 ? 'eager' : 'lazy'}>
-        ))}
+        <img src={img01.src} alt="Pequeño Museo del Aerolito — Vista general de la instalación" loading="eager">
+        <img src={img02.src} alt="Pequeño Museo del Aerolito — Meteorito original" loading="lazy">
+        <img src={img03.src} alt="Pequeño Museo del Aerolito — Archivo histórico" loading="lazy">
+        <img src={img04.src} alt="Pequeño Museo del Aerolito — Documentación fotográfica" loading="lazy">
+        <img src={img05.src} alt="Pequeño Museo del Aerolito — Réplica en hierro" loading="lazy">
+        <img src={img06.src} alt="Pequeño Museo del Aerolito — Detalle de instalación" loading="lazy">
+        <img src={img07.src} alt="Pequeño Museo del Aerolito — Archivo documental" loading="lazy">
+        <img src={img08.src} alt="Pequeño Museo del Aerolito — Investigación histórica" loading="lazy">
+        <img src={img09.src} alt="Pequeño Museo del Aerolito — Material de archivo" loading="lazy">
+        <img src={img10.src} alt="Pequeño Museo del Aerolito — Vista de sala" loading="lazy">
+        <img src={img11.src} alt="Pequeño Museo del Aerolito — Detalle documental" loading="lazy">
+        <img src={img12.src} alt="Pequeño Museo del Aerolito — Registro fotográfico" loading="lazy">
+        <img src={img13.src} alt="Pequeño Museo del Aerolito — Pieza de archivo" loading="lazy">
+        <img src={img14.src} alt="Pequeño Museo del Aerolito — Objeto de investigación" loading="lazy">
+        <img src={img15.src} alt="Pequeño Museo del Aerolito — Fragmento histórico" loading="lazy">
+        <img src={img16.src} alt="Pequeño Museo del Aerolito — Elemento de instalación" loading="lazy">
+        <img src={img17.src} alt="Pequeño Museo del Aerolito — Documento colonial" loading="lazy">
+        <img src={img18.src} alt="Pequeño Museo del Aerolito — Detalle de réplica" loading="lazy">
+        <img src={img19.src} alt="Pequeño Museo del Aerolito — Vista de conjunto" loading="lazy">
+        <img src={img20.src} alt="Pequeño Museo del Aerolito — Registro de investigación" loading="lazy">
+        <img src={img21.src} alt="Pequeño Museo del Aerolito — Pieza complementaria" loading="lazy">
+        <img src={img22.src} alt="Pequeño Museo del Aerolito — Vista final de instalación" loading="lazy">
       </div>
-
-      <!-- Video -->
-      <div class="work-page__video">
-        <div class="work-page__video-header">
-          <h3>VIDEO</h3>
-          <span class="label">Meteorito — Pequeño Museo del Aerolito · Video documental · 2:00 min</span>
-        </div>
-        <video controls preload="metadata" poster="">
-          <source src="/maria-elvira-escallon/video/meteorito-obra.mp4" type="video/mp4">
-          Tu navegador no soporta video HTML5.
-        </video>
-      </div>
-
-      <!-- Texto + Ficha -->
-      <div class="work-page__body">
-        <div class="work-page__text">
-
-          <p class="curatorial">
-            Constituido por diversos departamentos, acervos, archivos históricos y fotográficos
-            que dan seguimiento a la historia del meteorito que cayó en el departamento de Boyacá
-            un Sábado Santo de 1810. El proyecto incluye una réplica en hierro del aerolito que
-            actualmente custodia el Museo Nacional.
-          </p>
-
-          <p class="curatorial" style="margin-top: var(--s2);">
-            El montaje realizado para "Encuentros en la fábrica de polvo" en el MAMU (2024) fue
-            el más completo que se haya realizado, instalado en la sala El Parqueadero. El Pequeño
-            Museo funciona como una institución dentro de la institución — un museo ficticio que
-            cuestiona las formas en que se construye, preserva y exhibe el conocimiento.
-          </p>
-
-          <p class="curatorial" style="margin-top: var(--s2);">
-            Cada "departamento" del museo aborda un aspecto diferente: la historia geológica,
-            el impacto cultural, las narrativas locales, la documentación científica.
-          </p>
-
-          <h3 style="margin-top: var(--s4);">CONTEXTO</h3>
-          <p style="margin-top: var(--s2);">
-            El meteorito cayó en Santa Rosa de Viterbo, Boyacá, un Sábado Santo de 1810 —
-            el mismo año del movimiento de independencia de Colombia. Esta coincidencia
-            temporal añade capas de significado sobre los orígenes, los eventos cósmicos
-            y la identidad nacional.
-          </p>
-          <p style="margin-top: var(--s2);">
-            La pieza original del aerolito reposa en el Museo Nacional de Colombia y ha sido
-            objeto de múltiples narrativas: científicas, religiosas, populares e institucionales.
-            Escallón construye un dispositivo museográfico que las reúne todas, cuestionando la
-            autoridad de cada una y revelando cómo el conocimiento se fabrica tanto como se descubre.
-          </p>
-
-        </div>
-
-        <aside class="work-page__ficha">
-          <h4>FICHA TÉCNICA</h4>
-          <div class="ficha">
-            <strong>Pequeño Museo del Aerolito de Santa Rosa de Viterbo</strong><br>
-            2014–2015<br><br>
-            Investigación, instalación, archivos históricos
-            y fotográficos, réplica en hierro.<br>
-            Dimensiones variables
-          </div>
-
-          <h4 style="margin-top: var(--s3);">PREMIOS</h4>
-          <div class="ficha">
-            Beca Nacional de Creación Individual<br>
-            MinCultura, 2014
-          </div>
-
-          <h4 style="margin-top: var(--s3);">EXPOSICIONES</h4>
-          <div class="ficha">
-            Encuentros en la fábrica de polvo — MAMU, 2024<br>
-            Planetario Distrital, Bogotá, 2018<br>
-            Museo Nacional de Colombia, Bogotá, 2014
-          </div>
-
-          <h4 style="margin-top: var(--s3);">UBICACIÓN</h4>
-          <div class="ficha">
-            Museo Nacional de Colombia, Bogotá<br>
-            MAMU, Bogotá, 2024
-          </div>
-
-          <h4 style="margin-top: var(--s3);">CÓMO CITAR</h4>
-          <div class="ficha" style="font-size: 0.65rem;">
-            Escallón, M.E. (2014–2015). <em>Pequeño Museo del Aerolito de Santa Rosa de Viterbo</em>.
-            Investigación, instalación. Disponible en:
-            mariaelviraescallon.com/es/obra/aerolito/
-          </div>
-        </aside>
-      </div>
-
-    </div>
   </article>
 
 </Layout>
-
-<style>
-  @media (max-width: 768px) {
-    }
-</style>

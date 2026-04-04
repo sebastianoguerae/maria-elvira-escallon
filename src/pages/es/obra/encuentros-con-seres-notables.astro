@@ -6,38 +6,41 @@ const lang = 'es' as const;
 const title = 'Encuentros con seres notables';
 
 // Encuentros
-const imgsEncuentros = await Promise.all(
-  ['01','02','07','08'].map(n =>
-    import(`../../../assets/images/obras/encuentros/encuentros/encuentros-${n}.webp`)
-  )
-).then(m => m.map(x => x.default));
+const enc01 = (await import('../../../assets/images/obras/encuentros/encuentros/encuentros-01.webp')).default;
+const enc02 = (await import('../../../assets/images/obras/encuentros/encuentros/encuentros-02.webp')).default;
+const enc07 = (await import('../../../assets/images/obras/encuentros/encuentros/encuentros-07.webp')).default;
+const enc08 = (await import('../../../assets/images/obras/encuentros/encuentros/encuentros-08.webp')).default;
 // Encuentros con seres notables
-const imgsSeres = await Promise.all(
-  ['01','03','04','05','06','10'].map(n =>
-    import(`../../../assets/images/obras/encuentros/encuentros-con-seres-notables/encuentros-con-seres-notables-${n}.webp`)
-  )
-).then(m => m.map(x => x.default));
+const seres01 = (await import('../../../assets/images/obras/encuentros/encuentros-con-seres-notables/encuentros-con-seres-notables-01.webp')).default;
+const seres03 = (await import('../../../assets/images/obras/encuentros/encuentros-con-seres-notables/encuentros-con-seres-notables-03.webp')).default;
+const seres04 = (await import('../../../assets/images/obras/encuentros/encuentros-con-seres-notables/encuentros-con-seres-notables-04.webp')).default;
+const seres05 = (await import('../../../assets/images/obras/encuentros/encuentros-con-seres-notables/encuentros-con-seres-notables-05.webp')).default;
+const seres06 = (await import('../../../assets/images/obras/encuentros/encuentros-con-seres-notables/encuentros-con-seres-notables-06.webp')).default;
+const seres10 = (await import('../../../assets/images/obras/encuentros/encuentros-con-seres-notables/encuentros-con-seres-notables-10.webp')).default;
 // Mesa de trabajo
-const mesaNums = ['01','15','16','17','18','19','20','21','22','23','24','25','26','27'];
-const imgsMesa = await Promise.all(
-  mesaNums.map(n =>
-    import(`../../../assets/images/obras/encuentros/encuentros-mesa-de-trabajo/encuentros-mesa-de-trabajo-${n}.webp`)
-  )
-).then(m => m.map(x => x.default));
+const mesa01 = (await import('../../../assets/images/obras/encuentros/encuentros-mesa-de-trabajo/encuentros-mesa-de-trabajo-01.webp')).default;
+const mesa15 = (await import('../../../assets/images/obras/encuentros/encuentros-mesa-de-trabajo/encuentros-mesa-de-trabajo-15.webp')).default;
+const mesa16 = (await import('../../../assets/images/obras/encuentros/encuentros-mesa-de-trabajo/encuentros-mesa-de-trabajo-16.webp')).default;
+const mesa17 = (await import('../../../assets/images/obras/encuentros/encuentros-mesa-de-trabajo/encuentros-mesa-de-trabajo-17.webp')).default;
+const mesa18 = (await import('../../../assets/images/obras/encuentros/encuentros-mesa-de-trabajo/encuentros-mesa-de-trabajo-18.webp')).default;
+const mesa19 = (await import('../../../assets/images/obras/encuentros/encuentros-mesa-de-trabajo/encuentros-mesa-de-trabajo-19.webp')).default;
+const mesa20 = (await import('../../../assets/images/obras/encuentros/encuentros-mesa-de-trabajo/encuentros-mesa-de-trabajo-20.webp')).default;
+const mesa21 = (await import('../../../assets/images/obras/encuentros/encuentros-mesa-de-trabajo/encuentros-mesa-de-trabajo-21.webp')).default;
+const mesa22 = (await import('../../../assets/images/obras/encuentros/encuentros-mesa-de-trabajo/encuentros-mesa-de-trabajo-22.webp')).default;
+const mesa23 = (await import('../../../assets/images/obras/encuentros/encuentros-mesa-de-trabajo/encuentros-mesa-de-trabajo-23.webp')).default;
+const mesa24 = (await import('../../../assets/images/obras/encuentros/encuentros-mesa-de-trabajo/encuentros-mesa-de-trabajo-24.webp')).default;
+const mesa25 = (await import('../../../assets/images/obras/encuentros/encuentros-mesa-de-trabajo/encuentros-mesa-de-trabajo-25.webp')).default;
+const mesa26 = (await import('../../../assets/images/obras/encuentros/encuentros-mesa-de-trabajo/encuentros-mesa-de-trabajo-26.webp')).default;
+const mesa27 = (await import('../../../assets/images/obras/encuentros/encuentros-mesa-de-trabajo/encuentros-mesa-de-trabajo-27.webp')).default;
 // Arborea
-const imgsArborea = await Promise.all(
-  ['08','09'].map(n =>
-    import(`../../../assets/images/obras/encuentros/encuentros--arborea/encuentros--arborea-${n}.webp`)
-  )
-).then(m => m.map(x => x.default));
+const arborea08 = (await import('../../../assets/images/obras/encuentros/encuentros--arborea/encuentros--arborea-08.webp')).default;
+const arborea09 = (await import('../../../assets/images/obras/encuentros/encuentros--arborea/encuentros--arborea-09.webp')).default;
 // Encuentros cercanos
-const imgsCercanos = await Promise.all(
-  ['12','13','14'].map(n =>
-    import(`../../../assets/images/obras/encuentros/encuentros-cercanos/encuentros-cercanos-${n}.webp`)
-  )
-).then(m => m.map(x => x.default));
+const cercanos12 = (await import('../../../assets/images/obras/encuentros/encuentros-cercanos/encuentros-cercanos-12.webp')).default;
+const cercanos13 = (await import('../../../assets/images/obras/encuentros/encuentros-cercanos/encuentros-cercanos-13.webp')).default;
+const cercanos14 = (await import('../../../assets/images/obras/encuentros/encuentros-cercanos/encuentros-cercanos-14.webp')).default;
 // Las caminantes
-const imgCaminantes = (await import('../../../assets/images/obras/encuentros/encuentros-las-caminantes/encuentros-las-caminantes-11.webp')).default;
+const caminantes11 = (await import('../../../assets/images/obras/encuentros/encuentros-las-caminantes/encuentros-las-caminantes-11.webp')).default;
 ---
 
 <Layout
@@ -65,147 +68,50 @@ const imgCaminantes = (await import('../../../assets/images/obras/encuentros/enc
         <p class="work-page__meta">2022 &nbsp;/&nbsp; Escultura — ramas de jazmín de la sabana, eucalipto, talla en madera, arcilla &nbsp;/&nbsp; Dimensiones variables</p>
       </header>
 
-      <!-- Galeria: Encuentros -->
+      <!-- Galeria -->
       <div class="work-page__gallery">
         <h3 style="margin-top: var(--s3);">ENCUENTROS</h3>
-        {imgsEncuentros.map((img, i) => (
-          <img src={img.src} alt={`Encuentros — Imagen ${i + 1}`} loading={i === 0 ? 'eager' : 'lazy'}>
-        ))}
-      </div>
+        <img src={enc01.src} alt="Encuentros — Escultura sobre rama, figura emergente" loading="eager">
+        <img src={enc02.src} alt="Encuentros — Talla en madera sobre rama natural" loading="lazy">
+        <img src={enc07.src} alt="Encuentros — Detalle de intervención escultórica" loading="lazy">
+        <img src={enc08.src} alt="Encuentros — Forma humana en rama de árbol" loading="lazy">
 
-      <!-- Galeria: Encuentros con seres notables -->
-      <div class="work-page__gallery">
         <h3 style="margin-top: var(--s3);">ENCUENTROS CON SERES NOTABLES</h3>
-        {imgsSeres.map((img, i) => (
-          <img src={img.src} alt={`Encuentros con seres notables — Imagen ${i + 1}`} loading="lazy">
-        ))}
-      </div>
+        <img src={seres01.src} alt="Encuentros con seres notables — Escultura tallada sobre rama" loading="lazy">
+        <img src={seres03.src} alt="Encuentros con seres notables — Cuerpo vegetal intervenido" loading="lazy">
+        <img src={seres04.src} alt="Encuentros con seres notables — Detalle de talla en madera" loading="lazy">
+        <img src={seres05.src} alt="Encuentros con seres notables — Forma orgánica tallada" loading="lazy">
+        <img src={seres06.src} alt="Encuentros con seres notables — Rama con figura escultórica" loading="lazy">
+        <img src={seres10.src} alt="Encuentros con seres notables — Vista de conjunto" loading="lazy">
 
-      <!-- Galeria: Mesa de trabajo -->
-      <div class="work-page__gallery">
         <h3 style="margin-top: var(--s3);">MESA DE TRABAJO</h3>
-        {imgsMesa.map((img, i) => (
-          <img src={img.src} alt={`Mesa de trabajo — Imagen ${i + 1}`} loading="lazy">
-        ))}
-      </div>
+        <img src={mesa01.src} alt="Mesa de trabajo — Vista general del espacio de trabajo" loading="lazy">
+        <img src={mesa15.src} alt="Mesa de trabajo — Herramientas y materiales" loading="lazy">
+        <img src={mesa16.src} alt="Mesa de trabajo — Proceso de talla" loading="lazy">
+        <img src={mesa17.src} alt="Mesa de trabajo — Ramas en preparación" loading="lazy">
+        <img src={mesa18.src} alt="Mesa de trabajo — Detalle de proceso creativo" loading="lazy">
+        <img src={mesa19.src} alt="Mesa de trabajo — Piezas en desarrollo" loading="lazy">
+        <img src={mesa20.src} alt="Mesa de trabajo — Material escultórico" loading="lazy">
+        <img src={mesa21.src} alt="Mesa de trabajo — Fragmentos de talla" loading="lazy">
+        <img src={mesa22.src} alt="Mesa de trabajo — Elementos de trabajo" loading="lazy">
+        <img src={mesa23.src} alt="Mesa de trabajo — Vista del taller" loading="lazy">
+        <img src={mesa24.src} alt="Mesa de trabajo — Detalle de herramientas" loading="lazy">
+        <img src={mesa25.src} alt="Mesa de trabajo — Piezas terminadas" loading="lazy">
+        <img src={mesa26.src} alt="Mesa de trabajo — Registro de proceso" loading="lazy">
+        <img src={mesa27.src} alt="Mesa de trabajo — Vista final del espacio" loading="lazy">
 
-      <!-- Galeria: Arborea -->
-      <div class="work-page__gallery">
         <h3 style="margin-top: var(--s3);">ARBOREA</h3>
-        {imgsArborea.map((img, i) => (
-          <img src={img.src} alt={`Arborea — Imagen ${i + 1}`} loading="lazy">
-        ))}
-      </div>
+        <img src={arborea08.src} alt="Arbórea — Escultura arbórea intervenida" loading="lazy">
+        <img src={arborea09.src} alt="Arbórea — Detalle de intervención sobre árbol" loading="lazy">
 
-      <!-- Galeria: Encuentros cercanos -->
-      <div class="work-page__gallery">
         <h3 style="margin-top: var(--s3);">ENCUENTROS CERCANOS</h3>
-        {imgsCercanos.map((img, i) => (
-          <img src={img.src} alt={`Encuentros cercanos — Imagen ${i + 1}`} loading="lazy">
-        ))}
-      </div>
+        <img src={cercanos12.src} alt="Encuentros cercanos — Figura tallada en primer plano" loading="lazy">
+        <img src={cercanos13.src} alt="Encuentros cercanos — Detalle de forma escultórica" loading="lazy">
+        <img src={cercanos14.src} alt="Encuentros cercanos — Vista cercana de talla" loading="lazy">
 
-      <!-- Galeria: Las caminantes -->
-      <div class="work-page__gallery">
         <h3 style="margin-top: var(--s3);">LAS CAMINANTES</h3>
-        <img src={imgCaminantes.src} alt="Las caminantes — Imagen 1" loading="lazy">
+        <img src={caminantes11.src} alt="Las caminantes — Figura caminante tallada en rama" loading="lazy">
       </div>
-
-      <!-- Video -->
-      <div class="work-page__video">
-        <div class="work-page__video-header">
-          <h3>VIDEO</h3>
-          <span class="label">Encuentros con seres notables · Video completo · 2:00 min</span>
-        </div>
-        <video controls preload="metadata" poster="">
-          <source src="/maria-elvira-escallon/video/encuentros-obra.mp4" type="video/mp4">
-          Tu navegador no soporta video HTML5.
-        </video>
-      </div>
-
-      <!-- Texto + Ficha -->
-      <div class="work-page__body">
-        <div class="work-page__text">
-
-          <p class="curatorial">
-            El título se inspira en el libro del místico ruso George Gurdjieff, "Encuentros con
-            hombres notables", reimaginado para celebrar las conexiones con la naturaleza. La
-            exposición explora el parentesco entre los seres humanos y otros seres vivos — árboles
-            y plantas — destacando aspectos sensibles que muestran grandes similitudes entre seres vivos.
-          </p>
-
-          <p class="curatorial" style="margin-top: var(--s2);">
-            Escallón descubrió en el bosque ramas que se asemejan a la anatomía esquelética humana:
-            fémures, húmeros, escápulas, radios y cúbitos, falanges. Mediante talla cuidadosa,
-            reveló formas donde "sus dos ramas estiran sus dedos para tratar de tocarse", creando
-            ecos visuales de la escena de la Creación de Miguel Ángel.
-          </p>
-
-          <p class="curatorial" style="margin-top: var(--s2);">
-            La exposición incluye esculturas hechas de ramas talladas que semejan huesos humanos,
-            sugiriendo una correspondencia estructural entre organismos vegetales y animales. Los
-            materiales incluyen arena, arcilla en varios estados (fresca y cocida), y piezas
-            modeladas por el agua y la arena del mar.
-          </p>
-
-          <h3 style="margin-top: var(--s4);">CONTEXTO</h3>
-          <p style="margin-top: var(--s2);">
-            Escallón investigó híbridos entre naturaleza y humanos en la historia del arte,
-            encontrando que los híbridos entre humanos y plantas son escasos — la mandrágora,
-            Dafne, los Ents de Tolkien. Esta escasez motivó una exploración profunda de las
-            correspondencias estructurales entre lo vegetal y lo animal, revelando parentescos
-            que normalmente pasan desapercibidos.
-          </p>
-
-          <h3 style="margin-top: var(--s4);">PIEZAS INCLUIDAS</h3>
-          <ul style="margin-top: var(--s2); list-style: none;">
-            <li style="padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark);">
-              <strong>Brazo</strong> — 2022. Arcilla fresca, 10 × 60 × 12 cm. Manos modelando un brazo que se conecta a un frailejón.
-            </li>
-            <li style="padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark);">
-              <strong>Desclavada</strong> — 2022. Escultura.
-            </li>
-            <li style="padding: var(--s1) 0;">
-              <strong>Esculturas de ramas talladas</strong> — Ramas de jazmín de la sabana y eucalipto talladas semejando huesos humanos.
-            </li>
-          </ul>
-        </div>
-
-        <aside class="work-page__ficha">
-          <h4>FICHA TÉCNICA</h4>
-          <div class="ficha">
-            <strong>Encuentros con seres notables</strong><br>
-            2022<br><br>
-            Escultura — ramas de jazmín de la sabana, eucalipto, talla en madera, arcilla.<br><br>
-            Dimensiones variables<br>
-            Galería Espacio Continuo, Bogotá
-          </div>
-
-          <h4 style="margin-top: var(--s3);">CURADURÍA</h4>
-          <div class="ficha">
-            Ana María Lozano Rocha
-          </div>
-
-          <h4 style="margin-top: var(--s3);">EXPOSICIONES</h4>
-          <div class="ficha">
-            Encuentros con seres notables — Galería Espacio Continuo, Bogotá, 2022
-          </div>
-
-          <h4 style="margin-top: var(--s3);">CÓMO CITAR</h4>
-          <div class="ficha" style="font-size: 0.65rem;">
-            Escallón, M.E. (2022). <em>Encuentros con seres notables</em>.
-            Escultura. Disponible en:
-            mariaelviraescallon.com/es/obra/encuentros-con-seres-notables/
-          </div>
-        </aside>
-      </div>
-
-    </div>
   </article>
 
 </Layout>
-
-<style>
-  @media (max-width: 768px) {
-    }
-</style>

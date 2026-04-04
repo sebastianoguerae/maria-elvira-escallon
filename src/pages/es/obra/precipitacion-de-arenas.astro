@@ -5,24 +5,22 @@ import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
 const lang = 'es' as const;
 const title = 'Precipitación de arenas';
 
-// Cauca 2008 (root)
-const imgsCauca = await Promise.all(
-  ['01','02'].map(n =>
-    import(`../../../assets/images/obras/precipitacion/precipitacion-${n}.webp`)
-  )
-).then(m => m.map(x => x.default));
+// Rio Cauca 2008 (root)
+const prec01 = (await import('../../../assets/images/obras/precipitacion/precipitacion-01.webp')).default;
+const prec02 = (await import('../../../assets/images/obras/precipitacion/precipitacion-02.webp')).default;
 // 2020
-const imgs2020 = await Promise.all(
-  Array.from({ length: 4 }, (_, i) =>
-    import(`../../../assets/images/obras/precipitacion/2020/2020-${String(i + 1).padStart(2, '0')}.webp`)
-  )
-).then(m => m.map(x => x.default));
+const y2020_01 = (await import('../../../assets/images/obras/precipitacion/2020/2020-01.webp')).default;
+const y2020_02 = (await import('../../../assets/images/obras/precipitacion/2020/2020-02.webp')).default;
+const y2020_03 = (await import('../../../assets/images/obras/precipitacion/2020/2020-03.webp')).default;
+const y2020_04 = (await import('../../../assets/images/obras/precipitacion/2020/2020-04.webp')).default;
 // 2024
-const imgs2024 = await Promise.all(
-  Array.from({ length: 7 }, (_, i) =>
-    import(`../../../assets/images/obras/precipitacion/2024/2024-${String(i + 1).padStart(2, '0')}.webp`)
-  )
-).then(m => m.map(x => x.default));
+const y2024_01 = (await import('../../../assets/images/obras/precipitacion/2024/2024-01.webp')).default;
+const y2024_02 = (await import('../../../assets/images/obras/precipitacion/2024/2024-02.webp')).default;
+const y2024_03 = (await import('../../../assets/images/obras/precipitacion/2024/2024-03.webp')).default;
+const y2024_04 = (await import('../../../assets/images/obras/precipitacion/2024/2024-04.webp')).default;
+const y2024_05 = (await import('../../../assets/images/obras/precipitacion/2024/2024-05.webp')).default;
+const y2024_06 = (await import('../../../assets/images/obras/precipitacion/2024/2024-06.webp')).default;
+const y2024_07 = (await import('../../../assets/images/obras/precipitacion/2024/2024-07.webp')).default;
 ---
 
 <Layout
@@ -50,116 +48,27 @@ const imgs2024 = await Promise.all(
         <p class="work-page__meta">2022–2024 (varias versiones) &nbsp;/&nbsp; Instalación — arena, muebles, vidrio de seguridad, parlante &nbsp;/&nbsp; Dimensiones variables</p>
       </header>
 
-      <!-- Galeria: Cauca 2008 -->
+      <!-- Galeria -->
       <div class="work-page__gallery">
-        <h3 style="margin-top: var(--s3);">CAUCA 2008</h3>
-        {imgsCauca.map((img, i) => (
-          <img src={img.src} alt={`Precipitación de arenas — Cauca 2008, imagen ${i + 1}`} loading={i === 0 ? 'eager' : 'lazy'}>
-        ))}
-      </div>
+        <h3 style="margin-top: var(--s3);">RIO CAUCA, 2008</h3>
+        <img src={prec01.src} alt="Precipitación de arenas — Río Cauca, arena precipitándose" loading="eager">
+        <img src={prec02.src} alt="Precipitación de arenas — Río Cauca, registro de arena" loading="lazy">
 
-      <!-- Galeria: 2020 -->
-      <div class="work-page__gallery">
         <h3 style="margin-top: var(--s3);">PRECIPITACIONES 2020</h3>
-        {imgs2020.map((img, i) => (
-          <img src={img.src} alt={`Precipitación de arenas 2020 — Imagen ${i + 1}`} loading="lazy">
-        ))}
-      </div>
+        <img src={y2020_01.src} alt="Precipitación de arenas 2020 — Instalación con arena y muebles" loading="lazy">
+        <img src={y2020_02.src} alt="Precipitación de arenas 2020 — Arena sobre objetos domésticos" loading="lazy">
+        <img src={y2020_03.src} alt="Precipitación de arenas 2020 — Detalle de vitrina sellada" loading="lazy">
+        <img src={y2020_04.src} alt="Precipitación de arenas 2020 — Vista de conjunto" loading="lazy">
 
-      <!-- Galeria: 2024 -->
-      <div class="work-page__gallery">
         <h3 style="margin-top: var(--s3);">PRECIPITACIONES 2024</h3>
-        {imgs2024.map((img, i) => (
-          <img src={img.src} alt={`Precipitación de arenas 2024 — Imagen ${i + 1}`} loading="lazy">
-        ))}
+        <img src={y2024_01.src} alt="Precipitación de arenas 2024 — Instalación en el MAMU" loading="lazy">
+        <img src={y2024_02.src} alt="Precipitación de arenas 2024 — Arena cayendo sobre muebles" loading="lazy">
+        <img src={y2024_03.src} alt="Precipitación de arenas 2024 — Detalle de acumulación" loading="lazy">
+        <img src={y2024_04.src} alt="Precipitación de arenas 2024 — Vidrio de seguridad y arena" loading="lazy">
+        <img src={y2024_05.src} alt="Precipitación de arenas 2024 — Objetos cubiertos de arena" loading="lazy">
+        <img src={y2024_06.src} alt="Precipitación de arenas 2024 — Vista lateral de instalación" loading="lazy">
+        <img src={y2024_07.src} alt="Precipitación de arenas 2024 — Vista final de la obra" loading="lazy">
       </div>
-
-      <!-- Video -->
-      <div class="work-page__video">
-        <div class="work-page__video-header">
-          <h3>VIDEO</h3>
-          <span class="label">Polvo eres — Video relacionado · 2:00 min</span>
-        </div>
-        <video controls preload="metadata" poster="">
-          <source src="/maria-elvira-escallon/video/polvo-eres-obra.mp4" type="video/mp4">
-          Tu navegador no soporta video HTML5.
-        </video>
-      </div>
-
-      <!-- Texto + Ficha -->
-      <div class="work-page__body">
-        <div class="work-page__text">
-
-          <p class="curatorial">
-            La obra busca transformar un fenómeno no físico —el paso del tiempo— en algo material
-            y tangible. Escallón define estas piezas como "dispositivos para ver pasar el tiempo."
-            Arena dorada del río Guamo cae desde el techo en diferentes intervalos, cubriendo
-            superficies y transformando constantemente el estado de la habitación.
-          </p>
-
-          <p class="curatorial" style="margin-top: var(--s2);">
-            Muebles domésticos comprimidos son gradualmente sepultados bajo toneladas de arena.
-            El espacio está separado del espectador por un vidrio de seguridad y un parlante
-            permite escuchar el ruido de la caída. Los objetos personales se convierten en restos
-            arqueológicos. En la versión del MAMU se precipitaron 10 toneladas de arena por
-            primera vez, amplificando la escala e impacto de la instalación.
-          </p>
-
-          <p class="curatorial" style="margin-top: var(--s2);">
-            La obra se desarrolló a partir del concepto anterior "Precipitaciones del río Cauca."
-          </p>
-
-          <h3 style="margin-top: var(--s4);">CONTEXTO</h3>
-          <p style="margin-top: var(--s2);">
-            <em>Precipitación de arenas</em> ha tenido múltiples versiones, cada una adaptada
-            al espacio de exhibición específico. La versión presentada en el MAMU en 2024 fue
-            la más ambiciosa, con 10 toneladas de arena precipitándose sobre los muebles
-            comprimidos. La pieza transforma la sala de exhibición en un dispositivo poético
-            donde el tiempo se hace visible a través de la acumulación material.
-          </p>
-
-          <h3 style="margin-top: var(--s4);">EXPOSICIONES</h3>
-          <ul style="margin-top: var(--s2); list-style: none;">
-            <li style="padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark);">
-              <strong>Encuentros en la fábrica de polvo</strong> — MAMU, Bogotá, 2024. Versión más ambiciosa (10 toneladas de arena).
-            </li>
-            <li style="padding: var(--s1) 0;">
-              <strong>Galería Espacio Continuo</strong> — Bogotá, 2022.
-            </li>
-          </ul>
-        </div>
-
-        <aside class="work-page__ficha">
-          <h4>FICHA TÉCNICA</h4>
-          <div class="ficha">
-            <strong>Precipitación de arenas</strong><br>
-            2022–2024 (varias versiones)<br><br>
-            Instalación — arena, muebles, vidrio de seguridad, parlante.<br><br>
-            Dimensiones variables<br>
-            Múltiples sedes / MAMU, Bogotá (2024, versión más ambiciosa)
-          </div>
-
-          <h4 style="margin-top: var(--s3);">EXPOSICIONES</h4>
-          <div class="ficha">
-            Encuentros en la fábrica de polvo — MAMU, 2024<br>
-            Galería Espacio Continuo, 2022
-          </div>
-
-          <h4 style="margin-top: var(--s3);">CÓMO CITAR</h4>
-          <div class="ficha" style="font-size: 0.65rem;">
-            Escallón, M.E. (2022–2024). <em>Precipitación de arenas</em>.
-            Instalación. Disponible en:
-            mariaelviraescallon.com/es/obra/precipitacion-de-arenas/
-          </div>
-        </aside>
-      </div>
-
-    </div>
   </article>
 
 </Layout>
-
-<style>
-  @media (max-width: 768px) {
-    }
-</style>

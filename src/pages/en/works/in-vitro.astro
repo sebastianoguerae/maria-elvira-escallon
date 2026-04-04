@@ -2,7 +2,6 @@
 import Layout from '../../../components/layout/Layout.astro';
 import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
 import QuoteBlock from '../../../components/content/QuoteBlock.astro';
-import AudioPlayer from '../../../components/interactive/AudioPlayer';
 
 const lang = 'en' as const;
 const title = 'In Vitro';
@@ -40,11 +39,6 @@ const img2 = (await import('../../../assets/images/obras/in-vitro/in-vitro-02.we
       <div class="work-page__gallery">
         <img src={img1.src} alt="In Vitro — Mirror installation at La Sabana Station, Bogota" loading="eager">
         <img src={img2.src} alt="In Vitro — Detail of the floor and reflection in the mirror" loading="lazy">
-      </div>
-
-      <!-- Audio -->
-      <div style="margin: var(--s3) 0;">
-        <AudioPlayer client:visible title="Maria Elvira on In Vitro" />
       </div>
 
       <!-- Text + Technical sheet -->
