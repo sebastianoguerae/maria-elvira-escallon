@@ -6,15 +6,11 @@ import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
 const lang = 'en' as const;
 const title = 'Desde Adentro';
 
-const img1 = (await import('../../../assets/images/obras/desde-adentro/desde-adentro-01.jpg')).default;
-const img2 = (await import('../../../assets/images/obras/desde-adentro/desde-adentro-02.jpg')).default;
-const img3 = (await import('../../../assets/images/obras/desde-adentro/desde-adentro-03.jpg')).default;
-const img4 = (await import('../../../assets/images/obras/desde-adentro/port-067.jpg')).default;
-const img5 = (await import('../../../assets/images/obras/desde-adentro/port-069.jpg')).default;
-const img6 = (await import('../../../assets/images/obras/desde-adentro/port-073.jpg')).default;
-const img7 = (await import('../../../assets/images/obras/desde-adentro/port-076.jpg')).default;
-const img8 = (await import('../../../assets/images/obras/desde-adentro/port-079.jpg')).default;
-const img9 = (await import('../../../assets/images/obras/desde-adentro/port-080.jpg')).default;
+const imgs = await Promise.all(
+  Array.from({ length: 14 }, (_, i) =>
+    import(`../../../assets/images/obras/desde-adentro/desde-adentro-${String(i + 1).padStart(2, '0')}.webp`)
+  )
+).then(m => m.map(x => x.default));
 ---
 
 <Layout
@@ -45,15 +41,9 @@ const img9 = (await import('../../../assets/images/obras/desde-adentro/port-080.
 
       <!-- Main gallery -->
       <div class="work-page__gallery">
-        <img src={img1.src} alt="Desde Adentro — Photographic documentation of the interior of Club El Nogal after the attack" loading="eager">
-        <img src={img2.src} alt="Desde Adentro — Traces and marks on ash-covered surfaces" loading="lazy">
-        <img src={img3.src} alt="Desde Adentro — Detail of everyday objects after the explosion" loading="lazy">
-        <img src={img4.src} alt="Desde Adentro — Impressions on ash-covered surfaces" loading="lazy">
-        <img src={img5.src} alt="Desde Adentro — Traces and silhouettes of missing objects" loading="lazy">
-        <img src={img6.src} alt="Desde Adentro — Handprints on soot-covered walls" loading="lazy">
-        <img src={img7.src} alt="Desde Adentro — Stairs and hallways after the attack" loading="lazy">
-        <img src={img8.src} alt="Desde Adentro — Outlines of removed paintings on the wall" loading="lazy">
-        <img src={img9.src} alt="Desde Adentro — Photographic record of the interior destruction" loading="lazy">
+        {imgs.map((img, i) => (
+          <img src={img.src} alt={`Desde Adentro — Photographic documentation ${i + 1}`} loading={i === 0 ? 'eager' : 'lazy'}>
+        ))}
       </div>
 
       <!-- Audio -->

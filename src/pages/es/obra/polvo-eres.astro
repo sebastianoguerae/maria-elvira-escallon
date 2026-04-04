@@ -5,15 +5,11 @@ import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
 const lang = 'es' as const;
 const title = 'Polvo eres';
 
-const img1 = (await import('../../../assets/images/obras/polvo-eres/polvo-eres-01.jpg')).default;
-const img2 = (await import('../../../assets/images/obras/polvo-eres/port-116.jpg')).default;
-const img3 = (await import('../../../assets/images/obras/polvo-eres/port-117.jpg')).default;
-const img4 = (await import('../../../assets/images/obras/polvo-eres/port-118.jpg')).default;
-const img5 = (await import('../../../assets/images/obras/polvo-eres/port-119.jpg')).default;
-const img6 = (await import('../../../assets/images/obras/polvo-eres/port-120.jpg')).default;
-const img7 = (await import('../../../assets/images/obras/polvo-eres/port-121.jpg')).default;
-const img8 = (await import('../../../assets/images/obras/polvo-eres/port-122.jpg')).default;
-const img9 = (await import('../../../assets/images/obras/polvo-eres/port-123.jpg')).default;
+const imgs = await Promise.all(
+  Array.from({ length: 10 }, (_, i) =>
+    import(`../../../assets/images/obras/polvo-eres/polvo-eres-${String(i + 1).padStart(2, '0')}.webp`)
+  )
+).then(m => m.map(x => x.default));
 ---
 
 <Layout
@@ -43,15 +39,9 @@ const img9 = (await import('../../../assets/images/obras/polvo-eres/port-123.jpg
 
       <!-- Galería principal -->
       <div class="work-page__gallery">
-        <img src={img1.src} alt="Polvo eres — Inscripción tallada sobre pared del museo, capas de ladrillo expuestas" loading="eager">
-        <img src={img2.src} alt="Polvo eres — Vista general de la intervención sobre el muro" loading="lazy">
-        <img src={img3.src} alt="Polvo eres — Detalle de las letras talladas sobre ladrillo" loading="lazy">
-        <img src={img4.src} alt="Polvo eres — Residuos de la talla acumulados al pie del muro" loading="lazy">
-        <img src={img5.src} alt="Polvo eres — Capas de pintura y ladrillo expuestas por la talla" loading="lazy">
-        <img src={img6.src} alt="Polvo eres — Vista lateral de la inscripción en el muro del museo" loading="lazy">
-        <img src={img7.src} alt="Polvo eres — Detalle de la textura del ladrillo revelado" loading="lazy">
-        <img src={img8.src} alt="Polvo eres — Fragmento de la inscripción y escombros" loading="lazy">
-        <img src={img9.src} alt="Polvo eres — Vista de la obra en contexto de la sala del MAMU" loading="lazy">
+        {imgs.map((img, i) => (
+          <img src={img.src} alt={`Polvo eres — Talla sobre pared, MAMU ${i + 1}`} loading={i === 0 ? 'eager' : 'lazy'}>
+        ))}
       </div>
 
       <!-- Video -->

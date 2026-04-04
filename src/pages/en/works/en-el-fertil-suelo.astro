@@ -5,14 +5,8 @@ import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
 const lang = 'en' as const;
 const title = 'En el fertil suelo — La travesia';
 
-const img1 = (await import('../../../assets/images/obras/fertil-suelo/port-162.jpg')).default;
-const img2 = (await import('../../../assets/images/obras/fertil-suelo/port-164.jpg')).default;
-const img3 = (await import('../../../assets/images/obras/fertil-suelo/port-165.jpg')).default;
-const img4 = (await import('../../../assets/images/obras/fertil-suelo/port-167.jpg')).default;
-const img5 = (await import('../../../assets/images/obras/fertil-suelo/port-169.jpg')).default;
-const img6 = (await import('../../../assets/images/obras/fertil-suelo/port-170.jpg')).default;
-const img7 = (await import('../../../assets/images/obras/fertil-suelo/port-172.jpg')).default;
-const img8 = (await import('../../../assets/images/obras/fertil-suelo/port-173.jpg')).default;
+const img1 = (await import('../../../assets/images/obras/fertil-suelo/fertil-suelo-01.webp')).default;
+const img2 = (await import('../../../assets/images/obras/fertil-suelo/fertil-suelo-02.webp')).default;
 ---
 
 <Layout
@@ -44,12 +38,6 @@ const img8 = (await import('../../../assets/images/obras/fertil-suelo/port-173.j
       <div class="work-page__gallery">
         <img src={img1.src} alt="En el fertil suelo — General view of the sculptural installation" loading="eager">
         <img src={img2.src} alt="En el fertil suelo — Detail of the sculptural figures" loading="lazy">
-        <img src={img3.src} alt="En el fertil suelo — Characters advancing together after the war" loading="lazy">
-        <img src={img4.src} alt="En el fertil suelo — Light installation at Galeria Santa Fe" loading="lazy">
-        <img src={img5.src} alt="En el fertil suelo — Detail of projected shadows" loading="lazy">
-        <img src={img6.src} alt="En el fertil suelo — Side view of the sculpture" loading="lazy">
-        <img src={img7.src} alt="En el fertil suelo — Sound installation, detail" loading="lazy">
-        <img src={img8.src} alt="En el fertil suelo — View of the work in exhibition context" loading="lazy">
       </div>
 
       <!-- Text + Technical sheet -->
