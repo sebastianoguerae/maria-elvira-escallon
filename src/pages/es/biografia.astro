@@ -7,6 +7,9 @@ const title = 'Biografía';
 
 const retrato = (await import('../../assets/images/retrato/retrato.jpg')).default;
 const libroEnEstadoDeComa = (await import('../../assets/images/libros/en-estado-de-coma-libro.jpg')).default;
+const libroPolvoEres = (await import('../../assets/images/libros/polvo-eres-portada.jpg')).default;
+const libroSeguros = (await import('../../assets/images/libros/seguros-bolivar-portada.jpg')).default;
+const libroEncuentros = (await import('../../assets/images/libros/encuentros-catalogo-001.jpg')).default;
 ---
 
 <Layout
@@ -261,7 +264,23 @@ const libroEnEstadoDeComa = (await import('../../assets/images/libros/en-estado-
         <div class="bio-publications">
 
           <article class="bio-pub-card">
-            <div class="bio-pub-card__cover bio-pub-card__cover--placeholder"></div>
+            <div class="bio-pub-card__cover">
+              <img src={libroEncuentros.src} alt="Portada — Encuentros en la fábrica de polvo" loading="lazy">
+            </div>
+            <div class="bio-pub-card__info">
+              <h3>Encuentros en la fábrica de polvo</h3>
+              <div class="ficha">
+                2024<br>
+                Catálogo exposición antológica<br>
+                MAMU, Banco de la República
+              </div>
+            </div>
+          </article>
+
+          <article class="bio-pub-card">
+            <div class="bio-pub-card__cover">
+              <img src={libroSeguros.src} alt="Portada — Colección Seguros Bolívar" loading="lazy">
+            </div>
             <div class="bio-pub-card__info">
               <h3>Colección Seguros Bolívar de Arte Contemporáneo</h3>
               <div class="ficha">
@@ -273,7 +292,9 @@ const libroEnEstadoDeComa = (await import('../../assets/images/libros/en-estado-
           </article>
 
           <article class="bio-pub-card">
-            <div class="bio-pub-card__cover bio-pub-card__cover--placeholder"></div>
+            <div class="bio-pub-card__cover">
+              <img src={libroPolvoEres.src} alt="Portada — Polvo Eres" loading="lazy">
+            </div>
             <div class="bio-pub-card__info">
               <h3>Polvo Eres: El correr del tiempo</h3>
               <div class="ficha">
