@@ -531,16 +531,15 @@ export default function Timeline({ lang = 'es' }: { lang?: string }) {
                   bottom: nodeSize / 2 + 8,
                   left: '50%',
                   transform: 'translateX(-50%)',
-                  whiteSpace: 'nowrap',
+                  whiteSpace: 'normal',
                   fontFamily: "'Space Mono', monospace",
-                  fontSize: '0.68rem',
+                  fontSize: '0.6rem',
                   fontWeight: work.type === 'award' ? 700 : 400,
                   color: color,
                   letterSpacing: '0.02em',
-                  lineHeight: '1.3',
-                  maxWidth: 120,
-                  overflow: 'hidden',
-                  textOverflow: 'ellipsis',
+                  lineHeight: '1.4',
+                  width: 140,
+                  textAlign: 'center' as const,
                   userSelect: 'none',
                   pointerEvents: 'none',
                 }}>
@@ -605,14 +604,13 @@ export default function Timeline({ lang = 'es' }: { lang?: string }) {
 
                 {/* Title */}
                 <div style={{
-                  whiteSpace: 'nowrap',
+                  whiteSpace: 'normal',
                   fontFamily: "'Space Mono', monospace",
-                  fontSize: '0.6rem',
+                  fontSize: '0.55rem',
                   color: ASH_LIGHT,
                   letterSpacing: '0.02em',
-                  maxWidth: 110,
-                  overflow: 'hidden',
-                  textOverflow: 'ellipsis',
+                  width: 130,
+                  textAlign: 'center' as const,
                   userSelect: 'none',
                   pointerEvents: 'none',
                 }}>
@@ -622,12 +620,13 @@ export default function Timeline({ lang = 'es' }: { lang?: string }) {
                 {/* Description */}
                 {ctx.desc && (
                   <div style={{
-                    whiteSpace: 'nowrap',
+                    whiteSpace: 'normal',
                     fontFamily: "'Space Mono', monospace",
-                    fontSize: '0.5rem',
+                    fontSize: '0.45rem',
                     color: ASH_LIGHT,
                     opacity: 0.7,
-                    maxWidth: 110,
+                    width: 130,
+                    textAlign: 'center' as const,
                     overflow: 'hidden',
                     textOverflow: 'ellipsis',
                     userSelect: 'none',
