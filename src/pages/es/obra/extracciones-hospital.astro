@@ -4,6 +4,12 @@ import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
 
 const lang = 'es' as const;
 const title = 'Extracciones en el Hospital Universitario';
+
+const img1 = (await import('../../../assets/images/obras/extracciones-hospital/extracciones-hospital-01.webp')).default;
+const img2 = (await import('../../../assets/images/obras/extracciones-hospital/extracciones-hospital-02.webp')).default;
+const img3 = (await import('../../../assets/images/obras/extracciones-hospital/extracciones-hospital-03.webp')).default;
+const img4 = (await import('../../../assets/images/obras/extracciones-hospital/extracciones-hospital-04.webp')).default;
+const img5 = (await import('../../../assets/images/obras/extracciones-hospital/extracciones-hospital-05.webp')).default;
 ---
 
 <Layout
@@ -33,7 +39,11 @@ const title = 'Extracciones en el Hospital Universitario';
 
       <!-- Galería principal -->
       <div class="work-page__gallery">
-        <div class="placeholder-img" style="aspect-ratio: 4/3;">[ Extracciones en el Hospital Universitario ]</div>
+        <img src={img1.src} alt="Extracciones en el Hospital Universitario — Vista de la intervención" loading="eager">
+        <img src={img2.src} alt="Extracciones en el Hospital Universitario — Proceso de remoción del revestimiento" loading="lazy">
+        <img src={img3.src} alt="Extracciones en el Hospital Universitario — Habitación en obra gris" loading="lazy">
+        <img src={img4.src} alt="Extracciones en el Hospital Universitario — Detalle de la extracción" loading="lazy">
+        <img src={img5.src} alt="Extracciones en el Hospital Universitario — Registro del proceso" loading="lazy">
       </div>
 
       <!-- Video -->

@@ -3,45 +3,36 @@ import Layout from '../../../components/layout/Layout.astro';
 
 const lang = 'en' as const;
 
-const imgInVitro = (await import('../../../assets/images/obras/in-vitro/in-vitro-01.jpg')).default;
-const imgDesdeAdentro = (await import('../../../assets/images/obras/desde-adentro/desde-adentro-01.jpg')).default;
-const imgNuevasFloras = (await import('../../../assets/images/obras/nuevas-floras/nuevas-floras-01.jpg')).default;
-const imgInMemoriam = (await import('../../../assets/images/obras/in-memoriam/in-memoriam-01.jpg')).default;
-const imgPrecipitacion = (await import('../../../assets/images/obras/precipitacion/precipitacion-mamu-2024.jpg')).default;
-const imgElReino = (await import('../../../assets/images/obras/el-reino/el-reino-01.jpg')).default;
-const imgComa = (await import('../../../assets/images/obras/en-estado-de-coma/coma-hospital-01.jpg')).default;
-const imgAerolito = (await import('../../../assets/images/obras/aerolito/aerolito-ilustracion.jpg')).default;
-const imgEncuentros = (await import('../../../assets/images/obras/encuentros-seres/encuentros-01.jpg')).default;
-const imgPolvo = (await import('../../../assets/images/obras/polvo-eres/polvo-eres-01.jpg')).default;
-const imgCaminantes = (await import('../../../assets/images/obras/las-caminantes/caminantes-mamu-01.jpg')).default;
-const imgDispositivos = (await import('../../../assets/images/obras/dispositivos/dispositivos-01.jpg')).default;
-const imgFertilSuelo = (await import('../../../assets/images/obras/fertil-suelo/fertil-suelo-01.jpg')).default;
-const imgVersalles = (await import('../../../assets/images/obras/nuevas-floras-versalles/versalles-01.jpg')).default;
-const imgDoSul = (await import('../../../assets/images/obras/nuevas-floras-do-sul/do-sul-01.jpg')).default;
-const imgTravesia = (await import('../../../assets/images/obras/la-travesia/travesia-01.jpg')).default;
-const imgCauca = (await import('../../../assets/images/obras/precipitaciones-cauca/cauca-01.jpg')).default;
+const imgInVitro = (await import('../../../assets/images/obras/in-vitro/in-vitro-01.webp')).default;
+const imgDesdeAdentro = (await import('../../../assets/images/obras/desde-adentro/desde-adentro-01.webp')).default;
+const imgNuevasFloras = (await import('../../../assets/images/obras/nuevas-floras/nuevas-floras-01.webp')).default;
+const imgInMemoriam = (await import('../../../assets/images/obras/in-memoriam/in-memoriam-01.webp')).default;
+const imgPrecipitacion = (await import('../../../assets/images/obras/precipitacion/precipitacion-01.webp')).default;
+const imgElReino = (await import('../../../assets/images/obras/el-reino/el-reino-01.webp')).default;
+const imgComa = (await import('../../../assets/images/obras/en-estado-de-coma/cultivos/cultivos-01.webp')).default;
+const imgAerolito = (await import('../../../assets/images/obras/aerolito/aerolito-01.webp')).default;
+const imgEncuentros = (await import('../../../assets/images/obras/encuentros/encuentros/encuentros-01.webp')).default;
+const imgPolvo = (await import('../../../assets/images/obras/polvo-eres/polvo-eres-01.webp')).default;
+const imgDispositivos = (await import('../../../assets/images/obras/dispositivos/dispositivos-01.webp')).default;
+const imgFertilSuelo = (await import('../../../assets/images/obras/fertil-suelo/fertil-suelo-01.webp')).default;
+const imgTravesia = (await import('../../../assets/images/obras/la-travesia/la-travesia-01.webp')).default;
+const imgEnsayo = (await import('../../../assets/images/obras/ensayo-autorretrato/ensayo-autorretrato-01.webp')).default;
 
 const works = [
   { slug: 'polvo-eres', title: 'Polvo eres', year: '2024', image: imgPolvo },
-  { slug: 'las-caminantes', title: 'Las caminantes', year: '2024', image: imgCaminantes },
-  { slug: 'precipitacion-de-arenas', title: 'Precipitación de arenas', year: '2022–2024', image: imgPrecipitacion },
-  { slug: 'la-travesia', title: 'La travesía', year: '2017–2024', image: imgTravesia },
+  { slug: 'precipitacion-de-arenas', title: 'Precipitacion de arenas', year: '2022-2024', image: imgPrecipitacion },
+  { slug: 'la-travesia', title: 'La travesia', year: '2017-2024', image: imgTravesia },
   { slug: 'encuentros-con-seres-notables', title: 'Encuentros con seres notables', year: '2022', image: imgEncuentros },
-  { slug: 'ensayo-autorretrato', title: 'Ensayo autorretrato', year: '2022', image: null },
+  { slug: 'ensayo-autorretrato', title: 'Ensayo autorretrato', year: '2022', image: imgEnsayo },
   { slug: 'dispositivos-para-ver-pasar-el-tiempo', title: 'Dispositivos para ver pasar el tiempo', year: '2020', image: imgDispositivos },
-  { slug: 'en-el-fertil-suelo', title: 'En el fértil suelo', year: '2017–2018', image: imgFertilSuelo },
-  { slug: 'nuevas-floras-versalles', title: 'Nuevas Floras Versalles', year: '2017', image: imgVersalles },
-  { slug: 'aerolito', title: 'Pequeño Museo del Aerolito', year: '2014–2015', image: imgAerolito },
-  { slug: 'urgencias', title: 'Urgencias', year: '2012', image: null },
-  { slug: 'nuevas-floras-do-sul', title: 'Nuevas Floras do Sul', year: '2011', image: imgDoSul },
-  { slug: 'precipitaciones-cauca', title: 'Precipitaciones del río Cauca', year: '2008–2009', image: imgCauca },
-  { slug: 'en-estado-de-coma', title: 'En estado de coma', year: '2005–2007', image: imgComa },
+  { slug: 'en-el-fertil-suelo', title: 'En el fertil suelo', year: '2017-2018', image: imgFertilSuelo },
+  { slug: 'aerolito', title: 'Pequeno Museo del Aerolito', year: '2014-2015', image: imgAerolito },
+  { slug: 'en-estado-de-coma', title: 'En estado de coma', year: '2005-2007', image: imgComa },
   { slug: 'la-herida', title: 'La herida', year: '2006', image: null },
   { slug: 'nuevas-floras', title: 'Nuevas Floras', year: '2003', image: imgNuevasFloras },
   { slug: 'desde-adentro', title: 'Desde Adentro', year: '2003', image: imgDesdeAdentro },
   { slug: 'in-memoriam', title: 'In Memoriam', year: '2001', image: imgInMemoriam },
   { slug: 'el-reino-de-este-mundo', title: 'El reino de este mundo', year: '2000', image: imgElReino },
-  { slug: 'escenas-de-caza', title: 'Escenas de caza', year: '2000', image: null },
   { slug: 'in-vitro', title: 'In Vitro', year: '1997', image: imgInVitro },
 ];
 ---

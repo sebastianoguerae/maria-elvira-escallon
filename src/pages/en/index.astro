@@ -5,9 +5,9 @@ import ArtistSchema from '../../components/seo/ArtistSchema.astro';
 
 const lang = 'en' as const;
 
-const heroImage = (await import('../../assets/images/obras/ensayo-autorretrato/ensayo-01.jpg')).default;
-const nuevasFloras = (await import('../../assets/images/obras/nuevas-floras/nuevas-floras-01.jpg')).default;
-const desdeAdentro = (await import('../../assets/images/obras/desde-adentro/desde-adentro-01.jpg')).default;
+const heroImage = (await import('../../assets/images/obras/ensayo-autorretrato/ensayo-autorretrato-01.webp')).default;
+const nuevasFloras = (await import('../../assets/images/obras/nuevas-floras/nuevas-floras-01.webp')).default;
+const desdeAdentro = (await import('../../assets/images/obras/desde-adentro/desde-adentro-01.webp')).default;
 const retrato = (await import('../../assets/images/retrato/retrato.jpg')).default;
 const enEstadoDeComaLibro = (await import('../../assets/images/libros/en-estado-de-coma-libro.jpg')).default;
 
@@ -17,48 +17,49 @@ const featuredWorks = [
     title: 'IN VITRO',
     year: '1997',
     hasImage: true,
-    importedImage: (await import('../../assets/images/obras/in-vitro/in-vitro-01.jpg')).default,
+    importedImage: (await import('../../assets/images/obras/in-vitro/in-vitro-01.webp')).default,
   },
   {
     slug: 'el-reino-de-este-mundo',
     title: 'THE KINGDOM OF THIS WORLD',
     year: '2000',
     hasImage: true,
-    importedImage: (await import('../../assets/images/obras/el-reino/el-reino-01.jpg')).default,
+    importedImage: (await import('../../assets/images/obras/el-reino/el-reino-01.webp')).default,
   },
   {
     slug: 'desde-adentro',
     title: 'FROM WITHIN',
     year: '2003',
     hasImage: true,
-    importedImage: (await import('../../assets/images/obras/desde-adentro/desde-adentro-01.jpg')).default,
+    importedImage: (await import('../../assets/images/obras/desde-adentro/desde-adentro-01.webp')).default,
   },
   {
     slug: 'nuevas-floras',
     title: 'NEW FLORAS',
     year: '2003-2007',
     hasImage: true,
-    importedImage: (await import('../../assets/images/obras/nuevas-floras/nuevas-floras-01.jpg')).default,
+    importedImage: (await import('../../assets/images/obras/nuevas-floras/nuevas-floras-01.webp')).default,
   },
   {
     slug: 'en-estado-de-coma',
     title: 'IN A STATE OF COMA',
     year: '2005-2007',
     hasImage: true,
-    importedImage: (await import('../../assets/images/obras/en-estado-de-coma/coma-hospital-01.jpg')).default,
+    importedImage: (await import('../../assets/images/obras/en-estado-de-coma/cultivos/cultivos-01.webp')).default,
   },
   {
     slug: 'aerolito',
     title: 'SMALL MUSEUM OF THE AEROLITE',
     year: '2014-2015',
     hasImage: true,
-    importedImage: (await import('../../assets/images/obras/aerolito/aerolito-ilustracion.jpg')).default,
+    importedImage: (await import('../../assets/images/obras/aerolito/aerolito-01.webp')).default,
   },
   {
     slug: 'en-el-fertil-suelo',
     title: 'IN THE FERTILE GROUND',
     year: '2017-2018',
-    hasImage: false,
+    hasImage: true,
+    importedImage: (await import('../../assets/images/obras/fertil-suelo/fertil-suelo-01.webp')).default,
   },
 ];
 

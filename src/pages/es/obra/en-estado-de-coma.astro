@@ -6,16 +6,36 @@ import AudioPlayer from '../../../components/interactive/AudioPlayer';
 const lang = 'es' as const;
 const title = 'En estado de coma';
 
-const img1 = (await import('../../../assets/images/obras/en-estado-de-coma/coma-hospital-01.jpg')).default;
-const img2 = (await import('../../../assets/images/obras/en-estado-de-coma/coma-hospital-02.jpg')).default;
-const img3 = (await import('../../../assets/images/obras/en-estado-de-coma/coma-hospital-03.jpg')).default;
-const img4 = (await import('../../../assets/images/obras/en-estado-de-coma/coma-pared-detalle.jpg')).default;
-const img5 = (await import('../../../assets/images/obras/en-estado-de-coma/coma-cultivos-cama.jpg')).default;
-const img6 = (await import('../../../assets/images/obras/en-estado-de-coma/coma-bolsa-medicos.jpg')).default;
-const img7 = (await import('../../../assets/images/obras/en-estado-de-coma/port-081.jpg')).default;
-const img8 = (await import('../../../assets/images/obras/en-estado-de-coma/port-086.jpg')).default;
-const img9 = (await import('../../../assets/images/obras/en-estado-de-coma/port-094.jpg')).default;
-const img10 = (await import('../../../assets/images/obras/en-estado-de-coma/port-100.jpg')).default;
+// Cultivos
+const imgsCultivos = await Promise.all(
+  Array.from({ length: 3 }, (_, i) =>
+    import(`../../../assets/images/obras/en-estado-de-coma/cultivos/cultivos-${String(i + 1).padStart(2, '0')}.webp`)
+  )
+).then(m => m.map(x => x.default));
+// Serie tejido blando
+const imgsTejido = await Promise.all(
+  [4,5,6,7].map(n =>
+    import(`../../../assets/images/obras/en-estado-de-coma/serie-tejido-blando/serie-tejido-blando-${String(n).padStart(2, '0')}.webp`)
+  )
+).then(m => m.map(x => x.default));
+// Serie extracciones
+const imgsExtracciones = await Promise.all(
+  [8,9].map(n =>
+    import(`../../../assets/images/obras/en-estado-de-coma/serie-extracciones/serie-extracciones-${String(n).padStart(2, '0')}.webp`)
+  )
+).then(m => m.map(x => x.default));
+// Recorridos nocturnos
+const imgsRecorridos = await Promise.all(
+  [10,11,12,13].map(n =>
+    import(`../../../assets/images/obras/en-estado-de-coma/recorridos-nocturnos/recorridos-nocturnos-${n}.webp`)
+  )
+).then(m => m.map(x => x.default));
+// Postales
+const imgsPostales = await Promise.all(
+  [14,15,16,17].map(n =>
+    import(`../../../assets/images/obras/en-estado-de-coma/postales/postales-${n}.webp`)
+  )
+).then(m => m.map(x => x.default));
 ---
 
 <Layout
@@ -43,18 +63,44 @@ const img10 = (await import('../../../assets/images/obras/en-estado-de-coma/port
         <p class="work-page__meta">2005–2007 &nbsp;/&nbsp; 5 series fotográficas, video, instalación escultórica &nbsp;/&nbsp; Hospital San Juan de Dios, Bogotá</p>
       </header>
 
-      <!-- Galería principal -->
+      <!-- Galeria: Cultivos -->
       <div class="work-page__gallery">
-        <img src={img1.src} alt="En estado de coma — Hospital San Juan de Dios, vista general del deterioro" loading="eager">
-        <img src={img2.src} alt="En estado de coma — Hospital San Juan de Dios, pasillos abandonados" loading="lazy">
-        <img src={img3.src} alt="En estado de coma — Hospital San Juan de Dios, vegetación reclamando espacios" loading="lazy">
-        <img src={img4.src} alt="En estado de coma — Detalle de pared deteriorada, capas expuestas" loading="lazy">
-        <img src={img5.src} alt="Cultivos — Cama de hospital con hierba creciendo, serie En estado de coma" loading="lazy">
-        <img src={img6.src} alt="En estado de coma — Bolsa de médicos abandonada en el hospital" loading="lazy">
-        <img src={img7.src} alt="En estado de coma — Pasillo del Hospital San Juan de Dios en deterioro" loading="lazy">
-        <img src={img8.src} alt="En estado de coma — Vegetación invadiendo sala del hospital" loading="lazy">
-        <img src={img9.src} alt="En estado de coma — Recorrido nocturno, sábanas en camas vacías" loading="lazy">
-        <img src={img10.src} alt="En estado de coma — Extracciones, elemento arquitectónico aislado" loading="lazy">
+        <h3 style="margin-top: var(--s3);">CULTIVOS</h3>
+        {imgsCultivos.map((img, i) => (
+          <img src={img.src} alt={`En estado de coma — Cultivos ${i + 1}`} loading={i === 0 ? 'eager' : 'lazy'}>
+        ))}
+      </div>
+
+      <!-- Galeria: Serie tejido blando -->
+      <div class="work-page__gallery">
+        <h3 style="margin-top: var(--s3);">SERIE TEJIDO BLANDO</h3>
+        {imgsTejido.map((img, i) => (
+          <img src={img.src} alt={`En estado de coma — Serie tejido blando ${i + 1}`} loading="lazy">
+        ))}
+      </div>
+
+      <!-- Galeria: Serie extracciones -->
+      <div class="work-page__gallery">
+        <h3 style="margin-top: var(--s3);">SERIE EXTRACCIONES</h3>
+        {imgsExtracciones.map((img, i) => (
+          <img src={img.src} alt={`En estado de coma — Serie extracciones ${i + 1}`} loading="lazy">
+        ))}
+      </div>
+
+      <!-- Galeria: Recorridos nocturnos -->
+      <div class="work-page__gallery">
+        <h3 style="margin-top: var(--s3);">RECORRIDOS NOCTURNOS</h3>
+        {imgsRecorridos.map((img, i) => (
+          <img src={img.src} alt={`En estado de coma — Recorridos nocturnos ${i + 1}`} loading="lazy">
+        ))}
+      </div>
+
+      <!-- Galeria: Postales -->
+      <div class="work-page__gallery">
+        <h3 style="margin-top: var(--s3);">POSTALES</h3>
+        {imgsPostales.map((img, i) => (
+          <img src={img.src} alt={`En estado de coma — Postales ${i + 1}`} loading="lazy">
+        ))}
       </div>
 
       <!-- Video -->

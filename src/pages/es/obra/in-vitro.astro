@@ -7,11 +7,8 @@ import AudioPlayer from '../../../components/interactive/AudioPlayer';
 const lang = 'es' as const;
 const title = 'In Vitro';
 
-const img1 = (await import('../../../assets/images/obras/in-vitro/in-vitro-01.jpg')).default;
-const img2 = (await import('../../../assets/images/obras/in-vitro/in-vitro-piso.jpg')).default;
-const img3 = (await import('../../../assets/images/obras/in-vitro/port-000.jpg')).default;
-const img4 = (await import('../../../assets/images/obras/in-vitro/port-001.jpg')).default;
-const img5 = (await import('../../../assets/images/obras/in-vitro/port-002.jpg')).default;
+const img1 = (await import('../../../assets/images/obras/in-vitro/in-vitro-01.webp')).default;
+const img2 = (await import('../../../assets/images/obras/in-vitro/in-vitro-02.webp')).default;
 ---
 
 <Layout
@@ -43,9 +40,6 @@ const img5 = (await import('../../../assets/images/obras/in-vitro/port-002.jpg')
       <div class="work-page__gallery">
         <img src={img1.src} alt="In Vitro — Instalación con espejo en la Estación de La Sabana, Bogotá" loading="eager">
         <img src={img2.src} alt="In Vitro — Detalle del piso y reflejo en el espejo" loading="lazy">
-        <img src={img3.src} alt="In Vitro — Vista del corredor renovado duplicado por el espejo" loading="lazy">
-        <img src={img4.src} alt="In Vitro — Límite entre la sección renovada y el deterioro oculto" loading="lazy">
-        <img src={img5.src} alt="In Vitro — La ilusión de continuidad espacial creada por el espejo" loading="lazy">
       </div>
 
       <!-- Audio -->

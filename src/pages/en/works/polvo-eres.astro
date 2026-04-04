@@ -5,15 +5,11 @@ import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
 const lang = 'en' as const;
 const title = 'Polvo eres';
 
-const img1 = (await import('../../../assets/images/obras/polvo-eres/polvo-eres-01.jpg')).default;
-const img2 = (await import('../../../assets/images/obras/polvo-eres/port-116.jpg')).default;
-const img3 = (await import('../../../assets/images/obras/polvo-eres/port-117.jpg')).default;
-const img4 = (await import('../../../assets/images/obras/polvo-eres/port-118.jpg')).default;
-const img5 = (await import('../../../assets/images/obras/polvo-eres/port-119.jpg')).default;
-const img6 = (await import('../../../assets/images/obras/polvo-eres/port-120.jpg')).default;
-const img7 = (await import('../../../assets/images/obras/polvo-eres/port-121.jpg')).default;
-const img8 = (await import('../../../assets/images/obras/polvo-eres/port-122.jpg')).default;
-const img9 = (await import('../../../assets/images/obras/polvo-eres/port-123.jpg')).default;
+const imgs = await Promise.all(
+  Array.from({ length: 10 }, (_, i) =>
+    import(`../../../assets/images/obras/polvo-eres/polvo-eres-${String(i + 1).padStart(2, '0')}.webp`)
+  )
+).then(m => m.map(x => x.default));
 ---
 
 <Layout
@@ -43,15 +39,9 @@ const img9 = (await import('../../../assets/images/obras/polvo-eres/port-123.jpg
 
       <!-- Main gallery -->
       <div class="work-page__gallery">
-        <img src={img1.src} alt="Polvo eres — Inscription carved into museum wall, exposed brick layers" loading="eager">
-        <img src={img2.src} alt="Polvo eres — General view of the wall intervention" loading="lazy">
-        <img src={img3.src} alt="Polvo eres — Detail of letters carved into brick" loading="lazy">
-        <img src={img4.src} alt="Polvo eres — Carving debris accumulated at the base of the wall" loading="lazy">
-        <img src={img5.src} alt="Polvo eres — Layers of paint and brick exposed by the carving" loading="lazy">
-        <img src={img6.src} alt="Polvo eres — Side view of the inscription on the museum wall" loading="lazy">
-        <img src={img7.src} alt="Polvo eres — Detail of the revealed brick texture" loading="lazy">
-        <img src={img8.src} alt="Polvo eres — Fragment of the inscription and rubble" loading="lazy">
-        <img src={img9.src} alt="Polvo eres — View of the work in the context of the MAMU gallery" loading="lazy">
+        {imgs.map((img, i) => (
+          <img src={img.src} alt={`Polvo eres — Wall carving, MAMU ${i + 1}`} loading={i === 0 ? 'eager' : 'lazy'}>
+        ))}
       </div>
 
       <!-- Video -->

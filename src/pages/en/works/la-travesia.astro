@@ -5,8 +5,11 @@ import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
 const lang = 'en' as const;
 const title = 'La travesia';
 
-const img1 = (await import('../../../assets/images/obras/la-travesia/travesia-01.jpg')).default;
-const img2 = (await import('../../../assets/images/obras/la-travesia/travesia-02.jpg')).default;
+const img1 = (await import('../../../assets/images/obras/la-travesia/la-travesia-01.webp')).default;
+const img2 = (await import('../../../assets/images/obras/la-travesia/la-travesia-02.webp')).default;
+const img3 = (await import('../../../assets/images/obras/la-travesia/la-travesia-03.webp')).default;
+const img4 = (await import('../../../assets/images/obras/la-travesia/la-travesia-04.webp')).default;
+const img5 = (await import('../../../assets/images/obras/la-travesia/la-travesia-05.webp')).default;
 ---
 
 <Layout
@@ -38,6 +41,9 @@ const img2 = (await import('../../../assets/images/obras/la-travesia/travesia-02
       <div class="work-page__gallery">
         <img src={img1.src} alt="La travesia — Corridor of doors from demolished homes, frontal view" loading="eager">
         <img src={img2.src} alt="La travesia — Infinite reflection in the mirror at the end of the door corridor" loading="lazy">
+        <img src={img3.src} alt="La travesia — Detail of salvaged doors" loading="lazy">
+        <img src={img4.src} alt="La travesia — Side view of the door corridor" loading="lazy">
+        <img src={img5.src} alt="La travesia — Installation at MAMU" loading="lazy">
       </div>
 
       <!-- Text + Technical sheet -->

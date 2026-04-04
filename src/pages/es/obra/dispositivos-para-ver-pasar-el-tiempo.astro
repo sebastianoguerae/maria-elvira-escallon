@@ -5,14 +5,10 @@ import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
 const lang = 'es' as const;
 const title = 'Dispositivos para ver pasar el tiempo';
 
-const img1 = (await import('../../../assets/images/obras/dispositivos/port-176.jpg')).default;
-const img2 = (await import('../../../assets/images/obras/dispositivos/port-178.jpg')).default;
-const img3 = (await import('../../../assets/images/obras/dispositivos/port-180.jpg')).default;
-const img4 = (await import('../../../assets/images/obras/dispositivos/port-183.jpg')).default;
-const img5 = (await import('../../../assets/images/obras/dispositivos/port-186.jpg')).default;
-const img6 = (await import('../../../assets/images/obras/dispositivos/port-189.jpg')).default;
-const img7 = (await import('../../../assets/images/obras/dispositivos/port-192.jpg')).default;
-const img8 = (await import('../../../assets/images/obras/dispositivos/port-196.jpg')).default;
+const imgNums = ['01','02','03','04','05','06','07','08','10','11','12','13','14'];
+const imgs = await Promise.all(
+  imgNums.map(n => import(`../../../assets/images/obras/dispositivos/dispositivos-${n}.webp`))
+).then(m => m.map(x => x.default));
 ---
 
 <Layout
@@ -42,14 +38,9 @@ const img8 = (await import('../../../assets/images/obras/dispositivos/port-196.j
 
       <!-- Galería principal -->
       <div class="work-page__gallery">
-        <img src={img1.src} alt="Dispositivos para ver pasar el tiempo — Vista general de la instalación" loading="eager">
-        <img src={img2.src} alt="Dispositivos para ver pasar el tiempo — Detalle de mecanismo poético" loading="lazy">
-        <img src={img3.src} alt="Dispositivos para ver pasar el tiempo — Transformación material visible" loading="lazy">
-        <img src={img4.src} alt="Dispositivos para ver pasar el tiempo — Arena acumulándose sobre superficies" loading="lazy">
-        <img src={img5.src} alt="Dispositivos para ver pasar el tiempo — Registro del desgaste" loading="lazy">
-        <img src={img6.src} alt="Dispositivos para ver pasar el tiempo — Detalle de erosión en la pieza" loading="lazy">
-        <img src={img7.src} alt="Dispositivos para ver pasar el tiempo — Acumulación de materiales" loading="lazy">
-        <img src={img8.src} alt="Dispositivos para ver pasar el tiempo — Vista de la obra en sala" loading="lazy">
+        {imgs.map((img, i) => (
+          <img src={img.src} alt={`Dispositivos para ver pasar el tiempo — Imagen ${i + 1}`} loading={i === 0 ? 'eager' : 'lazy'}>
+        ))}
       </div>
 
       <!-- Texto + Ficha -->

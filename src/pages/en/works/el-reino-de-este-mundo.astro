@@ -5,14 +5,9 @@ import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
 const lang = 'en' as const;
 const title = 'El reino de este mundo';
 
-const img1 = (await import('../../../assets/images/obras/el-reino/el-reino-01.jpg')).default;
-const img2 = (await import('../../../assets/images/obras/el-reino/el-reino-02.jpg')).default;
-const img3 = (await import('../../../assets/images/obras/el-reino/el-reino-03.jpg')).default;
-const img4 = (await import('../../../assets/images/obras/el-reino/el-reino-04.jpg')).default;
-const img5 = (await import('../../../assets/images/obras/el-reino/port-006.jpg')).default;
-const img6 = (await import('../../../assets/images/obras/el-reino/port-007.jpg')).default;
-const img7 = (await import('../../../assets/images/obras/el-reino/port-008.jpg')).default;
-const img8 = (await import('../../../assets/images/obras/el-reino/port-009.jpg')).default;
+const img1 = (await import('../../../assets/images/obras/el-reino/el-reino-01.webp')).default;
+const img2 = (await import('../../../assets/images/obras/el-reino/el-reino-02.webp')).default;
+const img3 = (await import('../../../assets/images/obras/el-reino/el-reino-03.webp')).default;
 ---
 
 <Layout
@@ -45,11 +40,6 @@ const img8 = (await import('../../../assets/images/obras/el-reino/port-009.jpg')
         <img src={img1.src} alt="El reino de este mundo — Front view of the concrete wall with debris" loading="eager">
         <img src={img2.src} alt="El reino de este mundo — Shadow of debris on the museum floor" loading="lazy">
         <img src={img3.src} alt="El reino de este mundo — Detail of debris agglomerated in blocks" loading="lazy">
-        <img src={img4.src} alt="El reino de este mundo — General view of the installation, MAMBO" loading="lazy">
-        <img src={img5.src} alt="El reino de este mundo — Detail of debris embedded in concrete blocks" loading="lazy">
-        <img src={img6.src} alt="El reino de este mundo — Texture of the wall with domestic fragments" loading="lazy">
-        <img src={img7.src} alt="El reino de este mundo — Shadow of debris projected on the floor" loading="lazy">
-        <img src={img8.src} alt="El reino de este mundo — Side view of the wall and scattered remains" loading="lazy">
       </div>
 
       <!-- Text + Technical sheet -->

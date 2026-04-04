@@ -5,16 +5,11 @@ import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
 const lang = 'en' as const;
 const title = 'Pequeno Museo del Aerolito de Santa Rosa de Viterbo';
 
-const img1 = (await import('../../../assets/images/obras/aerolito/aerolito-ilustracion.jpg')).default;
-const img2 = (await import('../../../assets/images/obras/aerolito/aerolito-02.jpg')).default;
-const img3 = (await import('../../../assets/images/obras/aerolito/aerolito-foto-historica.jpg')).default;
-const img4 = (await import('../../../assets/images/obras/aerolito/aerolito-03.jpg')).default;
-const img5 = (await import('../../../assets/images/obras/aerolito/aerolito-04.jpg')).default;
-const img6 = (await import('../../../assets/images/obras/aerolito/port-141.jpg')).default;
-const img7 = (await import('../../../assets/images/obras/aerolito/port-145.jpg')).default;
-const img8 = (await import('../../../assets/images/obras/aerolito/port-150.jpg')).default;
-const img9 = (await import('../../../assets/images/obras/aerolito/port-155.jpg')).default;
-const img10 = (await import('../../../assets/images/obras/aerolito/port-160.jpg')).default;
+const imgs = await Promise.all(
+  Array.from({ length: 22 }, (_, i) =>
+    import(`../../../assets/images/obras/aerolito/aerolito-${String(i + 1).padStart(2, '0')}.webp`)
+  )
+).then(m => m.map(x => x.default));
 ---
 
 <Layout
@@ -44,16 +39,9 @@ const img10 = (await import('../../../assets/images/obras/aerolito/port-160.jpg'
 
       <!-- Main gallery -->
       <div class="work-page__gallery">
-        <img src={img1.src} alt="Aerolito — Historical illustration of the Santa Rosa de Viterbo meteorite" loading="eager">
-        <img src={img2.src} alt="Aerolito — Installation view" loading="lazy">
-        <img src={img3.src} alt="Aerolito — Historic photograph of the Santa Rosa de Viterbo meteorite" loading="lazy">
-        <img src={img4.src} alt="Aerolito — View of the Pequeno Museo del Aerolito" loading="lazy">
-        <img src={img5.src} alt="Aerolito — Detail of the Pequeno Museo installation" loading="lazy">
-        <img src={img6.src} alt="Aerolito — Museum department, archives and documents" loading="lazy">
-        <img src={img7.src} alt="Aerolito — Iron replica of the meteorite" loading="lazy">
-        <img src={img8.src} alt="Aerolito — Display cases with research material" loading="lazy">
-        <img src={img9.src} alt="Aerolito — Detail of historical photographic archive" loading="lazy">
-        <img src={img10.src} alt="Aerolito — View of the complete installation at MAMU" loading="lazy">
+        {imgs.map((img, i) => (
+          <img src={img.src} alt={`Pequeno Museo del Aerolito — Image ${i + 1}`} loading={i === 0 ? 'eager' : 'lazy'}>
+        ))}
       </div>
 
       <!-- Video -->
