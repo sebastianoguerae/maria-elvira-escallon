@@ -1,6 +1,5 @@
 ---
 import Layout from '../../../components/layout/Layout.astro';
-import AudioPlayer from '../../../components/interactive/AudioPlayer';
 import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
 
 const lang = 'es' as const;
@@ -44,11 +43,6 @@ const imgs = await Promise.all(
         {imgs.map((img, i) => (
           <img src={img.src} alt={`Desde Adentro — Documentación fotográfica ${i + 1}`} loading={i === 0 ? 'eager' : 'lazy'}>
         ))}
-      </div>
-
-      <!-- Audio -->
-      <div style="margin: var(--s3) 0;">
-        <AudioPlayer client:visible title="María Elvira sobre Desde Adentro" />
       </div>
 
       <!-- Texto + Ficha -->
