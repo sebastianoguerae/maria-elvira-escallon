@@ -765,6 +765,11 @@ blockquote cite {
   display: block;
 }
 
+.work-page__gallery img.img-small {
+  max-width: 500px;
+  width: auto;
+}
+
 .work-page__body {
   display: grid;
   grid-template-columns: 2fr 1fr;
