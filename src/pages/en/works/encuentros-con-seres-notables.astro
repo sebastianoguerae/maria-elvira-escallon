@@ -6,38 +6,41 @@ const lang = 'en' as const;
 const title = 'Encuentros con seres notables';
 
 // Encuentros
-const imgsEncuentros = await Promise.all(
-  ['01','02','07','08'].map(n =>
-    import(`../../../assets/images/obras/encuentros/encuentros/encuentros-${n}.webp`)
-  )
-).then(m => m.map(x => x.default));
+const enc01 = (await import('../../../assets/images/obras/encuentros/encuentros/encuentros-01.webp')).default;
+const enc02 = (await import('../../../assets/images/obras/encuentros/encuentros/encuentros-02.webp')).default;
+const enc07 = (await import('../../../assets/images/obras/encuentros/encuentros/encuentros-07.webp')).default;
+const enc08 = (await import('../../../assets/images/obras/encuentros/encuentros/encuentros-08.webp')).default;
 // Encuentros con seres notables
-const imgsSeres = await Promise.all(
-  ['01','03','04','05','06','10'].map(n =>
-    import(`../../../assets/images/obras/encuentros/encuentros-con-seres-notables/encuentros-con-seres-notables-${n}.webp`)
-  )
-).then(m => m.map(x => x.default));
+const seres01 = (await import('../../../assets/images/obras/encuentros/encuentros-con-seres-notables/encuentros-con-seres-notables-01.webp')).default;
+const seres03 = (await import('../../../assets/images/obras/encuentros/encuentros-con-seres-notables/encuentros-con-seres-notables-03.webp')).default;
+const seres04 = (await import('../../../assets/images/obras/encuentros/encuentros-con-seres-notables/encuentros-con-seres-notables-04.webp')).default;
+const seres05 = (await import('../../../assets/images/obras/encuentros/encuentros-con-seres-notables/encuentros-con-seres-notables-05.webp')).default;
+const seres06 = (await import('../../../assets/images/obras/encuentros/encuentros-con-seres-notables/encuentros-con-seres-notables-06.webp')).default;
+const seres10 = (await import('../../../assets/images/obras/encuentros/encuentros-con-seres-notables/encuentros-con-seres-notables-10.webp')).default;
 // Mesa de trabajo
-const mesaNums = ['01','15','16','17','18','19','20','21','22','23','24','25','26','27'];
-const imgsMesa = await Promise.all(
-  mesaNums.map(n =>
-    import(`../../../assets/images/obras/encuentros/encuentros-mesa-de-trabajo/encuentros-mesa-de-trabajo-${n}.webp`)
-  )
-).then(m => m.map(x => x.default));
+const mesa01 = (await import('../../../assets/images/obras/encuentros/encuentros-mesa-de-trabajo/encuentros-mesa-de-trabajo-01.webp')).default;
+const mesa15 = (await import('../../../assets/images/obras/encuentros/encuentros-mesa-de-trabajo/encuentros-mesa-de-trabajo-15.webp')).default;
+const mesa16 = (await import('../../../assets/images/obras/encuentros/encuentros-mesa-de-trabajo/encuentros-mesa-de-trabajo-16.webp')).default;
+const mesa17 = (await import('../../../assets/images/obras/encuentros/encuentros-mesa-de-trabajo/encuentros-mesa-de-trabajo-17.webp')).default;
+const mesa18 = (await import('../../../assets/images/obras/encuentros/encuentros-mesa-de-trabajo/encuentros-mesa-de-trabajo-18.webp')).default;
+const mesa19 = (await import('../../../assets/images/obras/encuentros/encuentros-mesa-de-trabajo/encuentros-mesa-de-trabajo-19.webp')).default;
+const mesa20 = (await import('../../../assets/images/obras/encuentros/encuentros-mesa-de-trabajo/encuentros-mesa-de-trabajo-20.webp')).default;
+const mesa21 = (await import('../../../assets/images/obras/encuentros/encuentros-mesa-de-trabajo/encuentros-mesa-de-trabajo-21.webp')).default;
+const mesa22 = (await import('../../../assets/images/obras/encuentros/encuentros-mesa-de-trabajo/encuentros-mesa-de-trabajo-22.webp')).default;
+const mesa23 = (await import('../../../assets/images/obras/encuentros/encuentros-mesa-de-trabajo/encuentros-mesa-de-trabajo-23.webp')).default;
+const mesa24 = (await import('../../../assets/images/obras/encuentros/encuentros-mesa-de-trabajo/encuentros-mesa-de-trabajo-24.webp')).default;
+const mesa25 = (await import('../../../assets/images/obras/encuentros/encuentros-mesa-de-trabajo/encuentros-mesa-de-trabajo-25.webp')).default;
+const mesa26 = (await import('../../../assets/images/obras/encuentros/encuentros-mesa-de-trabajo/encuentros-mesa-de-trabajo-26.webp')).default;
+const mesa27 = (await import('../../../assets/images/obras/encuentros/encuentros-mesa-de-trabajo/encuentros-mesa-de-trabajo-27.webp')).default;
 // Arborea
-const imgsArborea = await Promise.all(
-  ['08','09'].map(n =>
-    import(`../../../assets/images/obras/encuentros/encuentros--arborea/encuentros--arborea-${n}.webp`)
-  )
-).then(m => m.map(x => x.default));
+const arborea08 = (await import('../../../assets/images/obras/encuentros/encuentros--arborea/encuentros--arborea-08.webp')).default;
+const arborea09 = (await import('../../../assets/images/obras/encuentros/encuentros--arborea/encuentros--arborea-09.webp')).default;
 // Encuentros cercanos
-const imgsCercanos = await Promise.all(
-  ['12','13','14'].map(n =>
-    import(`../../../assets/images/obras/encuentros/encuentros-cercanos/encuentros-cercanos-${n}.webp`)
-  )
-).then(m => m.map(x => x.default));
+const cercanos12 = (await import('../../../assets/images/obras/encuentros/encuentros-cercanos/encuentros-cercanos-12.webp')).default;
+const cercanos13 = (await import('../../../assets/images/obras/encuentros/encuentros-cercanos/encuentros-cercanos-13.webp')).default;
+const cercanos14 = (await import('../../../assets/images/obras/encuentros/encuentros-cercanos/encuentros-cercanos-14.webp')).default;
 // Las caminantes
-const imgCaminantes = (await import('../../../assets/images/obras/encuentros/encuentros-las-caminantes/encuentros-las-caminantes-11.webp')).default;
+const caminantes11 = (await import('../../../assets/images/obras/encuentros/encuentros-las-caminantes/encuentros-las-caminantes-11.webp')).default;
 ---
 
 <Layout
@@ -65,56 +68,62 @@ const imgCaminantes = (await import('../../../assets/images/obras/encuentros/enc
         <p class="work-page__meta">2022 &nbsp;/&nbsp; Sculpture — savanna jasmine branches, eucalyptus, wood carving, clay &nbsp;/&nbsp; Variable dimensions</p>
       </header>
 
-      <!-- Gallery: Encuentros -->
+      <!-- Gallery -->
       <div class="work-page__gallery">
         <h3 style="margin-top: var(--s3);">ENCUENTROS</h3>
-        {imgsEncuentros.map((img, i) => (
-          <img src={img.src} alt={`Encuentros — Image ${i + 1}`} loading={i === 0 ? 'eager' : 'lazy'}>
-        ))}
-      </div>
+        <img src={enc01.src} alt="Encuentros — Sculpture on branch, emerging figure" loading="eager">
+        <img src={enc02.src} alt="Encuentros — Wood carving on natural branch" loading="lazy">
+        <img src={enc07.src} alt="Encuentros — Detail of sculptural intervention" loading="lazy">
+        <img src={enc08.src} alt="Encuentros — Human form in tree branch" loading="lazy">
 
-      <!-- Gallery: Encuentros con seres notables -->
-      <div class="work-page__gallery">
         <h3 style="margin-top: var(--s3);">ENCUENTROS CON SERES NOTABLES</h3>
-        {imgsSeres.map((img, i) => (
-          <img src={img.src} alt={`Encuentros con seres notables — Image ${i + 1}`} loading="lazy">
-        ))}
-      </div>
+        <img src={seres01.src} alt="Encuentros con seres notables — Sculpture carved on branch" loading="lazy">
+        <img src={seres03.src} alt="Encuentros con seres notables — Intervened vegetal body" loading="lazy">
+        <img src={seres04.src} alt="Encuentros con seres notables — Detail of wood carving" loading="lazy">
+        <img src={seres05.src} alt="Encuentros con seres notables — Carved organic form" loading="lazy">
+        <img src={seres06.src} alt="Encuentros con seres notables — Branch with sculptural figure" loading="lazy">
+        <img src={seres10.src} alt="Encuentros con seres notables — Ensemble view" loading="lazy">
 
-      <!-- Gallery: Mesa de trabajo -->
-      <div class="work-page__gallery">
         <h3 style="margin-top: var(--s3);">MESA DE TRABAJO</h3>
-        {imgsMesa.map((img, i) => (
-          <img src={img.src} alt={`Mesa de trabajo — Image ${i + 1}`} loading="lazy">
-        ))}
-      </div>
+        <img src={mesa01.src} alt="Mesa de trabajo — General view of the workspace" loading="lazy">
+        <img src={mesa15.src} alt="Mesa de trabajo — Tools and materials" loading="lazy">
+        <img src={mesa16.src} alt="Mesa de trabajo — Carving process" loading="lazy">
+        <img src={mesa17.src} alt="Mesa de trabajo — Branches in preparation" loading="lazy">
+        <img src={mesa18.src} alt="Mesa de trabajo — Detail of creative process" loading="lazy">
+        <img src={mesa19.src} alt="Mesa de trabajo — Pieces in development" loading="lazy">
+        <img src={mesa20.src} alt="Mesa de trabajo — Sculptural material" loading="lazy">
+        <img src={mesa21.src} alt="Mesa de trabajo — Carving fragments" loading="lazy">
+        <img src={mesa22.src} alt="Mesa de trabajo — Work elements" loading="lazy">
+        <img src={mesa23.src} alt="Mesa de trabajo — Studio view" loading="lazy">
+        <img src={mesa24.src} alt="Mesa de trabajo — Detail of tools" loading="lazy">
+        <img src={mesa25.src} alt="Mesa de trabajo — Finished pieces" loading="lazy">
+        <img src={mesa26.src} alt="Mesa de trabajo — Process record" loading="lazy">
+        <img src={mesa27.src} alt="Mesa de trabajo — Final view of the space" loading="lazy">
 
-      <!-- Gallery: Arborea -->
-      <div class="work-page__gallery">
         <h3 style="margin-top: var(--s3);">ARBOREA</h3>
-        {imgsArborea.map((img, i) => (
-          <img src={img.src} alt={`Arborea — Image ${i + 1}`} loading="lazy">
-        ))}
-      </div>
+        <img src={arborea08.src} alt="Arborea — Intervened arboreal sculpture" loading="lazy">
+        <img src={arborea09.src} alt="Arborea — Detail of intervention on tree" loading="lazy">
 
-      <!-- Gallery: Encuentros cercanos -->
-      <div class="work-page__gallery">
         <h3 style="margin-top: var(--s3);">ENCUENTROS CERCANOS</h3>
-        {imgsCercanos.map((img, i) => (
-          <img src={img.src} alt={`Encuentros cercanos — Image ${i + 1}`} loading="lazy">
-        ))}
+        <img src={cercanos12.src} alt="Encuentros cercanos — Carved figure in close-up" loading="lazy">
+        <img src={cercanos13.src} alt="Encuentros cercanos — Detail of sculptural form" loading="lazy">
+        <img src={cercanos14.src} alt="Encuentros cercanos — Close view of carving" loading="lazy">
+
+        <h3 style="margin-top: var(--s3);">LAS CAMINANTES</h3>
+        <img src={caminantes11.src} alt="Las caminantes — Walking figure carved in branch" loading="lazy">
       </div>
 
-      <!-- Gallery: Las caminantes -->
-      <div class="work-page__gallery">
-        <h3 style="margin-top: var(--s3);">LAS CAMINANTES</h3>
-        <img src={imgCaminantes.src} alt="Las caminantes — Image 1" loading="lazy">
+      <!-- Video -->
+      <div class="work-page__video">
+        <div class="work-page__video-header">
+          <h3>VIDEO</h3>
+          <span class="label">Encuentros</span>
+        </div>
+        <video controls preload="metadata">
+          <source src="/maria-elvira-escallon/video/encuentros-web.mp4" type="video/mp4">
+        </video>
       </div>
+
   </article>
 
 </Layout>
-
-<style>
-  @media (max-width: 768px) {
-    }
-</style>

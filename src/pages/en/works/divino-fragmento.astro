@@ -1,0 +1,103 @@
+---
+import Layout from '../../../components/layout/Layout.astro';
+import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
+
+const lang = 'en' as const;
+const title = 'Divino Fragmento';
+
+const img1 = (await import('../../../assets/images/obras/divino-fragmento/divino-fragmento-01.webp')).default;
+const img2 = (await import('../../../assets/images/obras/divino-fragmento/divino-fragmento-02.webp')).default;
+const img3 = (await import('../../../assets/images/obras/divino-fragmento/divino-fragmento-04.webp')).default;
+const img4 = (await import('../../../assets/images/obras/divino-fragmento/divino-fragmento-05.webp')).default;
+---
+
+<Layout
+  lang={lang}
+  title="Divino Fragmento — Work"
+  description="Divino Fragmento (2003). Photographic series of the Parthenon marbles at the British Museum. Maria Elvira Escallon."
+>
+
+  <ArtworkSchema
+    title="Divino Fragmento"
+    year="2003"
+    medium="Photography"
+    description="Photographic series of the Parthenon marbles at the British Museum, London."
+    url="https://mariaelviraescallon.com/en/works/divino-fragmento/"
+  />
+
+  <article class="work-page">
+    <div class="container">
+
+      <!-- Header -->
+      <header class="work-page__header">
+        <p class="label">Work / 015</p>
+        <h1>{title}</h1>
+        <p class="work-page__meta">2003 &nbsp;/&nbsp; Photography &nbsp;/&nbsp; British Museum, London</p>
+      </header>
+
+      <!-- Main gallery -->
+      <div class="work-page__gallery">
+        <img src={img1.src} alt="Divino Fragmento — Parthenon marbles at the British Museum" loading="eager">
+        <img src={img2.src} alt="Divino Fragmento — Detail of Greek sculptural fragment" loading="lazy">
+        <img src={img3.src} alt="Divino Fragmento — Fragments displaced from their original context" loading="lazy">
+        <img src={img4.src} alt="Divino Fragmento — Photographic series, British Museum" loading="lazy">
+      </div>
+
+      <!-- Text + Technical sheet -->
+      <div class="work-page__body">
+        <div class="work-page__text">
+
+          <p class="curatorial">
+            Photographic series of the Parthenon marbles at the British Museum. Escallon
+            photographs the Greek sculptural fragments that Lord Elgin brought to London
+            in the nineteenth century, exploring themes of displacement, appropriation,
+            and the fragility of monuments.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            The work questions the legitimacy of colonial possession of cultural heritage
+            and establishes a parallel with the vulnerability of monuments in Colombia.
+            The fragments — torn from their original context — are presented as evidence
+            of a process of erasure that spans geographies and eras.
+          </p>
+
+          <h3 style="margin-top: var(--s4);">CONTEXT</h3>
+          <p style="margin-top: var(--s2);">
+            <em>Divino Fragmento</em> is inscribed in Escallon's line of research on the
+            fragility of monuments and the procedures of invisibilization. The series
+            establishes a dialogue between classical European heritage — displaced and
+            recontextualized — and the vulnerability of Colombian cultural heritage, a
+            recurring theme in works such as <em>En estado de coma</em> and <em>Aerolito</em>.
+          </p>
+        </div>
+
+        <aside class="work-page__ficha">
+          <h4>TECHNICAL SHEET</h4>
+          <div class="ficha">
+            <strong>Divino Fragmento</strong><br>
+            2003<br><br>
+            Photography.<br>
+            British Museum, London.
+          </div>
+
+          <h4 style="margin-top: var(--s3);">THEMES</h4>
+          <div class="ficha">
+            Displacement<br>
+            Colonial appropriation<br>
+            Fragility of monuments<br>
+            Cultural heritage
+          </div>
+
+          <h4 style="margin-top: var(--s3);">HOW TO CITE</h4>
+          <div class="ficha" style="font-size: 0.65rem;">
+            Escallon, M.E. (2003). <em>Divino Fragmento</em>.
+            Photography. Available at:
+            mariaelviraescallon.com/en/works/divino-fragmento/
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </article>
+
+</Layout>

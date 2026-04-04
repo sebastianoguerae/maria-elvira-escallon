@@ -5,10 +5,19 @@ import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
 const lang = 'en' as const;
 const title = 'Dispositivos para ver pasar el tiempo';
 
-const imgNums = ['01','02','03','04','05','06','07','08','10','11','12','13','14'];
-const imgs = await Promise.all(
-  imgNums.map(n => import(`../../../assets/images/obras/dispositivos/dispositivos-${n}.webp`))
-).then(m => m.map(x => x.default));
+const img01 = (await import('../../../assets/images/obras/dispositivos/dispositivos-01.webp')).default;
+const img02 = (await import('../../../assets/images/obras/dispositivos/dispositivos-02.webp')).default;
+const img03 = (await import('../../../assets/images/obras/dispositivos/dispositivos-03.webp')).default;
+const img04 = (await import('../../../assets/images/obras/dispositivos/dispositivos-04.webp')).default;
+const img05 = (await import('../../../assets/images/obras/dispositivos/dispositivos-05.webp')).default;
+const img06 = (await import('../../../assets/images/obras/dispositivos/dispositivos-06.webp')).default;
+const img07 = (await import('../../../assets/images/obras/dispositivos/dispositivos-07.webp')).default;
+const img08 = (await import('../../../assets/images/obras/dispositivos/dispositivos-08.webp')).default;
+const img10 = (await import('../../../assets/images/obras/dispositivos/dispositivos-10.webp')).default;
+const img11 = (await import('../../../assets/images/obras/dispositivos/dispositivos-11.webp')).default;
+const img12 = (await import('../../../assets/images/obras/dispositivos/dispositivos-12.webp')).default;
+const img13 = (await import('../../../assets/images/obras/dispositivos/dispositivos-13.webp')).default;
+const img14 = (await import('../../../assets/images/obras/dispositivos/dispositivos-14.webp')).default;
 ---
 
 <Layout
@@ -38,9 +47,19 @@ const imgs = await Promise.all(
 
       <!-- Main gallery -->
       <div class="work-page__gallery">
-        {imgs.map((img, i) => (
-          <img src={img.src} alt={`Dispositivos para ver pasar el tiempo — Image ${i + 1}`} loading={i === 0 ? 'eager' : 'lazy'}>
-        ))}
+        <img src={img01.src} alt="Dispositivos para ver pasar el tiempo — General installation view" loading="eager">
+        <img src={img02.src} alt="Dispositivos para ver pasar el tiempo — Sand device" loading="lazy">
+        <img src={img03.src} alt="Dispositivos para ver pasar el tiempo — Eroded surface" loading="lazy">
+        <img src={img04.src} alt="Dispositivos para ver pasar el tiempo — Poetic mechanism" loading="lazy">
+        <img src={img05.src} alt="Dispositivos para ver pasar el tiempo — Material accumulation" loading="lazy">
+        <img src={img06.src} alt="Dispositivos para ver pasar el tiempo — Device detail" loading="lazy">
+        <img src={img07.src} alt="Dispositivos para ver pasar el tiempo — Material transformation" loading="lazy">
+        <img src={img08.src} alt="Dispositivos para ver pasar el tiempo — Record of wear" loading="lazy">
+        <img src={img10.src} alt="Dispositivos para ver pasar el tiempo — Sculptural piece" loading="lazy">
+        <img src={img11.src} alt="Dispositivos para ver pasar el tiempo — Process detail" loading="lazy">
+        <img src={img12.src} alt="Dispositivos para ver pasar el tiempo — Ensemble view" loading="lazy">
+        <img src={img13.src} alt="Dispositivos para ver pasar el tiempo — Temporal element" loading="lazy">
+        <img src={img14.src} alt="Dispositivos para ver pasar el tiempo — Final view" loading="lazy">
       </div>
 
       <!-- Text + Technical sheet -->
@@ -92,8 +111,3 @@ const imgs = await Promise.all(
   </article>
 
 </Layout>
-
-<style>
-  @media (max-width: 768px) {
-    }
-</style>

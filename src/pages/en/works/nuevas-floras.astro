@@ -7,24 +7,34 @@ const lang = 'en' as const;
 const title = 'Nuevas Floras';
 
 // Colombia (root)
-const rootNums = ['01','02','03','04','05','06','08','09','10','11','12','13'];
-const imgsRoot = await Promise.all(
-  rootNums.map(n => import(`../../../assets/images/obras/nuevas-floras/nuevas-floras-${n}.webp`))
-).then(m => m.map(x => x.default));
+const col01 = (await import('../../../assets/images/obras/nuevas-floras/nuevas-floras-01.webp')).default;
+const col02 = (await import('../../../assets/images/obras/nuevas-floras/nuevas-floras-02.webp')).default;
+const col03 = (await import('../../../assets/images/obras/nuevas-floras/nuevas-floras-03.webp')).default;
+const col04 = (await import('../../../assets/images/obras/nuevas-floras/nuevas-floras-04.webp')).default;
+const col05 = (await import('../../../assets/images/obras/nuevas-floras/nuevas-floras-05.webp')).default;
+const col06 = (await import('../../../assets/images/obras/nuevas-floras/nuevas-floras-06.webp')).default;
+const col08 = (await import('../../../assets/images/obras/nuevas-floras/nuevas-floras-08.webp')).default;
+const col09 = (await import('../../../assets/images/obras/nuevas-floras/nuevas-floras-09.webp')).default;
+const col10 = (await import('../../../assets/images/obras/nuevas-floras/nuevas-floras-10.webp')).default;
+const col11 = (await import('../../../assets/images/obras/nuevas-floras/nuevas-floras-11.webp')).default;
+const col12 = (await import('../../../assets/images/obras/nuevas-floras/nuevas-floras-12.webp')).default;
+const col13 = (await import('../../../assets/images/obras/nuevas-floras/nuevas-floras-13.webp')).default;
 // Bristol
-const imgBristol = (await import('../../../assets/images/obras/nuevas-floras/bristol/bristol-01.webp')).default;
+const bristol01 = (await import('../../../assets/images/obras/nuevas-floras/bristol/bristol-01.webp')).default;
 // Do Sul
-const imgsDoSul = await Promise.all(
-  Array.from({ length: 7 }, (_, i) =>
-    import(`../../../assets/images/obras/nuevas-floras/do-sul/do-sul-${String(i + 1).padStart(2, '0')}.webp`)
-  )
-).then(m => m.map(x => x.default));
+const doSul01 = (await import('../../../assets/images/obras/nuevas-floras/do-sul/do-sul-01.webp')).default;
+const doSul02 = (await import('../../../assets/images/obras/nuevas-floras/do-sul/do-sul-02.webp')).default;
+const doSul03 = (await import('../../../assets/images/obras/nuevas-floras/do-sul/do-sul-03.webp')).default;
+const doSul04 = (await import('../../../assets/images/obras/nuevas-floras/do-sul/do-sul-04.webp')).default;
+const doSul05 = (await import('../../../assets/images/obras/nuevas-floras/do-sul/do-sul-05.webp')).default;
+const doSul06 = (await import('../../../assets/images/obras/nuevas-floras/do-sul/do-sul-06.webp')).default;
+const doSul07 = (await import('../../../assets/images/obras/nuevas-floras/do-sul/do-sul-07.webp')).default;
 // Versalles
-const imgsVersalles = await Promise.all(
-  Array.from({ length: 5 }, (_, i) =>
-    import(`../../../assets/images/obras/nuevas-floras/versalles/versalles-${String(i + 1).padStart(2, '0')}.webp`)
-  )
-).then(m => m.map(x => x.default));
+const versalles01 = (await import('../../../assets/images/obras/nuevas-floras/versalles/versalles-01.webp')).default;
+const versalles02 = (await import('../../../assets/images/obras/nuevas-floras/versalles/versalles-02.webp')).default;
+const versalles03 = (await import('../../../assets/images/obras/nuevas-floras/versalles/versalles-03.webp')).default;
+const versalles04 = (await import('../../../assets/images/obras/nuevas-floras/versalles/versalles-04.webp')).default;
+const versalles05 = (await import('../../../assets/images/obras/nuevas-floras/versalles/versalles-05.webp')).default;
 ---
 
 <Layout
@@ -37,7 +47,7 @@ const imgsVersalles = await Promise.all(
     title="Nuevas Floras"
     year="2003"
     medium="Sculptural intervention on living native trees, chromogenic photograph"
-    dimensions="120 × 80 cm (photographs)"
+    dimensions="120 x 80 cm (photographs)"
     description="Intervention on living native trees with baroque carvings. III Luis Caballero Prize, Galeria Santa Fe, Bogota."
     url="https://mariaelviraescallon.com/en/works/nuevas-floras/"
     collections={["Banco de la Republica, Bogota", "ESCALA, University of Essex, UK", "Seguros Bolivar Collection"]}
@@ -53,34 +63,40 @@ const imgsVersalles = await Promise.all(
         <p class="work-page__meta">2003 &nbsp;/&nbsp; Sculptural intervention on living native trees &nbsp;/&nbsp; Variable dimensions</p>
       </header>
 
-      <!-- Gallery: Colombia -->
+      <!-- Gallery -->
       <div class="work-page__gallery">
         <h3 style="margin-top: var(--s3);">COLOMBIA</h3>
-        {imgsRoot.map((img, i) => (
-          <img src={img.src} alt={`Nuevas Floras Colombia — Image ${i + 1}`} loading={i === 0 ? 'eager' : 'lazy'}>
-        ))}
-      </div>
+        <img src={col01.src} alt="Nuevas Floras Colombia — Native tree with baroque carving" loading="eager">
+        <img src={col02.src} alt="Nuevas Floras Colombia — Sculptural intervention on trunk" loading="lazy">
+        <img src={col03.src} alt="Nuevas Floras Colombia — Detail of carved Solomonic column" loading="lazy">
+        <img src={col04.src} alt="Nuevas Floras Colombia — Ornamental prosthesis on living tree" loading="lazy">
+        <img src={col05.src} alt="Nuevas Floras Colombia — Baroque volute on bark" loading="lazy">
+        <img src={col06.src} alt="Nuevas Floras Colombia — Altarpiece element on branch" loading="lazy">
+        <img src={col08.src} alt="Nuevas Floras Colombia — Tree absorbing the intervention" loading="lazy">
+        <img src={col09.src} alt="Nuevas Floras Colombia — Chromogenic photographic record" loading="lazy">
+        <img src={col10.src} alt="Nuevas Floras Colombia — Carving almost imperceptible due to growth" loading="lazy">
+        <img src={col11.src} alt="Nuevas Floras Colombia — Convergence of nature and culture" loading="lazy">
+        <img src={col12.src} alt="Nuevas Floras Colombia — Detail of arboreal intervention" loading="lazy">
+        <img src={col13.src} alt="Nuevas Floras Colombia — Ensemble view of the series" loading="lazy">
 
-      <!-- Gallery: Bristol -->
-      <div class="work-page__gallery">
         <h3 style="margin-top: var(--s3);">BRISTOL</h3>
-        <img src={imgBristol.src} alt="Nuevas Floras Bristol — Intervention on tree" loading="lazy">
-      </div>
+        <img src={bristol01.src} alt="Nuevas Floras Bristol — Intervention on tree in Bristol" loading="lazy">
 
-      <!-- Gallery: Do Sul -->
-      <div class="work-page__gallery">
         <h3 style="margin-top: var(--s3);">DO SUL</h3>
-        {imgsDoSul.map((img, i) => (
-          <img src={img.src} alt={`Nuevas Floras do Sul — Image ${i + 1}`} loading="lazy">
-        ))}
-      </div>
+        <img src={doSul01.src} alt="Nuevas Floras do Sul — Intervened tree in Brazil" loading="lazy">
+        <img src={doSul02.src} alt="Nuevas Floras do Sul — Detail of carving on trunk" loading="lazy">
+        <img src={doSul03.src} alt="Nuevas Floras do Sul — Ornamental form on bark" loading="lazy">
+        <img src={doSul04.src} alt="Nuevas Floras do Sul — Sculptural intervention" loading="lazy">
+        <img src={doSul05.src} alt="Nuevas Floras do Sul — Record of tree growth" loading="lazy">
+        <img src={doSul06.src} alt="Nuevas Floras do Sul — Detail of organic process" loading="lazy">
+        <img src={doSul07.src} alt="Nuevas Floras do Sul — View of the complete series" loading="lazy">
 
-      <!-- Gallery: Versalles -->
-      <div class="work-page__gallery">
         <h3 style="margin-top: var(--s3);">VERSALLES</h3>
-        {imgsVersalles.map((img, i) => (
-          <img src={img.src} alt={`Nuevas Floras Versalles — Image ${i + 1}`} loading="lazy">
-        ))}
+        <img src={versalles01.src} alt="Nuevas Floras Versalles — Intervened tree in Versailles" loading="lazy">
+        <img src={versalles02.src} alt="Nuevas Floras Versalles — Ornamental carving on trunk" loading="lazy">
+        <img src={versalles03.src} alt="Nuevas Floras Versalles — Detail of intervention" loading="lazy">
+        <img src={versalles04.src} alt="Nuevas Floras Versalles — Baroque form in living tree" loading="lazy">
+        <img src={versalles05.src} alt="Nuevas Floras Versalles — Ensemble view" loading="lazy">
       </div>
 
       <!-- Text + Technical sheet -->
@@ -145,7 +161,7 @@ const imgsVersalles = await Promise.all(
             Sculptural intervention on living native trees.
             Wood carving, prostheses.<br>
             Documentation: chromogenic photograph.<br><br>
-            120 × 80 cm (photographs)<br>
+            120 x 80 cm (photographs)<br>
             Edition of 5<br>
             Variable dimensions (interventions)
           </div>

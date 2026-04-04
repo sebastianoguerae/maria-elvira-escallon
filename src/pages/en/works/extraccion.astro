@@ -1,0 +1,81 @@
+---
+import Layout from '../../../components/layout/Layout.astro';
+import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
+
+const lang = 'en' as const;
+const title = 'Extraccion';
+
+const img1 = (await import('../../../assets/images/obras/extraccion/extraccion-01.webp')).default;
+---
+
+<Layout
+  lang={lang}
+  title="Extraccion — Work"
+  description="Extraccion (2018). Single-channel video. Maria Elvira Escallon."
+>
+
+  <ArtworkSchema
+    title="Extraccion"
+    year="2018"
+    medium="Single-channel video"
+    description="Video documenting material extraction processes."
+    url="https://mariaelviraescallon.com/en/works/extraccion/"
+  />
+
+  <article class="work-page">
+    <div class="container">
+
+      <!-- Header -->
+      <header class="work-page__header">
+        <p class="label">Work / 018</p>
+        <h1>{title}</h1>
+        <p class="work-page__meta">2018 &nbsp;/&nbsp; Single-channel video</p>
+      </header>
+
+      <!-- Main gallery -->
+      <div class="work-page__gallery">
+        <img src={img1.src} alt="Extraccion — Still from the single-channel video" loading="eager">
+      </div>
+
+      <!-- Video -->
+      <div class="work-page__video">
+        <div class="work-page__video-header">
+          <h3>VIDEO</h3>
+          <span class="label">Extraccion</span>
+        </div>
+        <video controls preload="metadata">
+          <source src="/maria-elvira-escallon/video/extraccion-web.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <!-- Text + Technical sheet -->
+      <div class="work-page__body">
+        <div class="work-page__text">
+
+          <p class="curatorial">
+            Extraccion is a single-channel video that records a delicate and repetitive gesture: a hand carefully extracts small fragments of matter from the skin. The action, filmed through a circular lens reminiscent of a medical or scientific instrument, transforms an everyday act into an almost surgical observation of the relationship between the body and its material residues.
+          </p>
+
+        </div>
+
+        <aside class="work-page__ficha">
+          <h4>TECHNICAL SHEET</h4>
+          <div class="ficha">
+            <strong>Extraccion</strong><br>
+            2018<br><br>
+            Single-channel video.
+          </div>
+
+          <h4 style="margin-top: var(--s3);">HOW TO CITE</h4>
+          <div class="ficha" style="font-size: 0.65rem;">
+            Escallon, M.E. (2018). <em>Extraccion</em>.
+            Single-channel video. Available at:
+            mariaelviraescallon.com/en/works/extraccion/
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </article>
+
+</Layout>

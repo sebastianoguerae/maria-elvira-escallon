@@ -6,47 +6,39 @@ const lang = 'en' as const;
 const title = 'En estado de coma';
 
 // Cultivos
-const imgsCultivos = await Promise.all(
-  Array.from({ length: 3 }, (_, i) =>
-    import(`../../../assets/images/obras/en-estado-de-coma/cultivos/cultivos-${String(i + 1).padStart(2, '0')}.webp`)
-  )
-).then(m => m.map(x => x.default));
+const cultivos01 = (await import('../../../assets/images/obras/en-estado-de-coma/cultivos/cultivos-01.webp')).default;
+const cultivos02 = (await import('../../../assets/images/obras/en-estado-de-coma/cultivos/cultivos-02.webp')).default;
+const cultivos03 = (await import('../../../assets/images/obras/en-estado-de-coma/cultivos/cultivos-03.webp')).default;
 // Serie tejido blando
-const imgsTejido = await Promise.all(
-  [4,5,6,7].map(n =>
-    import(`../../../assets/images/obras/en-estado-de-coma/serie-tejido-blando/serie-tejido-blando-${String(n).padStart(2, '0')}.webp`)
-  )
-).then(m => m.map(x => x.default));
+const tejido04 = (await import('../../../assets/images/obras/en-estado-de-coma/serie-tejido-blando/serie-tejido-blando-04.webp')).default;
+const tejido05 = (await import('../../../assets/images/obras/en-estado-de-coma/serie-tejido-blando/serie-tejido-blando-05.webp')).default;
+const tejido06 = (await import('../../../assets/images/obras/en-estado-de-coma/serie-tejido-blando/serie-tejido-blando-06.webp')).default;
+const tejido07 = (await import('../../../assets/images/obras/en-estado-de-coma/serie-tejido-blando/serie-tejido-blando-07.webp')).default;
 // Serie extracciones
-const imgsExtracciones = await Promise.all(
-  [8,9].map(n =>
-    import(`../../../assets/images/obras/en-estado-de-coma/serie-extracciones/serie-extracciones-${String(n).padStart(2, '0')}.webp`)
-  )
-).then(m => m.map(x => x.default));
+const extracciones08 = (await import('../../../assets/images/obras/en-estado-de-coma/serie-extracciones/serie-extracciones-08.webp')).default;
+const extracciones09 = (await import('../../../assets/images/obras/en-estado-de-coma/serie-extracciones/serie-extracciones-09.webp')).default;
 // Recorridos nocturnos
-const imgsRecorridos = await Promise.all(
-  [10,11,12,13].map(n =>
-    import(`../../../assets/images/obras/en-estado-de-coma/recorridos-nocturnos/recorridos-nocturnos-${n}.webp`)
-  )
-).then(m => m.map(x => x.default));
+const recorridos10 = (await import('../../../assets/images/obras/en-estado-de-coma/recorridos-nocturnos/recorridos-nocturnos-10.webp')).default;
+const recorridos11 = (await import('../../../assets/images/obras/en-estado-de-coma/recorridos-nocturnos/recorridos-nocturnos-11.webp')).default;
+const recorridos12 = (await import('../../../assets/images/obras/en-estado-de-coma/recorridos-nocturnos/recorridos-nocturnos-12.webp')).default;
+const recorridos13 = (await import('../../../assets/images/obras/en-estado-de-coma/recorridos-nocturnos/recorridos-nocturnos-13.webp')).default;
 // Postales
-const imgsPostales = await Promise.all(
-  [14,15,16,17].map(n =>
-    import(`../../../assets/images/obras/en-estado-de-coma/postales/postales-${n}.webp`)
-  )
-).then(m => m.map(x => x.default));
+const postales14 = (await import('../../../assets/images/obras/en-estado-de-coma/postales/postales-14.webp')).default;
+const postales15 = (await import('../../../assets/images/obras/en-estado-de-coma/postales/postales-15.webp')).default;
+const postales16 = (await import('../../../assets/images/obras/en-estado-de-coma/postales/postales-16.webp')).default;
+const postales17 = (await import('../../../assets/images/obras/en-estado-de-coma/postales/postales-17.webp')).default;
 ---
 
 <Layout
   lang={lang}
   title="En estado de coma — Work"
-  description="En estado de coma (2005–2007). 5 photographic series, video, sculptural installation. Hospital San Juan de Dios, Bogota. Maria Elvira Escallon."
+  description="En estado de coma (2005-2007). 5 photographic series, video, sculptural installation. Hospital San Juan de Dios, Bogota. Maria Elvira Escallon."
 >
 
 
   <ArtworkSchema
     title="En estado de coma"
-    year="2005–2007"
+    year="2005-2007"
     medium="Photography, video, installation"
     description="Documentation of the abandoned Hospital San Juan de Dios, Bogota. Photographs, videos, and extractions from the building."
     url="https://mariaelviraescallon.com/en/works/en-estado-de-coma/"
@@ -59,53 +51,154 @@ const imgsPostales = await Promise.all(
       <header class="work-page__header">
         <p class="label">Work / 006</p>
         <h1>{title}</h1>
-        <p class="work-page__meta">2005–2007 &nbsp;/&nbsp; 5 photographic series, video, sculptural installation &nbsp;/&nbsp; Hospital San Juan de Dios, Bogota</p>
+        <p class="work-page__meta">2005-2007 &nbsp;/&nbsp; 5 photographic series, video, sculptural installation &nbsp;/&nbsp; Hospital San Juan de Dios, Bogota</p>
       </header>
 
-      <!-- Gallery: Cultures -->
+      <!-- Gallery -->
       <div class="work-page__gallery">
         <h3 style="margin-top: var(--s3);">CULTURES</h3>
-        {imgsCultivos.map((img, i) => (
-          <img src={img.src} alt={`En estado de coma — Cultures ${i + 1}`} loading={i === 0 ? 'eager' : 'lazy'}>
-        ))}
-      </div>
+        <img src={cultivos01.src} alt="En estado de coma — Cultures, vegetation invading the hospital" loading="eager">
+        <img src={cultivos02.src} alt="En estado de coma — Cultures, nature reclaiming spaces" loading="lazy">
+        <img src={cultivos03.src} alt="En estado de coma — Cultures, organic growth in abandonment" loading="lazy">
 
-      <!-- Gallery: Soft Tissue series -->
-      <div class="work-page__gallery">
         <h3 style="margin-top: var(--s3);">SOFT TISSUE SERIES</h3>
-        {imgsTejido.map((img, i) => (
-          <img src={img.src} alt={`En estado de coma — Soft Tissue series ${i + 1}`} loading="lazy">
-        ))}
-      </div>
+        <img src={tejido04.src} alt="En estado de coma — Soft Tissue, hospital sheets" loading="lazy">
+        <img src={tejido05.src} alt="En estado de coma — Soft Tissue, curtains and textiles" loading="lazy">
+        <img src={tejido06.src} alt="En estado de coma — Soft Tissue, vestiges of medical activity" loading="lazy">
+        <img src={tejido07.src} alt="En estado de coma — Soft Tissue, fabrics on empty beds" loading="lazy">
 
-      <!-- Gallery: Extractions series -->
-      <div class="work-page__gallery">
         <h3 style="margin-top: var(--s3);">EXTRACTIONS SERIES</h3>
-        {imgsExtracciones.map((img, i) => (
-          <img src={img.src} alt={`En estado de coma — Extractions series ${i + 1}`} loading="lazy">
-        ))}
-      </div>
+        <img src={extracciones08.src} alt="En estado de coma — Extractions, isolated architectural element" loading="lazy">
+        <img src={extracciones09.src} alt="En estado de coma — Extractions, specimen of the sick body" loading="lazy">
 
-      <!-- Gallery: Nocturnal Walks -->
-      <div class="work-page__gallery">
         <h3 style="margin-top: var(--s3);">NOCTURNAL WALKS</h3>
-        {imgsRecorridos.map((img, i) => (
-          <img src={img.src} alt={`En estado de coma — Nocturnal Walks ${i + 1}`} loading="lazy">
-        ))}
+        <img src={recorridos10.src} alt="En estado de coma — Nocturnal Walks, hospital corridor" loading="lazy">
+        <img src={recorridos11.src} alt="En estado de coma — Nocturnal Walks, room in shadow" loading="lazy">
+        <img src={recorridos12.src} alt="En estado de coma — Nocturnal Walks, palpable absence" loading="lazy">
+        <img src={recorridos13.src} alt="En estado de coma — Nocturnal Walks, nocturnal record" loading="lazy">
+
+        <h3 style="margin-top: var(--s3);">POSTCARDS</h3>
+        <img src={postales14.src} alt="En estado de coma — Postcards, inverted tourist view of the hospital" loading="lazy">
+        <img src={postales15.src} alt="En estado de coma — Postcards, deteriorating facade" loading="lazy">
+        <img src={postales16.src} alt="En estado de coma — Postcards, evidence of abandonment" loading="lazy">
+        <img src={postales17.src} alt="En estado de coma — Postcards, postal record of the hospital" loading="lazy">
       </div>
 
-      <!-- Gallery: Postcards -->
-      <div class="work-page__gallery">
-        <h3 style="margin-top: var(--s3);">POSTCARDS</h3>
-        {imgsPostales.map((img, i) => (
-          <img src={img.src} alt={`En estado de coma — Postcards ${i + 1}`} loading="lazy">
-        ))}
+      <!-- Text + Technical sheet -->
+      <div class="work-page__body">
+        <div class="work-page__text">
+
+          <p class="curatorial">
+            The project began in 2005 as a documentary that sought to make visible the
+            conditions of the Hospital San Juan de Dios — founded in 1564, renowned for its
+            level of specialization — after falling into abandonment. It includes five
+            photographic series: <em>Postcards</em>, <em>Nocturnal Walks</em>, <em>Soft
+            Tissue</em>, <em>Extractions</em>, and <em>Cultures</em>.
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            The hospital was closed in 2001 as a consequence of mismanagement and the
+            privatization of the health system. A small group of employees continued
+            giving "oxygen to the terminal patient." The name of the work refers to
+            "an entity that is not dead and about which there is hope."
+          </p>
+
+          <p class="curatorial" style="margin-top: var(--s2);">
+            Escallon did not document the hospital as a picturesque ruin but as an organism
+            in a state of suspension. The five series address different facets of that
+            liminal condition: the inverted tourist postcards, the nocturnal walks that
+            reveal what daylight conceals, the soft tissue of sheets still covering empty
+            beds, the extractions of architectural elements as if they were clinical
+            specimens, and the cultures of vegetation reclaiming the abandoned spaces.
+          </p>
+
+          <h3 style="margin-top: var(--s4);">SERIES</h3>
+          <ul style="margin-top: var(--s2); list-style: none;">
+            <li style="padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark);">
+              <strong>Postcards</strong> — Photographs of the hospital treated as tourist postcards, inverting the promotional logic to reveal deterioration.
+            </li>
+            <li style="padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark);">
+              <strong>Nocturnal Walks</strong> — Photographic record of the hospital's corridors and rooms at night, when absence becomes most palpable.
+            </li>
+            <li style="padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark);">
+              <strong>Soft Tissue</strong> — Documentation of the hospital's sheets, curtains, and textiles that remain as vestiges of medical activity.
+            </li>
+            <li style="padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark);">
+              <strong>Extractions</strong> — Architectural and hospital elements isolated from their context, treated as specimens of a sick body.
+            </li>
+            <li style="padding: var(--s1) 0;">
+              <strong>Cultures</strong> — Record of the vegetation that invades and reclaims the abandoned spaces of the hospital.
+            </li>
+          </ul>
+
+          <h3 style="margin-top: var(--s4);">CONTEXT</h3>
+          <p style="margin-top: var(--s2);">
+            The Hospital San Juan de Dios, founded in 1564, was one of the most important
+            public hospitals in Colombia, providing care to the poorest. After its closure
+            in 2001, it was declared a national cultural heritage site in 2002. The building,
+            designed by the architect Pablo de la Cruz, represents a central chapter in the
+            history of Colombian public health.
+          </p>
+          <p style="margin-top: var(--s2);">
+            Escallon's work is inscribed in her line of research on abandoned heritage and
+            the relationship between the State and buildings that embody collective memory.
+            As in <em>In Vitro</em>, the artist works with a heritage building that the
+            State has left in ruins, but here the scale is monumental and the deterioration
+            extends over years.
+          </p>
+          <p style="margin-top: var(--s2);">
+            The project was published as a book by the IDPC and Johns Hopkins University Press
+            (Project MUSE), consolidating its importance both in the artistic realm and in
+            the discussion of cultural heritage and public health in Colombia.
+          </p>
+        </div>
+
+        <aside class="work-page__ficha">
+          <h4>TECHNICAL SHEET</h4>
+          <div class="ficha">
+            <strong>En estado de coma</strong><br>
+            2005-2007<br><br>
+            5 photographic series, video,<br>
+            sculptural installation.<br><br>
+            Hospital San Juan de Dios, Bogota.<br>
+            Variable dimensions.
+          </div>
+
+          <h4 style="margin-top: var(--s3);">AWARDS</h4>
+          <div class="ficha">
+            First Prize, Heritage Category — IDCT, 2006<br><br>
+            National Individual Creation Grant — MinCultura, 2005
+          </div>
+
+          <h4 style="margin-top: var(--s3);">PUBLICATION</h4>
+          <div class="ficha">
+            IDPC / Johns Hopkins University Press<br>
+            (Project MUSE)
+          </div>
+
+          <h4 style="margin-top: var(--s3);">EXHIBITIONS</h4>
+          <div class="ficha">
+            Hospital San Juan de Dios, Bogota<br>
+            National and international exhibitions
+          </div>
+
+          <h4 style="margin-top: var(--s3);">TEXTS</h4>
+          <div class="ficha">
+            <a href="/maria-elvira-escallon/en/texts/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">
+              Related texts
+            </a>
+          </div>
+
+          <h4 style="margin-top: var(--s3);">HOW TO CITE</h4>
+          <div class="ficha" style="font-size: 0.65rem;">
+            Escallon, M.E. (2005-2007). <em>En estado de coma</em>.
+            Photographic series, video, and installation. Available at:
+            mariaelviraescallon.com/en/works/en-estado-de-coma/
+          </div>
+        </aside>
       </div>
+
+    </div>
   </article>
 
 </Layout>
-
-<style>
-  @media (max-width: 768px) {
-    }
-</style>

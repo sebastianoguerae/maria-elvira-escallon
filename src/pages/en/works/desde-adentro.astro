@@ -5,11 +5,20 @@ import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
 const lang = 'en' as const;
 const title = 'Desde Adentro';
 
-const imgs = await Promise.all(
-  Array.from({ length: 14 }, (_, i) =>
-    import(`../../../assets/images/obras/desde-adentro/desde-adentro-${String(i + 1).padStart(2, '0')}.webp`)
-  )
-).then(m => m.map(x => x.default));
+const img01 = (await import('../../../assets/images/obras/desde-adentro/desde-adentro-01.webp')).default;
+const img02 = (await import('../../../assets/images/obras/desde-adentro/desde-adentro-02.webp')).default;
+const img03 = (await import('../../../assets/images/obras/desde-adentro/desde-adentro-03.webp')).default;
+const img04 = (await import('../../../assets/images/obras/desde-adentro/desde-adentro-04.webp')).default;
+const img05 = (await import('../../../assets/images/obras/desde-adentro/desde-adentro-05.webp')).default;
+const img06 = (await import('../../../assets/images/obras/desde-adentro/desde-adentro-06.webp')).default;
+const img07 = (await import('../../../assets/images/obras/desde-adentro/desde-adentro-07.webp')).default;
+const img08 = (await import('../../../assets/images/obras/desde-adentro/desde-adentro-08.webp')).default;
+const img09 = (await import('../../../assets/images/obras/desde-adentro/desde-adentro-09.webp')).default;
+const img10 = (await import('../../../assets/images/obras/desde-adentro/desde-adentro-10.webp')).default;
+const img11 = (await import('../../../assets/images/obras/desde-adentro/desde-adentro-11.webp')).default;
+const img12 = (await import('../../../assets/images/obras/desde-adentro/desde-adentro-12.webp')).default;
+const img13 = (await import('../../../assets/images/obras/desde-adentro/desde-adentro-13.webp')).default;
+const img14 = (await import('../../../assets/images/obras/desde-adentro/desde-adentro-14.webp')).default;
 ---
 
 <Layout
@@ -40,9 +49,20 @@ const imgs = await Promise.all(
 
       <!-- Main gallery -->
       <div class="work-page__gallery">
-        {imgs.map((img, i) => (
-          <img src={img.src} alt={`Desde Adentro — Photographic documentation ${i + 1}`} loading={i === 0 ? 'eager' : 'lazy'}>
-        ))}
+        <img src={img01.src} alt="Desde Adentro — Trace on surface after the attack" loading="eager">
+        <img src={img02.src} alt="Desde Adentro — Trace of absence on wall" loading="lazy">
+        <img src={img03.src} alt="Desde Adentro — Silhouette of volatilized object" loading="lazy">
+        <img src={img04.src} alt="Desde Adentro — Handprint on ash" loading="lazy">
+        <img src={img05.src} alt="Desde Adentro — Outline of removed painting" loading="lazy">
+        <img src={img06.src} alt="Desde Adentro — Door covered in ash film" loading="lazy">
+        <img src={img07.src} alt="Desde Adentro — Devastated staircase" loading="lazy">
+        <img src={img08.src} alt="Desde Adentro — Record of interior destruction" loading="lazy">
+        <img src={img09.src} alt="Desde Adentro — Detail of ash-covered surface" loading="lazy">
+        <img src={img10.src} alt="Desde Adentro — Devastated space of Club El Nogal" loading="lazy">
+        <img src={img11.src} alt="Desde Adentro — Vestige of human presence" loading="lazy">
+        <img src={img12.src} alt="Desde Adentro — Everyday object after the explosion" loading="lazy">
+        <img src={img13.src} alt="Desde Adentro — Documentation of aftermath" loading="lazy">
+        <img src={img14.src} alt="Desde Adentro — Final record of the series" loading="lazy">
       </div>
 
       <!-- Text + Technical sheet -->
@@ -141,8 +161,3 @@ const imgs = await Promise.all(
   </article>
 
 </Layout>
-
-<style>
-  @media (max-width: 768px) {
-    }
-</style>
