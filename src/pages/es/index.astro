@@ -7,6 +7,7 @@ const lang = 'es' as const;
 
 const heroImage = (await import('../../assets/images/obras/ensayo-autorretrato/ensayo-autorretrato-06.webp')).default;
 const nuevasFloras = (await import('../../assets/images/obras/nuevas-floras/nuevas-floras-01.webp')).default;
+const featuredComa = (await import('../../assets/images/obras/en-estado-de-coma/cultivos/cultivos-01.webp')).default;
 const desdeAdentro = (await import('../../assets/images/obras/desde-adentro/desde-adentro-01.webp')).default;
 const retrato = (await import('../../assets/images/retrato/retrato.jpg')).default;
 const enEstadoDeComaLibro = (await import('../../assets/images/libros/en-estado-de-coma-libro.jpg')).default;
@@ -125,18 +126,18 @@ const timelineEntries = [
   <section class="home-section home-section--alt fade-in">
     <div class="container">
       <p class="label">Obra destacada</p>
-      <a href="/maria-elvira-escallon/es/obra/nuevas-floras/" class="home-featured">
+      <a href="/maria-elvira-escallon/es/obra/en-estado-de-coma/" class="home-featured">
         <img
-          src={nuevasFloras.src}
-          alt="Nuevas Floras &mdash; María Elvira Escallón"
+          src={featuredComa.src}
+          alt="En estado de coma &mdash; María Elvira Escallón"
           loading="lazy"
         />
         <div class="home-featured__caption">
-          <h3>NUEVAS FLORAS</h3>
-          <span class="ficha">2003&ndash;2007 &middot; Instalación / Escultura</span>
+          <h3>EN ESTADO DE COMA</h3>
+          <span class="ficha">2005&ndash;2007 &middot; Hospital San Juan de Dios</span>
         </div>
       </a>
-      <a href="/maria-elvira-escallon/es/obra/nuevas-floras/" class="home-teaser-link">Ver obra completa &rarr;</a>
+      <a href="/maria-elvira-escallon/es/obra/en-estado-de-coma/" class="home-teaser-link">Ver obra completa &rarr;</a>
     </div>
   </section>
 
@@ -295,7 +296,7 @@ const timelineEntries = [
         <div class="home-bio-teaser__text">
           <p class="label">Biografía</p>
           <p class="curatorial home-bio-teaser__quote">
-            María Elvira Escallón no ilustra la violencia. Señala. No critica &mdash; evidencia.
+            Su obra se desarrolla en torno a temas como el tiempo, la memoria, la ruina y la vulnerabilidad de los monumentos.
           </p>
           <p class="home-bio-teaser__body">
             Nacida en Londres en 1954, Escallón ha desarrollado a lo largo de tres décadas un cuerpo de obra que interroga las fronteras entre lo natural y lo construido, la memoria y el olvido, el deterioro y la permanencia.
