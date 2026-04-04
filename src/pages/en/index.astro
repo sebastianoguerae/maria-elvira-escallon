@@ -7,6 +7,7 @@ const lang = 'en' as const;
 
 const heroImage = (await import('../../assets/images/obras/ensayo-autorretrato/ensayo-autorretrato-06.webp')).default;
 const nuevasFloras = (await import('../../assets/images/obras/nuevas-floras/nuevas-floras-01.webp')).default;
+const featuredComa = (await import('../../assets/images/obras/en-estado-de-coma/cultivos/cultivos-01.webp')).default;
 const desdeAdentro = (await import('../../assets/images/obras/desde-adentro/desde-adentro-01.webp')).default;
 const retrato = (await import('../../assets/images/retrato/retrato.jpg')).default;
 const enEstadoDeComaLibro = (await import('../../assets/images/libros/en-estado-de-coma-libro.jpg')).default;
@@ -125,18 +126,18 @@ const timelineEntries = [
   <section class="home-section home-section--alt fade-in">
     <div class="container">
       <p class="label">Featured work</p>
-      <a href="/maria-elvira-escallon/en/works/nuevas-floras/" class="home-featured">
+      <a href="/maria-elvira-escallon/en/works/en-estado-de-coma/" class="home-featured">
         <img
-          src={nuevasFloras.src}
-          alt="New Floras &mdash; María Elvira Escallón"
+          src={featuredComa.src}
+          alt="En estado de coma &mdash; María Elvira Escallón"
           loading="lazy"
         />
         <div class="home-featured__caption">
-          <h3>NEW FLORAS</h3>
-          <span class="ficha">2003&ndash;2007 &middot; Installation / Sculpture</span>
+          <h3>EN ESTADO DE COMA</h3>
+          <span class="ficha">2005&ndash;2007 &middot; Hospital San Juan de Dios</span>
         </div>
       </a>
-      <a href="/maria-elvira-escallon/en/works/nuevas-floras/" class="home-teaser-link">View complete work &rarr;</a>
+      <a href="/maria-elvira-escallon/en/works/en-estado-de-coma/" class="home-teaser-link">View complete work &rarr;</a>
     </div>
   </section>
 
