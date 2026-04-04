@@ -5,11 +5,28 @@ import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
 const lang = 'es' as const;
 const title = 'Pequeño Museo del Aerolito de Santa Rosa de Viterbo';
 
-const imgs = await Promise.all(
-  Array.from({ length: 22 }, (_, i) =>
-    import(`../../../assets/images/obras/aerolito/aerolito-${String(i + 1).padStart(2, '0')}.webp`)
-  )
-).then(m => m.map(x => x.default));
+const img01 = (await import('../../../assets/images/obras/aerolito/aerolito-01.webp')).default;
+const img02 = (await import('../../../assets/images/obras/aerolito/aerolito-02.webp')).default;
+const img03 = (await import('../../../assets/images/obras/aerolito/aerolito-03.webp')).default;
+const img04 = (await import('../../../assets/images/obras/aerolito/aerolito-04.webp')).default;
+const img05 = (await import('../../../assets/images/obras/aerolito/aerolito-05.webp')).default;
+const img06 = (await import('../../../assets/images/obras/aerolito/aerolito-06.webp')).default;
+const img07 = (await import('../../../assets/images/obras/aerolito/aerolito-07.webp')).default;
+const img08 = (await import('../../../assets/images/obras/aerolito/aerolito-08.webp')).default;
+const img09 = (await import('../../../assets/images/obras/aerolito/aerolito-09.webp')).default;
+const img10 = (await import('../../../assets/images/obras/aerolito/aerolito-10.webp')).default;
+const img11 = (await import('../../../assets/images/obras/aerolito/aerolito-11.webp')).default;
+const img12 = (await import('../../../assets/images/obras/aerolito/aerolito-12.webp')).default;
+const img13 = (await import('../../../assets/images/obras/aerolito/aerolito-13.webp')).default;
+const img14 = (await import('../../../assets/images/obras/aerolito/aerolito-14.webp')).default;
+const img15 = (await import('../../../assets/images/obras/aerolito/aerolito-15.webp')).default;
+const img16 = (await import('../../../assets/images/obras/aerolito/aerolito-16.webp')).default;
+const img17 = (await import('../../../assets/images/obras/aerolito/aerolito-17.webp')).default;
+const img18 = (await import('../../../assets/images/obras/aerolito/aerolito-18.webp')).default;
+const img19 = (await import('../../../assets/images/obras/aerolito/aerolito-19.webp')).default;
+const img20 = (await import('../../../assets/images/obras/aerolito/aerolito-20.webp')).default;
+const img21 = (await import('../../../assets/images/obras/aerolito/aerolito-21.webp')).default;
+const img22 = (await import('../../../assets/images/obras/aerolito/aerolito-22.webp')).default;
 ---
 
 <Layout
@@ -37,17 +54,31 @@ const imgs = await Promise.all(
         <p class="work-page__meta">2014–2015 &nbsp;/&nbsp; Investigación, instalación, archivos históricos y fotográficos, réplica en hierro &nbsp;/&nbsp; Dimensiones variables</p>
       </header>
 
-      <!-- Galería principal -->
+      <!-- Galeria principal -->
       <div class="work-page__gallery">
-        {imgs.map((img, i) => (
-          <img src={img.src} alt={`Pequeño Museo del Aerolito — Imagen ${i + 1}`} loading={i === 0 ? 'eager' : 'lazy'}>
-        ))}
+        <img src={img01.src} alt="Pequeño Museo del Aerolito — Vista general de la instalación" loading="eager">
+        <img src={img02.src} alt="Pequeño Museo del Aerolito — Meteorito original" loading="lazy">
+        <img src={img03.src} alt="Pequeño Museo del Aerolito — Archivo histórico" loading="lazy">
+        <img src={img04.src} alt="Pequeño Museo del Aerolito — Documentación fotográfica" loading="lazy">
+        <img src={img05.src} alt="Pequeño Museo del Aerolito — Réplica en hierro" loading="lazy">
+        <img src={img06.src} alt="Pequeño Museo del Aerolito — Detalle de instalación" loading="lazy">
+        <img src={img07.src} alt="Pequeño Museo del Aerolito — Archivo documental" loading="lazy">
+        <img src={img08.src} alt="Pequeño Museo del Aerolito — Investigación histórica" loading="lazy">
+        <img src={img09.src} alt="Pequeño Museo del Aerolito — Material de archivo" loading="lazy">
+        <img src={img10.src} alt="Pequeño Museo del Aerolito — Vista de sala" loading="lazy">
+        <img src={img11.src} alt="Pequeño Museo del Aerolito — Detalle documental" loading="lazy">
+        <img src={img12.src} alt="Pequeño Museo del Aerolito — Registro fotográfico" loading="lazy">
+        <img src={img13.src} alt="Pequeño Museo del Aerolito — Pieza de archivo" loading="lazy">
+        <img src={img14.src} alt="Pequeño Museo del Aerolito — Objeto de investigación" loading="lazy">
+        <img src={img15.src} alt="Pequeño Museo del Aerolito — Fragmento histórico" loading="lazy">
+        <img src={img16.src} alt="Pequeño Museo del Aerolito — Elemento de instalación" loading="lazy">
+        <img src={img17.src} alt="Pequeño Museo del Aerolito — Documento colonial" loading="lazy">
+        <img src={img18.src} alt="Pequeño Museo del Aerolito — Detalle de réplica" loading="lazy">
+        <img src={img19.src} alt="Pequeño Museo del Aerolito — Vista de conjunto" loading="lazy">
+        <img src={img20.src} alt="Pequeño Museo del Aerolito — Registro de investigación" loading="lazy">
+        <img src={img21.src} alt="Pequeño Museo del Aerolito — Pieza complementaria" loading="lazy">
+        <img src={img22.src} alt="Pequeño Museo del Aerolito — Vista final de instalación" loading="lazy">
       </div>
   </article>
 
 </Layout>
-
-<style>
-  @media (max-width: 768px) {
-    }
-</style>

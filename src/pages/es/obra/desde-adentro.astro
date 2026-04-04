@@ -5,11 +5,20 @@ import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
 const lang = 'es' as const;
 const title = 'Desde Adentro';
 
-const imgs = await Promise.all(
-  Array.from({ length: 14 }, (_, i) =>
-    import(`../../../assets/images/obras/desde-adentro/desde-adentro-${String(i + 1).padStart(2, '0')}.webp`)
-  )
-).then(m => m.map(x => x.default));
+const img01 = (await import('../../../assets/images/obras/desde-adentro/desde-adentro-01.webp')).default;
+const img02 = (await import('../../../assets/images/obras/desde-adentro/desde-adentro-02.webp')).default;
+const img03 = (await import('../../../assets/images/obras/desde-adentro/desde-adentro-03.webp')).default;
+const img04 = (await import('../../../assets/images/obras/desde-adentro/desde-adentro-04.webp')).default;
+const img05 = (await import('../../../assets/images/obras/desde-adentro/desde-adentro-05.webp')).default;
+const img06 = (await import('../../../assets/images/obras/desde-adentro/desde-adentro-06.webp')).default;
+const img07 = (await import('../../../assets/images/obras/desde-adentro/desde-adentro-07.webp')).default;
+const img08 = (await import('../../../assets/images/obras/desde-adentro/desde-adentro-08.webp')).default;
+const img09 = (await import('../../../assets/images/obras/desde-adentro/desde-adentro-09.webp')).default;
+const img10 = (await import('../../../assets/images/obras/desde-adentro/desde-adentro-10.webp')).default;
+const img11 = (await import('../../../assets/images/obras/desde-adentro/desde-adentro-11.webp')).default;
+const img12 = (await import('../../../assets/images/obras/desde-adentro/desde-adentro-12.webp')).default;
+const img13 = (await import('../../../assets/images/obras/desde-adentro/desde-adentro-13.webp')).default;
+const img14 = (await import('../../../assets/images/obras/desde-adentro/desde-adentro-14.webp')).default;
 ---
 
 <Layout
@@ -38,11 +47,22 @@ const imgs = await Promise.all(
         <p class="work-page__meta">2003 &nbsp;/&nbsp; 12 fotografías tipo C, video-instalación de 12 horas &nbsp;/&nbsp; 89 × 123 cm (fotografías), edición de 5</p>
       </header>
 
-      <!-- Galería principal -->
+      <!-- Galeria principal -->
       <div class="work-page__gallery">
-        {imgs.map((img, i) => (
-          <img src={img.src} alt={`Desde Adentro — Documentación fotográfica ${i + 1}`} loading={i === 0 ? 'eager' : 'lazy'}>
-        ))}
+        <img src={img01.src} alt="Desde Adentro — Huella sobre superficie tras el atentado" loading="eager">
+        <img src={img02.src} alt="Desde Adentro — Rastro de ausencia en muro" loading="lazy">
+        <img src={img03.src} alt="Desde Adentro — Silueta de objeto volatilizado" loading="lazy">
+        <img src={img04.src} alt="Desde Adentro — Marca de mano sobre ceniza" loading="lazy">
+        <img src={img05.src} alt="Desde Adentro — Contorno de cuadro descolgado" loading="lazy">
+        <img src={img06.src} alt="Desde Adentro — Puerta con película de ceniza" loading="lazy">
+        <img src={img07.src} alt="Desde Adentro — Escalera devastada" loading="lazy">
+        <img src={img08.src} alt="Desde Adentro — Registro de destrucción interior" loading="lazy">
+        <img src={img09.src} alt="Desde Adentro — Detalle de superficie cubierta de ceniza" loading="lazy">
+        <img src={img10.src} alt="Desde Adentro — Espacio devastado del Club El Nogal" loading="lazy">
+        <img src={img11.src} alt="Desde Adentro — Vestigio de presencia humana" loading="lazy">
+        <img src={img12.src} alt="Desde Adentro — Objeto cotidiano tras la explosión" loading="lazy">
+        <img src={img13.src} alt="Desde Adentro — Documentación de secuelas" loading="lazy">
+        <img src={img14.src} alt="Desde Adentro — Registro final de la serie" loading="lazy">
       </div>
 
       <!-- Texto + Ficha -->
@@ -141,8 +161,3 @@ const imgs = await Promise.all(
   </article>
 
 </Layout>
-
-<style>
-  @media (max-width: 768px) {
-    }
-</style>

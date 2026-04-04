@@ -5,24 +5,22 @@ import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
 const lang = 'es' as const;
 const title = 'Precipitación de arenas';
 
-// Cauca 2008 (root)
-const imgsCauca = await Promise.all(
-  ['01','02'].map(n =>
-    import(`../../../assets/images/obras/precipitacion/precipitacion-${n}.webp`)
-  )
-).then(m => m.map(x => x.default));
+// Rio Cauca 2008 (root)
+const prec01 = (await import('../../../assets/images/obras/precipitacion/precipitacion-01.webp')).default;
+const prec02 = (await import('../../../assets/images/obras/precipitacion/precipitacion-02.webp')).default;
 // 2020
-const imgs2020 = await Promise.all(
-  Array.from({ length: 4 }, (_, i) =>
-    import(`../../../assets/images/obras/precipitacion/2020/2020-${String(i + 1).padStart(2, '0')}.webp`)
-  )
-).then(m => m.map(x => x.default));
+const y2020_01 = (await import('../../../assets/images/obras/precipitacion/2020/2020-01.webp')).default;
+const y2020_02 = (await import('../../../assets/images/obras/precipitacion/2020/2020-02.webp')).default;
+const y2020_03 = (await import('../../../assets/images/obras/precipitacion/2020/2020-03.webp')).default;
+const y2020_04 = (await import('../../../assets/images/obras/precipitacion/2020/2020-04.webp')).default;
 // 2024
-const imgs2024 = await Promise.all(
-  Array.from({ length: 7 }, (_, i) =>
-    import(`../../../assets/images/obras/precipitacion/2024/2024-${String(i + 1).padStart(2, '0')}.webp`)
-  )
-).then(m => m.map(x => x.default));
+const y2024_01 = (await import('../../../assets/images/obras/precipitacion/2024/2024-01.webp')).default;
+const y2024_02 = (await import('../../../assets/images/obras/precipitacion/2024/2024-02.webp')).default;
+const y2024_03 = (await import('../../../assets/images/obras/precipitacion/2024/2024-03.webp')).default;
+const y2024_04 = (await import('../../../assets/images/obras/precipitacion/2024/2024-04.webp')).default;
+const y2024_05 = (await import('../../../assets/images/obras/precipitacion/2024/2024-05.webp')).default;
+const y2024_06 = (await import('../../../assets/images/obras/precipitacion/2024/2024-06.webp')).default;
+const y2024_07 = (await import('../../../assets/images/obras/precipitacion/2024/2024-07.webp')).default;
 ---
 
 <Layout
@@ -50,34 +48,27 @@ const imgs2024 = await Promise.all(
         <p class="work-page__meta">2022–2024 (varias versiones) &nbsp;/&nbsp; Instalación — arena, muebles, vidrio de seguridad, parlante &nbsp;/&nbsp; Dimensiones variables</p>
       </header>
 
-      <!-- Galeria: Cauca 2008 -->
+      <!-- Galeria -->
       <div class="work-page__gallery">
-        <h3 style="margin-top: var(--s3);">CAUCA 2008</h3>
-        {imgsCauca.map((img, i) => (
-          <img src={img.src} alt={`Precipitación de arenas — Cauca 2008, imagen ${i + 1}`} loading={i === 0 ? 'eager' : 'lazy'}>
-        ))}
-      </div>
+        <h3 style="margin-top: var(--s3);">RIO CAUCA, 2008</h3>
+        <img src={prec01.src} alt="Precipitación de arenas — Río Cauca, arena precipitándose" loading="eager">
+        <img src={prec02.src} alt="Precipitación de arenas — Río Cauca, registro de arena" loading="lazy">
 
-      <!-- Galeria: 2020 -->
-      <div class="work-page__gallery">
         <h3 style="margin-top: var(--s3);">PRECIPITACIONES 2020</h3>
-        {imgs2020.map((img, i) => (
-          <img src={img.src} alt={`Precipitación de arenas 2020 — Imagen ${i + 1}`} loading="lazy">
-        ))}
-      </div>
+        <img src={y2020_01.src} alt="Precipitación de arenas 2020 — Instalación con arena y muebles" loading="lazy">
+        <img src={y2020_02.src} alt="Precipitación de arenas 2020 — Arena sobre objetos domésticos" loading="lazy">
+        <img src={y2020_03.src} alt="Precipitación de arenas 2020 — Detalle de vitrina sellada" loading="lazy">
+        <img src={y2020_04.src} alt="Precipitación de arenas 2020 — Vista de conjunto" loading="lazy">
 
-      <!-- Galeria: 2024 -->
-      <div class="work-page__gallery">
         <h3 style="margin-top: var(--s3);">PRECIPITACIONES 2024</h3>
-        {imgs2024.map((img, i) => (
-          <img src={img.src} alt={`Precipitación de arenas 2024 — Imagen ${i + 1}`} loading="lazy">
-        ))}
+        <img src={y2024_01.src} alt="Precipitación de arenas 2024 — Instalación en el MAMU" loading="lazy">
+        <img src={y2024_02.src} alt="Precipitación de arenas 2024 — Arena cayendo sobre muebles" loading="lazy">
+        <img src={y2024_03.src} alt="Precipitación de arenas 2024 — Detalle de acumulación" loading="lazy">
+        <img src={y2024_04.src} alt="Precipitación de arenas 2024 — Vidrio de seguridad y arena" loading="lazy">
+        <img src={y2024_05.src} alt="Precipitación de arenas 2024 — Objetos cubiertos de arena" loading="lazy">
+        <img src={y2024_06.src} alt="Precipitación de arenas 2024 — Vista lateral de instalación" loading="lazy">
+        <img src={y2024_07.src} alt="Precipitación de arenas 2024 — Vista final de la obra" loading="lazy">
       </div>
   </article>
 
 </Layout>
-
-<style>
-  @media (max-width: 768px) {
-    }
-</style>
