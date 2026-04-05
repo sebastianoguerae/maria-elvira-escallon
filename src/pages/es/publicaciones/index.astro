@@ -6,8 +6,20 @@ const title = 'Publicaciones';
 
 const coverComa = (await import('../../../assets/images/libros/en-estado-de-coma-libro.jpg')).default;
 const coverPolvo = (await import('../../../assets/images/libros/polvo-eres.jpg')).default;
+const coverEncuentros = (await import('../../../assets/images/libros/encuentros-catalogo-001.jpg')).default;
+const coverSeguros = (await import('../../../assets/images/libros/seguros-bolivar-001.jpg')).default;
 
 const books = [
+  {
+    slug: null,
+    title: 'Encuentros en la fábrica de polvo',
+    displayTitle: 'Encuentros en la fábrica de polvo',
+    year: 2024,
+    editor: 'MAMU, Banco de la República',
+    publisher: 'Catálogo exposición antológica',
+    pages: 200,
+    cover: coverEncuentros,
+  },
   {
     slug: 'coleccion-seguros-bolivar',
     title: 'Coleccion de Arte Contemporaneo Seguros Bolivar',
@@ -16,7 +28,7 @@ const books = [
     editor: 'Dir. José Roca y Sylvia Suárez',
     publisher: 'Seguros Bolívar',
     pages: 112,
-    cover: null,
+    cover: coverSeguros,
   },
   {
     slug: 'polvo-eres-libro',
