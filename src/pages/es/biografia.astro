@@ -8,7 +8,6 @@ const title = 'Biografía';
 const retrato = (await import('../../assets/images/retrato/retrato.jpg')).default;
 const libroEnEstadoDeComa = (await import('../../assets/images/libros/en-estado-de-coma-libro.jpg')).default;
 const libroPolvoEres = (await import('../../assets/images/libros/polvo-eres-portada.jpg')).default;
-const libroSeguros = (await import('../../assets/images/libros/seguros-bolivar-portada.jpg')).default;
 const libroEncuentros = (await import('../../assets/images/libros/encuentros-catalogo-001.jpg')).default;
 ---
 
@@ -278,9 +277,7 @@ const libroEncuentros = (await import('../../assets/images/libros/encuentros-cat
           </article>
 
           <article class="bio-pub-card">
-            <div class="bio-pub-card__cover">
-              <img src={libroSeguros.src} alt="Portada — Colección Seguros Bolívar" loading="lazy">
-            </div>
+            <div class="bio-pub-card__cover bio-pub-card__cover--placeholder"></div>
             <div class="bio-pub-card__info">
               <h3>Colección Seguros Bolívar de Arte Contemporáneo</h3>
               <div class="ficha">
