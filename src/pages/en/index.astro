@@ -11,6 +11,8 @@ const featuredComa = (await import('../../assets/images/obras/en-estado-de-coma/
 const desdeAdentro = (await import('../../assets/images/obras/desde-adentro/desde-adentro-01.webp')).default;
 const retrato = (await import('../../assets/images/retrato/retrato.jpg')).default;
 const enEstadoDeComaLibro = (await import('../../assets/images/libros/en-estado-de-coma-libro.jpg')).default;
+const libroEncuentros = (await import('../../assets/images/libros/encuentros-catalogo-001.jpg')).default;
+const libroPolvoEres = (await import('../../assets/images/libros/polvo-eres-portada.jpg')).default;
 
 const featuredWorks = [
   {
@@ -257,28 +259,27 @@ const timelineEntries = [
         <h2>Publications</h2>
         <span class="label">Catalogues</span>
       </div>
-      <!-- Links to ES publication pages until EN publication pages are created -->
       <div class="home-publications">
-        <a href="/maria-elvira-escallon/es/publicaciones/en-estado-de-coma-libro/" class="home-publications__book">
+        <a href="/maria-elvira-escallon/en/biography/" class="home-publications__book">
           <div class="home-publications__cover">
-            <img src={enEstadoDeComaLibro.src} alt="In a State of Coma &mdash; Catalogue" loading="lazy" />
+            <img src={libroEncuentros.src} alt="Encuentros en la fábrica de polvo — Catalogue" loading="lazy" />
           </div>
-          <p class="home-publications__title">In a State of Coma</p>
-          <p class="home-publications__year">2007</p>
+          <p class="home-publications__title">Encuentros en la fábrica de polvo</p>
+          <p class="home-publications__year">2024</p>
         </a>
         <a href="/maria-elvira-escallon/es/publicaciones/polvo-eres-libro/" class="home-publications__book">
-          <div class="home-publications__cover home-publications__cover--placeholder">
-            <span>[ Dust Thou Art ]</span>
+          <div class="home-publications__cover">
+            <img src={libroPolvoEres.src} alt="Polvo Eres — Book" loading="lazy" />
           </div>
-          <p class="home-publications__title">Dust Thou Art</p>
+          <p class="home-publications__title">Polvo eres</p>
           <p class="home-publications__year">2014</p>
         </a>
-        <a href="/maria-elvira-escallon/es/publicaciones/coleccion-seguros-bolivar/" class="home-publications__book">
-          <div class="home-publications__cover home-publications__cover--placeholder">
-            <span>[ Seguros Bolívar Collection ]</span>
+        <a href="/maria-elvira-escallon/es/publicaciones/en-estado-de-coma-libro/" class="home-publications__book">
+          <div class="home-publications__cover">
+            <img src={enEstadoDeComaLibro.src} alt="En estado de coma — Catalogue" loading="lazy" />
           </div>
-          <p class="home-publications__title">Seguros Bolívar Collection</p>
-          <p class="home-publications__year">2018</p>
+          <p class="home-publications__title">En estado de coma</p>
+          <p class="home-publications__year">2007</p>
         </a>
       </div>
       <div class="home-section__cta">
