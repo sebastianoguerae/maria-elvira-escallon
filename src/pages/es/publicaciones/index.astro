@@ -8,6 +8,7 @@ const coverComa = (await import('../../../assets/images/libros/en-estado-de-coma
 const coverPolvo = (await import('../../../assets/images/libros/polvo-eres.jpg')).default;
 const coverEncuentros = (await import('../../../assets/images/libros/encuentros-catalogo-001.jpg')).default;
 const coverSeguros = (await import('../../../assets/images/libros/seguros-bolivar-001.jpg')).default;
+const coverMoma = (await import('../../../assets/images/libros/moma-arte-naturaleza.jpg')).default;
 
 const books = [
   {
@@ -51,6 +52,17 @@ const books = [
     cover: coverComa,
   },
 ];
+
+const otherBooks = [
+  {
+    title: 'Arte y naturaleza',
+    displayTitle: 'Arte y naturaleza',
+    year: null,
+    editor: 'MoMA',
+    publisher: 'Incluye obra de María Elvira Escallón',
+    cover: coverMoma,
+  },
+];
 ---
 
 <Layout
@@ -89,6 +101,24 @@ const books = [
               <p class="pub-card__meta">{book.publisher} &middot; {book.pages} pp.</p>
             </div>
           </a>
+        ))}
+      </div>
+
+      <hr class="rule rule--light" style="margin: var(--s5) 0 var(--s4);" />
+
+      <h3 style="font-family: var(--mono); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: var(--ash); margin-bottom: var(--s3);">Incluida en</h3>
+      <div class="pub-grid">
+        {otherBooks.map((book) => (
+          <div class="pub-card">
+            <div class="pub-card__cover">
+              {book.cover && <img src={book.cover.src} alt={`Portada — ${book.displayTitle}`} loading="lazy" />}
+            </div>
+            <div class="pub-card__info">
+              <h2 class="pub-card__title">{book.displayTitle}</h2>
+              <p class="pub-card__meta">{book.editor}</p>
+              <p class="pub-card__meta">{book.publisher}</p>
+            </div>
+          </div>
         ))}
       </div>
 
