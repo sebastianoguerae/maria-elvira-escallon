@@ -7,12 +7,54 @@
       "lng": -74.072,
       "type": "base",
       "events": [
-        { "title": "Encuentros en la fábrica de polvo", "venue": "MAMU", "year": 2024, "type": "solo" },
-        { "title": "Encuentros con seres notables", "venue": "Espacio Continuo", "year": 2022, "type": "solo" },
-        { "title": "En el fértil suelo", "venue": "Galería Santa Fe", "year": 2018, "type": "solo" },
-        { "title": "Nuevas Floras", "venue": "Galería Santa Fe", "year": 2003, "type": "solo" },
-        { "title": "En estado de coma", "venue": "Museo de Bogotá", "year": 2007, "type": "solo" },
-        { "title": "El reino de este mundo", "venue": "MAMBO", "year": 2000, "type": "solo" }
+        {
+          "title": "In Vitro",
+          "venue": "Estación de la Sabana",
+          "year": 1997,
+          "type": "solo"
+        },
+        {
+          "title": "Premio Nacional de Fotografía",
+          "venue": "",
+          "year": 2024,
+          "type": "award"
+        },
+        {
+          "title": "Encuentros en la fábrica de polvo",
+          "venue": "MAMU",
+          "year": 2024,
+          "type": "solo"
+        },
+        {
+          "title": "Encuentros con seres notables",
+          "venue": "Espacio Continuo",
+          "year": 2022,
+          "type": "solo"
+        },
+        {
+          "title": "En el fértil suelo",
+          "venue": "Galería Santa Fe",
+          "year": 2018,
+          "type": "solo"
+        },
+        {
+          "title": "Nuevas Floras",
+          "venue": "Galería Santa Fe",
+          "year": 2003,
+          "type": "solo"
+        },
+        {
+          "title": "En estado de coma",
+          "venue": "Museo de Bogotá",
+          "year": 2007,
+          "type": "solo"
+        },
+        {
+          "title": "El reino de este mundo",
+          "venue": "MAMBO",
+          "year": 2000,
+          "type": "solo"
+        }
       ]
     },
     {
@@ -22,8 +64,18 @@
       "lng": 2.352,
       "type": "exhibition",
       "events": [
-        { "title": "Nuevas Floras Versalles", "venue": "Jardin de Tullerias / FIAC", "year": 2017, "type": "solo" },
-        { "title": "Palimpsestes", "venue": "Galeria Mor-Charpentier", "year": 2013, "type": "group" }
+        {
+          "title": "Nuevas Floras Versalles",
+          "venue": "Jardin de Tullerias / FIAC",
+          "year": 2017,
+          "type": "solo"
+        },
+        {
+          "title": "Palimpsestes",
+          "venue": "Galeria Mor-Charpentier",
+          "year": 2013,
+          "type": "group"
+        }
       ]
     },
     {
@@ -33,7 +85,12 @@
       "lng": 4.631,
       "type": "exhibition",
       "events": [
-        { "title": "La vuelta", "venue": "Rencontres de la Photographie", "year": 2017, "type": "group" }
+        {
+          "title": "La vuelta",
+          "venue": "Rencontres de la Photographie",
+          "year": 2017,
+          "type": "group"
+        }
       ]
     },
     {
@@ -43,7 +100,12 @@
       "lng": -0.128,
       "type": "exhibition",
       "events": [
-        { "title": "Urban Impulses", "venue": "The Photographers' Gallery", "year": 2019, "type": "group" }
+        {
+          "title": "Urban Impulses",
+          "venue": "The Photographers' Gallery",
+          "year": 2019,
+          "type": "group"
+        }
       ]
     },
     {
@@ -53,7 +115,12 @@
       "lng": -3.943,
       "type": "exhibition",
       "events": [
-        { "title": "Displaced", "venue": "Glynn Vivian Gallery", "year": 2007, "type": "group" }
+        {
+          "title": "Displaced",
+          "venue": "Glynn Vivian Gallery",
+          "year": 2007,
+          "type": "group"
+        }
       ]
     },
     {
@@ -63,7 +130,12 @@
       "lng": 0.944,
       "type": "collection",
       "events": [
-        { "title": "ESCALA Collection", "venue": "University of Essex", "year": 2005, "type": "collection" }
+        {
+          "title": "ESCALA Collection",
+          "venue": "University of Essex",
+          "year": 2005,
+          "type": "collection"
+        }
       ]
     },
     {
@@ -73,17 +145,27 @@
       "lng": -74.006,
       "type": "exhibition",
       "events": [
-        { "title": "Hibridos", "venue": "Deutsche Bank Gallery", "year": 2018, "type": "group" }
+        {
+          "title": "Hibridos",
+          "venue": "Deutsche Bank Gallery",
+          "year": 2018,
+          "type": "group"
+        }
       ]
     },
     {
       "name": "Houston",
       "country": "Estados Unidos",
-      "lat": 29.760,
-      "lng": -95.370,
+      "lat": 29.76,
+      "lng": -95.37,
       "type": "exhibition",
       "events": [
-        { "title": "Colombian Contemporary Photography", "venue": "FotoFest", "year": 2008, "type": "group" }
+        {
+          "title": "Colombian Contemporary Photography",
+          "venue": "FotoFest",
+          "year": 2008,
+          "type": "group"
+        }
       ]
     },
     {
@@ -93,8 +175,18 @@
       "lng": 151.209,
       "type": "collection",
       "events": [
-        { "title": "Focus on Contemporary", "venue": "Art Gallery of NSW", "year": 2008, "type": "group" },
-        { "title": "Desde Adentro (collection)", "venue": "Art Gallery of NSW", "year": 2008, "type": "collection" }
+        {
+          "title": "Focus on Contemporary",
+          "venue": "Art Gallery of NSW",
+          "year": 2008,
+          "type": "group"
+        },
+        {
+          "title": "Desde Adentro (collection)",
+          "venue": "Art Gallery of NSW",
+          "year": 2008,
+          "type": "collection"
+        }
       ]
     },
     {
@@ -104,28 +196,48 @@
       "lng": -82.366,
       "type": "exhibition",
       "events": [
-        { "title": "VII Bienal de La Habana", "venue": "Bienal", "year": 2000, "type": "biennial" },
-        { "title": "X Bienal de La Habana", "venue": "Bienal", "year": 2009, "type": "biennial" }
+        {
+          "title": "VII Bienal de La Habana",
+          "venue": "Bienal",
+          "year": 2000,
+          "type": "biennial"
+        },
+        {
+          "title": "X Bienal de La Habana",
+          "venue": "Bienal",
+          "year": 2009,
+          "type": "biennial"
+        }
       ]
     },
     {
       "name": "Milan",
       "country": "Italia",
       "lat": 45.464,
-      "lng": 9.190,
+      "lng": 9.19,
       "type": "exhibition",
       "events": [
-        { "title": "In Motion", "venue": "Galeria Bianconi", "year": 2013, "type": "group" }
+        {
+          "title": "In Motion",
+          "venue": "Galeria Bianconi",
+          "year": 2013,
+          "type": "group"
+        }
       ]
     },
     {
       "name": "Berlin",
       "country": "Alemania",
-      "lat": 52.520,
+      "lat": 52.52,
       "lng": 13.405,
       "type": "exhibition",
       "events": [
-        { "title": "After the fact", "venue": "Berlin Photography Festival", "year": 2005, "type": "group" }
+        {
+          "title": "After the fact",
+          "venue": "Berlin Photography Festival",
+          "year": 2005,
+          "type": "group"
+        }
       ]
     },
     {
@@ -135,17 +247,27 @@
       "lng": -3.704,
       "type": "exhibition",
       "events": [
-        { "title": "ARCO Madrid", "venue": "ARCO", "year": 2015, "type": "fair" }
+        {
+          "title": "ARCO Madrid",
+          "venue": "ARCO",
+          "year": 2015,
+          "type": "fair"
+        }
       ]
     },
     {
       "name": "Sao Paulo",
       "country": "Brasil",
-      "lat": -23.550,
+      "lat": -23.55,
       "lng": -46.633,
       "type": "exhibition",
       "events": [
-        { "title": "Otras miradas", "venue": "Memorial America Latina", "year": 2005, "type": "group" }
+        {
+          "title": "Otras miradas",
+          "venue": "Memorial America Latina",
+          "year": 2005,
+          "type": "group"
+        }
       ]
     },
     {
@@ -155,7 +277,12 @@
       "lng": 2.121,
       "type": "exhibition",
       "events": [
-        { "title": "Nuevas Floras", "venue": "Arboretum de Chevreloup", "year": 2017, "type": "solo" }
+        {
+          "title": "Nuevas Floras",
+          "venue": "Arboretum de Chevreloup",
+          "year": 2017,
+          "type": "solo"
+        }
       ]
     },
     {
@@ -165,7 +292,12 @@
       "lng": -2.588,
       "type": "exhibition",
       "events": [
-        { "title": "Nuevas Floras Bristol", "venue": "\u2014", "year": 2009, "type": "solo" }
+        {
+          "title": "Nuevas Floras Bristol",
+          "venue": "—",
+          "year": 2009,
+          "type": "solo"
+        }
       ]
     },
     {
@@ -175,7 +307,12 @@
       "lng": -69.931,
       "type": "exhibition",
       "events": [
-        { "title": "IV Bienal del Caribe", "venue": "Bienal", "year": 2002, "type": "biennial" }
+        {
+          "title": "IV Bienal del Caribe",
+          "venue": "Bienal",
+          "year": 2002,
+          "type": "biennial"
+        }
       ]
     },
     {
@@ -185,7 +322,135 @@
       "lng": -72.872,
       "type": "site",
       "events": [
-        { "title": "Pequeno Museo del Aerolito", "venue": "Sitio de intervencion", "year": 2014, "type": "site" }
+        {
+          "title": "Pequeno Museo del Aerolito",
+          "venue": "Sitio de intervencion",
+          "year": 2014,
+          "type": "site"
+        }
+      ]
+    },
+    {
+      "name": "Medellín",
+      "country": "Colombia",
+      "lat": 6.244,
+      "lng": -75.581,
+      "type": "exhibition",
+      "events": [
+        {
+          "title": "Polvo eres",
+          "venue": "Edificio Coltabaco, BIAM",
+          "year": 2025,
+          "type": "solo"
+        },
+        {
+          "title": "Urgencias",
+          "venue": "Sala U",
+          "year": 2011,
+          "type": "solo"
+        },
+        {
+          "title": "Crónica 1995-2005",
+          "venue": "Museo de Arte Moderno",
+          "year": 2010,
+          "type": "group"
+        }
+      ]
+    },
+    {
+      "name": "Cali",
+      "country": "Colombia",
+      "lat": 3.451,
+      "lng": -76.532,
+      "type": "exhibition",
+      "events": [
+        {
+          "title": "Precipitaciones del río Cauca",
+          "venue": "Colegio Sagrada Familia",
+          "year": 2008,
+          "type": "solo"
+        },
+        {
+          "title": "Nuevas Floras",
+          "venue": "Galería Jenny Vila",
+          "year": 2004,
+          "type": "solo"
+        }
+      ]
+    },
+    {
+      "name": "San Miguel de las Misiones",
+      "country": "Brasil",
+      "lat": -28.549,
+      "lng": -54.556,
+      "type": "exhibition",
+      "events": [
+        {
+          "title": "Nuevas Floras do Sul",
+          "venue": "VIII Bienal de Mercosur",
+          "year": 2011,
+          "type": "biennial"
+        }
+      ]
+    },
+    {
+      "name": "Caracas",
+      "country": "Venezuela",
+      "lat": 10.5,
+      "lng": -66.917,
+      "type": "exhibition",
+      "events": [
+        {
+          "title": "Otras Miradas",
+          "venue": "",
+          "year": 2004,
+          "type": "group"
+        }
+      ]
+    },
+    {
+      "name": "Santiago de Chile",
+      "country": "Chile",
+      "lat": -33.449,
+      "lng": -70.669,
+      "type": "exhibition",
+      "events": [
+        {
+          "title": "Otras Miradas",
+          "venue": "",
+          "year": 2004,
+          "type": "group"
+        }
+      ]
+    },
+    {
+      "name": "Buenos Aires",
+      "country": "Argentina",
+      "lat": -34.604,
+      "lng": -58.382,
+      "type": "exhibition",
+      "events": [
+        {
+          "title": "Otras Miradas",
+          "venue": "Museo de Bellas Artes",
+          "year": 2005,
+          "type": "group"
+        }
+      ]
+    },
+    {
+      "name": "San José",
+      "country": "Costa Rica",
+      "lat": 9.928,
+      "lng": -84.091,
+      "type": "exhibition",
+      "events": [
+        {
+          "title": "El Dorado",
+          "venue": "Teorética",
+          "year": 2013,
+          "type": "group"
+        }
       ]
     }
   ]
