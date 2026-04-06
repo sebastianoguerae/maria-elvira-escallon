@@ -379,15 +379,15 @@
       ]
     },
     {
-      "name": "San Miguel de las Misiones",
+      "name": "Porto Alegre",
       "country": "Brasil",
-      "lat": -28.549,
-      "lng": -54.556,
+      "lat": -30.034,
+      "lng": -51.23,
       "type": "exhibition",
       "events": [
         {
           "title": "Nuevas Floras do Sul",
-          "venue": "VIII Bienal de Mercosur",
+          "venue": "VIII Bienal de Mercosur, San Miguel de las Misiones",
           "year": 2011,
           "type": "biennial"
         }
