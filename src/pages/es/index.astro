@@ -13,6 +13,7 @@ const retrato = (await import('../../assets/images/retrato/retrato.jpg')).defaul
 const enEstadoDeComaLibro = (await import('../../assets/images/libros/en-estado-de-coma-libro.jpg')).default;
 const libroEncuentros = (await import('../../assets/images/libros/encuentros-catalogo-001.jpg')).default;
 const libroPolvoEres = (await import('../../assets/images/libros/polvo-eres-portada.jpg')).default;
+const libroSeguros = (await import('../../assets/images/libros/seguros-bolivar-001.jpg')).default;
 
 const featuredWorks = [
   {
@@ -273,6 +274,13 @@ const timelineEntries = [
           </div>
           <p class="home-publications__title">Polvo eres</p>
           <p class="home-publications__year">2014</p>
+        </a>
+        <a href="/maria-elvira-escallon/es/publicaciones/coleccion-seguros-bolivar/" class="home-publications__book">
+          <div class="home-publications__cover">
+            <img src={libroSeguros.src} alt="Colección Seguros Bolívar — Monografía" loading="lazy" />
+          </div>
+          <p class="home-publications__title">Colección Seguros Bolívar</p>
+          <p class="home-publications__year">2018</p>
         </a>
         <a href="/maria-elvira-escallon/es/publicaciones/en-estado-de-coma-libro/" class="home-publications__book">
           <div class="home-publications__cover">
@@ -673,7 +681,7 @@ const timelineEntries = [
   /* --- Publications --- */
   .home-publications {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: var(--s3);
     margin-top: var(--s4);
   }
@@ -790,7 +798,7 @@ const timelineEntries = [
     }
 
     .home-publications {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: var(--s2);
     }
 
