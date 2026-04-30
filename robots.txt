@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sebastianoguerae.github.io/maria-elvira-escallon/sitemap-index.xml
