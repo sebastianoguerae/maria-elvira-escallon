@@ -56,8 +56,8 @@ const routeMap: Record<string, Record<Lang, string>> = {
   '/mapa/': { es: '/mapa/', en: '/map/', fr: '/carte/', zh: '/ditu/' },
   '/prensa/': { es: '/prensa/', en: '/prensa/', fr: '/prensa/', zh: '/prensa/' },
   '/contacto/': { es: '/contacto/', en: '/contacto/', fr: '/contacto/', zh: '/contacto/' },
-  '/textos/': { es: '/textos/', en: '/texts/', fr: '/textos/', zh: '/textos/' },
-  '/publicaciones/': { es: '/publicaciones/', en: '/publications/', fr: '/publicaciones/', zh: '/publicaciones/' },
+  '/textos/': { es: '/textos/', en: '/texts/', fr: '/', zh: '/' },
+  '/publicaciones/': { es: '/publicaciones/', en: '/publications/', fr: '/', zh: '/' },
   '/voz-del-artista/': { es: '/voz-del-artista/', en: '/artist-statement/', fr: '/voz-del-artista/', zh: '/voz-del-artista/' },
 };
 
