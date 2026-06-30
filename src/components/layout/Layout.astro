@@ -44,11 +44,11 @@ const pageDescription = description ?? t(lang, 'site.description');
   {ogImage && <meta property="og:image" content={ogImage}>}
 
   <!-- hreflang -->
-  <link rel="alternate" hreflang="es" href={`https://mariaelviraescallon.com${switchLanguage(Astro.url.pathname, 'es')}`}>
-  <link rel="alternate" hreflang="en" href={`https://mariaelviraescallon.com${switchLanguage(Astro.url.pathname, 'en')}`}>
-  <link rel="alternate" hreflang="fr" href={`https://mariaelviraescallon.com${switchLanguage(Astro.url.pathname, 'fr')}`}>
-  <link rel="alternate" hreflang="zh" href={`https://mariaelviraescallon.com${switchLanguage(Astro.url.pathname, 'zh')}`}>
-  <link rel="alternate" hreflang="x-default" href={`https://mariaelviraescallon.com${switchLanguage(Astro.url.pathname, 'en')}`}>
+  <link rel="alternate" hreflang="es" href={`${import.meta.env.SITE}${switchLanguage(Astro.url.pathname, 'es')}`}>
+  <link rel="alternate" hreflang="en" href={`${import.meta.env.SITE}${switchLanguage(Astro.url.pathname, 'en')}`}>
+  <link rel="alternate" hreflang="fr" href={`${import.meta.env.SITE}${switchLanguage(Astro.url.pathname, 'fr')}`}>
+  <link rel="alternate" hreflang="zh" href={`${import.meta.env.SITE}${switchLanguage(Astro.url.pathname, 'zh')}`}>
+  <link rel="alternate" hreflang="x-default" href={`${import.meta.env.SITE}${switchLanguage(Astro.url.pathname, 'en')}`}>
 </head>
 <body>
   {showDust && <DustParticles client:load intensity={0.4} />}
