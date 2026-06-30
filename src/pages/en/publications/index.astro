@@ -1,0 +1,69 @@
+---
+import Layout from '../../../components/layout/Layout.astro';
+const lang = 'en' as const;
+---
+
+<Layout
+  lang={lang}
+  title="Publications"
+  description="Publications on the work of María Elvira Escallón, including artist books and exhibition catalogues."
+>
+  <div class="textos-index">
+    <div class="container">
+
+      <header class="textos-index__header">
+        <h1>Publications</h1>
+        <span class="label">Artist books &amp; catalogues</span>
+      </header>
+
+      <div class="textos-list">
+
+        <article class="texto-entry">
+          <span class="label">Seguros Bolívar — 2021</span>
+          <h2 class="texto-entry__title">
+            <a href="/maria-elvira-escallon/es/publicaciones/coleccion-seguros-bolivar/">
+              Colección Seguros Bolívar
+            </a>
+          </h2>
+          <p class="texto-entry__meta">Monograph. Bogotá, Colombia, 2021.</p>
+          <p class="texto-entry__note" style="font-style:italic; color:var(--ash);">Available in Spanish</p>
+        </article>
+
+        <article class="texto-entry">
+          <span class="label">Project MUSE / Johns Hopkins — 2007</span>
+          <h2 class="texto-entry__title">
+            <a href="/maria-elvira-escallon/es/publicaciones/en-estado-de-coma-libro/">
+              En estado de coma
+            </a>
+          </h2>
+          <p class="texto-entry__meta">Artist book. Baltimore: Johns Hopkins University Press, 2007.</p>
+          <p class="texto-entry__note" style="font-style:italic; color:var(--ash);">Available in Spanish</p>
+        </article>
+
+        <article class="texto-entry">
+          <span class="label">Ministerio de Cultura — 2014</span>
+          <h2 class="texto-entry__title">
+            <a href="/maria-elvira-escallon/es/publicaciones/polvo-eres-libro/">
+              Polvo eres — Colección Artistas Colombianos No. 8
+            </a>
+          </h2>
+          <p class="texto-entry__meta">Julia Buenaventura. Bogotá: Ministerio de Cultura, 2014.</p>
+          <p class="texto-entry__note" style="font-style:italic; color:var(--ash);">Available in Spanish</p>
+        </article>
+
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .textos-index { padding: var(--s6) 0; }
+  .textos-index__header { margin-bottom: var(--s5); }
+  .textos-list { display: flex; flex-direction: column; gap: var(--s5); }
+  .texto-entry { border-top: 1px solid var(--paper-dark); padding-top: var(--s3); }
+  .texto-entry__title { font-family: var(--serif); font-size: var(--text-lg); font-weight: 400; margin: var(--s1) 0; }
+  .texto-entry__title a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--ash-light); }
+  .texto-entry__title a:hover { border-color: var(--ink); }
+  .texto-entry__meta { color: var(--ash); font-size: var(--text-sm); margin: var(--s1) 0 0; }
+  .texto-entry__note { font-size: var(--text-sm); margin-top: var(--s1); }
+</style>
