@@ -1,6 +1,6 @@
 ---
 import type { Lang } from '../../i18n/languages';
-import { t, switchLanguage } from '../../i18n/utils';
+import { t, getAlternates } from '../../i18n/utils';
 import Nav from './Nav.astro';
 import Footer from './Footer.astro';
 import DustParticles from '../interactive/DustParticles';
@@ -18,6 +18,10 @@ const { title, description, lang, ogImage, showDust = true } = Astro.props;
 const siteTitle = t(lang, 'site.title');
 const pageTitle = title ? `${title} — ${siteTitle}` : siteTitle;
 const pageDescription = description ?? t(lang, 'site.description');
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site).href;
+// Only languages where this same content actually exists (empty if no real alternates)
+const alternates = getAlternates(Astro.url.pathname);
+const esAlternate = alternates.find((a) => a.lang === 'es');
 ---
 
 <!DOCTYPE html>
@@ -43,12 +47,14 @@ const pageDescription = description ?? t(lang, 'site.description');
   <meta property="og:type" content="website">
   {ogImage && <meta property="og:image" content={ogImage}>}
 
-  <!-- hreflang -->
-  <link rel="alternate" hreflang="es" href={`${import.meta.env.SITE}${switchLanguage(Astro.url.pathname, 'es')}`}>
-  <link rel="alternate" hreflang="en" href={`${import.meta.env.SITE}${switchLanguage(Astro.url.pathname, 'en')}`}>
-  <link rel="alternate" hreflang="fr" href={`${import.meta.env.SITE}${switchLanguage(Astro.url.pathname, 'fr')}`}>
-  <link rel="alternate" hreflang="zh" href={`${import.meta.env.SITE}${switchLanguage(Astro.url.pathname, 'zh')}`}>
-  <link rel="alternate" hreflang="x-default" href={`${import.meta.env.SITE}${switchLanguage(Astro.url.pathname, 'en')}`}>
+  <!-- Canonical -->
+  <link rel="canonical" href={canonicalUrl}>
+
+  <!-- hreflang: only emitted for languages where this page really exists -->
+  {alternates.map(({ lang: altLang, url }) => (
+    <link rel="alternate" hreflang={altLang} href={new URL(url, Astro.site).href} />
+  ))}
+  {esAlternate && <link rel="alternate" hreflang="x-default" href={new URL(esAlternate.url, Astro.site).href} />}
 </head>
 <body>
   {showDust && <DustParticles client:load intensity={0.4} />}
