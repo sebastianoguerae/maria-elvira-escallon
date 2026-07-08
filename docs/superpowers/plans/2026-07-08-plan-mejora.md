@@ -81,3 +81,6 @@ Estado build: limpio, 89 páginas, dist = 142 MB.
 - [x] P2.10 imágenes: 409 <img> → <Image> en 61 archivos (srcset 480/900/1400 + cards 400/800); ogImage por obra (42 páginas); dist 144M→136M y transferencia por página mucho menor
 - [x] Extra: 13 links internos rotos detectados y corregidos (View-in-English a páginas EN inexistentes ×8, las-caminantes ×3, nuevas-floras-versalles ×2, publicaciones slug null); checker dist = 0 rotos
 - Declinado: self-host de fonts (preconnect+swap ya aceptable)
+- [x] Deploy manual npm run deploy (gh-pages) ejecutado — el push a main NO despliega solo
+- [x] Verificado en producción: root→/es/ instantáneo, og:image, canonical, hreflang→/en/works/, srcset, 404, Bienales 2025 en EN/FR/ZH
+- PLAN COMPLETO — quedan solo: emails @mariaelviraescallon.com (confirmar con usuario) y lista de exposiciones faltantes (esperar a la artista)
