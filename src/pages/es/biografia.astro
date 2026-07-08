@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../../components/layout/Layout.astro';
 import ArtistSchema from '../../components/seo/ArtistSchema.astro';
 
@@ -31,7 +32,7 @@ const libroSeguros = (await import('../../assets/images/libros/seguros-bolivar-0
 
       <div class="bio-page__opening">
         <div class="bio-page__portrait">
-          <img src={retrato.src} alt="Retrato de María Elvira Escallón" loading="eager">
+          <Image src={retrato} alt="Retrato de María Elvira Escallón" loading="eager" fetchpriority="high" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
         </div>
         <div class="bio-page__intro">
           <p class="curatorial" style="margin-top: var(--s3);">
@@ -265,7 +266,7 @@ const libroSeguros = (await import('../../assets/images/libros/seguros-bolivar-0
 
           <article class="bio-pub-card">
             <div class="bio-pub-card__cover">
-              <img src={libroEncuentros.src} alt="Portada — Encuentros en la fábrica de polvo" loading="lazy">
+              <Image src={libroEncuentros} alt="Portada — Encuentros en la fábrica de polvo" loading="lazy" widths={[400, 800]} sizes="(max-width: 640px) 50vw, 33vw" />
             </div>
             <div class="bio-pub-card__info">
               <h3>Encuentros en la fábrica de polvo</h3>
@@ -278,7 +279,7 @@ const libroSeguros = (await import('../../assets/images/libros/seguros-bolivar-0
           </article>
 
           <article class="bio-pub-card">
-            <div class="bio-pub-card__cover"><img src={libroSeguros.src} alt="Portada — Colección Seguros Bolívar" loading="lazy"></div>
+            <div class="bio-pub-card__cover"><Image src={libroSeguros} alt="Portada — Colección Seguros Bolívar" loading="lazy" widths={[400, 800]} sizes="(max-width: 640px) 50vw, 33vw" /></div>
             <div class="bio-pub-card__info">
               <h3>Colección Seguros Bolívar de Arte Contemporáneo</h3>
               <div class="ficha">
@@ -291,7 +292,7 @@ const libroSeguros = (await import('../../assets/images/libros/seguros-bolivar-0
 
           <article class="bio-pub-card">
             <div class="bio-pub-card__cover">
-              <img src={libroPolvoEres.src} alt="Portada — Polvo Eres" loading="lazy">
+              <Image src={libroPolvoEres} alt="Portada — Polvo Eres" loading="lazy" widths={[400, 800]} sizes="(max-width: 640px) 50vw, 33vw" />
             </div>
             <div class="bio-pub-card__info">
               <h3>Polvo Eres: El correr del tiempo</h3>
@@ -305,7 +306,7 @@ const libroSeguros = (await import('../../assets/images/libros/seguros-bolivar-0
 
           <article class="bio-pub-card">
             <div class="bio-pub-card__cover">
-              <img src={libroEnEstadoDeComa.src} alt="Portada — En estado de coma" loading="lazy">
+              <Image src={libroEnEstadoDeComa} alt="Portada — En estado de coma" loading="lazy" widths={[400, 800]} sizes="(max-width: 640px) 50vw, 33vw" />
             </div>
             <div class="bio-pub-card__info">
               <h3>En estado de coma</h3>

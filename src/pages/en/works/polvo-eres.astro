@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../../../components/layout/Layout.astro';
 import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
 
@@ -21,6 +22,7 @@ const img10 = (await import('../../../assets/images/obras/polvo-eres/polvo-eres-
   lang={lang}
   title="Polvo eres — Work"
   description="Polvo eres (2024). Wall carving, brick wall, carving debris, plaster, paint. Maria Elvira Escallon."
+  ogImage={img01.src}
 >
 
 
@@ -44,16 +46,16 @@ const img10 = (await import('../../../assets/images/obras/polvo-eres/polvo-eres-
 
       <!-- Main gallery -->
       <div class="work-page__gallery">
-        <img src={img01.src} alt="Polvo eres — General view of the wall carving" loading="eager">
-        <img src={img02.src} alt="Polvo eres — Detail of carved inscription" loading="lazy">
-        <img src={img03.src} alt="Polvo eres — Carving debris on the floor" loading="lazy">
-        <img src={img04.src} alt="Polvo eres — Texture of exposed brick wall" loading="lazy">
-        <img src={img05.src} alt="Polvo eres — Detail of carved letters" loading="lazy">
-        <img src={img06.src} alt="Polvo eres — Side view of the intervention" loading="lazy">
-        <img src={img07.src} alt="Polvo eres — Dust accumulation at the base of the wall" loading="lazy">
-        <img src={img08.src} alt="Polvo eres — Detail of carving process" loading="lazy">
-        <img src={img09.src} alt="Polvo eres — Gallery view at MAMU" loading="lazy">
-        <img src={img10.src} alt="Polvo eres — Final view of the installed work" loading="lazy">
+        <Image src={img01} alt="Polvo eres — General view of the wall carving" loading="eager" fetchpriority="high" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img02} alt="Polvo eres — Detail of carved inscription" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img03} alt="Polvo eres — Carving debris on the floor" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img04} alt="Polvo eres — Texture of exposed brick wall" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img05} alt="Polvo eres — Detail of carved letters" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img06} alt="Polvo eres — Side view of the intervention" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img07} alt="Polvo eres — Dust accumulation at the base of the wall" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img08} alt="Polvo eres — Detail of carving process" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img09} alt="Polvo eres — Gallery view at MAMU" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img10} alt="Polvo eres — Final view of the installed work" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
       </div>
 
       <!-- Video -->

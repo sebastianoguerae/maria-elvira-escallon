@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../../components/layout/Layout.astro';
 import QuoteBlock from '../../components/content/QuoteBlock.astro';
 
@@ -96,12 +97,7 @@ const featuredWorks = [
             <article class="work-card-static">
               <div class="work-card__thumb">
                 {work.hasImage && work.importedImage ? (
-                  <img
-                    src={work.importedImage.src}
-                    alt={`${work.title} — María Elvira Escallón`}
-                    loading="lazy"
-                    style="width:100%;height:100%;object-fit:cover;"
-                  />
+                  <Image src={work.importedImage} alt={`${work.title} — María Elvira Escallón`} loading="lazy" style="width:100%;height:100%;object-fit:cover;" widths={[400, 800]} sizes="(max-width: 640px) 50vw, 33vw" />
                 ) : (
                   <div class="placeholder-img" style="height:100%;aspect-ratio:4/3;background:var(--paper-dark);"></div>
                 )}

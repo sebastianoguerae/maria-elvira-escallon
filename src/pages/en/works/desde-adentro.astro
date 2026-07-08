@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../../../components/layout/Layout.astro';
 import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
 
@@ -25,6 +26,7 @@ const img14 = (await import('../../../assets/images/obras/desde-adentro/desde-ad
   lang={lang}
   title="Desde Adentro — Work"
   description="Desde Adentro (2003). 12 C-type photographs, 12-hour video installation. Documentation of the Club El Nogal attack. Maria Elvira Escallon."
+  ogImage={img01.src}
 >
 
   <ArtworkSchema
@@ -49,20 +51,20 @@ const img14 = (await import('../../../assets/images/obras/desde-adentro/desde-ad
 
       <!-- Main gallery -->
       <div class="work-page__gallery">
-        <img src={img01.src} alt="Desde Adentro — Trace on surface after the attack" loading="eager">
-        <img src={img02.src} alt="Desde Adentro — Trace of absence on wall" loading="lazy">
-        <img src={img03.src} alt="Desde Adentro — Silhouette of volatilized object" loading="lazy">
-        <img src={img04.src} alt="Desde Adentro — Handprint on ash" loading="lazy">
-        <img src={img05.src} alt="Desde Adentro — Outline of removed painting" loading="lazy">
-        <img src={img06.src} alt="Desde Adentro — Door covered in ash film" loading="lazy">
-        <img src={img07.src} alt="Desde Adentro — Devastated staircase" loading="lazy">
-        <img src={img08.src} alt="Desde Adentro — Record of interior destruction" loading="lazy">
-        <img src={img09.src} alt="Desde Adentro — Detail of ash-covered surface" loading="lazy">
-        <img src={img10.src} alt="Desde Adentro — Devastated space of Club El Nogal" loading="lazy">
-        <img src={img11.src} alt="Desde Adentro — Vestige of human presence" loading="lazy">
-        <img src={img12.src} alt="Desde Adentro — Everyday object after the explosion" loading="lazy">
-        <img src={img13.src} alt="Desde Adentro — Documentation of aftermath" loading="lazy">
-        <img src={img14.src} alt="Desde Adentro — Final record of the series" loading="lazy">
+        <Image src={img01} alt="Desde Adentro — Trace on surface after the attack" loading="eager" fetchpriority="high" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img02} alt="Desde Adentro — Trace of absence on wall" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img03} alt="Desde Adentro — Silhouette of volatilized object" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img04} alt="Desde Adentro — Handprint on ash" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img05} alt="Desde Adentro — Outline of removed painting" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img06} alt="Desde Adentro — Door covered in ash film" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img07} alt="Desde Adentro — Devastated staircase" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img08} alt="Desde Adentro — Record of interior destruction" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img09} alt="Desde Adentro — Detail of ash-covered surface" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img10} alt="Desde Adentro — Devastated space of Club El Nogal" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img11} alt="Desde Adentro — Vestige of human presence" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img12} alt="Desde Adentro — Everyday object after the explosion" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img13} alt="Desde Adentro — Documentation of aftermath" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img14} alt="Desde Adentro — Final record of the series" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
       </div>
 
       <!-- Text + Technical sheet -->

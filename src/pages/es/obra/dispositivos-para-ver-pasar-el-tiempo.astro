@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../../../components/layout/Layout.astro';
 import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
 
@@ -24,6 +25,7 @@ const img14 = (await import('../../../assets/images/obras/dispositivos/dispositi
   lang={lang}
   title="Dispositivos para ver pasar el tiempo — Obra"
   description="Dispositivos para ver pasar el tiempo (2020). Instalación, escultura. María Elvira Escallón."
+  ogImage={img01.src}
 >
 
   
@@ -47,19 +49,19 @@ const img14 = (await import('../../../assets/images/obras/dispositivos/dispositi
 
       <!-- Galeria principal -->
       <div class="work-page__gallery">
-        <img src={img01.src} alt="Dispositivos para ver pasar el tiempo — Vista general de instalación" loading="eager">
-        <img src={img02.src} alt="Dispositivos para ver pasar el tiempo — Dispositivo de arena" loading="lazy">
-        <img src={img03.src} alt="Dispositivos para ver pasar el tiempo — Superficie erosionada" loading="lazy">
-        <img src={img04.src} alt="Dispositivos para ver pasar el tiempo — Mecanismo poético" loading="lazy">
-        <img src={img05.src} alt="Dispositivos para ver pasar el tiempo — Acumulación de material" loading="lazy">
-        <img src={img06.src} alt="Dispositivos para ver pasar el tiempo — Detalle de dispositivo" loading="lazy">
-        <img src={img07.src} alt="Dispositivos para ver pasar el tiempo — Transformación material" loading="lazy">
-        <img src={img08.src} alt="Dispositivos para ver pasar el tiempo — Registro de desgaste" loading="lazy">
-        <img src={img10.src} alt="Dispositivos para ver pasar el tiempo — Pieza escultórica" loading="lazy">
-        <img src={img11.src} alt="Dispositivos para ver pasar el tiempo — Detalle de proceso" loading="lazy">
-        <img src={img12.src} alt="Dispositivos para ver pasar el tiempo — Vista de conjunto" loading="lazy">
-        <img src={img13.src} alt="Dispositivos para ver pasar el tiempo — Elemento temporal" loading="lazy">
-        <img src={img14.src} alt="Dispositivos para ver pasar el tiempo — Vista final" loading="lazy">
+        <Image src={img01} alt="Dispositivos para ver pasar el tiempo — Vista general de instalación" loading="eager" fetchpriority="high" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img02} alt="Dispositivos para ver pasar el tiempo — Dispositivo de arena" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img03} alt="Dispositivos para ver pasar el tiempo — Superficie erosionada" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img04} alt="Dispositivos para ver pasar el tiempo — Mecanismo poético" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img05} alt="Dispositivos para ver pasar el tiempo — Acumulación de material" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img06} alt="Dispositivos para ver pasar el tiempo — Detalle de dispositivo" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img07} alt="Dispositivos para ver pasar el tiempo — Transformación material" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img08} alt="Dispositivos para ver pasar el tiempo — Registro de desgaste" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img10} alt="Dispositivos para ver pasar el tiempo — Pieza escultórica" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img11} alt="Dispositivos para ver pasar el tiempo — Detalle de proceso" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img12} alt="Dispositivos para ver pasar el tiempo — Vista de conjunto" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img13} alt="Dispositivos para ver pasar el tiempo — Elemento temporal" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img14} alt="Dispositivos para ver pasar el tiempo — Vista final" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
       </div>
 
       <!-- Texto + Ficha -->

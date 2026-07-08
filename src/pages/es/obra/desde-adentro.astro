@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../../../components/layout/Layout.astro';
 import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
 
@@ -25,6 +26,7 @@ const img14 = (await import('../../../assets/images/obras/desde-adentro/desde-ad
   lang={lang}
   title="Desde Adentro — Obra"
   description="Desde Adentro (2003). 12 fotografías tipo C, video-instalación de 12 horas. Documentación del atentado al Club El Nogal. María Elvira Escallón."
+  ogImage={img01.src}
 >
 
   <ArtworkSchema
@@ -49,20 +51,20 @@ const img14 = (await import('../../../assets/images/obras/desde-adentro/desde-ad
 
       <!-- Galeria principal -->
       <div class="work-page__gallery">
-        <img src={img01.src} alt="Desde Adentro — Huella sobre superficie tras el atentado" loading="eager">
-        <img src={img02.src} alt="Desde Adentro — Rastro de ausencia en muro" loading="lazy">
-        <img src={img03.src} alt="Desde Adentro — Silueta de objeto volatilizado" loading="lazy">
-        <img src={img04.src} alt="Desde Adentro — Marca de mano sobre ceniza" loading="lazy">
-        <img src={img05.src} alt="Desde Adentro — Contorno de cuadro descolgado" loading="lazy">
-        <img src={img06.src} alt="Desde Adentro — Puerta con película de ceniza" loading="lazy">
-        <img src={img07.src} alt="Desde Adentro — Escalera devastada" loading="lazy">
-        <img src={img08.src} alt="Desde Adentro — Registro de destrucción interior" loading="lazy">
-        <img src={img09.src} alt="Desde Adentro — Detalle de superficie cubierta de ceniza" loading="lazy">
-        <img src={img10.src} alt="Desde Adentro — Espacio devastado del Club El Nogal" loading="lazy">
-        <img src={img11.src} alt="Desde Adentro — Vestigio de presencia humana" loading="lazy">
-        <img src={img12.src} alt="Desde Adentro — Objeto cotidiano tras la explosión" loading="lazy">
-        <img src={img13.src} alt="Desde Adentro — Documentación de secuelas" loading="lazy">
-        <img src={img14.src} alt="Desde Adentro — Registro final de la serie" loading="lazy">
+        <Image src={img01} alt="Desde Adentro — Huella sobre superficie tras el atentado" loading="eager" fetchpriority="high" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img02} alt="Desde Adentro — Rastro de ausencia en muro" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img03} alt="Desde Adentro — Silueta de objeto volatilizado" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img04} alt="Desde Adentro — Marca de mano sobre ceniza" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img05} alt="Desde Adentro — Contorno de cuadro descolgado" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img06} alt="Desde Adentro — Puerta con película de ceniza" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img07} alt="Desde Adentro — Escalera devastada" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img08} alt="Desde Adentro — Registro de destrucción interior" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img09} alt="Desde Adentro — Detalle de superficie cubierta de ceniza" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img10} alt="Desde Adentro — Espacio devastado del Club El Nogal" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img11} alt="Desde Adentro — Vestigio de presencia humana" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img12} alt="Desde Adentro — Objeto cotidiano tras la explosión" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img13} alt="Desde Adentro — Documentación de secuelas" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img14} alt="Desde Adentro — Registro final de la serie" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
       </div>
 
       <!-- Texto + Ficha -->

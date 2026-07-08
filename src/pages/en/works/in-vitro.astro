@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../../../components/layout/Layout.astro';
 import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
 import QuoteBlock from '../../../components/content/QuoteBlock.astro';
@@ -14,6 +15,7 @@ const img2 = (await import('../../../assets/images/obras/in-vitro/in-vitro-02.we
   lang={lang}
   title="In Vitro — Work"
   description="In Vitro (1997). Installation — mirror, glass. La Sabana Station, Bogota. 1st Prize, VIII Regional Artists' Salon. Maria Elvira Escallon."
+  ogImage={img1.src}
 >
 
 
@@ -37,8 +39,8 @@ const img2 = (await import('../../../assets/images/obras/in-vitro/in-vitro-02.we
 
       <!-- Main gallery -->
       <div class="work-page__gallery">
-        <img src={img1.src} alt="In Vitro — Mirror installation at La Sabana Station, Bogota" loading="eager">
-        <img src={img2.src} alt="In Vitro — Detail of the floor and reflection in the mirror" loading="lazy">
+        <Image src={img1} alt="In Vitro — Mirror installation at La Sabana Station, Bogota" loading="eager" fetchpriority="high" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img2} alt="In Vitro — Detail of the floor and reflection in the mirror" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
       </div>
 
       <!-- Text + Technical sheet -->

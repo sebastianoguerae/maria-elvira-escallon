@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../../../components/layout/Layout.astro';
 import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
 
@@ -27,6 +28,7 @@ const y2024_07 = (await import('../../../assets/images/obras/precipitacion/2024/
   lang={lang}
   title="Precipitación de arenas — Obra"
   description="Precipitación de arenas (2022–2024). Instalación — arena, muebles, vidrio de seguridad, parlante. María Elvira Escallón."
+  ogImage={prec01.src}
 >
 
   
@@ -51,23 +53,23 @@ const y2024_07 = (await import('../../../assets/images/obras/precipitacion/2024/
       <!-- Galeria -->
       <div class="work-page__gallery">
         <h3 style="margin-top: var(--s3);">RIO CAUCA, 2008</h3>
-        <img src={prec01.src} alt="Precipitación de arenas — Río Cauca, arena precipitándose" loading="eager">
-        <img src={prec02.src} alt="Precipitación de arenas — Río Cauca, registro de arena" loading="lazy">
+        <Image src={prec01} alt="Precipitación de arenas — Río Cauca, arena precipitándose" loading="eager" fetchpriority="high" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={prec02} alt="Precipitación de arenas — Río Cauca, registro de arena" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
 
         <h3 style="margin-top: var(--s3);">PRECIPITACIONES 2020</h3>
-        <img src={y2020_01.src} alt="Precipitación de arenas 2020 — Instalación con arena y muebles" loading="lazy">
-        <img src={y2020_02.src} alt="Precipitación de arenas 2020 — Arena sobre objetos domésticos" loading="lazy">
-        <img src={y2020_03.src} alt="Precipitación de arenas 2020 — Detalle de vitrina sellada" loading="lazy">
-        <img src={y2020_04.src} alt="Precipitación de arenas 2020 — Vista de conjunto" loading="lazy">
+        <Image src={y2020_01} alt="Precipitación de arenas 2020 — Instalación con arena y muebles" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={y2020_02} alt="Precipitación de arenas 2020 — Arena sobre objetos domésticos" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={y2020_03} alt="Precipitación de arenas 2020 — Detalle de vitrina sellada" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={y2020_04} alt="Precipitación de arenas 2020 — Vista de conjunto" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
 
         <h3 style="margin-top: var(--s3);">PRECIPITACIONES 2024</h3>
-        <img src={y2024_01.src} alt="Precipitación de arenas 2024 — Instalación en el MAMU" loading="lazy">
-        <img src={y2024_02.src} alt="Precipitación de arenas 2024 — Arena cayendo sobre muebles" loading="lazy">
-        <img src={y2024_03.src} alt="Precipitación de arenas 2024 — Detalle de acumulación" loading="lazy">
-        <img src={y2024_04.src} alt="Precipitación de arenas 2024 — Vidrio de seguridad y arena" loading="lazy">
-        <img src={y2024_05.src} alt="Precipitación de arenas 2024 — Objetos cubiertos de arena" loading="lazy">
-        <img src={y2024_06.src} alt="Precipitación de arenas 2024 — Vista lateral de instalación" loading="lazy">
-        <img src={y2024_07.src} alt="Precipitación de arenas 2024 — Vista final de la obra" loading="lazy">
+        <Image src={y2024_01} alt="Precipitación de arenas 2024 — Instalación en el MAMU" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={y2024_02} alt="Precipitación de arenas 2024 — Arena cayendo sobre muebles" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={y2024_03} alt="Precipitación de arenas 2024 — Detalle de acumulación" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={y2024_04} alt="Precipitación de arenas 2024 — Vidrio de seguridad y arena" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={y2024_05} alt="Precipitación de arenas 2024 — Objetos cubiertos de arena" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={y2024_06} alt="Precipitación de arenas 2024 — Vista lateral de instalación" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={y2024_07} alt="Precipitación de arenas 2024 — Vista final de la obra" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
       </div>
 
       <!-- Texto + Ficha -->

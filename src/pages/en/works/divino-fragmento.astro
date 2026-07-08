@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../../../components/layout/Layout.astro';
 import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
 
@@ -15,6 +16,7 @@ const img4 = (await import('../../../assets/images/obras/divino-fragmento/divino
   lang={lang}
   title="Divino Fragmento — Work"
   description="Divino Fragmento (2003). Photographic series of the Parthenon marbles at the British Museum. Maria Elvira Escallon."
+  ogImage={img1.src}
 >
 
   <ArtworkSchema
@@ -37,10 +39,10 @@ const img4 = (await import('../../../assets/images/obras/divino-fragmento/divino
 
       <!-- Main gallery -->
       <div class="work-page__gallery">
-        <img src={img1.src} alt="Divino Fragmento — Parthenon marbles at the British Museum" loading="eager">
-        <img src={img2.src} alt="Divino Fragmento — Detail of Greek sculptural fragment" loading="lazy">
-        <img src={img3.src} alt="Divino Fragmento — Fragments displaced from their original context" loading="lazy">
-        <img src={img4.src} alt="Divino Fragmento — Photographic series, British Museum" loading="lazy">
+        <Image src={img1} alt="Divino Fragmento — Parthenon marbles at the British Museum" loading="eager" fetchpriority="high" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img2} alt="Divino Fragmento — Detail of Greek sculptural fragment" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img3} alt="Divino Fragmento — Fragments displaced from their original context" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img4} alt="Divino Fragmento — Photographic series, British Museum" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
       </div>
 
       <!-- Text + Technical sheet -->

@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../../components/layout/Layout.astro';
 import QuoteBlock from '../../components/content/QuoteBlock.astro';
 import ArtistSchema from '../../components/seo/ArtistSchema.astro';
@@ -110,7 +111,7 @@ const timelineEntries = [
 
   <!-- Section 2: HERO IMAGE — full bleed -->
   <section class="home-hero-image fade-in">
-    <img src={heroImage.src} alt="Ensayo para un autorretrato — María Elvira Escallón" />
+    <Image src={heroImage} alt="Ensayo para un autorretrato — María Elvira Escallón" fetchpriority="high" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
     <div class="home-hero-image__caption">
       <span>Ensayo para un autorretrato, 2017–2022</span>
     </div>
@@ -132,11 +133,7 @@ const timelineEntries = [
     <div class="container">
       <p class="label">Obra destacada</p>
       <a href="/maria-elvira-escallon/es/obra/en-estado-de-coma/" class="home-featured">
-        <img
-          src={featuredComa.src}
-          alt="En estado de coma &mdash; María Elvira Escallón"
-          loading="lazy"
-        />
+        <Image src={featuredComa} alt="En estado de coma &mdash; María Elvira Escallón" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
         <div class="home-featured__caption">
           <h3>EN ESTADO DE COMA</h3>
           <span class="ficha">2005&ndash;2007 &middot; Hospital San Juan de Dios</span>
@@ -160,12 +157,7 @@ const timelineEntries = [
             <article class="work-card-static">
               <div class="work-card__thumb">
                 {work.hasImage && work.importedImage ? (
-                  <img
-                    src={work.importedImage.src}
-                    alt={`${work.title} \u2014 María Elvira Escallón`}
-                    loading="lazy"
-                    style="width:100%;height:100%;object-fit:cover;"
-                  />
+                  <Image src={work.importedImage} alt={`${work.title} \u2014 María Elvira Escallón`} loading="lazy" style="width:100%;height:100%;object-fit:cover;" widths={[400, 800]} sizes="(max-width: 640px) 50vw, 33vw" />
                 ) : (
                   <div class="placeholder-img" style="height:100%;aspect-ratio:4/3;background:var(--paper-dark);"></div>
                 )}
@@ -263,28 +255,28 @@ const timelineEntries = [
       <div class="home-publications">
         <a href="/maria-elvira-escallon/es/biografia/" class="home-publications__book">
           <div class="home-publications__cover">
-            <img src={libroEncuentros.src} alt="Encuentros en la fábrica de polvo — Catálogo" loading="lazy" />
+            <Image src={libroEncuentros} alt="Encuentros en la fábrica de polvo — Catálogo" loading="lazy" widths={[400, 800]} sizes="(max-width: 640px) 50vw, 33vw" />
           </div>
           <p class="home-publications__title">Encuentros en la fábrica de polvo</p>
           <p class="home-publications__year">2024</p>
         </a>
         <a href="/maria-elvira-escallon/es/publicaciones/polvo-eres-libro/" class="home-publications__book">
           <div class="home-publications__cover">
-            <img src={libroPolvoEres.src} alt="Polvo Eres — Libro" loading="lazy" />
+            <Image src={libroPolvoEres} alt="Polvo Eres — Libro" loading="lazy" widths={[400, 800]} sizes="(max-width: 640px) 50vw, 33vw" />
           </div>
           <p class="home-publications__title">Polvo eres</p>
           <p class="home-publications__year">2014</p>
         </a>
         <a href="/maria-elvira-escallon/es/publicaciones/coleccion-seguros-bolivar/" class="home-publications__book">
           <div class="home-publications__cover">
-            <img src={libroSeguros.src} alt="Colección Seguros Bolívar — Monografía" loading="lazy" />
+            <Image src={libroSeguros} alt="Colección Seguros Bolívar — Monografía" loading="lazy" widths={[400, 800]} sizes="(max-width: 640px) 50vw, 33vw" />
           </div>
           <p class="home-publications__title">Colección Seguros Bolívar</p>
           <p class="home-publications__year">2018</p>
         </a>
         <a href="/maria-elvira-escallon/es/publicaciones/en-estado-de-coma-libro/" class="home-publications__book">
           <div class="home-publications__cover">
-            <img src={enEstadoDeComaLibro.src} alt="En estado de coma — Catálogo" loading="lazy" />
+            <Image src={enEstadoDeComaLibro} alt="En estado de coma — Catálogo" loading="lazy" widths={[400, 800]} sizes="(max-width: 640px) 50vw, 33vw" />
           </div>
           <p class="home-publications__title">En estado de coma</p>
           <p class="home-publications__year">2007</p>
@@ -301,7 +293,7 @@ const timelineEntries = [
     <div class="container">
       <div class="home-bio-teaser">
         <div class="home-bio-teaser__portrait">
-          <img src={retrato.src} alt="María Elvira Escallón &mdash; Retrato" loading="lazy" />
+          <Image src={retrato} alt="María Elvira Escallón &mdash; Retrato" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
         </div>
         <div class="home-bio-teaser__text">
           <p class="label">Biografía</p>

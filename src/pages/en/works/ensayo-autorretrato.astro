@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../../../components/layout/Layout.astro';
 import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
 
@@ -17,6 +18,7 @@ const img6 = (await import('../../../assets/images/obras/ensayo-autorretrato/ens
   lang={lang}
   title="Ensayo autorretrato — Work"
   description="Ensayo para un autorretrato (2017-2022). Photography, sculpture and video. Galeria Espacio Continuo, Bogota. Maria Elvira Escallon."
+  ogImage={img1.src}
 >
 
 
@@ -40,12 +42,12 @@ const img6 = (await import('../../../assets/images/obras/ensayo-autorretrato/ens
 
       <!-- Main gallery -->
       <div class="work-page__gallery">
-        <img src={img1.src} alt="Ensayo autorretrato — Video still, the artist's hands" loading="eager">
-        <img src={img2.src} alt="Ensayo autorretrato — Hands scratching the wall searching for a nail" loading="lazy">
-        <img src={img3.src} alt="Ensayo autorretrato — Destruction of a Venus de Milo mask" loading="lazy">
-        <img src={img4.src} alt="Ensayo autorretrato — Hands modeling an arm connected to a frailejon" loading="lazy">
-        <img src={img5.src} alt="Ensayo autorretrato — Face molds grated with a cheese grater" loading="lazy">
-        <img src={img6.src} alt="Ensayo autorretrato — Process of simultaneous destruction and creation" loading="lazy">
+        <Image src={img1} alt="Ensayo autorretrato — Video still, the artist's hands" loading="eager" fetchpriority="high" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img2} alt="Ensayo autorretrato — Hands scratching the wall searching for a nail" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img3} alt="Ensayo autorretrato — Destruction of a Venus de Milo mask" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img4} alt="Ensayo autorretrato — Hands modeling an arm connected to a frailejon" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img5} alt="Ensayo autorretrato — Face molds grated with a cheese grater" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img6} alt="Ensayo autorretrato — Process of simultaneous destruction and creation" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
       </div>
 
       <!-- Text + Technical sheet -->

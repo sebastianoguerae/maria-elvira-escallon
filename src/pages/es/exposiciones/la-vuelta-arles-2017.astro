@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../../../components/layout/Layout.astro';
 const lang = 'es' as const;
 
@@ -23,7 +24,7 @@ const arlesImg = (await import('../../../assets/images/exposiciones/arles-2017.j
 
       <!-- Galería -->
       <div class="exh-gallery">
-        <img src={arlesImg.src} alt="La vuelta — Vista de la exposición en Les Rencontres de la Photographie d'Arles, 2017" loading="eager">
+        <Image src={arlesImg} alt="La vuelta — Vista de la exposición en Les Rencontres de la Photographie d'Arles, 2017" loading="eager" fetchpriority="high" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
       </div>
 
       <!-- Cuerpo -->
@@ -78,12 +79,6 @@ const arlesImg = (await import('../../../assets/images/exposiciones/arles-2017.j
             Galería: Mor-Charpentier, París
           </div>
 
-          <h4 style="margin-top: var(--s3);">IDIOMAS</h4>
-          <div class="ficha">
-            <a href="/maria-elvira-escallon/en/exhibitions/la-vuelta-arles-2017/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">
-              View in English
-            </a>
-          </div>
         </aside>
       </div>
 

@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../../components/layout/Layout.astro';
 
 const lang = 'es' as const;
@@ -24,7 +25,7 @@ const retrato = (await import('../../assets/images/retrato/retrato-fernando-gome
 
       <div class="statement-page__opening">
         <div class="statement-page__portrait">
-          <img src={retrato.src} alt="Retrato de María Elvira Escallón" loading="eager">
+          <Image src={retrato} alt="Retrato de María Elvira Escallón" loading="eager" fetchpriority="high" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
           <p class="statement-page__credit">Fotografía: Fernando Gómez</p>
         </div>
 

@@ -71,3 +71,13 @@ Estado build: limpio, 89 páginas, dist = 142 MB.
 - [ ] P0.1/P0.3/P0.4 (switchLanguage, canonical, 404) — agente en curso
 - [ ] P1.5-8 (exposiciones/bios/homes FR-ZH, la-travesia) — agente en curso
 - [ ] Pendiente fase 2: imágenes <Image>, og:image, prefers-reduced-motion, base-path helper, root redirect decision
+- [x] Fase 1 commit 9595f2c: P0 completo (switchLanguage, hreflang, canonical, 404, dominio) + P1 completo (exposiciones/bios/homes FR-ZH, la-travesia) — verificado en dist
+- [x] P2.12 og:image/og:url/og:locale/twitter:card en Layout (default polvo-eres-01, obra pages pasan su hero via agente)
+- [x] P2.13 prefers-reduced-motion script en Layout
+- [x] P3.17 root redirect → /es/ (canónico), instantáneo (JS + meta refresh 0), noindex + canonical
+- [x] Minor: sitemap excluye root stub; defaultLocale es
+- [ ] P2.10 imágenes <Image> — agente en curso
+- Decisiones: NO recomprimir videos de arte (calidad > peso, lazy ya ok); NO content collections ni base-path helper ni Astro 7 (riesgo > beneficio en sitio ya correcto); emails @mariaelviraescallon.com pendientes de confirmar con el usuario
+- [x] P2.10 imágenes: 409 <img> → <Image> en 61 archivos (srcset 480/900/1400 + cards 400/800); ogImage por obra (42 páginas); dist 144M→136M y transferencia por página mucho menor
+- [x] Extra: 13 links internos rotos detectados y corregidos (View-in-English a páginas EN inexistentes ×8, las-caminantes ×3, nuevas-floras-versalles ×2, publicaciones slug null); checker dist = 0 rotos
+- Declinado: self-host de fonts (preconnect+swap ya aceptable)

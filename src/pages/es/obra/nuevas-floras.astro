@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../../../components/layout/Layout.astro';
 import QuoteBlock from '../../../components/content/QuoteBlock.astro';
 import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
@@ -41,6 +42,7 @@ const versalles05 = (await import('../../../assets/images/obras/nuevas-floras/ve
   lang={lang}
   title="Nuevas Floras — Obra"
   description="Nuevas Floras (2003). Intervención escultórica sobre árboles nativos. III Premio Luis Caballero. María Elvira Escallón."
+  ogImage={col01.src}
 >
 
   <ArtworkSchema
@@ -66,37 +68,37 @@ const versalles05 = (await import('../../../assets/images/obras/nuevas-floras/ve
       <!-- Galeria -->
       <div class="work-page__gallery">
         <h3 style="margin-top: var(--s3);">COLOMBIA</h3>
-        <img src={col01.src} alt="Nuevas Floras Colombia — Árbol nativo con talla barroca" loading="eager">
-        <img src={col02.src} alt="Nuevas Floras Colombia — Intervención escultórica sobre tronco" loading="lazy">
-        <img src={col03.src} alt="Nuevas Floras Colombia — Detalle de columna salomónica tallada" loading="lazy">
-        <img src={col04.src} alt="Nuevas Floras Colombia — Prótesis ornamental en árbol vivo" loading="lazy">
-        <img src={col05.src} alt="Nuevas Floras Colombia — Voluta barroca sobre corteza" loading="lazy">
-        <img src={col06.src} alt="Nuevas Floras Colombia — Elemento de retablo en rama" loading="lazy">
-        <img src={col08.src} alt="Nuevas Floras Colombia — Árbol absorbiendo la intervención" loading="lazy">
-        <img src={col09.src} alt="Nuevas Floras Colombia — Registro fotográfico cromogénico" loading="lazy">
-        <img src={col10.src} alt="Nuevas Floras Colombia — Talla casi imperceptible por crecimiento" loading="lazy">
-        <img src={col11.src} alt="Nuevas Floras Colombia — Convergencia de naturaleza y cultura" loading="lazy">
-        <img src={col12.src} alt="Nuevas Floras Colombia — Detalle de intervención arbórea" loading="lazy">
-        <img src={col13.src} alt="Nuevas Floras Colombia — Vista de conjunto de la serie" loading="lazy">
+        <Image src={col01} alt="Nuevas Floras Colombia — Árbol nativo con talla barroca" loading="eager" fetchpriority="high" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={col02} alt="Nuevas Floras Colombia — Intervención escultórica sobre tronco" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={col03} alt="Nuevas Floras Colombia — Detalle de columna salomónica tallada" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={col04} alt="Nuevas Floras Colombia — Prótesis ornamental en árbol vivo" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={col05} alt="Nuevas Floras Colombia — Voluta barroca sobre corteza" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={col06} alt="Nuevas Floras Colombia — Elemento de retablo en rama" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={col08} alt="Nuevas Floras Colombia — Árbol absorbiendo la intervención" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={col09} alt="Nuevas Floras Colombia — Registro fotográfico cromogénico" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={col10} alt="Nuevas Floras Colombia — Talla casi imperceptible por crecimiento" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={col11} alt="Nuevas Floras Colombia — Convergencia de naturaleza y cultura" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={col12} alt="Nuevas Floras Colombia — Detalle de intervención arbórea" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={col13} alt="Nuevas Floras Colombia — Vista de conjunto de la serie" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
 
         <h3 style="margin-top: var(--s3);">BRISTOL</h3>
-        <img src={bristol01.src} alt="Nuevas Floras Bristol — Intervención sobre árbol en Bristol" loading="lazy">
+        <Image src={bristol01} alt="Nuevas Floras Bristol — Intervención sobre árbol en Bristol" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
 
         <h3 style="margin-top: var(--s3);">DO SUL</h3>
-        <img src={doSul01.src} alt="Nuevas Floras do Sul — Árbol intervenido en Brasil" loading="lazy">
-        <img src={doSul02.src} alt="Nuevas Floras do Sul — Detalle de talla sobre tronco" loading="lazy">
-        <img src={doSul03.src} alt="Nuevas Floras do Sul — Forma ornamental en corteza" loading="lazy">
-        <img src={doSul04.src} alt="Nuevas Floras do Sul — Intervención escultórica" loading="lazy">
-        <img src={doSul05.src} alt="Nuevas Floras do Sul — Registro de crecimiento del árbol" loading="lazy">
-        <img src={doSul06.src} alt="Nuevas Floras do Sul — Detalle de proceso orgánico" loading="lazy">
-        <img src={doSul07.src} alt="Nuevas Floras do Sul — Vista de la serie completa" loading="lazy">
+        <Image src={doSul01} alt="Nuevas Floras do Sul — Árbol intervenido en Brasil" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={doSul02} alt="Nuevas Floras do Sul — Detalle de talla sobre tronco" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={doSul03} alt="Nuevas Floras do Sul — Forma ornamental en corteza" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={doSul04} alt="Nuevas Floras do Sul — Intervención escultórica" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={doSul05} alt="Nuevas Floras do Sul — Registro de crecimiento del árbol" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={doSul06} alt="Nuevas Floras do Sul — Detalle de proceso orgánico" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={doSul07} alt="Nuevas Floras do Sul — Vista de la serie completa" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
 
         <h3 style="margin-top: var(--s3);">VERSALLES</h3>
-        <img src={versalles01.src} alt="Nuevas Floras Versalles — Árbol intervenido en Versalles" loading="lazy">
-        <img src={versalles02.src} alt="Nuevas Floras Versalles — Talla ornamental sobre tronco" loading="lazy">
-        <img src={versalles03.src} alt="Nuevas Floras Versalles — Detalle de intervención" loading="lazy">
-        <img src={versalles04.src} alt="Nuevas Floras Versalles — Forma barroca en árbol vivo" loading="lazy">
-        <img src={versalles05.src} alt="Nuevas Floras Versalles — Vista de conjunto" loading="lazy">
+        <Image src={versalles01} alt="Nuevas Floras Versalles — Árbol intervenido en Versalles" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={versalles02} alt="Nuevas Floras Versalles — Talla ornamental sobre tronco" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={versalles03} alt="Nuevas Floras Versalles — Detalle de intervención" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={versalles04} alt="Nuevas Floras Versalles — Forma barroca en árbol vivo" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={versalles05} alt="Nuevas Floras Versalles — Vista de conjunto" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
       </div>
 
       <!-- Texto + Ficha -->
@@ -137,7 +139,7 @@ const versalles05 = (await import('../../../assets/images/obras/nuevas-floras/ve
           <h3 style="margin-top: var(--s4);">OBRAS RELACIONADAS</h3>
           <ul style="margin-top: var(--s2); list-style: none;">
             <li style="padding: var(--s1) 0; border-bottom: 1px solid var(--paper-dark);">
-              <a href="/maria-elvira-escallon/es/obra/nuevas-floras-versalles/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">Nuevas Floras Versalles (2017)</a>
+              <a href="/maria-elvira-escallon/es/exposiciones/nuevas-floras-versalles-2017/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">Nuevas Floras Versalles (2017)</a>
             </li>
           </ul>
         </div>

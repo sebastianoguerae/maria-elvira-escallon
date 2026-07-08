@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../../../components/layout/Layout.astro';
 
 const lang = 'es' as const;
@@ -83,11 +84,13 @@ const otherBooks = [
       </header>
 
       <div class="pub-index__grid">
-        {books.map((book) => (
-          <a href={`/maria-elvira-escallon/es/publicaciones/${book.slug}/`} class="pub-card">
+        {books.map((book) => {
+          const Card = book.slug ? 'a' : 'div';
+          return (
+          <Card href={book.slug ? `/maria-elvira-escallon/es/publicaciones/${book.slug}/` : undefined} class="pub-card">
             <div class="pub-card__cover">
               {book.cover ? (
-                <img src={book.cover.src} alt={`Portada — ${book.displayTitle}`} loading="lazy" />
+                <Image src={book.cover} alt={`Portada — ${book.displayTitle}`} loading="lazy" widths={[400, 800]} sizes="(max-width: 640px) 50vw, 33vw" />
               ) : (
                 <div class="placeholder-cover">
                   <span>[ Portada pendiente ]</span>
@@ -100,8 +103,9 @@ const otherBooks = [
               <p class="pub-card__meta">{book.editor}</p>
               <p class="pub-card__meta">{book.publisher} &middot; {book.pages} pp.</p>
             </div>
-          </a>
-        ))}
+          </Card>
+          );
+        })}
       </div>
 
       <hr class="rule rule--light" style="margin: var(--s5) 0 var(--s4);" />
@@ -111,7 +115,7 @@ const otherBooks = [
         {otherBooks.map((book) => (
           <div class="pub-card">
             <div class="pub-card__cover">
-              {book.cover && <img src={book.cover.src} alt={`Portada — ${book.displayTitle}`} loading="lazy" />}
+              {book.cover && <Image src={book.cover} alt={`Portada — ${book.displayTitle}`} loading="lazy" widths={[400, 800]} sizes="(max-width: 640px) 50vw, 33vw" />}
             </div>
             <div class="pub-card__info">
               <h2 class="pub-card__title">{book.displayTitle}</h2>

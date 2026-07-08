@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../../../components/layout/Layout.astro';
 import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
 
@@ -15,6 +16,7 @@ const img4 = (await import('../../../assets/images/obras/recelaron-del-cielo/rec
   lang={lang}
   title="Recelaron del cielo — Work"
   description="Recelaron del cielo (2008). Backlight photography in lightbox, installation. Maria Elvira Escallon."
+  ogImage={img1.src}
 >
 
   <ArtworkSchema
@@ -37,10 +39,10 @@ const img4 = (await import('../../../assets/images/obras/recelaron-del-cielo/rec
 
       <!-- Main gallery -->
       <div class="work-page__gallery">
-        <img src={img1.src} alt="Recelaron del cielo — Installation view, Hospital Santa Rosa" loading="eager">
-        <img src={img2.src} alt="Recelaron del cielo — Hospital corridor with fragments of La Voragine" loading="lazy">
-        <img src={img3.src} alt="Recelaron del cielo — Illuminated room seen through glass" loading="lazy">
-        <img src={img4.src} alt="Recelaron del cielo — Lightbox detail" loading="lazy">
+        <Image src={img1} alt="Recelaron del cielo — Installation view, Hospital Santa Rosa" loading="eager" fetchpriority="high" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img2} alt="Recelaron del cielo — Hospital corridor with fragments of La Voragine" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img3} alt="Recelaron del cielo — Illuminated room seen through glass" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img4} alt="Recelaron del cielo — Lightbox detail" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
       </div>
 
       <!-- Text + Technical sheet -->

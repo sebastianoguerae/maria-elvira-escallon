@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../../components/layout/Layout.astro';
 
 const lang = 'en' as const;
@@ -25,7 +26,7 @@ const libroEnEstadoDeComa = (await import('../../assets/images/libros/en-estado-
 
       <div class="bio-page__opening">
         <div class="bio-page__portrait">
-          <img src={retrato.src} alt="Portrait of Maria Elvira Escallon" loading="eager">
+          <Image src={retrato} alt="Portrait of Maria Elvira Escallon" loading="eager" fetchpriority="high" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
         </div>
         <div class="bio-page__intro">
           <p class="curatorial" style="margin-top: var(--s3);">
@@ -283,7 +284,7 @@ const libroEnEstadoDeComa = (await import('../../assets/images/libros/en-estado-
 
           <article class="bio-pub-card">
             <div class="bio-pub-card__cover">
-              <img src={libroEnEstadoDeComa.src} alt="Cover — En estado de coma" loading="lazy">
+              <Image src={libroEnEstadoDeComa} alt="Cover — En estado de coma" loading="lazy" widths={[400, 800]} sizes="(max-width: 640px) 50vw, 33vw" />
             </div>
             <div class="bio-pub-card__info">
               <h3>En estado de coma</h3>

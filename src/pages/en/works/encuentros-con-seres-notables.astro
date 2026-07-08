@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../../../components/layout/Layout.astro';
 import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
 
@@ -47,6 +48,7 @@ const caminantes11 = (await import('../../../assets/images/obras/encuentros/encu
   lang={lang}
   title="Encuentros — Work"
   description="Encuentros con seres notables (2022). Sculpture — savanna jasmine branches, eucalyptus, wood carving, clay. Maria Elvira Escallon."
+  ogImage={enc01.src}
 >
 
 
@@ -71,46 +73,46 @@ const caminantes11 = (await import('../../../assets/images/obras/encuentros/encu
       <!-- Gallery -->
       <div class="work-page__gallery">
         <h3 style="margin-top: var(--s3);">ENCUENTROS</h3>
-        <img src={enc01.src} alt="Encuentros — Sculpture on branch, emerging figure" loading="eager">
-        <img src={enc02.src} alt="Encuentros — Wood carving on natural branch" loading="lazy">
-        <img src={enc07.src} alt="Encuentros — Detail of sculptural intervention" loading="lazy">
-        <img src={enc08.src} alt="Encuentros — Human form in tree branch" loading="lazy">
+        <Image src={enc01} alt="Encuentros — Sculpture on branch, emerging figure" loading="eager" fetchpriority="high" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={enc02} alt="Encuentros — Wood carving on natural branch" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={enc07} alt="Encuentros — Detail of sculptural intervention" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={enc08} alt="Encuentros — Human form in tree branch" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
 
         <h3 style="margin-top: var(--s3);">ENCUENTROS CON SERES NOTABLES</h3>
-        <img src={seres01.src} alt="Encuentros con seres notables — Sculpture carved on branch" loading="lazy">
-        <img src={seres03.src} alt="Encuentros con seres notables — Intervened vegetal body" loading="lazy">
-        <img src={seres04.src} alt="Encuentros con seres notables — Detail of wood carving" loading="lazy">
-        <img src={seres05.src} alt="Encuentros con seres notables — Carved organic form" loading="lazy">
-        <img src={seres06.src} alt="Encuentros con seres notables — Branch with sculptural figure" loading="lazy">
-        <img src={seres10.src} alt="Encuentros con seres notables — Ensemble view" loading="lazy">
+        <Image src={seres01} alt="Encuentros con seres notables — Sculpture carved on branch" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={seres03} alt="Encuentros con seres notables — Intervened vegetal body" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={seres04} alt="Encuentros con seres notables — Detail of wood carving" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={seres05} alt="Encuentros con seres notables — Carved organic form" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={seres06} alt="Encuentros con seres notables — Branch with sculptural figure" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={seres10} alt="Encuentros con seres notables — Ensemble view" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
 
         <h3 style="margin-top: var(--s3);">MESA DE TRABAJO</h3>
-        <img src={mesa01.src} alt="Mesa de trabajo — General view of the workspace" loading="lazy">
-        <img src={mesa15.src} alt="Mesa de trabajo — Tools and materials" loading="lazy">
-        <img src={mesa16.src} alt="Mesa de trabajo — Carving process" loading="lazy">
-        <img src={mesa17.src} alt="Mesa de trabajo — Branches in preparation" loading="lazy">
-        <img src={mesa18.src} alt="Mesa de trabajo — Detail of creative process" loading="lazy">
-        <img src={mesa19.src} alt="Mesa de trabajo — Pieces in development" loading="lazy">
-        <img src={mesa20.src} alt="Mesa de trabajo — Sculptural material" loading="lazy">
-        <img src={mesa21.src} alt="Mesa de trabajo — Carving fragments" loading="lazy">
-        <img src={mesa22.src} alt="Mesa de trabajo — Work elements" loading="lazy">
-        <img src={mesa23.src} alt="Mesa de trabajo — Studio view" loading="lazy">
-        <img src={mesa24.src} alt="Mesa de trabajo — Detail of tools" loading="lazy">
-        <img src={mesa25.src} alt="Mesa de trabajo — Finished pieces" loading="lazy">
-        <img src={mesa26.src} alt="Mesa de trabajo — Process record" loading="lazy">
-        <img src={mesa27.src} alt="Mesa de trabajo — Final view of the space" loading="lazy">
+        <Image src={mesa01} alt="Mesa de trabajo — General view of the workspace" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={mesa15} alt="Mesa de trabajo — Tools and materials" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={mesa16} alt="Mesa de trabajo — Carving process" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={mesa17} alt="Mesa de trabajo — Branches in preparation" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={mesa18} alt="Mesa de trabajo — Detail of creative process" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={mesa19} alt="Mesa de trabajo — Pieces in development" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={mesa20} alt="Mesa de trabajo — Sculptural material" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={mesa21} alt="Mesa de trabajo — Carving fragments" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={mesa22} alt="Mesa de trabajo — Work elements" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={mesa23} alt="Mesa de trabajo — Studio view" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={mesa24} alt="Mesa de trabajo — Detail of tools" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={mesa25} alt="Mesa de trabajo — Finished pieces" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={mesa26} alt="Mesa de trabajo — Process record" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={mesa27} alt="Mesa de trabajo — Final view of the space" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
 
         <h3 style="margin-top: var(--s3);">ARBOREA</h3>
-        <img src={arborea08.src} alt="Arborea — Intervened arboreal sculpture" loading="lazy">
-        <img src={arborea09.src} alt="Arborea — Detail of intervention on tree" loading="lazy">
+        <Image src={arborea08} alt="Arborea — Intervened arboreal sculpture" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={arborea09} alt="Arborea — Detail of intervention on tree" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
 
         <h3 style="margin-top: var(--s3);">ENCUENTROS CERCANOS</h3>
-        <img src={cercanos12.src} alt="Encuentros cercanos — Carved figure in close-up" loading="lazy">
-        <img src={cercanos13.src} alt="Encuentros cercanos — Detail of sculptural form" loading="lazy">
-        <img src={cercanos14.src} alt="Encuentros cercanos — Close view of carving" loading="lazy">
+        <Image src={cercanos12} alt="Encuentros cercanos — Carved figure in close-up" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={cercanos13} alt="Encuentros cercanos — Detail of sculptural form" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={cercanos14} alt="Encuentros cercanos — Close view of carving" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
 
         <h3 style="margin-top: var(--s3);">LAS CAMINANTES</h3>
-        <img src={caminantes11.src} alt="Las caminantes — Walking figure carved in branch" loading="lazy">
+        <Image src={caminantes11} alt="Las caminantes — Walking figure carved in branch" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
       </div>
 
       <!-- Video -->

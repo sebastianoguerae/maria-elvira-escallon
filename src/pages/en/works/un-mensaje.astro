@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../../../components/layout/Layout.astro';
 import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
 
@@ -12,6 +13,7 @@ const img1 = (await import('../../../assets/images/obras/un-mensaje/un-mensaje-0
   lang={lang}
   title="Un mensaje — Work"
   description="Un mensaje (2024). Video installation with Morse code. Encuentros en la fabrica de polvo, MAMU, Bogota. Maria Elvira Escallon."
+  ogImage={img1.src}
 >
 
   <ArtworkSchema
@@ -34,7 +36,7 @@ const img1 = (await import('../../../assets/images/obras/un-mensaje/un-mensaje-0
 
       <!-- Main gallery -->
       <div class="work-page__gallery">
-        <img src={img1.src} alt="Un mensaje — Installation, Morse code" loading="eager">
+        <Image src={img1} alt="Un mensaje — Installation, Morse code" loading="eager" fetchpriority="high" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
       </div>
 
       <!-- Text + Technical sheet -->
@@ -82,7 +84,7 @@ const img1 = (await import('../../../assets/images/obras/un-mensaje/un-mensaje-0
 
           <h4 style="margin-top: var(--s3);">RELATED WORKS</h4>
           <div class="ficha">
-            <a href="/maria-elvira-escallon/en/works/las-caminantes/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">
+            <a href="/maria-elvira-escallon/en/works/encuentros-con-seres-notables/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">
               Las caminantes (2024)
             </a>
           </div>

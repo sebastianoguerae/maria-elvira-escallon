@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../../../components/layout/Layout.astro';
 import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
 
@@ -14,6 +15,7 @@ const img3 = (await import('../../../assets/images/obras/in-memoriam/in-memoriam
   lang={lang}
   title="In Memoriam — Work"
   description="In Memoriam (2001). Ephemeral sculpture — ice, glass, water. 300 kg, 20 hours. Alianza Colombo Francesa, Bogota. Maria Elvira Escallon."
+  ogImage={img1.src}
 >
 
 
@@ -37,9 +39,9 @@ const img3 = (await import('../../../assets/images/obras/in-memoriam/in-memoriam
 
       <!-- Main gallery -->
       <div class="work-page__gallery">
-        <img src={img1.src} alt="In Memoriam — Doric ice column dissolving in water urn, 2001" loading="eager">
-        <img src={img2.src} alt="In Memoriam — Intermediate state of the ice column dissolution" loading="lazy">
-        <img src={img3.src} alt="In Memoriam — Detail of the transformation process of ice into water" loading="lazy">
+        <Image src={img1} alt="In Memoriam — Doric ice column dissolving in water urn, 2001" loading="eager" fetchpriority="high" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img2} alt="In Memoriam — Intermediate state of the ice column dissolution" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img3} alt="In Memoriam — Detail of the transformation process of ice into water" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
       </div>
 
       <!-- Text + Technical sheet -->

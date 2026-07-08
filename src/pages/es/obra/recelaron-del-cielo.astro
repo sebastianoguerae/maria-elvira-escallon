@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../../../components/layout/Layout.astro';
 import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
 
@@ -15,6 +16,7 @@ const img4 = (await import('../../../assets/images/obras/recelaron-del-cielo/rec
   lang={lang}
   title="Recelaron del cielo — Obra"
   description="Recelaron del cielo (2008). Fotografía Backlight en caja de luz, instalación. María Elvira Escallón."
+  ogImage={img1.src}
 >
 
   
@@ -38,10 +40,10 @@ const img4 = (await import('../../../assets/images/obras/recelaron-del-cielo/rec
 
       <!-- Galería principal -->
       <div class="work-page__gallery">
-        <img src={img1.src} alt="Recelaron del cielo — Vista de instalación, Hospital Santa Rosa" loading="eager">
-        <img src={img2.src} alt="Recelaron del cielo — Corredor del hospital con fragmentos de La Vorágine" loading="lazy">
-        <img src={img3.src} alt="Recelaron del cielo — Habitación iluminada vista a través de vidrio" loading="lazy">
-        <img class="img-small" src={img4.src} alt="Recelaron del cielo — Detalle de caja de luz" loading="lazy">
+        <Image src={img1} alt="Recelaron del cielo — Vista de instalación, Hospital Santa Rosa" loading="eager" fetchpriority="high" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img2} alt="Recelaron del cielo — Corredor del hospital con fragmentos de La Vorágine" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img3} alt="Recelaron del cielo — Habitación iluminada vista a través de vidrio" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image class="img-small" src={img4} alt="Recelaron del cielo — Detalle de caja de luz" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
       </div>
 
       <!-- Texto + Ficha -->
