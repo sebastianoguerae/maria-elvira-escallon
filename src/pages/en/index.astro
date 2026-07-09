@@ -9,7 +9,6 @@ const lang = 'en' as const;
 const heroImage = (await import('../../assets/images/obras/ensayo-autorretrato/ensayo-autorretrato-06.webp')).default;
 const expoActual = (await import('../../assets/images/obras/polvo-eres/polvo-eres-09.webp')).default;
 const nuevasFloras = (await import('../../assets/images/obras/nuevas-floras/nuevas-floras-01.webp')).default;
-const featuredComa = (await import('../../assets/images/obras/en-estado-de-coma/cultivos/cultivos-01.webp')).default;
 const desdeAdentro = (await import('../../assets/images/obras/desde-adentro/desde-adentro-01.webp')).default;
 const retrato = (await import('../../assets/images/retrato/retrato.jpg')).default;
 const enEstadoDeComaLibro = (await import('../../assets/images/libros/en-estado-de-coma-libro.jpg')).default;
@@ -134,20 +133,6 @@ const timelineEntries = [
     </div>
   </section>
 
-  <!-- Section 3: FEATURED WORK -->
-  <section class="home-section home-section--alt fade-in">
-    <div class="container">
-      <p class="label">Featured work</p>
-      <a href="/en/works/en-estado-de-coma/" class="home-featured">
-        <Image src={featuredComa} alt="En estado de coma &mdash; María Elvira Escallón" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
-        <div class="home-featured__caption">
-          <h3>EN ESTADO DE COMA</h3>
-          <span class="ficha">2005&ndash;2007 &middot; Hospital San Juan de Dios</span>
-        </div>
-      </a>
-      <a href="/en/works/en-estado-de-coma/" class="home-teaser-link">View complete work &rarr;</a>
-    </div>
-  </section>
 
   <!-- Section 4: WORKS PREVIEW -->
   <section class="home-section fade-in">
