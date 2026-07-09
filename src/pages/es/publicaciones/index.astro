@@ -87,7 +87,7 @@ const otherBooks = [
         {books.map((book) => {
           const Card = book.slug ? 'a' : 'div';
           return (
-          <Card href={book.slug ? `/maria-elvira-escallon/es/publicaciones/${book.slug}/` : undefined} class="pub-card">
+          <Card href={book.slug ? `/es/publicaciones/${book.slug}/` : undefined} class="pub-card">
             <div class="pub-card__cover">
               {book.cover ? (
                 <Image src={book.cover} alt={`Portada — ${book.displayTitle}`} loading="lazy" widths={[400, 800]} sizes="(max-width: 640px) 50vw, 33vw" />

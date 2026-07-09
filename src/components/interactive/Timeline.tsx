@@ -232,7 +232,7 @@ function Tooltip({ data, scrollLeft, lang }: { data: TooltipData | null; scrollL
    ------------------------------------------------ */
 export default function Timeline({ lang = 'es' }: { lang?: string }) {
   const labels = i18n[lang] || i18n.es;
-  const base = '/maria-elvira-escallon';
+  const base = '';
   const prefix = worksPrefix[lang] || 'obra';
 
   const scrollRef = useRef<HTMLDivElement>(null);

@@ -93,7 +93,7 @@ const timelineEntries = [
   <section class="hero home-section home-section--hero">
     <div class="hero-video-bg">
       <video autoplay muted loop playsinline poster={heroImage.src}>
-        <source src="/maria-elvira-escallon/video/hero-encuentros-v2.mp4" type="video/mp4">
+        <source src="/video/hero-encuentros-v2.mp4" type="video/mp4">
       </video>
     </div>
     <div class="container" style="position: relative; z-index: 2;">
@@ -135,14 +135,14 @@ const timelineEntries = [
   <section class="home-section home-section--alt fade-in">
     <div class="container">
       <p class="label">Obra destacada</p>
-      <a href="/maria-elvira-escallon/es/obra/en-estado-de-coma/" class="home-featured">
+      <a href="/es/obra/en-estado-de-coma/" class="home-featured">
         <Image src={featuredComa} alt="En estado de coma &mdash; María Elvira Escallón" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
         <div class="home-featured__caption">
           <h3>EN ESTADO DE COMA</h3>
           <span class="ficha">2005&ndash;2007 &middot; Hospital San Juan de Dios</span>
         </div>
       </a>
-      <a href="/maria-elvira-escallon/es/obra/en-estado-de-coma/" class="home-teaser-link">Ver obra completa &rarr;</a>
+      <a href="/es/obra/en-estado-de-coma/" class="home-teaser-link">Ver obra completa &rarr;</a>
     </div>
   </section>
 
@@ -156,7 +156,7 @@ const timelineEntries = [
 
       <div class="works-grid">
         {featuredWorks.map((work) => (
-          <a href={`/maria-elvira-escallon/es/obra/${work.slug}/`} class="work-card-link" style="text-decoration:none; color:inherit;">
+          <a href={`/es/obra/${work.slug}/`} class="work-card-link" style="text-decoration:none; color:inherit;">
             <article class={`work-card-static ${work.major ? "work-card--major" : ""}`}>
               <div class="work-card__thumb">
                 {work.hasImage && work.importedImage ? (
@@ -175,7 +175,7 @@ const timelineEntries = [
       </div>
 
       <div class="home-section__cta">
-        <a href="/maria-elvira-escallon/es/obra/" class="home-teaser-link">Ver catálogo completo &rarr;</a>
+        <a href="/es/obra/" class="home-teaser-link">Ver catálogo completo &rarr;</a>
       </div>
     </div>
   </section>
@@ -192,7 +192,7 @@ const timelineEntries = [
         <p class="home-exhibition__desc curatorial">
           Una nueva versión de Polvo eres instalada en el Edificio de Coltabaco. Un gran espacio tapizado con escombros provenientes de muros del propio edificio, donde emergen pequeñas plantas pioneras como si algo insistiese en resurgir.
         </p>
-        <a href="/maria-elvira-escallon/es/exposiciones/" class="home-teaser-link">Ver exposiciones &rarr;</a>
+        <a href="/es/exposiciones/" class="home-teaser-link">Ver exposiciones &rarr;</a>
       </div>
     </div>
   </section>
@@ -220,7 +220,7 @@ const timelineEntries = [
           </div>
         ))}
       </div>
-      <a href="/maria-elvira-escallon/es/linea-de-tiempo/" class="home-teaser-link home-teaser-link--light">Explorar línea de tiempo &rarr;</a>
+      <a href="/es/linea-de-tiempo/" class="home-teaser-link home-teaser-link--light">Explorar línea de tiempo &rarr;</a>
     </div>
   </section>
 
@@ -244,7 +244,7 @@ const timelineEntries = [
           <span class="home-stats__label">exposiciones</span>
         </div>
       </div>
-      <a href="/maria-elvira-escallon/es/mapa/" class="home-teaser-link">Explorar mapa &rarr;</a>
+      <a href="/es/mapa/" class="home-teaser-link">Explorar mapa &rarr;</a>
     </div>
   </section>
 
@@ -256,28 +256,28 @@ const timelineEntries = [
         <span class="label">Catálogos</span>
       </div>
       <div class="home-publications">
-        <a href="/maria-elvira-escallon/es/biografia/" class="home-publications__book">
+        <a href="/es/biografia/" class="home-publications__book">
           <div class="home-publications__cover">
             <Image src={libroEncuentros} alt="Encuentros en la fábrica de polvo — Catálogo" loading="lazy" widths={[400, 800]} sizes="(max-width: 640px) 50vw, 33vw" />
           </div>
           <p class="home-publications__title">Encuentros en la fábrica de polvo</p>
           <p class="home-publications__year">2024</p>
         </a>
-        <a href="/maria-elvira-escallon/es/publicaciones/polvo-eres-libro/" class="home-publications__book">
+        <a href="/es/publicaciones/polvo-eres-libro/" class="home-publications__book">
           <div class="home-publications__cover">
             <Image src={libroPolvoEres} alt="Polvo Eres — Libro" loading="lazy" widths={[400, 800]} sizes="(max-width: 640px) 50vw, 33vw" />
           </div>
           <p class="home-publications__title">Polvo eres</p>
           <p class="home-publications__year">2014</p>
         </a>
-        <a href="/maria-elvira-escallon/es/publicaciones/coleccion-seguros-bolivar/" class="home-publications__book">
+        <a href="/es/publicaciones/coleccion-seguros-bolivar/" class="home-publications__book">
           <div class="home-publications__cover">
             <Image src={libroSeguros} alt="Colección Seguros Bolívar — Monografía" loading="lazy" widths={[400, 800]} sizes="(max-width: 640px) 50vw, 33vw" />
           </div>
           <p class="home-publications__title">Colección Seguros Bolívar</p>
           <p class="home-publications__year">2018</p>
         </a>
-        <a href="/maria-elvira-escallon/es/publicaciones/en-estado-de-coma-libro/" class="home-publications__book">
+        <a href="/es/publicaciones/en-estado-de-coma-libro/" class="home-publications__book">
           <div class="home-publications__cover">
             <Image src={enEstadoDeComaLibro} alt="En estado de coma — Catálogo" loading="lazy" widths={[400, 800]} sizes="(max-width: 640px) 50vw, 33vw" />
           </div>
@@ -286,7 +286,7 @@ const timelineEntries = [
         </a>
       </div>
       <div class="home-section__cta">
-        <a href="/maria-elvira-escallon/es/publicaciones/" class="home-teaser-link">Ver publicaciones &rarr;</a>
+        <a href="/es/publicaciones/" class="home-teaser-link">Ver publicaciones &rarr;</a>
       </div>
     </div>
   </section>
@@ -306,7 +306,7 @@ const timelineEntries = [
           <p class="home-bio-teaser__body">
             Nacida en Londres en 1954, Escallón ha desarrollado a lo largo de tres décadas un cuerpo de obra que interroga las fronteras entre lo natural y lo construido, la memoria y el olvido, el deterioro y la permanencia.
           </p>
-          <a href="/maria-elvira-escallon/es/biografia/" class="home-teaser-link">Leer biografía completa &rarr;</a>
+          <a href="/es/biografia/" class="home-teaser-link">Leer biografía completa &rarr;</a>
         </div>
       </div>
     </div>
@@ -317,7 +317,7 @@ const timelineEntries = [
     <div class="container">
       <p class="label">Representación</p>
       <p class="home-contact__gallery">Galería Espacio Continuo, Bogotá</p>
-      <a href="/maria-elvira-escallon/es/contacto/" class="home-teaser-link">Contactar &rarr;</a>
+      <a href="/es/contacto/" class="home-teaser-link">Contactar &rarr;</a>
     </div>
   </section>
 

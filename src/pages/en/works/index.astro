@@ -63,7 +63,7 @@ const works = [
 
       <div class="obra-grid">
         {works.map((work) => (
-          <a href={`/maria-elvira-escallon/en/works/${work.slug}/`} class={`obra-card ${work.major ? "obra-card--major" : ""}`}>
+          <a href={`/en/works/${work.slug}/`} class={`obra-card ${work.major ? "obra-card--major" : ""}`}>
             <div class="obra-card__img">
               {work.image ? (
                 <Image src={work.image} alt={`${work.title} — María Elvira Escallón`} loading="lazy" widths={[400, 800]} sizes="(max-width: 640px) 50vw, 33vw" />
