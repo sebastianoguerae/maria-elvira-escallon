@@ -18,28 +18,6 @@ const libroSeguros = (await import('../../assets/images/libros/seguros-bolivar-0
 
 const featuredWorks = [
   {
-    slug: 'polvo-eres',
-    title: 'POLVO ERES',
-    year: '2024',
-    hasImage: true,
-    wide: true,
-    importedImage: (await import('../../assets/images/obras/polvo-eres/polvo-eres-portada.webp')).default,
-  },
-  {
-    slug: 'precipitacion-de-arenas',
-    title: 'PRECIPITACIÓN DE ARENAS',
-    year: '2022-2024',
-    hasImage: true,
-    importedImage: (await import('../../assets/images/obras/precipitacion/precipitacion-01.webp')).default,
-  },
-  {
-    slug: 'encuentros-con-seres-notables',
-    title: 'ENCUENTROS',
-    year: '2022',
-    hasImage: true,
-    importedImage: (await import('../../assets/images/obras/encuentros/encuentros-con-seres-notables/encuentros-con-seres-notables-03.webp')).default,
-  },
-  {
     slug: 'dispositivos-para-ver-pasar-el-tiempo',
     title: 'DISPOSITIVOS PARA VER PASAR EL TIEMPO',
     year: '2020',
@@ -54,11 +32,32 @@ const featuredWorks = [
     importedImage: (await import('../../assets/images/obras/aerolito/aerolito-01.webp')).default,
   },
   {
+    slug: 'precipitacion-de-arenas',
+    title: 'PRECIPITACIÓN DE ARENAS',
+    year: '2022-2024',
+    hasImage: true,
+    importedImage: (await import('../../assets/images/obras/precipitacion/precipitacion-01.webp')).default,
+  },
+  {
+    slug: 'polvo-eres',
+    title: 'POLVO ERES',
+    year: '2024',
+    hasImage: true,
+    importedImage: (await import('../../assets/images/obras/polvo-eres/polvo-eres-portada.webp')).default,
+  },
+  {
     slug: 'en-estado-de-coma',
     title: 'EN ESTADO DE COMA',
     year: '2005-2007',
     hasImage: true,
     importedImage: (await import('../../assets/images/obras/en-estado-de-coma/cultivos/cultivos-01.webp')).default,
+  },
+  {
+    slug: 'encuentros-con-seres-notables',
+    title: 'ENCUENTROS',
+    year: '2022',
+    hasImage: true,
+    importedImage: (await import('../../assets/images/obras/encuentros/encuentros-con-seres-notables/encuentros-con-seres-notables-03.webp')).default,
   },
   {
     slug: 'nuevas-floras',
@@ -158,7 +157,7 @@ const timelineEntries = [
             <article class="work-card-static">
               <div class="work-card__thumb">
                 {work.hasImage && work.importedImage ? (
-                  <Image src={work.importedImage} alt={`${work.title} \u2014 María Elvira Escallón`} loading="lazy" style={`width:100%;height:100%;object-fit:${work.wide ? "contain" : "cover"};${work.wide ? "background:var(--paper-dark);" : ""}`} widths={[400, 800]} sizes="(max-width: 640px) 50vw, 33vw" />
+                  <Image src={work.importedImage} alt={`${work.title} \u2014 María Elvira Escallón`} loading="lazy" style="width:100%;height:auto;" widths={[400, 800]} sizes="(max-width: 640px) 50vw, 33vw" />
                 ) : (
                   <div class="placeholder-img" style="height:100%;aspect-ratio:4/3;background:var(--paper-dark);"></div>
                 )}
@@ -536,7 +535,6 @@ const timelineEntries = [
   }
   .work-card-static .work-card__thumb {
     width: 100%;
-    aspect-ratio: 4/3;
     background-color: var(--paper-dark);
     overflow: hidden;
   }

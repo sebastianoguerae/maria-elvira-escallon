@@ -567,9 +567,13 @@ blockquote cite {
 
 /* Grid of cards: image + title only */
 .works-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-  gap: 2px;
+  columns: 2;
+  column-gap: var(--s2);
+}
+
+.works-grid > * {
+  break-inside: avoid;
+  margin-bottom: var(--s2);
 }
 
 .work-card {
@@ -700,7 +704,7 @@ blockquote cite {
 
 @media (max-width: 768px) {
   .works-grid {
-    grid-template-columns: 1fr;
+    columns: 1;
   }
   .work-card__gallery--sculpture {
     grid-template-columns: 1fr;
