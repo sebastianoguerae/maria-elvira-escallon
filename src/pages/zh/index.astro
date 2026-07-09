@@ -11,6 +11,7 @@ const featuredWorks = [
     title: 'POLVO ERES',
     year: '2024',
     hasImage: true,
+    wide: true,
     importedImage: (await import('../../assets/images/obras/polvo-eres/polvo-eres-portada.webp')).default,
   },
   {
@@ -97,7 +98,7 @@ const featuredWorks = [
             <article class="work-card-static">
               <div class="work-card__thumb">
                 {work.hasImage && work.importedImage ? (
-                  <Image src={work.importedImage} alt={`${work.title} — María Elvira Escallón`} loading="lazy" style="width:100%;height:100%;object-fit:cover;" widths={[400, 800]} sizes="(max-width: 640px) 50vw, 33vw" />
+                  <Image src={work.importedImage} alt={`${work.title} — María Elvira Escallón`} loading="lazy" style={`width:100%;height:100%;object-fit:${work.wide ? "contain" : "cover"};${work.wide ? "background:var(--paper-dark);" : ""}`} widths={[400, 800]} sizes="(max-width: 640px) 50vw, 33vw" />
                 ) : (
                   <div class="placeholder-img" style="height:100%;aspect-ratio:4/3;background:var(--paper-dark);"></div>
                 )}

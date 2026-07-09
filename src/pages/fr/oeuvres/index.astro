@@ -26,7 +26,7 @@ const imgEnsayo = (await import('../../../assets/images/obras/ensayo-autorretrat
 const imgExtraccion = (await import('../../../assets/images/obras/extraccion/extraccion-01.webp')).default;
 const imgUnMensaje = (await import('../../../assets/images/obras/un-mensaje/un-mensaje-01.webp')).default;
 const works = [
-  { slug: 'polvo-eres', title: 'Polvo eres', year: '2024', image: imgPolvo },
+  { slug: 'polvo-eres', title: 'Polvo eres', year: '2024', image: imgPolvo , wide: true },
   { slug: 'un-mensaje', title: 'Un mensaje', year: '2024', image: imgUnMensaje },
   { slug: 'sabian-no-recordaban', title: 'Sabían, pero no recordaban', year: '2024', image: imgSabian },
   { slug: 'precipitacion-de-arenas', title: 'Precipitación de arenas', year: '2022–2024', image: imgPrecipitacion },
@@ -65,7 +65,7 @@ const works = [
           <a href={`/maria-elvira-escallon/en/works/${work.slug}/`} class="obra-card">
             <div class="obra-card__img">
               {work.image ? (
-                <Image src={work.image} alt={`${work.title} — María Elvira Escallón`} loading="lazy" widths={[400, 800]} sizes="(max-width: 640px) 50vw, 33vw" />
+                <Image src={work.image} alt={`${work.title} — María Elvira Escallón`} loading="lazy" widths={[400, 800]} sizes="(max-width: 640px) 50vw, 33vw" style={work.wide ? "object-fit:contain;background:var(--paper-dark);" : undefined} />
               ) : (
                 <span class="obra-card__placeholder"></span>
               )}
