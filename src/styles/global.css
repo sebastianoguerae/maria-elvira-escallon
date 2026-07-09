@@ -564,14 +564,18 @@ cite {
    ============================================ */
 
 /* Grid of cards: image + title only */
-.works-grid {
-  columns: 2;
-  column-gap: var(--s2);
+.works-grid > * {
+  display: block;
+  margin-bottom: var(--s4);
 }
 
-.works-grid > * {
-  break-inside: avoid;
-  margin-bottom: var(--s2);
+/* obras no-principales: 66% de ancho, alternando lado para ritmo editorial */
+.works-grid > *:not(:has(.work-card--major)) {
+  max-width: 66%;
+}
+
+.works-grid > *:nth-child(even):not(:has(.work-card--major)) {
+  margin-left: auto;
 }
 
 .work-card {
@@ -701,8 +705,8 @@ cite {
 }
 
 @media (max-width: 768px) {
-  .works-grid {
-    columns: 1;
+  .works-grid > *:not(:has(.work-card--major)) {
+    max-width: 100%;
   }
   .work-card__gallery--sculpture {
     grid-template-columns: 1fr;

@@ -7,6 +7,7 @@ import ArtistSchema from '../../components/seo/ArtistSchema.astro';
 const lang = 'es' as const;
 
 const heroImage = (await import('../../assets/images/obras/ensayo-autorretrato/ensayo-autorretrato-06.webp')).default;
+const expoActual = (await import('../../assets/images/obras/polvo-eres/polvo-eres-09.webp')).default;
 const nuevasFloras = (await import('../../assets/images/obras/nuevas-floras/nuevas-floras-01.webp')).default;
 const featuredComa = (await import('../../assets/images/obras/en-estado-de-coma/cultivos/cultivos-01.webp')).default;
 const desdeAdentro = (await import('../../assets/images/obras/desde-adentro/desde-adentro-01.webp')).default;
@@ -183,6 +184,9 @@ const timelineEntries = [
   <!-- Section 5: EXHIBITION HIGHLIGHT -->
   <section class="home-section home-section--alt fade-in">
     <div class="container">
+      <a href="/es/obra/polvo-eres/" class="home-exhibition__image fade-in">
+        <Image src={expoActual} alt="Polvo eres — instalación en el Edificio Coltabaco, I Bienal Internacional de Antioquia y Medellín" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+      </a>
       <div class="home-exhibition">
         <p class="label">Exposición actual</p>
         <h2 class="home-exhibition__title">Polvo eres</h2>
@@ -197,16 +201,6 @@ const timelineEntries = [
     </div>
   </section>
 
-  <!-- Section 6: SECOND QUOTE (Seguros Bolívar) -->
-  <section class="home-section home-section--quote fade-in">
-    <div class="container">
-      <QuoteBlock
-        annotation="Sobre la artista"
-        quote="Su obra articula procesos escultóricos, fotografía y trabajo in situ, revelando un presente amenazado por fracasos históricos, posicionándose entre la historia y la memoria al establecer umbrales para conectar tiempos y fragmentos de relatos a través de elementos de cultura material."
-        cite="Colección Seguros Bolívar de Arte Contemporáneo, 2018"
-      />
-    </div>
-  </section>
 
   <!-- Section 7: TIMELINE TEASER -->
   <section class="home-section home-timeline-strip fade-in">
@@ -509,25 +503,31 @@ const timelineEntries = [
   .home-teaser-link {
     display: inline-block;
     font-family: var(--mono);
-    font-size: 0.7rem;
+    font-size: 0.8rem;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: var(--ash);
-    text-decoration: none;
+    letter-spacing: 0.08em;
+    color: var(--ink);
+    border: 1px solid var(--ink);
+    padding: 0.75rem 1.5rem;
     margin-top: var(--s3);
-    transition: color 0.2s ease;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
   }
 
   .home-teaser-link:hover {
-    color: var(--ink);
+    background-color: var(--ink);
+    color: var(--paper);
   }
 
   .home-teaser-link--light {
-    color: var(--ash-light);
+    color: var(--paper);
+    border-color: var(--paper);
   }
 
   .home-teaser-link--light:hover {
-    color: var(--paper);
+    background-color: var(--paper);
+    color: var(--ink);
   }
 
   /* --- Work cards (reused) --- */
@@ -566,6 +566,22 @@ const timelineEntries = [
   }
 
   /* --- Exhibition highlight --- */
+  .home-exhibition__image {
+    display: block;
+    margin-bottom: var(--s3);
+  }
+
+  .home-exhibition__image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 0.3s;
+  }
+
+  .home-exhibition__image:hover img {
+    opacity: 0.9;
+  }
+
   .home-exhibition {
     max-width: var(--text-w);
   }
