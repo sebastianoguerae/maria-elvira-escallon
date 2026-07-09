@@ -564,16 +564,39 @@ cite {
    ============================================ */
 
 /* Grid of cards: image + title only */
-.works-grid > * {
-  display: block;
-  margin-bottom: var(--s4);
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--s3);
 }
 
-/* obras no-principales: centradas a 70% — jerarquía sin desorden */
-.works-grid > *:not(:has(.work-card--major)) {
-  max-width: 70%;
-  margin-left: auto;
-  margin-right: auto;
+.works-grid > * {
+  display: block;
+  min-width: 0;
+}
+
+.works-grid .work-card__thumb img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.work-card--full { grid-column: span 5; }
+.work-card--wide { grid-column: span 3; }
+.work-card--narrow { grid-column: span 2; }
+
+/* pares asimétricos con altura pareja (recorte suave solo en teasers) */
+.work-card--wide .work-card__thumb,
+.work-card--narrow .work-card__thumb {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.work-card--wide .work-card__thumb img,
+.work-card--narrow .work-card__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .work-card {
@@ -703,8 +726,17 @@ cite {
 }
 
 @media (max-width: 768px) {
-  .works-grid > *:not(:has(.work-card--major)) {
-    max-width: 100%;
+  .works-grid > * {
+    grid-column: span 5;
+  }
+  .work-card--wide .work-card__thumb,
+  .work-card--narrow .work-card__thumb {
+    aspect-ratio: auto;
+  }
+  .work-card--wide .work-card__thumb img,
+  .work-card--narrow .work-card__thumb img {
+    height: auto;
+    object-fit: unset;
   }
   .work-card__gallery--sculpture {
     grid-template-columns: 1fr;
