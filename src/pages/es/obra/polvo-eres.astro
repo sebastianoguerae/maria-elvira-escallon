@@ -6,6 +6,7 @@ import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
 const lang = 'es' as const;
 const title = 'Polvo eres';
 
+const imgPortada = (await import('../../../assets/images/obras/polvo-eres/polvo-eres-portada.webp')).default;
 const img01 = (await import('../../../assets/images/obras/polvo-eres/polvo-eres-01.webp')).default;
 const img02 = (await import('../../../assets/images/obras/polvo-eres/polvo-eres-02.webp')).default;
 const img03 = (await import('../../../assets/images/obras/polvo-eres/polvo-eres-03.webp')).default;
@@ -22,7 +23,7 @@ const img10 = (await import('../../../assets/images/obras/polvo-eres/polvo-eres-
   lang={lang}
   title="Polvo eres — Obra"
   description="Polvo eres (2024). Talla sobre pared, muro de ladrillo, residuos de la talla, yeso, pintura. María Elvira Escallón."
-  ogImage={img01.src}
+  ogImage={imgPortada.src}
 >
 
   
@@ -46,7 +47,8 @@ const img10 = (await import('../../../assets/images/obras/polvo-eres/polvo-eres-
 
       <!-- Galeria principal -->
       <div class="work-page__gallery">
-        <Image src={img01} alt="Polvo eres — Vista general de la talla sobre pared" loading="eager" fetchpriority="high" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={imgPortada} alt="Polvo eres — Vista frontal de la talla sobre el muro, MAMU" loading="eager" fetchpriority="high" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={img01} alt="Polvo eres — Vista general de la talla sobre pared" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
         <Image src={img02} alt="Polvo eres — Detalle de inscripción tallada" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
         <Image src={img03} alt="Polvo eres — Residuos de la talla sobre el suelo" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
         <Image src={img04} alt="Polvo eres — Textura del muro de ladrillo expuesto" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />

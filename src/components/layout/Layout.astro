@@ -19,7 +19,7 @@ const siteTitle = t(lang, 'site.title');
 const pageTitle = title ? `${title} — ${siteTitle}` : siteTitle;
 const pageDescription = description ?? t(lang, 'site.description');
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site).href;
-const defaultOgImage = (await import('../../assets/images/obras/polvo-eres/polvo-eres-01.webp')).default;
+const defaultOgImage = (await import('../../assets/images/obras/polvo-eres/polvo-eres-portada.webp')).default;
 const ogImageUrl = new URL(ogImage ?? defaultOgImage.src, Astro.site).href;
 const ogLocales: Record<Lang, string> = { es: 'es_CO', en: 'en_US', fr: 'fr_FR', zh: 'zh_CN' };
 // Only languages where this same content actually exists (empty if no real alternates)
