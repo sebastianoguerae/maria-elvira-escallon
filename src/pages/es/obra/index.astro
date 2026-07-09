@@ -27,27 +27,27 @@ const imgExtraccion = (await import('../../../assets/images/obras/extraccion/ext
 const imgUnMensaje = (await import('../../../assets/images/obras/un-mensaje/un-mensaje-01.webp')).default;
 
 const works = [
-  { slug: 'sabian-no-recordaban', title: 'Sabían, pero no recordaban', year: '2024', image: imgSabian },
-  { slug: 'un-mensaje', title: 'Un mensaje', year: '2024', image: imgUnMensaje },
-  { slug: 'dispositivos-para-ver-pasar-el-tiempo', title: 'Dispositivos para ver pasar el tiempo', year: '2020', image: imgDispositivos },
-  { slug: 'extraccion', title: 'Extracción', year: '2018', image: imgExtraccion },
-  { slug: 'la-travesia', title: 'La travesía', year: '2017–2024', image: imgTravesia },
-  { slug: 'en-el-fertil-suelo', title: 'En el fértil suelo', year: '2017–2018', image: imgFertilSuelo },
-  { slug: 'aerolito', title: 'Pequeño Museo del Aerolito', year: '2014–2015', image: imgAerolito },
-  { slug: 'precipitacion-de-arenas', title: 'Precipitación de arenas', year: '2022–2024', image: imgPrecipitacion },
-  { slug: 'polvo-eres', title: 'Polvo eres', year: '2024', image: imgPolvo  },
-  { slug: 'extracciones-hospital', title: 'Extracciones en el Hospital', year: '2012', image: imgExtracciones },
-  { slug: 'recelaron-del-cielo', title: 'Recelaron del cielo', year: '2008', image: imgRecelaron },
-  { slug: 'en-estado-de-coma', title: 'En estado de coma', year: '2005–2007', image: imgComa },
-  { slug: 'desde-adentro', title: 'Desde Adentro', year: '2003', image: imgDesdeAdentro },
-  { slug: 'ensayo-autorretrato', title: 'Ensayo autorretrato', year: '2022', image: imgEnsayo },
-  { slug: 'encuentros-con-seres-notables', title: 'Encuentros', year: '2022', image: imgEncuentros },
-  { slug: 'paisaje-domestico', title: 'Paisaje doméstico', year: '2005', image: imgPaisaje },
-  { slug: 'nuevas-floras', title: 'Nuevas Floras', year: '2003', image: imgNuevasFloras },
-  { slug: 'divino-fragmento', title: 'Divino Fragmento', year: '2003', image: imgDivino },
-  { slug: 'el-reino-de-este-mundo', title: 'El reino de este mundo', year: '2000', image: imgElReino },
+  { slug: 'in-vitro', title: 'In Vitro', year: '1997', image: imgInVitro, major: true },
   { slug: 'in-memoriam', title: 'In Memoriam', year: '2001', image: imgInMemoriam },
-  { slug: 'in-vitro', title: 'In Vitro', year: '1997', image: imgInVitro },
+  { slug: 'el-reino-de-este-mundo', title: 'El reino de este mundo', year: '2000', image: imgElReino },
+  { slug: 'divino-fragmento', title: 'Divino Fragmento', year: '2003', image: imgDivino },
+  { slug: 'nuevas-floras', title: 'Nuevas Floras', year: '2003', image: imgNuevasFloras, major: true },
+  { slug: 'paisaje-domestico', title: 'Paisaje doméstico', year: '2005', image: imgPaisaje },
+  { slug: 'encuentros-con-seres-notables', title: 'Encuentros', year: '2022', image: imgEncuentros },
+  { slug: 'ensayo-autorretrato', title: 'Ensayo autorretrato', year: '2022', image: imgEnsayo },
+  { slug: 'desde-adentro', title: 'Desde Adentro', year: '2003', image: imgDesdeAdentro, major: true },
+  { slug: 'en-estado-de-coma', title: 'En estado de coma', year: '2005–2007', image: imgComa, major: true },
+  { slug: 'recelaron-del-cielo', title: 'Recelaron del cielo', year: '2008', image: imgRecelaron },
+  { slug: 'extracciones-hospital', title: 'Extracciones en el Hospital', year: '2012', image: imgExtracciones },
+  { slug: 'polvo-eres', title: 'Polvo eres', year: '2024', image: imgPolvo , major: true },
+  { slug: 'precipitacion-de-arenas', title: 'Precipitación de arenas', year: '2022–2024', image: imgPrecipitacion },
+  { slug: 'aerolito', title: 'Pequeño Museo del Aerolito', year: '2014–2015', image: imgAerolito },
+  { slug: 'en-el-fertil-suelo', title: 'En el fértil suelo', year: '2017–2018', image: imgFertilSuelo },
+  { slug: 'la-travesia', title: 'La travesía', year: '2017–2024', image: imgTravesia },
+  { slug: 'extraccion', title: 'Extracción', year: '2018', image: imgExtraccion },
+  { slug: 'dispositivos-para-ver-pasar-el-tiempo', title: 'Dispositivos para ver pasar el tiempo', year: '2020', image: imgDispositivos },
+  { slug: 'un-mensaje', title: 'Un mensaje', year: '2024', image: imgUnMensaje },
+  { slug: 'sabian-no-recordaban', title: 'Sabían, pero no recordaban', year: '2024', image: imgSabian },
 ];
 ---
 
@@ -63,7 +63,7 @@ const works = [
 
       <div class="obra-grid">
         {works.map((work) => (
-          <a href={`/maria-elvira-escallon/es/obra/${work.slug}/`} class="obra-card">
+          <a href={`/maria-elvira-escallon/es/obra/${work.slug}/`} class={`obra-card ${work.major ? "obra-card--major" : ""}`}>
             <div class="obra-card__img">
               {work.image ? (
                 <Image src={work.image} alt={`${work.title} — María Elvira Escallón`} loading="lazy" widths={[400, 800]} sizes="(max-width: 640px) 50vw, 33vw" />
@@ -209,5 +209,14 @@ const works = [
     .obra-card__title {
       font-size: 0.58rem;
     }
+  }
+  .obra-card--major {
+    column-span: all;
+    margin-bottom: var(--s3);
+  }
+
+  .obra-card--major .obra-card__title {
+    font-size: 0.8rem;
+    font-weight: 700;
   }
 </style>

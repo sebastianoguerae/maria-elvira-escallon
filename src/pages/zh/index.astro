@@ -7,39 +7,12 @@ const lang = 'zh' as const;
 
 const featuredWorks = [
   {
-    slug: 'dispositivos-para-ver-pasar-el-tiempo',
-    title: 'DISPOSITIVOS PARA VER PASAR EL TIEMPO',
-    year: '2020',
+    slug: 'nuevas-floras',
+    title: 'NUEVAS FLORAS',
+    year: '2003',
     hasImage: true,
-    importedImage: (await import('../../assets/images/obras/dispositivos/dispositivos-01.webp')).default,
-  },
-  {
-    slug: 'aerolito',
-    title: 'PEQUEÑO MUSEO DEL AEROLITO',
-    year: '2014–2015',
-    hasImage: true,
-    importedImage: (await import('../../assets/images/obras/aerolito/aerolito-01.webp')).default,
-  },
-  {
-    slug: 'precipitacion-de-arenas',
-    title: 'PRECIPITACIÓN DE ARENAS',
-    year: '2022–2024',
-    hasImage: true,
-    importedImage: (await import('../../assets/images/obras/precipitacion/precipitacion-01.webp')).default,
-  },
-  {
-    slug: 'polvo-eres',
-    title: 'POLVO ERES',
-    year: '2024',
-    hasImage: true,
-    importedImage: (await import('../../assets/images/obras/polvo-eres/polvo-eres-portada.webp')).default,
-  },
-  {
-    slug: 'en-estado-de-coma',
-    title: 'EN ESTADO DE COMA',
-    year: '2005–2007',
-    hasImage: true,
-    importedImage: (await import('../../assets/images/obras/en-estado-de-coma/cultivos/cultivos-01.webp')).default,
+    major: true,
+    importedImage: (await import('../../assets/images/obras/nuevas-floras/nuevas-floras-13.webp')).default,
   },
   {
     slug: 'encuentros-con-seres-notables',
@@ -49,11 +22,41 @@ const featuredWorks = [
     importedImage: (await import('../../assets/images/obras/encuentros/encuentros-con-seres-notables/encuentros-con-seres-notables-03.webp')).default,
   },
   {
-    slug: 'nuevas-floras',
-    title: 'NUEVAS FLORAS',
-    year: '2003',
+    slug: 'en-estado-de-coma',
+    title: 'EN ESTADO DE COMA',
+    year: '2005–2007',
     hasImage: true,
-    importedImage: (await import('../../assets/images/obras/nuevas-floras/nuevas-floras-13.webp')).default,
+    major: true,
+    importedImage: (await import('../../assets/images/obras/en-estado-de-coma/cultivos/cultivos-01.webp')).default,
+  },
+  {
+    slug: 'polvo-eres',
+    title: 'POLVO ERES',
+    year: '2024',
+    hasImage: true,
+    major: true,
+    importedImage: (await import('../../assets/images/obras/polvo-eres/polvo-eres-portada.webp')).default,
+  },
+  {
+    slug: 'precipitacion-de-arenas',
+    title: 'PRECIPITACIÓN DE ARENAS',
+    year: '2022–2024',
+    hasImage: true,
+    importedImage: (await import('../../assets/images/obras/precipitacion/precipitacion-01.webp')).default,
+  },
+  {
+    slug: 'aerolito',
+    title: 'PEQUEÑO MUSEO DEL AEROLITO',
+    year: '2014–2015',
+    hasImage: true,
+    importedImage: (await import('../../assets/images/obras/aerolito/aerolito-01.webp')).default,
+  },
+  {
+    slug: 'dispositivos-para-ver-pasar-el-tiempo',
+    title: 'DISPOSITIVOS PARA VER PASAR EL TIEMPO',
+    year: '2020',
+    hasImage: true,
+    importedImage: (await import('../../assets/images/obras/dispositivos/dispositivos-01.webp')).default,
   },
 ];
 ---
@@ -94,7 +97,7 @@ const featuredWorks = [
       <div class="works-grid">
         {featuredWorks.map((work) => (
           <a href={`/maria-elvira-escallon/en/works/${work.slug}/`} class="work-card-link" style="text-decoration:none; color:inherit;">
-            <article class="work-card-static">
+            <article class={`work-card-static ${work.major ? "work-card--major" : ""}`}>
               <div class="work-card__thumb">
                 {work.hasImage && work.importedImage ? (
                   <Image src={work.importedImage} alt={`${work.title} — María Elvira Escallón`} loading="lazy" style="width:100%;height:auto;" widths={[400, 800]} sizes="(max-width: 640px) 50vw, 33vw" />
@@ -158,4 +161,5 @@ const featuredWorks = [
     font-size: 0.7rem;
     color: var(--ash-light);
   }
+  .work-card--major { column-span: all; }
 </style>
