@@ -73,14 +73,14 @@ const textos = [
             {texto.slug ? (
               <a href={`/maria-elvira-escallon/es/textos/${texto.slug}/`} class="texto-card__link">
                 <span class="texto-card__author">{texto.author}</span>
-                <h3 class="texto-card__title">{texto.title}</h3>
+                <h3 class="texto-card__title">“{texto.title}”</h3>
                 <span class="texto-card__source">{texto.source}, {texto.year}</span>
                 <p class="texto-card__excerpt">{texto.excerpt}</p>
               </a>
             ) : (
               <div class="texto-card__inner">
                 <span class="texto-card__author">{texto.author}</span>
-                <h3 class="texto-card__title">{texto.title}</h3>
+                <h3 class="texto-card__title">“{texto.title}”</h3>
                 <span class="texto-card__source">{texto.source}, {texto.year}</span>
                 <p class="texto-card__excerpt">{texto.excerpt}</p>
                 <span class="texto-card__soon">Próximamente</span>
@@ -92,7 +92,7 @@ const textos = [
 
       <!-- Footnote -->
       <div class="textos-footnote">
-        <p>Para una bibliografía completa, consultar el catálogo de la exposición <em>Encuentros en la fábrica de polvo</em> (MAMU, 2024) y la monografía de la <em>Colección Artistas Colombianos</em> (MinCultura, 2014).</p>
+        <p>Para una bibliografía completa, consultar el catálogo de la exposición “Encuentros en la fábrica de polvo” (MAMU, 2024) y la monografía de la “Colección Artistas Colombianos” (MinCultura, 2014).</p>
       </div>
 
     </div>
@@ -157,7 +157,6 @@ const textos = [
   .texto-card__title {
     font-family: var(--serif);
     font-weight: 400;
-    font-style: italic;
     font-size: clamp(1.2rem, 2.5vw, 1.6rem);
     line-height: 1.4;
     text-transform: none;
@@ -212,10 +211,6 @@ const textos = [
     letter-spacing: 0.04em;
     line-height: 1.8;
     max-width: var(--text-w);
-  }
-
-  .textos-footnote em {
-    font-style: italic;
   }
 
   /* ── Responsive ── */

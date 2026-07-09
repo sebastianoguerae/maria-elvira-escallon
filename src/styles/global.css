@@ -130,14 +130,10 @@ h3 {
   color: var(--ink-soft);
 }
 
-.curatorial em {
-  font-style: italic;
-}
 
 /* Blockquote — Roca's voice */
 blockquote {
   font-family: var(--serif);
-  font-style: italic;
   font-size: clamp(1.2rem, 2.2vw, 1.6rem);
   line-height: 1.7;
   color: var(--ink-soft);
