@@ -1,6 +1,8 @@
 ---
 import SchemaOrg from './SchemaOrg.astro';
 
+const retrato = (await import('../../assets/images/retrato/retrato-fernando-gomez.jpg')).default;
+
 const schema = {
   "@context": "https://schema.org",
   "@type": "Person",
@@ -17,7 +19,7 @@ const schema = {
   ],
   "workLocation": { "@type": "Place", "name": "Bogotá, Colombia" },
   "url": "https://mariaelviraescallon.org",
-  "image": "https://mariaelviraescallon.org/images/retrato.jpg",
+  "image": new URL(retrato.src, "https://mariaelviraescallon.org").href,
   "sameAs": [
     "https://www.artsy.net/artist/maria-elvira-escallon",
     "https://espaciocontinuo.co/artists/37-maria-elvira-escallon/",

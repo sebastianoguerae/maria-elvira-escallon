@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sebastianoguerae.github.io/maria-elvira-escallon/sitemap-index.xml
+Sitemap: https://mariaelviraescallon.org/sitemap-index.xml
