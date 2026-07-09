@@ -2,6 +2,7 @@
 import Layout from '../../components/layout/Layout.astro';
 
 const lang = 'es' as const;
+const retrato = (await import('../../assets/images/retrato/retrato-fernando-gomez.jpg')).default;
 const title = 'Prensa';
 
 const bioCorta = `María Elvira Escallón (Londres, 1954) es una artista visual colombiana. Su obra articula procesos escultóricos, fotografía y trabajo in situ, revelando un presente amenazado por fracasos históricos. Sus intervenciones se realizan en hospitales abandonados, estaciones de tren en ruinas, árboles nativos y edificios marcados por la violencia. Ha recibido el Premio Luis Caballero (2003), el Premio de Patrimonio (2006) y múltiples Becas de Creación del Ministerio de Cultura. Su obra se encuentra en colecciones como Art Gallery of NSW (Sydney), Banco de la República y ESCALA (Universidad de Essex). Está representada por Galería Espacio Continuo, Bogotá.`;
@@ -15,7 +16,7 @@ En 2024, el Museo de Arte Miguel Urrutia (MAMU), Banco de la República, Bogotá
 Ha recibido el Premio Luis Caballero (2003), el Premio de Patrimonio (2006) y múltiples Becas de Creación del Ministerio de Cultura. Durante más de una década fue docente en la Universidad Javeriana. Su obra se encuentra en colecciones como Art Gallery of NSW (Sydney), Banco de la República, Colección Seguros Bolívar y ESCALA (Universidad de Essex). Está representada por Galería Espacio Continuo, Bogotá.`;
 
 const prensaArticulos = [
-  { titulo: 'Polvo eres — I BIAM Medellín', medio: 'Bienal Internacional de Antioquia y Medellín', fecha: '2025', url: '#' },
+  { titulo: 'Bi_AM 2025 — International Art Biennial of Antioquia and Medellín', medio: 'Universes in Universe', fecha: '2025', url: 'https://universes.art/en/bi-am/2025' },
   { titulo: 'Encuentros en la fábrica de polvo', medio: 'Artishock Revista', fecha: 'Febrero 2025', url: 'https://artishockrevista.com/2025/02/05/maria-elvira-escallon-encuentros-en-la-fabrica-de-polvo/' },
   { titulo: 'La antología de la mente de María Elvira Escallón', medio: 'El Espectador', fecha: '2024', url: 'https://www.elespectador.com/el-magazin-cultural/encuentros-en-la-fabrica-de-polvo-la-antologia-de-la-mente-de-maria-elvira-escallon-en-bogota-noticias-hoy/' },
   { titulo: 'El esqueleto de Dios de María Elvira Escallón', medio: 'El Tiempo', fecha: '2022', url: 'https://www.eltiempo.com/cultura/arte-y-teatro/el-esqueleto-de-dios-de-maria-elvira-escallon-682757' },
@@ -23,7 +24,7 @@ const prensaArticulos = [
   { titulo: 'El cuerpo y el árbol', medio: 'Cambio Colombia', fecha: '2022', url: 'https://cambiocolombia.com/articulo/placer/el-cuerpo-y-el-arbol-una-nueva-exploracion-de-maria-elvira-escallon' },
   { titulo: 'Sobre raíces y flores', medio: 'Las2Orillas', fecha: '2022', url: 'https://www.las2orillas.co/sobre-raices-y-flores/' },
   { titulo: 'María Elvira Escallón: Moving Through Boundaries', medio: 'ArtNexus 58', fecha: '2005', url: 'https://www.artnexus.com/en/magazines/article-magazine-artnexus/5d63263090cc21cf7c09f4ea/58/maria-elvira-escallon' },
-  { titulo: 'Urban Impulses', medio: 'Artlyst', fecha: '2019', url: 'https://artlyst.com/reviews/urban-impulses-latin-american-photography-photographers-gallery-london-edward-lucie-smith/' },
+  { titulo: 'Urban Impulses', medio: "The Photographers' Gallery", fecha: '2019', url: 'https://thephotographersgallery.org.uk/whats-on/exhibition/urban-impulses-latin-american-photography-1959-2016' },
 ];
 ---
 
@@ -88,12 +89,12 @@ const prensaArticulos = [
           <h3>Recursos descargables</h3>
           <ul class="descargas__list">
             <li>
-              <span class="descargas__label">Retrato de la artista</span>
-              <a href="#" class="descargas__link">Descargar JPG →</a>
+              <span class="descargas__label">Retrato de la artista (Fotografía: Fernando Gómez)</span>
+              <a href={retrato.src} download="Maria-Elvira-Escallon-retrato.jpg" class="descargas__link">Descargar JPG →</a>
             </li>
             <li>
               <span class="descargas__label">CV completo</span>
-              <a href="#" class="descargas__link">Descargar PDF →</a>
+              <span class="descargas__note">Solicitar a <a href="mailto:prensa@mariaelviraescallon.com">prensa@mariaelviraescallon.com</a></span>
             </li>
             <li>
               <span class="descargas__label">Imágenes de obra en alta resolución</span>

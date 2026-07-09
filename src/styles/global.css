@@ -569,13 +569,11 @@ cite {
   margin-bottom: var(--s4);
 }
 
-/* obras no-principales: 66% de ancho, alternando lado para ritmo editorial */
+/* obras no-principales: centradas a 70% — jerarquía sin desorden */
 .works-grid > *:not(:has(.work-card--major)) {
-  max-width: 66%;
-}
-
-.works-grid > *:nth-child(even):not(:has(.work-card--major)) {
+  max-width: 70%;
   margin-left: auto;
+  margin-right: auto;
 }
 
 .work-card {

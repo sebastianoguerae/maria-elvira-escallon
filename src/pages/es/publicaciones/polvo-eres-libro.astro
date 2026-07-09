@@ -5,7 +5,7 @@ import Layout from '../../../components/layout/Layout.astro';
 const lang = 'es' as const;
 const title = 'Polvo Eres: El correr del tiempo en María Elvira Escallón';
 
-const coverPolvo = (await import('../../../assets/images/libros/polvo-eres.jpg')).default;
+const coverPolvo = (await import('../../../assets/images/libros/polvo-eres-portada.jpg')).default;
 ---
 
 <Layout
@@ -29,27 +29,6 @@ const coverPolvo = (await import('../../../assets/images/libros/polvo-eres.jpg')
           <div class="pub-page__cover-area">
             <Image src={coverPolvo} alt="Portada — Polvo Eres: El correr del tiempo en María Elvira Escallón" loading="eager" fetchpriority="high" style="width:100%;" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
           </div>
-
-          <p class="curatorial">
-            Monografía que traza el arco de la práctica de Escallón a través del lente del tiempo
-            y la materialidad. Julia Buenaventura examina cómo cada obra funciona como un dispositivo
-            para hacer visible el paso del tiempo — desde las intervenciones en hospitales abandonados
-            hasta las tallas sobre árboles vivos que la corteza lentamente reclama.
-          </p>
-
-          <p class="curatorial" style="margin-top: var(--s2);">
-            El título conecta la frase bíblica — “polvo eres y en polvo te convertirás” —
-            con la preocupación fundamental de la artista por el deterioro, la mortalidad y la
-            transformación de la materia. Buenaventura argumenta que la obra de Escallón no documenta
-            la ruina sino que la activa, convirtiendo cada pieza en un reloj que marca un tiempo
-            distinto al cronológico.
-          </p>
-
-          <p class="curatorial" style="margin-top: var(--s2);">
-            Publicado dentro de la Colección Artistas Colombianos del Ministerio de Cultura, el
-            volumen ofrece un recorrido exhaustivo por la trayectoria de la artista, con reproducciones
-            de obras, textos analíticos y documentación de procesos.
-          </p>
 
           <h3 style="margin-top: var(--s4);">DISPONIBILIDAD</h3>
           <p style="margin-top: var(--s2);">
