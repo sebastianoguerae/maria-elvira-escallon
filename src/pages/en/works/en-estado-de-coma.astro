@@ -19,10 +19,10 @@ const tejido07 = (await import('../../../assets/images/obras/en-estado-de-coma/s
 const extracciones08 = (await import('../../../assets/images/obras/en-estado-de-coma/serie-extracciones/serie-extracciones-08.webp')).default;
 const extracciones09 = (await import('../../../assets/images/obras/en-estado-de-coma/serie-extracciones/serie-extracciones-09.webp')).default;
 // Recorridos nocturnos
-const recorridos10 = (await import('../../../assets/images/obras/en-estado-de-coma/recorridos-nocturnos/recorridos-nocturnos-10.webp')).default;
-const recorridos11 = (await import('../../../assets/images/obras/en-estado-de-coma/recorridos-nocturnos/recorridos-nocturnos-11.webp')).default;
-const recorridos12 = (await import('../../../assets/images/obras/en-estado-de-coma/recorridos-nocturnos/recorridos-nocturnos-12.webp')).default;
-const recorridos13 = (await import('../../../assets/images/obras/en-estado-de-coma/recorridos-nocturnos/recorridos-nocturnos-13.webp')).default;
+const recorridoG1 = (await import('../../../assets/images/obras/en-estado-de-coma/recorridos-nocturnos/recorrido-grande-01.webp')).default;
+const recorridoG2 = (await import('../../../assets/images/obras/en-estado-de-coma/recorridos-nocturnos/recorrido-grande-02.webp')).default;
+const recorridoG3 = (await import('../../../assets/images/obras/en-estado-de-coma/recorridos-nocturnos/recorrido-grande-03.webp')).default;
+const recorridoG4 = (await import('../../../assets/images/obras/en-estado-de-coma/recorridos-nocturnos/recorrido-grande-04.webp')).default;
 // Postales
 const postales14 = (await import('../../../assets/images/obras/en-estado-de-coma/postales/postales-14.webp')).default;
 const postales15 = (await import('../../../assets/images/obras/en-estado-de-coma/postales/postales-15.webp')).default;
@@ -56,51 +56,54 @@ const postales17 = (await import('../../../assets/images/obras/en-estado-de-coma
         <p class="work-page__meta">2005-2007 &nbsp;/&nbsp; 5 photographic series, video, sculptural installation &nbsp;/&nbsp; Hospital San Juan de Dios, Bogota</p>
       </header>
 
-      <!-- Gallery -->
+
+      <!-- Main text (before the images, per the artist's instruction) -->
+      <div class="work-page__text" style="margin-bottom: var(--s4); max-width: 72ch;">
+        <p class="curatorial">
+          A set of photographic, sculptural, and video series about the Hospital San Juan de Dios in Bogota, which was, at the scientific and social level, one of the most important public hospitals in the country. Traditionally, it was the hospital that provided care to the lowest-income sectors of the city. The San Juan de Dios was closed in 2001 as a consequence of a combination of mismanagement and health service privatization policies.
+        </p>
+        <p class="curatorial" style="margin-top: var(--s2);">
+          "En estado de coma" began as a documentary project seeking to give visibility to the state of a deserted and fully equipped hospital. Little by little, it shifted toward other practices, and a series of interventions on the hospital furniture were carried out. The project is centered on the space of the bed, the only "private" space accessible to a patient in a public hospital.
+        </p>
+        <p class="curatorial" style="margin-top: var(--s2);">
+          "En estado de coma" seeks to approach some of the processes that converge in that space: the immobility in which an enormous and optimal physical plant and equipment are immersed, permanently threatened by deterioration (Postcard Project and video); the absent body of patients who have ceased to inhabit the Hospital during these years but whose traces we still find ("Soft Tissue" Series and "Nocturnal Walks" Series); the progressive process of usurpation of the Hospital's assets by government authorities ("Extractions" Series); and the resistance of a small group of its former employees who, with precarious means, insist on counteracting the institutional abandonment ("Cultures" Series and video).
+        </p>
+      </div>
+      <!-- Gallery: Cultivos -->
       <div class="work-page__gallery">
-        <h3 style="margin-top: var(--s3);">CULTURES</h3>
+        <h3 style="margin-top: var(--s3);">SERIE “CULTIVOS”</h3>
         <Image src={cultivos01} alt="En estado de coma — Cultures, vegetation invading the hospital" loading="eager" fetchpriority="high" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
         <Image src={cultivos02} alt="En estado de coma — Cultures, nature reclaiming spaces" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
         <Image src={cultivos03} alt="En estado de coma — Cultures, organic growth in abandonment" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
 
-        <h3 style="margin-top: var(--s3);">SOFT TISSUE SERIES</h3>
+        <h3 style="margin-top: var(--s3);">SERIE “TEJIDO BLANDO”</h3>
         <Image src={tejido04} alt="En estado de coma — Soft Tissue, hospital sheets" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
         <Image src={tejido05} alt="En estado de coma — Soft Tissue, curtains and textiles" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
         <Image src={tejido06} alt="En estado de coma — Soft Tissue, vestiges of medical activity" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
         <Image src={tejido07} alt="En estado de coma — Soft Tissue, fabrics on empty beds" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
 
-        <h3 style="margin-top: var(--s3);">EXTRACTIONS SERIES</h3>
+        <h3 style="margin-top: var(--s3);">SERIE “EXTRACCIONES”</h3>
         <Image src={extracciones08} alt="En estado de coma — Extractions, isolated architectural element" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
         <Image src={extracciones09} alt="En estado de coma — Extractions, specimen of the sick body" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
 
-        <h3 style="margin-top: var(--s3);">NOCTURNAL WALKS</h3>
-        <Image src={recorridos10} alt="En estado de coma — Nocturnal Walks, hospital corridor" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
-        <Image src={recorridos11} alt="En estado de coma — Nocturnal Walks, room in shadow" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
-        <Image src={recorridos12} alt="En estado de coma — Nocturnal Walks, palpable absence" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
-        <Image src={recorridos13} alt="En estado de coma — Nocturnal Walks, nocturnal record" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <h3 style="margin-top: var(--s3);">SERIE “RECORRIDOS NOCTURNOS”</h3>
+        <Image src={recorridoG1} alt="En estado de coma — Nocturnal Walks, room with a bed" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={recorridoG2} alt="En estado de coma — Nocturnal Walks, ward in half-light" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={recorridoG3} alt="En estado de coma — Nocturnal Walks, large window at dusk" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={recorridoG4} alt="En estado de coma — Nocturnal Walks, medical records archive" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
 
-        <h3 style="margin-top: var(--s3);">POSTCARDS</h3>
-        <Image src={postales14} alt="En estado de coma — Postcards, inverted tourist view of the hospital" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
-        <Image src={postales15} alt="En estado de coma — Postcards, deteriorating facade" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
-        <Image src={postales16} alt="En estado de coma — Postcards, evidence of abandonment" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
-        <Image src={postales17} alt="En estado de coma — Postcards, postal record of the hospital" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <h3 style="margin-top: var(--s3);">SERIE “POSTALES”</h3>
+        <div class="postales-grid">
+          <Image src={postales14} alt="En estado de coma — Postcard 1" loading="lazy" widths={[300, 600]} sizes="(max-width: 640px) 50vw, 25vw" />
+          <Image src={postales15} alt="En estado de coma — Postcard 2" loading="lazy" widths={[300, 600]} sizes="(max-width: 640px) 50vw, 25vw" />
+          <Image src={postales16} alt="En estado de coma — Postcard 3" loading="lazy" widths={[300, 600]} sizes="(max-width: 640px) 50vw, 25vw" />
+          <Image src={postales17} alt="En estado de coma — Postcard 4" loading="lazy" widths={[300, 600]} sizes="(max-width: 640px) 50vw, 25vw" />
+        </div>
       </div>
 
       <!-- Text + Technical sheet -->
       <div class="work-page__body">
         <div class="work-page__text">
-
-          <p class="curatorial">
-            A set of photographic, sculptural, and video series about the Hospital San Juan de Dios in Bogota, which was, at the scientific and social level, one of the most important public hospitals in the country. Traditionally, it was the hospital that provided care to the lowest-income sectors of the city. The San Juan de Dios was closed in 2001 as a consequence of a combination of mismanagement and health service privatization policies.
-          </p>
-
-          <p class="curatorial" style="margin-top: var(--s2);">
-            "En estado de coma" began as a documentary project seeking to give visibility to the state of a deserted and fully equipped hospital. Little by little, it shifted toward other practices, and a series of interventions on the hospital furniture were carried out. The project is centered on the space of the bed, the only "private" space accessible to a patient in a public hospital.
-          </p>
-
-          <p class="curatorial" style="margin-top: var(--s2);">
-            "En estado de coma" seeks to approach some of the processes that converge in that space: the immobility in which an enormous and optimal physical plant and equipment are immersed, permanently threatened by deterioration (Postcard Project and video); the absent body of patients who have ceased to inhabit the Hospital during these years but whose traces we still find ("Soft Tissue" Series and "Nocturnal Walks" Series); the progressive process of usurpation of the Hospital's assets by government authorities ("Extractions" Series); and the resistance of a small group of its former employees who, with precarious means, insist on counteracting the institutional abandonment ("Cultures" Series and video).
-          </p>
           <h3 style="margin-top: var(--s4);">TEXT ON THE BACK OF THE POSTCARDS</h3>
 
           <div class="ficha" style="margin-top: var(--s2); line-height: 2;">
@@ -121,12 +124,6 @@ const postales17 = (await import('../../../assets/images/obras/en-estado-de-coma
             sculptural installation.<br><br>
             Hospital San Juan de Dios, Bogota.<br>
             Variable dimensions.
-          </div>
-
-          <h4 style="margin-top: var(--s3);">AWARDS</h4>
-          <div class="ficha">
-            First Prize, Heritage Category — IDCT, 2006<br><br>
-            National Individual Creation Grant — MinCultura, 2005
           </div>
 
           <h4 style="margin-top: var(--s3);">PUBLICATION</h4>
@@ -161,3 +158,15 @@ const postales17 = (await import('../../../assets/images/obras/en-estado-de-coma
   </article>
 
 </Layout>
+
+<style>
+  .postales-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--s1);
+    align-items: start;
+  }
+  @media (max-width: 640px) {
+    .postales-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>

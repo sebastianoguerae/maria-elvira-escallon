@@ -1,7 +1,6 @@
 ---
 import { Image } from 'astro:assets';
 import Layout from '../../../components/layout/Layout.astro';
-import QuoteBlock from '../../../components/content/QuoteBlock.astro';
 import ArtworkSchema from '../../../components/seo/ArtworkSchema.astro';
 
 const lang = 'en' as const;
@@ -9,17 +8,18 @@ const title = 'Nuevas Floras';
 
 // Colombia (root)
 const col01 = (await import('../../../assets/images/obras/nuevas-floras/nuevas-floras-01.webp')).default;
-const col02 = (await import('../../../assets/images/obras/nuevas-floras/nuevas-floras-02.webp')).default;
 const col03 = (await import('../../../assets/images/obras/nuevas-floras/nuevas-floras-03.webp')).default;
-const col04 = (await import('../../../assets/images/obras/nuevas-floras/nuevas-floras-04.webp')).default;
 const col05 = (await import('../../../assets/images/obras/nuevas-floras/nuevas-floras-05.webp')).default;
-const col06 = (await import('../../../assets/images/obras/nuevas-floras/nuevas-floras-06.webp')).default;
-const col08 = (await import('../../../assets/images/obras/nuevas-floras/nuevas-floras-08.webp')).default;
 const col09 = (await import('../../../assets/images/obras/nuevas-floras/nuevas-floras-09.webp')).default;
-const col10 = (await import('../../../assets/images/obras/nuevas-floras/nuevas-floras-10.webp')).default;
 const col11 = (await import('../../../assets/images/obras/nuevas-floras/nuevas-floras-11.webp')).default;
 const col12 = (await import('../../../assets/images/obras/nuevas-floras/nuevas-floras-12.webp')).default;
 const col13 = (await import('../../../assets/images/obras/nuevas-floras/nuevas-floras-13.webp')).default;
+// Follow-up records (cropped from the composite pages)
+const seg01 = (await import('../../../assets/images/obras/nuevas-floras/seguimiento-01.webp')).default;
+const seg03 = (await import('../../../assets/images/obras/nuevas-floras/seguimiento-03.webp')).default;
+const seg05 = (await import('../../../assets/images/obras/nuevas-floras/seguimiento-05.webp')).default;
+const seg09 = (await import('../../../assets/images/obras/nuevas-floras/seguimiento-09.webp')).default;
+const seg13 = (await import('../../../assets/images/obras/nuevas-floras/seguimiento-13.webp')).default;
 // Bristol
 const bristol01 = (await import('../../../assets/images/obras/nuevas-floras/bristol/bristol-01.webp')).default;
 // Do Sul
@@ -29,11 +29,8 @@ const doSul03 = (await import('../../../assets/images/obras/nuevas-floras/do-sul
 const doSul04 = (await import('../../../assets/images/obras/nuevas-floras/do-sul/do-sul-04.webp')).default;
 const doSul05 = (await import('../../../assets/images/obras/nuevas-floras/do-sul/do-sul-05.webp')).default;
 const doSul06 = (await import('../../../assets/images/obras/nuevas-floras/do-sul/do-sul-06.webp')).default;
-const doSul07 = (await import('../../../assets/images/obras/nuevas-floras/do-sul/do-sul-07.webp')).default;
 // Versalles
 const versalles01 = (await import('../../../assets/images/obras/nuevas-floras/versalles/versalles-01.webp')).default;
-const versalles02 = (await import('../../../assets/images/obras/nuevas-floras/versalles/versalles-02.webp')).default;
-const versalles03 = (await import('../../../assets/images/obras/nuevas-floras/versalles/versalles-03.webp')).default;
 const versalles04 = (await import('../../../assets/images/obras/nuevas-floras/versalles/versalles-04.webp')).default;
 const versalles05 = (await import('../../../assets/images/obras/nuevas-floras/versalles/versalles-05.webp')).default;
 ---
@@ -65,79 +62,96 @@ const versalles05 = (await import('../../../assets/images/obras/nuevas-floras/ve
         <p class="work-page__meta">2003 &nbsp;/&nbsp; Sculptural intervention on living native trees &nbsp;/&nbsp; Variable dimensions</p>
       </header>
 
-      <!-- Gallery -->
+      <!-- Gallery + texts per section -->
       <div class="work-page__gallery">
         <h3 style="margin-top: var(--s3);">COLOMBIA</h3>
-        <Image src={col01} alt="Nuevas Floras Colombia — Native tree with baroque carving" loading="eager" fetchpriority="high" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
-        <Image src={col02} alt="Nuevas Floras Colombia — Sculptural intervention on trunk" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
-        <Image src={col03} alt="Nuevas Floras Colombia — Detail of carved Solomonic column" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
-        <Image src={col04} alt="Nuevas Floras Colombia — Ornamental prosthesis on living tree" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
-        <Image src={col05} alt="Nuevas Floras Colombia — Baroque volute on bark" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
-        <Image src={col06} alt="Nuevas Floras Colombia — Altarpiece element on branch" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
-        <Image src={col08} alt="Nuevas Floras Colombia — Tree absorbing the intervention" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
-        <Image src={col09} alt="Nuevas Floras Colombia — Chromogenic photographic record" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
-        <Image src={col10} alt="Nuevas Floras Colombia — Carving almost imperceptible due to growth" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
-        <Image src={col11} alt="Nuevas Floras Colombia — Convergence of nature and culture" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
-        <Image src={col12} alt="Nuevas Floras Colombia — Detail of arboreal intervention" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
-        <Image src={col13} alt="Nuevas Floras Colombia — Ensemble view of the series" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={col01} alt="Nuevas floras — intervention on a mano de oso, La Calera" loading="eager" fetchpriority="high" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={seg01} alt="Follow-up record, 2004–2020 — mano de oso" loading="lazy" widths={[400, 800]} sizes="(max-width: 768px) 60vw, 660px" class="img-medium" />
+        <Image src={col03} alt="Nuevas floras — intervention on a guayabo sabanero, La Calera" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={seg03} alt="Follow-up record, 2004–2020 — guayabo sabanero" loading="lazy" widths={[400, 800]} sizes="(max-width: 768px) 60vw, 660px" class="img-medium" />
+        <Image src={col05} alt="Nuevas floras — intervention on a tuno esmeraldo, La Calera" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={seg05} alt="Follow-up record, 2004–2020 — tuno esmeraldo" loading="lazy" widths={[400, 800]} sizes="(max-width: 768px) 60vw, 660px" class="img-medium" />
+        <Image src={col13} alt="Nuevas floras — intervention on an amarillo, La Calera" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={seg13} alt="Follow-up record, 2004–2020 — amarillo" loading="lazy" widths={[400, 800]} sizes="(max-width: 768px) 60vw, 660px" class="img-medium" />
+        <Image src={col09} alt="Nuevas floras — intervention on a raque, La Calera" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={seg09} alt="Follow-up record, 2004–2020 — raque" loading="lazy" widths={[400, 800]} sizes="(max-width: 768px) 60vw, 660px" class="img-medium" />
+        <Image src={col11} alt="Nuevas floras — the cube, carving on a stump" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={col12} alt="Nuevas floras — the cube, carving on the trunk" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
 
-        <h3 style="margin-top: var(--s3);">BRISTOL</h3>
-        <Image src={bristol01} alt="Nuevas Floras Bristol — Intervention on tree in Bristol" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <div class="work-page__text" style="margin: var(--s4) 0;">
+          <p class="curatorial">
+            Nuevas Floras is a series of interventions in the landscape, carried out on some trees of native forests in the mountains near Bogota, belonging to the Central Cordillera. Carved pieces made from their own wood have been applied to these trees, or parts of some of their branches or trunks have been carved.
+          </p>
+          <p class="curatorial" style="margin-top: var(--s2);">
+            A master carver participated in the project, carrying out the carving work on the 7 trees, following models provided by the artist that come from colonial and baroque furniture and architecture.
+          </p>
+          <p class="curatorial" style="margin-top: var(--s2);">
+            Nuevas Floras is composed of seven large-format color photographs (80 x 120 cm) taken immediately after the carving process was completed. The project aims to follow over time how each of the trees will process these interventions. Therefore, these photographs represent the first stage of a living process in continuous change.
+          </p>
+          <p class="curatorial" style="margin-top: var(--s2);">
+            From 2004 onward, Nuevas Floras became a nomadic project that responds to the specificities of the relationship between culture and nature particular to each place.
+          </p>
+        </div>
 
-        <h3 style="margin-top: var(--s3);">DO SUL</h3>
-        <Image src={doSul01} alt="Nuevas Floras do Sul — Intervened tree in Brazil" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
-        <Image src={doSul02} alt="Nuevas Floras do Sul — Detail of carving on trunk" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
-        <Image src={doSul03} alt="Nuevas Floras do Sul — Ornamental form on bark" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
-        <Image src={doSul04} alt="Nuevas Floras do Sul — Sculptural intervention" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
-        <Image src={doSul05} alt="Nuevas Floras do Sul — Record of tree growth" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
-        <Image src={doSul06} alt="Nuevas Floras do Sul — Detail of organic process" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
-        <Image src={doSul07} alt="Nuevas Floras do Sul — View of the complete series" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <h3 style="margin-top: var(--s3);">NUEVAS FLORAS BRISTOL</h3>
+        <Image src={bristol01} alt="Nuevas Floras Bristol — intervention on the branch of a sycamore, Ashton Court" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
 
-        <h3 style="margin-top: var(--s3);">VERSALLES</h3>
-        <Image src={versalles01} alt="Nuevas Floras Versalles — Intervened tree in Versailles" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
-        <Image src={versalles02} alt="Nuevas Floras Versalles — Ornamental carving on trunk" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
-        <Image src={versalles03} alt="Nuevas Floras Versalles — Detail of intervention" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
-        <Image src={versalles04} alt="Nuevas Floras Versalles — Baroque form in living tree" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
-        <Image src={versalles05} alt="Nuevas Floras Versalles — Ensemble view" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <div class="work-page__text" style="margin: var(--s4) 0;">
+          <p class="curatorial">
+            The Nuevas Floras project, in its nomadic phase, was first developed in the United Kingdom, with the help of an art restorer, R. Peploe. On that occasion, the branch of a Sycamore was intervened in Ashton Court Estate Park (Bristol). This park is a representative example of what is known as “the English natural landscape.” It was carried out in the context of a Visiting Arts artistic residency at Spike Island, Bristol, during 2004 and 2005.
+          </p>
+        </div>
+
+        <h3 style="margin-top: var(--s3);">NUEVAS FLORAS DO SUL</h3>
+        <Image src={doSul01} alt="Nuevas Floras do Sul — San Isidro, VIII Mercosul Biennial" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={doSul02} alt="Nuevas Floras do Sul — carving on a native tree" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={doSul03} alt="Nuevas Floras do Sul — diptych of the temple" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={doSul04} alt="Nuevas Floras do Sul — diptych and list of endemic species" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={doSul05} alt="Nuevas Floras do Sul — Navigations over Rio Grande, satellite photograph" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={doSul06} alt="Nuevas Floras do Sul — Navigations over Rio Grande, islands of native flora" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+
+        <div class="work-page__text" style="margin: var(--s4) 0;">
+          <p class="curatorial">
+            In 2011 the Nuevas Floras project was invited to the VIII Mercosul Biennial to carry out an intervention at one of the sites of the old Missions that the Jesuits created to evangelize the Guarani indigenous people, in southern Brazil. The work, carried out in the National Historic Park of São Miguel das Missões, responds to the direct experience of the landscape of the area and of the statuary pieces found in the Museum.
+          </p>
+          <p class="curatorial" style="margin-top: var(--s2);">
+            The landscape along the road to San Miguel is dominated by enormous monocultures of soy and millet. From time to time, small still-surviving islands of native flora come into view, resembling an oasis. Visiting them, I found gathered within a few square meters trees and plants of a wide variety of species that once populated those lands. I clearly felt agriculture to be the great shaper of the landscape.
+          </p>
+          <p class="curatorial" style="margin-top: var(--s2);">
+            These “islands” are preserved by a decree of the Brazilian government to protect the migrations of birds that would otherwise find no rest on their journey.
+          </p>
+          <p class="curatorial" style="margin-top: var(--s2);">
+            Fallen branches of some native trees and a tree that had already dried up were intervened with carvings alluding to the architecture of the temple and to the statuary of the Museum — in particular, to the figure of San Isidro Labrador, patron saint of agriculture. The original posture of the saint, who looks toward the sky in a gesture connoting strength and confidence, was modified and placed in relation to the current landscape of the area.
+          </p>
+          <p class="curatorial" style="margin-top: var(--s2);">
+            The series is complemented by a satellite exploration of the road from Porto Alegre to São Miguel das Missões, in search of islands of native flora that have survived the monocultures. The series “Camino de San Miguel” and “Navegaciones sobre Rio Grande” present these images.
+          </p>
+          <p class="ficha" style="margin-top: var(--s2); color: var(--ash);">
+            (*) Several trees of the intervened species were planted in the park.
+          </p>
+        </div>
+
+        <h3 style="margin-top: var(--s3);">NUEVAS FLORAS VERSALLES</h3>
+        <Image src={versalles01} alt="Nuevas Floras Versalles — exhibition in the Tuileries Garden, Paris" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={versalles04} alt="Nuevas Floras Versalles — detail of the carving on white chestnut" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+        <Image src={versalles05} alt="Nuevas Floras Versalles — Astronomical Clock of Louis XV, Palace of Versailles" loading="lazy" widths={[480, 900, 1400]} sizes="(max-width: 768px) 100vw, 1200px" />
+
+        <div class="work-page__text" style="margin: var(--s4) 0;">
+          <p class="curatorial">
+            Nuevas Floras Versalles was carried out in 2017 on a botanical estate called the Arboretum de Chevreloup, which once formed part of the Gardens of the Palace of Versailles as a hunting ground and is now a vast collection of trees from all over the world, belonging to the Natural History Museum of France. The invitation took place within the framework of the Colombia-France year.
+          </p>
+          <p class="curatorial" style="margin-top: var(--s2);">
+            The carving was carried out on two large branches of a white chestnut that had torn away from the trunk due to an ailment of the tree.
+          </p>
+          <p class="curatorial" style="margin-top: var(--s2);">
+            The Gardens of Versailles respond emblematically to the conception of nature proposed by the French baroque garden. Man controls and believes he directs nature according to the aesthetic parameters of the era. The design was chosen from among the decorative elements of the Palace of Versailles and takes the form of the hour hand of Louis XV's Astronomical Clock.
+          </p>
+        </div>
       </div>
 
       <!-- Text + Technical sheet -->
       <div class="work-page__body">
         <div class="work-page__text">
-
-          <p class="curatorial">
-            Nuevas Floras is a series of interventions in the landscape, carried out on some trees of native forests in the mountains near Bogota, belonging to the Central Cordillera. Carved pieces made from their own wood have been applied to these trees, or parts of some of their branches or trunks have been carved.
-          </p>
-
-          <p class="curatorial" style="margin-top: var(--s2);">
-            A master carver participated in the project, carrying out the carving work on the 7 trees, following models provided by the artist that come from colonial and baroque furniture and architecture.
-          </p>
-
-          <p class="curatorial" style="margin-top: var(--s2);">
-            Nuevas Floras is composed of seven large-format color photographs (80 x 120 cm) taken immediately after the carving process was completed. The project aims to follow over time how each of the trees will process these interventions. Therefore, these photographs represent the first stage of a living process in continuous change.
-          </p>
-
-          <p class="curatorial" style="margin-top: var(--s2);">
-            From 2004 onward, Nuevas Floras became a nomadic project that responds to the specificities of the relationship between culture and nature particular to each place.
-          </p>
-
-          <QuoteBlock
-            annotation="Curatorial text — Jose Roca (original in Spanish)"
-            quote="La obra de Escallon se encamina a perturbar la naturalidad de ese orden. “Nuevas Floras” posee dos aspectos fundamentales: su caracter nomada — porque la idea de la que parte puede desarrollarse en otros espacios — y el concepto de temporalidad — porque su duracion es indefinida."
-            cite="Jose Roca — Columna de Arena 53, August 2003"
-          />
-          <p style="margin-top: var(--s1); font-size: 0.75rem; color: var(--ink-light);">
-            [Translation: “Escallon's work aims to disturb the naturalness of that order. ‘Nuevas Floras’ possesses two fundamental aspects: its nomadic character — because the idea from which it departs can be developed in other spaces — and the concept of temporality — because its duration is indefinite.”]
-          </p>
-
-          <h3 style="margin-top: var(--s4);">CONTEXT</h3>
-          <p style="margin-top: var(--s2);">
-            In 2003, Escallon won the First Prize of the III Luis Caballero Competition
-            with this project, presented at the Galeria Santa Fe in Bogota. The jury,
-            composed of curator Jose Roca among others, highlighted the way in which
-            the work questions the boundaries between the natural and the cultural — a
-            constant in the artist's trajectory.
-          </p>
 
           <h3 style="margin-top: var(--s4);">RELATED WORKS</h3>
           <ul style="margin-top: var(--s2); list-style: none;">
@@ -145,51 +159,6 @@ const versalles05 = (await import('../../../assets/images/obras/nuevas-floras/ve
               <a href="/es/exposiciones/nuevas-floras-versalles-2017/" style="color: var(--moss); border-bottom: 1px solid var(--paper-dark);">Nuevas Floras Versalles (2017)</a>
             </li>
           </ul>
-          <h3 style="margin-top: var(--s4);">NUEVAS FLORAS BRISTOL — 2004</h3>
-
-          <p class="curatorial" style="margin-top: var(--s2);">
-            The Nuevas Floras project, in its nomadic phase, was first developed in the United Kingdom, with the help of an art restorer, R. Peploe. On that occasion, the branch of a Sycamore was intervened in Ashton Court Estate Park (Bristol). This park is a representative example of what is known as “the English natural landscape.” It was carried out in the context of a Visiting Arts artistic residency at Spike Island, Bristol, during 2004 and 2005.
-          </p>
-
-          <h3 style="margin-top: var(--s4);">NUEVAS FLORAS DO SUL — 2011</h3>
-
-          <p class="curatorial" style="margin-top: var(--s2);">
-            In 2011 the Nuevas Floras project was invited to the VIII Mercosul Biennial to carry out an intervention at one of the sites of the old Missions that the Jesuits created to evangelize the Guarani indigenous people, in southern Brazil. The work, carried out in the National Historic Park of São Miguel das Missões, responds to the direct experience of the landscape of the area and of the statuary pieces found in the Museum.
-          </p>
-
-          <p class="curatorial" style="margin-top: var(--s2);">
-            The landscape along the road to San Miguel is dominated by enormous monocultures of soy and millet. From time to time, small still-surviving islands of native flora come into view, resembling an oasis. Visiting them, I found gathered within a few square meters trees and plants of a wide variety of species that once populated those lands. I clearly felt agriculture to be the great shaper of the landscape.
-          </p>
-
-          <p class="curatorial" style="margin-top: var(--s2);">
-            These “islands” are preserved by a decree of the Brazilian government to protect the migrations of birds that would otherwise find no rest on their journey.
-          </p>
-
-          <p class="curatorial" style="margin-top: var(--s2);">
-            Fallen branches of some native trees and a tree that had already dried up were intervened with carvings alluding to the architecture of the temple and to the statuary of the Museum — in particular, to the figure of San Isidro Labrador, patron saint of agriculture. The original posture of the saint, who looks toward the sky in a gesture connoting strength and confidence, was modified and placed in relation to the current landscape of the area.
-          </p>
-
-          <p class="curatorial" style="margin-top: var(--s2);">
-            The series is complemented by a satellite exploration of the road from Porto Alegre to São Miguel das Missões, in search of islands of native flora that have survived the monocultures. The series “Camino de San Miguel” and “Navegaciones sobre Rio Grande” present these images.
-          </p>
-
-          <p class="ficha" style="margin-top: var(--s2); color: var(--ash);">
-            (*) Several trees of the intervened species were planted in the park.
-          </p>
-
-          <h3 style="margin-top: var(--s4);">NUEVAS FLORAS VERSALLES — 2017</h3>
-
-          <p class="curatorial" style="margin-top: var(--s2);">
-            Nuevas Floras Versalles was carried out in 2017 on a botanical estate called the Arboretum de Chevreloup, which once formed part of the Gardens of the Palace of Versailles as a hunting ground and is now a vast collection of trees from all over the world, belonging to the Natural History Museum of France. The invitation took place within the framework of the Colombia-France year.
-          </p>
-
-          <p class="curatorial" style="margin-top: var(--s2);">
-            The carving was carried out on two large branches of a white chestnut that had torn away from the trunk due to an ailment of the tree.
-          </p>
-
-          <p class="curatorial" style="margin-top: var(--s2);">
-            The Gardens of Versailles respond emblematically to the conception of nature proposed by the French baroque garden. Man controls and believes he directs nature according to the aesthetic parameters of the era. The design was chosen from among the decorative elements of the Palace of Versailles and takes the form of the hour hand of Louis XV's Astronomical Clock.
-          </p>
 
         </div>
 
@@ -204,12 +173,6 @@ const versalles05 = (await import('../../../assets/images/obras/nuevas-floras/ve
             120 x 80 cm (photographs)<br>
             Edition of 5<br>
             Variable dimensions (interventions)
-          </div>
-
-          <h4 style="margin-top: var(--s3);">AWARDS</h4>
-          <div class="ficha">
-            III Luis Caballero Prize — First prize<br>
-            Galeria Santa Fe, Bogota, 2003
           </div>
 
           <h4 style="margin-top: var(--s3);">COLLECTIONS</h4>
@@ -232,3 +195,10 @@ const versalles05 = (await import('../../../assets/images/obras/nuevas-floras/ve
   </article>
 
 </Layout>
+
+<style>
+  :global(.img-medium) { max-width: 55%; }
+  @media (max-width: 768px) {
+    :global(.img-medium) { max-width: 80%; }
+  }
+</style>
